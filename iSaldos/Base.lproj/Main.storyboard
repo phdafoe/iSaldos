@@ -483,7 +483,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                     <navigationItem key="navigationItem" title="Terminos y Condiciones" id="89y-cb-50N">
                         <barButtonItem key="rightBarButtonItem" title="OK" id="l9Z-8d-yOS">
                             <connections>
-                                <action selector="okButtonACTION:" destination="Rps-Ut-xw8" id="ffa-qt-FK4"/>
+                                <action selector="hideVC:" destination="Rps-Ut-xw8" id="6Ql-PF-C2c"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -933,6 +933,9 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="POy-H5-OEA" id="Lwu-Cp-lZA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IAG-fe-WMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1892,7 +1895,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <image name="rateApp" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W6i-0w-9ct"/>
-        <segue reference="Odd-gc-QFi"/>
+        <segue reference="nX1-Ui-Xl1"/>
+        <segue reference="Gpq-Hv-uaE"/>
     </inferredMetricsTieBreakers>
 </document>

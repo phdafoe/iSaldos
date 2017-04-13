@@ -64,9 +64,9 @@ class ISSplashViewController: UIViewController {
                 loginVC.modalTransitionStyle = .crossDissolve
                 present(loginVC, animated: true, completion: nil)
             }else{
-                let homeTabVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeTabBarController") as! ISHomeTabBarController
-                homeTabVC.modalTransitionStyle = .crossDissolve
-                present(homeTabVC, animated: true, completion: nil)
+                let revealVC = self.storyboard?.instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+                revealVC.modalTransitionStyle = .crossDissolve
+                present(revealVC, animated: true, completion: nil)
             }
             
         }else{

@@ -9,16 +9,34 @@
 import UIKit
 
 class ISHomeViewController: UIViewController {
+    
+    //MARK: - Variables locales
+    var items = NSArray()
+    var customTabSwipeNavigation : CarbonTabSwipeNavigation!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        items = ["Muro", "Canal"]
+        customTabSwipeNavigation = CarbonTabSwipeNavigation(items: (items as! [Any]), delegate: self)
+        customTabSwipeNavigation.insert(intoRootViewController: self)
+        style()
+        
+        self.navigationItem.title = "SOCIAL"
+        
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func style(){
+        let customColor = CONSTANTES.COLORES.GRIS_NAV_TAB
+        customTabSwipeNavigation.toolbar.isTranslucent = false
+        customTabSwipeNavigation.setIndicatorColor(customColor)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 0)
+        customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 1)
+        customTabSwipeNavigation.setNormalColor(customColor.withAlphaComponent(0.6))
+        customTabSwipeNavigation.setSelectedColor(customColor, font: UIFont.boldSystemFont(ofSize: 14))
     }
     
 
@@ -33,3 +51,19 @@ class ISHomeViewController: UIViewController {
     */
 
 }
+
+extension ISHomeViewController : CarbonTabSwipeNavigationDelegate{
+    
+    
+    func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
+        switch index {
+        case 0:
+            return self.storyboard?.instantiateViewController(withIdentifier: "MuroSocialViewController") as! ISMuroSocialViewController
+        default:
+            return self.storyboard?.instantiateViewController(withIdentifier: "CanalSocialViewController") as! ISCanalSocialViewController
+        }
+    }
+    
+}
+
+

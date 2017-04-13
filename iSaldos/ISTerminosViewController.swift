@@ -9,6 +9,16 @@
 import UIKit
 
 class ISTerminosViewController: UIViewController {
+    
+    //MARK: - IBActions
+    
+    @IBAction func hideVC(_ sender: Any) {
+        dismiss(animated: true,
+                completion: nil)
+    }
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

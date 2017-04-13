@@ -9,15 +9,26 @@
 import UIKit
 
 class ISOfertasTableViewController: UITableViewController {
+    
+    
+    //MARK: - IBOutlets
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //TODO: - Gestion del menu superior Izq.
+        if revealViewController() != nil{
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rightViewRevealWidth = 150
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
     }
 
     override func didReceiveMemoryWarning() {
