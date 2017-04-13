@@ -39,6 +39,19 @@
 		412742091E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742071E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift */; };
 		4127420A1E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412742081E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib */; };
 		4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */; };
+		4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127420E1E9FC3800074CDD7 /* ISHomeViewController.swift */; };
+		412742111E9FC3C80074CDD7 /* ISMuroSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */; };
+		412742131E9FC3D30074CDD7 /* ISCanalSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742121E9FC3D30074CDD7 /* ISCanalSocialViewController.swift */; };
+		4127421F1E9FC4620074CDD7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742151E9FC4620074CDD7 /* Alamofire.framework */; };
+		412742201E9FC4620074CDD7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742161E9FC4620074CDD7 /* Bolts.framework */; };
+		412742211E9FC4620074CDD7 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742171E9FC4620074CDD7 /* CryptoSwift.framework */; };
+		412742221E9FC4620074CDD7 /* ExpandingMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742181E9FC4620074CDD7 /* ExpandingMenu.framework */; };
+		412742231E9FC4620074CDD7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742191E9FC4620074CDD7 /* Kingfisher.framework */; };
+		412742241E9FC4620074CDD7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421A1E9FC4620074CDD7 /* Parse.framework */; };
+		412742251E9FC4620074CDD7 /* PKHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421B1E9FC4620074CDD7 /* PKHUD.framework */; };
+		412742261E9FC4620074CDD7 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421C1E9FC4620074CDD7 /* PromiseKit.framework */; };
+		412742271E9FC4620074CDD7 /* ReachabilitySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421D1E9FC4620074CDD7 /* ReachabilitySwift.framework */; };
+		412742281E9FC4620074CDD7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421E1E9FC4620074CDD7 /* SwiftyJSON.framework */; };
 		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +99,19 @@
 		412742071E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConcursoCustomCell.swift; sourceTree = "<group>"; };
 		412742081E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISConcursoCustomCell.xib; sourceTree = "<group>"; };
 		4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleConcursoViewController.swift; sourceTree = "<group>"; };
+		4127420E1E9FC3800074CDD7 /* ISHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISHomeViewController.swift; sourceTree = "<group>"; };
+		412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISMuroSocialViewController.swift; sourceTree = "<group>"; };
+		412742121E9FC3D30074CDD7 /* ISCanalSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISCanalSocialViewController.swift; sourceTree = "<group>"; };
+		412742151E9FC4620074CDD7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		412742161E9FC4620074CDD7 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/Bolts/Bolts.framework"; sourceTree = "<group>"; };
+		412742171E9FC4620074CDD7 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/CryptoSwift/CryptoSwift.framework"; sourceTree = "<group>"; };
+		412742181E9FC4620074CDD7 /* ExpandingMenu.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExpandingMenu.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/ExpandingMenu/ExpandingMenu.framework"; sourceTree = "<group>"; };
+		412742191E9FC4620074CDD7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/Kingfisher/Kingfisher.framework"; sourceTree = "<group>"; };
+		4127421A1E9FC4620074CDD7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
+		4127421B1E9FC4620074CDD7 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/PKHUD/PKHUD.framework"; sourceTree = "<group>"; };
+		4127421C1E9FC4620074CDD7 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/PromiseKit/PromiseKit.framework"; sourceTree = "<group>"; };
+		4127421D1E9FC4620074CDD7 /* ReachabilitySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReachabilitySwift.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/ReachabilitySwift/ReachabilitySwift.framework"; sourceTree = "<group>"; };
+		4127421E1E9FC4620074CDD7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,6 +120,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4127421F1E9FC4620074CDD7 /* Alamofire.framework in Frameworks */,
+				412742201E9FC4620074CDD7 /* Bolts.framework in Frameworks */,
+				412742211E9FC4620074CDD7 /* CryptoSwift.framework in Frameworks */,
+				412742221E9FC4620074CDD7 /* ExpandingMenu.framework in Frameworks */,
+				412742231E9FC4620074CDD7 /* Kingfisher.framework in Frameworks */,
+				412742241E9FC4620074CDD7 /* Parse.framework in Frameworks */,
+				412742251E9FC4620074CDD7 /* PKHUD.framework in Frameworks */,
+				412742261E9FC4620074CDD7 /* PromiseKit.framework in Frameworks */,
+				412742271E9FC4620074CDD7 /* ReachabilitySwift.framework in Frameworks */,
+				412742281E9FC4620074CDD7 /* SwiftyJSON.framework in Frameworks */,
 				5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +224,7 @@
 			children = (
 				412741F21E9FC0FE0074CDD7 /* LOGIN/REGISTRO/GALERIA */,
 				412741F01E9FC0D70074CDD7 /* ISMenuTableViewController.swift */,
+				412742141E9FC4380074CDD7 /* SOCIAL */,
 				412741FF1E9FC1680074CDD7 /* OFERTAS */,
 				412742061E9FC19D0074CDD7 /* CUPONES */,
 				4127420D1E9FC1C60074CDD7 /* CONCURSOS */,
@@ -238,9 +275,29 @@
 			name = CONCURSOS;
 			sourceTree = "<group>";
 		};
+		412742141E9FC4380074CDD7 /* SOCIAL */ = {
+			isa = PBXGroup;
+			children = (
+				4127420E1E9FC3800074CDD7 /* ISHomeViewController.swift */,
+				412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */,
+				412742121E9FC3D30074CDD7 /* ISCanalSocialViewController.swift */,
+			);
+			name = SOCIAL;
+			sourceTree = "<group>";
+		};
 		AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				412742151E9FC4620074CDD7 /* Alamofire.framework */,
+				412742161E9FC4620074CDD7 /* Bolts.framework */,
+				412742171E9FC4620074CDD7 /* CryptoSwift.framework */,
+				412742181E9FC4620074CDD7 /* ExpandingMenu.framework */,
+				412742191E9FC4620074CDD7 /* Kingfisher.framework */,
+				4127421A1E9FC4620074CDD7 /* Parse.framework */,
+				4127421B1E9FC4620074CDD7 /* PKHUD.framework */,
+				4127421C1E9FC4620074CDD7 /* PromiseKit.framework */,
+				4127421D1E9FC4620074CDD7 /* ReachabilitySwift.framework */,
+				4127421E1E9FC4620074CDD7 /* SwiftyJSON.framework */,
 				F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */,
 			);
 			name = Frameworks;
@@ -396,10 +453,12 @@
 				412742011E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift in Sources */,
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
 				412741EC1E9FC0520074CDD7 /* ISLoginViewController.swift in Sources */,
+				412742111E9FC3C80074CDD7 /* ISMuroSocialViewController.swift in Sources */,
 				412741F41E9FC1130074CDD7 /* ISOfertasTableViewController.swift in Sources */,
 				412741F61E9FC11D0074CDD7 /* ISCuponesTableViewController.swift in Sources */,
 				412741EA1E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift in Sources */,
 				412742091E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift in Sources */,
+				412742131E9FC3D30074CDD7 /* ISCanalSocialViewController.swift in Sources */,
 				412742041E9FC1980074CDD7 /* ISCuponCustomCell.swift in Sources */,
 				412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */,
 				412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */,
@@ -407,6 +466,7 @@
 				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				412741FE1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift in Sources */,
 				412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */,
+				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
 				412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 			);
