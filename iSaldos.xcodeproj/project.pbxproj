@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741B41E9F93B20074CDD7 /* AppDelegate.swift */; };
-		412741B71E9F93B20074CDD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741B61E9F93B20074CDD7 /* ViewController.swift */; };
 		412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412741B81E9F93B20074CDD7 /* Main.storyboard */; };
 		412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412741BB1E9F93B20074CDD7 /* Assets.xcassets */; };
 		412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412741BD1E9F93B20074CDD7 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,27 @@
 		412741D11E9F95390074CDD7 /* AJ_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 412741CB1E9F95390074CDD7 /* AJ_4.png */; };
 		412741D21E9F95390074CDD7 /* AJ_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 412741CC1E9F95390074CDD7 /* AJ_5.png */; };
 		412741D31E9F95390074CDD7 /* AJ_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 412741CD1E9F95390074CDD7 /* AJ_6.png */; };
+		412741DA1E9F984B0074CDD7 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 412741D91E9F984B0074CDD7 /* SWRevealViewController.m */; };
+		412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 412741DE1E9FBF230074CDD7 /* CarbonSwipeRefresh.m */; };
+		412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 412741E01E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m */; };
+		412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 412741E21E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m */; };
+		412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 412741E41E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m */; };
+		412741EA1E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741E91E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift */; };
+		412741EC1E9FC0520074CDD7 /* ISLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741EB1E9FC0520074CDD7 /* ISLoginViewController.swift */; };
+		412741EE1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741ED1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift */; };
+		412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F01E9FC0D70074CDD7 /* ISMenuTableViewController.swift */; };
+		412741F41E9FC1130074CDD7 /* ISOfertasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F31E9FC1130074CDD7 /* ISOfertasTableViewController.swift */; };
+		412741F61E9FC11D0074CDD7 /* ISCuponesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F51E9FC11D0074CDD7 /* ISCuponesTableViewController.swift */; };
+		412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F71E9FC1300074CDD7 /* ISConcursosTableViewController.swift */; };
+		412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */; };
+		412741FC1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */; };
+		412741FE1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */; };
+		412742011E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742001E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift */; };
+		412742041E9FC1980074CDD7 /* ISCuponCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742021E9FC1980074CDD7 /* ISCuponCustomCell.swift */; };
+		412742051E9FC1980074CDD7 /* ISCuponCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412742031E9FC1980074CDD7 /* ISCuponCustomCell.xib */; };
+		412742091E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742071E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift */; };
+		4127420A1E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412742081E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib */; };
+		4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */; };
 		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +47,6 @@
 		35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.debug.xcconfig"; sourceTree = "<group>"; };
 		412741B11E9F93B20074CDD7 /* iSaldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaldos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		412741B41E9F93B20074CDD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		412741B61E9F93B20074CDD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		412741B91E9F93B20074CDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		412741BB1E9F93B20074CDD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		412741BE1E9F93B20074CDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +58,34 @@
 		412741CB1E9F95390074CDD7 /* AJ_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AJ_4.png; sourceTree = "<group>"; };
 		412741CC1E9F95390074CDD7 /* AJ_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AJ_5.png; sourceTree = "<group>"; };
 		412741CD1E9F95390074CDD7 /* AJ_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AJ_6.png; sourceTree = "<group>"; };
+		412741D71E9F984A0074CDD7 /* iSaldos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iSaldos-Bridging-Header.h"; sourceTree = "<group>"; };
+		412741D81E9F984B0074CDD7 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		412741D91E9F984B0074CDD7 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		412741DC1E9FBF230074CDD7 /* CarbonKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonKit.h; sourceTree = "<group>"; };
+		412741DD1E9FBF230074CDD7 /* CarbonSwipeRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonSwipeRefresh.h; sourceTree = "<group>"; };
+		412741DE1E9FBF230074CDD7 /* CarbonSwipeRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonSwipeRefresh.m; sourceTree = "<group>"; };
+		412741DF1E9FBF230074CDD7 /* CarbonTabSwipeNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonTabSwipeNavigation.h; sourceTree = "<group>"; };
+		412741E01E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeNavigation.m; sourceTree = "<group>"; };
+		412741E11E9FBF230074CDD7 /* CarbonTabSwipeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonTabSwipeScrollView.h; sourceTree = "<group>"; };
+		412741E21E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeScrollView.m; sourceTree = "<group>"; };
+		412741E31E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarbonTabSwipeSegmentedControl.h; sourceTree = "<group>"; };
+		412741E41E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeSegmentedControl.m; sourceTree = "<group>"; };
+		412741E91E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISGaleriaTutorialViewController.swift; sourceTree = "<group>"; };
+		412741EB1E9FC0520074CDD7 /* ISLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISLoginViewController.swift; sourceTree = "<group>"; };
+		412741ED1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISRegistrarseViewController.swift; sourceTree = "<group>"; };
+		412741F01E9FC0D70074CDD7 /* ISMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISMenuTableViewController.swift; sourceTree = "<group>"; };
+		412741F31E9FC1130074CDD7 /* ISOfertasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertasTableViewController.swift; sourceTree = "<group>"; };
+		412741F51E9FC11D0074CDD7 /* ISCuponesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISCuponesTableViewController.swift; sourceTree = "<group>"; };
+		412741F71E9FC1300074CDD7 /* ISConcursosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConcursosTableViewController.swift; sourceTree = "<group>"; };
+		412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertaCustomCell.swift; sourceTree = "<group>"; };
+		412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISOfertaCustomCell.xib; sourceTree = "<group>"; };
+		412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleOfertaViewController.swift; sourceTree = "<group>"; };
+		412742001E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleCuponesViewController.swift; sourceTree = "<group>"; };
+		412742021E9FC1980074CDD7 /* ISCuponCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISCuponCustomCell.swift; sourceTree = "<group>"; };
+		412742031E9FC1980074CDD7 /* ISCuponCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISCuponCustomCell.xib; sourceTree = "<group>"; };
+		412742071E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConcursoCustomCell.swift; sourceTree = "<group>"; };
+		412742081E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISConcursoCustomCell.xib; sourceTree = "<group>"; };
+		4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleConcursoViewController.swift; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -76,9 +123,10 @@
 		412741B31E9F93B20074CDD7 /* iSaldos */ = {
 			isa = PBXGroup;
 			children = (
+				412741D51E9F98230074CDD7 /* OBJC */,
 				412741D41E9F953E0074CDD7 /* TUTORIAL_INTRO */,
 				412741B41E9F93B20074CDD7 /* AppDelegate.swift */,
-				412741B61E9F93B20074CDD7 /* ViewController.swift */,
+				412741EF1E9FC0710074CDD7 /* VIEWS_CONTROLLERS */,
 				412741B81E9F93B20074CDD7 /* Main.storyboard */,
 				412741BB1E9F93B20074CDD7 /* Assets.xcassets */,
 				412741BD1E9F93B20074CDD7 /* LaunchScreen.storyboard */,
@@ -98,6 +146,96 @@
 				412741CD1E9F95390074CDD7 /* AJ_6.png */,
 			);
 			name = TUTORIAL_INTRO;
+			sourceTree = "<group>";
+		};
+		412741D51E9F98230074CDD7 /* OBJC */ = {
+			isa = PBXGroup;
+			children = (
+				412741DB1E9FBF040074CDD7 /* CARBON */,
+				412741D61E9F982C0074CDD7 /* MENU */,
+			);
+			name = OBJC;
+			sourceTree = "<group>";
+		};
+		412741D61E9F982C0074CDD7 /* MENU */ = {
+			isa = PBXGroup;
+			children = (
+				412741D81E9F984B0074CDD7 /* SWRevealViewController.h */,
+				412741D91E9F984B0074CDD7 /* SWRevealViewController.m */,
+				412741D71E9F984A0074CDD7 /* iSaldos-Bridging-Header.h */,
+			);
+			name = MENU;
+			sourceTree = "<group>";
+		};
+		412741DB1E9FBF040074CDD7 /* CARBON */ = {
+			isa = PBXGroup;
+			children = (
+				412741DC1E9FBF230074CDD7 /* CarbonKit.h */,
+				412741DD1E9FBF230074CDD7 /* CarbonSwipeRefresh.h */,
+				412741DE1E9FBF230074CDD7 /* CarbonSwipeRefresh.m */,
+				412741DF1E9FBF230074CDD7 /* CarbonTabSwipeNavigation.h */,
+				412741E01E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m */,
+				412741E11E9FBF230074CDD7 /* CarbonTabSwipeScrollView.h */,
+				412741E21E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m */,
+				412741E31E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.h */,
+				412741E41E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m */,
+			);
+			name = CARBON;
+			sourceTree = "<group>";
+		};
+		412741EF1E9FC0710074CDD7 /* VIEWS_CONTROLLERS */ = {
+			isa = PBXGroup;
+			children = (
+				412741F21E9FC0FE0074CDD7 /* LOGIN/REGISTRO/GALERIA */,
+				412741F01E9FC0D70074CDD7 /* ISMenuTableViewController.swift */,
+				412741FF1E9FC1680074CDD7 /* OFERTAS */,
+				412742061E9FC19D0074CDD7 /* CUPONES */,
+				4127420D1E9FC1C60074CDD7 /* CONCURSOS */,
+			);
+			name = VIEWS_CONTROLLERS;
+			sourceTree = "<group>";
+		};
+		412741F21E9FC0FE0074CDD7 /* LOGIN/REGISTRO/GALERIA */ = {
+			isa = PBXGroup;
+			children = (
+				412741E91E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift */,
+				412741EB1E9FC0520074CDD7 /* ISLoginViewController.swift */,
+				412741ED1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift */,
+			);
+			name = LOGIN/REGISTRO/GALERIA;
+			sourceTree = "<group>";
+		};
+		412741FF1E9FC1680074CDD7 /* OFERTAS */ = {
+			isa = PBXGroup;
+			children = (
+				412741F31E9FC1130074CDD7 /* ISOfertasTableViewController.swift */,
+				412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */,
+				412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */,
+				412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */,
+			);
+			name = OFERTAS;
+			sourceTree = "<group>";
+		};
+		412742061E9FC19D0074CDD7 /* CUPONES */ = {
+			isa = PBXGroup;
+			children = (
+				412741F51E9FC11D0074CDD7 /* ISCuponesTableViewController.swift */,
+				412742001E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift */,
+				412742021E9FC1980074CDD7 /* ISCuponCustomCell.swift */,
+				412742031E9FC1980074CDD7 /* ISCuponCustomCell.xib */,
+			);
+			name = CUPONES;
+			sourceTree = "<group>";
+		};
+		4127420D1E9FC1C60074CDD7 /* CONCURSOS */ = {
+			isa = PBXGroup;
+			children = (
+				412741F71E9FC1300074CDD7 /* ISConcursosTableViewController.swift */,
+				4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */,
+				412742071E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift */,
+				412742081E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib */,
+			);
+			name = CONCURSOS;
 			sourceTree = "<group>";
 		};
 		AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */ = {
@@ -153,6 +291,7 @@
 					412741B01E9F93B20074CDD7 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 2C7W4RF846;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -184,12 +323,15 @@
 				412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */,
 				412741D11E9F95390074CDD7 /* AJ_4.png in Resources */,
 				412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */,
+				412741FC1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib in Resources */,
 				412741CE1E9F95390074CDD7 /* AJ_1.png in Resources */,
+				412742051E9FC1980074CDD7 /* ISCuponCustomCell.xib in Resources */,
 				412741CF1E9F95390074CDD7 /* AJ_2.png in Resources */,
 				412741C71E9F93D40074CDD7 /* Podfile in Resources */,
 				412741D31E9F95390074CDD7 /* AJ_6.png in Resources */,
 				412741D01E9F95390074CDD7 /* AJ_3.png in Resources */,
 				412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */,
+				4127420A1E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,8 +390,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				412741B71E9F93B20074CDD7 /* ViewController.swift in Sources */,
+				4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */,
+				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
+				412741EE1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift in Sources */,
+				412742011E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift in Sources */,
+				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
+				412741EC1E9FC0520074CDD7 /* ISLoginViewController.swift in Sources */,
+				412741F41E9FC1130074CDD7 /* ISOfertasTableViewController.swift in Sources */,
+				412741F61E9FC11D0074CDD7 /* ISCuponesTableViewController.swift in Sources */,
+				412741EA1E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift in Sources */,
+				412742091E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift in Sources */,
+				412742041E9FC1980074CDD7 /* ISCuponCustomCell.swift in Sources */,
+				412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */,
 				412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */,
+				412741DA1E9F984B0074CDD7 /* SWRevealViewController.m in Sources */,
+				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,
+				412741FE1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift in Sources */,
+				412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */,
+				412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */,
+				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,11 +532,14 @@
 			baseConfigurationReference = 35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iSaldos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -387,11 +549,13 @@
 			baseConfigurationReference = 1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iSaldos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

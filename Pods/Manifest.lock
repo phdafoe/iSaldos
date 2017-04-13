@@ -1,0 +1,67 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Bolts/Tasks (1.8.4)
+  - CryptoSwift (0.6.8)
+  - ExpandingMenu (0.3.1)
+  - Kingfisher (3.6.2)
+  - Parse (1.14.4):
+    - Bolts/Tasks (~> 1.8)
+  - PKHUD (3.2.1)
+  - PromiseKit (4.1.7):
+    - PromiseKit/Foundation (= 4.1.7)
+    - PromiseKit/QuartzCore (= 4.1.7)
+    - PromiseKit/UIKit (= 4.1.7)
+  - PromiseKit/Alamofire (4.1.7):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (4.1.7)
+  - PromiseKit/Foundation (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.1.7):
+    - PromiseKit/CorePromise
+  - ReachabilitySwift (3)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `master`)
+  - ExpandingMenu
+  - Kingfisher
+  - Parse
+  - PKHUD (from `https://github.com/toyship/PKHUD.git`)
+  - PromiseKit
+  - PromiseKit/Alamofire
+  - ReachabilitySwift
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  CryptoSwift:
+    :branch: master
+    :git: https://github.com/krzyzanowskim/CryptoSwift
+  PKHUD:
+    :git: https://github.com/toyship/PKHUD.git
+
+CHECKOUT OPTIONS:
+  CryptoSwift:
+    :commit: b1a4e7890ff979579a40138d74f1528de6f44d64
+    :git: https://github.com/krzyzanowskim/CryptoSwift
+  PKHUD:
+    :commit: 28fb970b41d63134e962f9da766b96670c0f55f0
+    :git: https://github.com/toyship/PKHUD.git
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CryptoSwift: 769c3796bb40f94f7b0fb4f829eaebb67fde9897
+  ExpandingMenu: 107548f3cb8c04b28a8b6b436983f506849484cc
+  Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
+  Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
+  PKHUD: 001c11518f125a273ddf026bcc64918423744ea2
+  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 30f7b6b4854487331e370a67df2d4b0f606b8674
+
+COCOAPODS: 1.2.1
