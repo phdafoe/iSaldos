@@ -13,6 +13,7 @@ let CONSTANTES = Constantes()
 struct Constantes {
     let COLORES = Colores()
     let LLAMADAS = LLamadas()
+    let USER_DEFAULT = CustomUserDefaults()
 }
 
 struct Colores {
@@ -36,4 +37,10 @@ struct LLamadas {
     let BASEURLIDCLIENTE = "http://app.clubsinergias.es/api_comercios.php?idcliente="
     let BASEIDP = "&p="
     let BASEIDTIPO = "&tipo="
+}
+
+struct CustomUserDefaults {
+    let VISTA_GALERIA_INICIAL = "vistaGaleriaInicial"
+    let VISTA_LOGIN = "vistaLogin"
+    let VISTA_REGISTRO = "vistaRegistro"
 }
