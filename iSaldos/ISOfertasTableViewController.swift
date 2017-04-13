@@ -104,10 +104,15 @@ class ISOfertasTableViewController: UITableViewController {
             let selectInd = tableView.indexPathForSelectedRow?.row
             let objInd = arrayOfertas[selectInd!]
             detalleVC.oferta = objInd
-            let imageData = UIImage(data: try! Data(contentsOf: URL(string: CONSTANTES.LLAMADAS.BASE_PHOTO_URL + (objInd.id)! + "/" + (objInd.imagen)!)!))
-            detalleVC.detalleImagenData = imageData!
+            do{
+                let imageData = UIImage(data: try Data(contentsOf: URL(string: CONSTANTES.LLAMADAS.BASE_PHOTO_URL + (objInd.id)! + "/" + (objInd.imagen)!)!))
+                detalleVC.detalleImagenData = imageData!
+            }catch let error{
+                print("Error: \(error.localizedDescription)")
+            }
+            
+            
         }
-        
     }
 
 

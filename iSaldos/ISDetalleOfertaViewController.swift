@@ -73,6 +73,7 @@ class ISDetalleOfertaViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         if indexPath.section == 1 && indexPath.row == 1{
             return UITableViewAutomaticDimension
         }
