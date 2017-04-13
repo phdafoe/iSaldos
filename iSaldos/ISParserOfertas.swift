@@ -17,18 +17,19 @@ class ISParserOfertas: NSObject {
     var jsonDataPromociones : JSON?
     
     func getDatosPromociones(_ idLocalidad : String, idTipo : String, idParametro : String) -> Promise<JSON>{
-        let request = URLRequest(url: URL(string: CONSTANTES.LLAMADAS.BASEURLIDCLIENTE + idLocalidad + CONSTANTES.LLAMADAS.BASEIDTIPO + idTipo + CONSTANTES.LLAMADAS.BASEIDP + idParametro)!)
+        let request = URLRequest(url: URL(string: CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASEIDLOCALIDAD + idLocalidad + CONSTANTES.LLAMADAS.BASEIDTIPO + idTipo + CONSTANTES.LLAMADAS.BASEIDP + idParametro)!)
+        print(request)
         
         return Alamofire.request(request).responseJSON().then{(data) -> JSON in
             self.jsonDataPromociones = JSON(data)
-            print(self.jsonDataPromociones!)
+            //print(self.jsonDataPromociones!)
             return self.jsonDataPromociones!
         }
     }
     
     func getParserPromociones() -> [ISOfertasModel]{
         var arrayPromocionesModel = [ISOfertasModel]()
-        for c_Promocion in jsonDataPromociones!{
+        for c_Promocion in (jsonDataPromociones?["promociones"])!{
             
             let asociadoModel = ISAsociadoModel(pId: dimeString(c_Promocion.1["asociado"], nombre: "id"),
                                                 pNombre: dimeString(c_Promocion.1["asociado"], nombre: "nombre"),
