@@ -12,9 +12,19 @@
 		412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412741B81E9F93B20074CDD7 /* Main.storyboard */; };
 		412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412741BB1E9F93B20074CDD7 /* Assets.xcassets */; };
 		412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412741BD1E9F93B20074CDD7 /* LaunchScreen.storyboard */; };
+		412741C71E9F93D40074CDD7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 412741C61E9F93D40074CDD7 /* Podfile */; };
+		412741CE1E9F95390074CDD7 /* AJ_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 412741C81E9F95390074CDD7 /* AJ_1.png */; };
+		412741CF1E9F95390074CDD7 /* AJ_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 412741C91E9F95390074CDD7 /* AJ_2.png */; };
+		412741D01E9F95390074CDD7 /* AJ_3.png in Resources */ = {isa = PBXBuildFile; fileRef = 412741CA1E9F95390074CDD7 /* AJ_3.png */; };
+		412741D11E9F95390074CDD7 /* AJ_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 412741CB1E9F95390074CDD7 /* AJ_4.png */; };
+		412741D21E9F95390074CDD7 /* AJ_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 412741CC1E9F95390074CDD7 /* AJ_5.png */; };
+		412741D31E9F95390074CDD7 /* AJ_6.png in Resources */ = {isa = PBXBuildFile; fileRef = 412741CD1E9F95390074CDD7 /* AJ_6.png */; };
+		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.release.xcconfig"; sourceTree = "<group>"; };
+		35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.debug.xcconfig"; sourceTree = "<group>"; };
 		412741B11E9F93B20074CDD7 /* iSaldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaldos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		412741B41E9F93B20074CDD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		412741B61E9F93B20074CDD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,14 @@
 		412741BB1E9F93B20074CDD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		412741BE1E9F93B20074CDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		412741C01E9F93B20074CDD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		412741C61E9F93D40074CDD7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		412741C81E9F95390074CDD7 /* AJ_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AJ_1.png; sourceTree = "<group>"; };
+		412741C91E9F95390074CDD7 /* AJ_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AJ_2.png; sourceTree = "<group>"; };
+		412741CA1E9F95390074CDD7 /* AJ_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AJ_3.png; sourceTree = "<group>"; };
+		412741CB1E9F95390074CDD7 /* AJ_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AJ_4.png; sourceTree = "<group>"; };
+		412741CC1E9F95390074CDD7 /* AJ_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AJ_5.png; sourceTree = "<group>"; };
+		412741CD1E9F95390074CDD7 /* AJ_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AJ_6.png; sourceTree = "<group>"; };
+		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,8 +57,11 @@
 		412741A81E9F93B20074CDD7 = {
 			isa = PBXGroup;
 			children = (
+				412741C61E9F93D40074CDD7 /* Podfile */,
 				412741B31E9F93B20074CDD7 /* iSaldos */,
 				412741B21E9F93B20074CDD7 /* Products */,
+				D54070C79A5867705BA6C568 /* Pods */,
+				AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +76,7 @@
 		412741B31E9F93B20074CDD7 /* iSaldos */ = {
 			isa = PBXGroup;
 			children = (
+				412741D41E9F953E0074CDD7 /* TUTORIAL_INTRO */,
 				412741B41E9F93B20074CDD7 /* AppDelegate.swift */,
 				412741B61E9F93B20074CDD7 /* ViewController.swift */,
 				412741B81E9F93B20074CDD7 /* Main.storyboard */,
@@ -64,6 +87,36 @@
 			path = iSaldos;
 			sourceTree = "<group>";
 		};
+		412741D41E9F953E0074CDD7 /* TUTORIAL_INTRO */ = {
+			isa = PBXGroup;
+			children = (
+				412741C81E9F95390074CDD7 /* AJ_1.png */,
+				412741C91E9F95390074CDD7 /* AJ_2.png */,
+				412741CA1E9F95390074CDD7 /* AJ_3.png */,
+				412741CB1E9F95390074CDD7 /* AJ_4.png */,
+				412741CC1E9F95390074CDD7 /* AJ_5.png */,
+				412741CD1E9F95390074CDD7 /* AJ_6.png */,
+			);
+			name = TUTORIAL_INTRO;
+			sourceTree = "<group>";
+		};
+		AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D54070C79A5867705BA6C568 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */,
+				1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +124,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 412741C31E9F93B20074CDD7 /* Build configuration list for PBXNativeTarget "iSaldos" */;
 			buildPhases = (
+				DEBBE55CB4AC9D43484F9803 /* [CP] Check Pods Manifest.lock */,
 				412741AD1E9F93B20074CDD7 /* Sources */,
 				412741AE1E9F93B20074CDD7 /* Frameworks */,
 				412741AF1E9F93B20074CDD7 /* Resources */,
+				8BEA6850C9CBE0C78BAC4C2B /* [CP] Embed Pods Frameworks */,
+				707B7C636524262B63175E59 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,13 +180,68 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				412741D21E9F95390074CDD7 /* AJ_5.png in Resources */,
 				412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */,
+				412741D11E9F95390074CDD7 /* AJ_4.png in Resources */,
 				412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */,
+				412741CE1E9F95390074CDD7 /* AJ_1.png in Resources */,
+				412741CF1E9F95390074CDD7 /* AJ_2.png in Resources */,
+				412741C71E9F93D40074CDD7 /* Podfile in Resources */,
+				412741D31E9F95390074CDD7 /* AJ_6.png in Resources */,
+				412741D01E9F95390074CDD7 /* AJ_3.png in Resources */,
 				412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		707B7C636524262B63175E59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BEA6850C9CBE0C78BAC4C2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEBBE55CB4AC9D43484F9803 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		412741AD1E9F93B20074CDD7 /* Sources */ = {
@@ -259,6 +370,7 @@
 		};
 		412741C41E9F93B20074CDD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2C7W4RF846;
@@ -272,6 +384,7 @@
 		};
 		412741C51E9F93B20074CDD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2C7W4RF846;
@@ -302,6 +415,7 @@
 				412741C51E9F93B20074CDD7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
