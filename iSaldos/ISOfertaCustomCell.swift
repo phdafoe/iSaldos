@@ -9,6 +9,14 @@
 import UIKit
 
 class ISOfertaCustomCell: UITableViewCell {
+    
+    //MARK:- IBOutlets
+    @IBOutlet weak var myImagenOferta: UIImageView!
+    @IBOutlet weak var myNombreOferta: UILabel!
+    @IBOutlet weak var myFechaOferta: UILabel!
+    @IBOutlet weak var myInformacionOferta: UILabel!
+    @IBOutlet weak var myImporteOferta: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()

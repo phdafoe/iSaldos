@@ -33,8 +33,9 @@ struct LLamadas {
     let PROMOCIONES_SERVICE = "promociones"
     
     let BASEURLIDPARSE = "http://app.clubsinergias.es/api_comercios.php?idparse="
-    let BASEURLIDLOCALIDAD = "http://app.clubsinergias.es/api_comercios.php?idlocalidad="
+    let BASE_URL = "http://app.clubsinergias.es/api_comercios.php?"
     let BASEURLIDCLIENTE = "http://app.clubsinergias.es/api_comercios.php?idcliente="
+    let BASEIDLOCALIDAD = "idlocalidad="
     let BASEIDP = "&p="
     let BASEIDTIPO = "&tipo="
 }

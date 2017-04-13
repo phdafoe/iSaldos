@@ -27,6 +27,10 @@ class ISOfertasTableViewController: UITableViewController {
             revealViewController().rightViewRevealWidth = 150
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        
+        //TODO: - Registro de celda
+        tableView.register(UINib(nibName: "ISOfertaCustomCell", bundle: nil), forCellReuseIdentifier: "ISOfertaCustomCell")
 
         
     }

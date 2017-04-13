@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 let customPrefs = UserDefaults.standard
 
@@ -16,4 +17,13 @@ func muestraAlertVC(_ titleData : String, messageData : String) -> UIAlertContro
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
     alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
     return alert
+}
+
+//MARK: - NULL TO STRING
+public func dimeString(_ j : JSON, nombre : String) -> String{
+    if let stringResult = j[nombre].string{
+        return stringResult
+    }else{
+        return ""
+    }
 }

@@ -61,6 +61,9 @@
 		412742451E9FE74D0074CDD7 /* ISSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742441E9FE74D0074CDD7 /* ISSignIn.swift */; };
 		412742471E9FEB260074CDD7 /* ISEnumation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742461E9FEB260074CDD7 /* ISEnumation.swift */; };
 		412742491E9FF68C0074CDD7 /* ISHomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742481E9FF68C0074CDD7 /* ISHomeTabBarController.swift */; };
+		4138E4601EA01991003BCD5F /* ISOfertasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */; };
+		4138E4621EA019A5003BCD5F /* ISAsociadoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */; };
+		4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */; };
 		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +133,9 @@
 		412742441E9FE74D0074CDD7 /* ISSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSignIn.swift; sourceTree = "<group>"; };
 		412742461E9FEB260074CDD7 /* ISEnumation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISEnumation.swift; sourceTree = "<group>"; };
 		412742481E9FF68C0074CDD7 /* ISHomeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISHomeTabBarController.swift; sourceTree = "<group>"; };
+		4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertasModel.swift; sourceTree = "<group>"; };
+		4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISAsociadoModel.swift; sourceTree = "<group>"; };
+		4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISParserOfertas.swift; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -315,6 +321,7 @@
 			children = (
 				4127422B1E9FC6630074CDD7 /* APIUTILS.swift */,
 				4127422D1E9FC66C0074CDD7 /* APIHELPERS.swift */,
+				4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -325,6 +332,8 @@
 				412742461E9FEB260074CDD7 /* ISEnumation.swift */,
 				412742421E9FE73C0074CDD7 /* ISSignUp.swift */,
 				412742441E9FE74D0074CDD7 /* ISSignIn.swift */,
+				4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */,
+				4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */,
 			);
 			name = MODELS;
 			sourceTree = "<group>";
@@ -499,11 +508,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4138E4621EA019A5003BCD5F /* ISAsociadoModel.swift in Sources */,
 				4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */,
 				412742451E9FE74D0074CDD7 /* ISSignIn.swift in Sources */,
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
 				4127422E1E9FC66C0074CDD7 /* APIHELPERS.swift in Sources */,
 				412741EE1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift in Sources */,
+				4138E4601EA01991003BCD5F /* ISOfertasModel.swift in Sources */,
 				4127422A1E9FC5630074CDD7 /* ISTerminosViewController.swift in Sources */,
 				4127422C1E9FC6630074CDD7 /* APIUTILS.swift in Sources */,
 				412742011E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift in Sources */,
@@ -513,6 +524,7 @@
 				412741F41E9FC1130074CDD7 /* ISOfertasTableViewController.swift in Sources */,
 				412741F61E9FC11D0074CDD7 /* ISCuponesTableViewController.swift in Sources */,
 				412741EA1E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift in Sources */,
+				4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */,
 				412742091E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift in Sources */,
 				412742131E9FC3D30074CDD7 /* ISCanalSocialViewController.swift in Sources */,
 				412742331E9FC9FE0074CDD7 /* ISSplashViewController.swift in Sources */,

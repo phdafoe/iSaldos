@@ -67,12 +67,7 @@ class APISignUp : NSObject{
         usuario["nombre"] = self.nombre
         usuario["apellido"] = self.apellido
         usuario["movil"] = self.movil
-        
-        do{
-            try usuario.signUp()
-        }catch let error{
-            print("Error: \(error.localizedDescription)")
-        }
+        usuario.signUpInBackground()
         
         exitoso = usuario.isNew
         return exitoso
