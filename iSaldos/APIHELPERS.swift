@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import MessageUI
 
 let customPrefs = UserDefaults.standard
 
@@ -18,6 +19,18 @@ func muestraAlertVC(_ titleData : String, messageData : String) -> UIAlertContro
     alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
     return alert
 }
+
+
+//MARK: - ENVIO DE CORREO DE CONTACTO
+func configuredMailComposeViewController() -> MFMailComposeViewController{
+    let mailCompose = MFMailComposeViewController()
+    mailCompose.setToRecipients(["info@info.com"])
+    mailCompose.setSubject("Ayuda desde IOS")
+    mailCompose.setMessageBody("Escriba su mensaje, nos pondremos en contacto con usted lo antes posible.", isHTML: false)
+    return mailCompose
+}
+
+
 
 //MARK: - NULL TO STRING
 public func dimeString(_ j : JSON, nombre : String) -> String{

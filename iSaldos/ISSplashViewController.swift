@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ISSplashViewController: UIViewController {
     
@@ -59,7 +60,7 @@ class ISSplashViewController: UIViewController {
     
     func beginApp(){
         if(customPrefs.string(forKey: CONSTANTES.USER_DEFAULT.VISTA_GALERIA_INICIAL) != nil){
-            if(customPrefs.string(forKey: CONSTANTES.USER_DEFAULT.VISTA_LOGIN) != nil){
+            if customPrefs.string(forKey: CONSTANTES.USER_DEFAULT.VISTA_LOGIN) != nil  || PFUser.current() != nil{
                 let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! ISLoginViewController
                 loginVC.modalTransitionStyle = .crossDissolve
                 present(loginVC, animated: true, completion: nil)
@@ -68,7 +69,6 @@ class ISSplashViewController: UIViewController {
                 revealVC.modalTransitionStyle = .crossDissolve
                 present(revealVC, animated: true, completion: nil)
             }
-            
         }else{
             customPrefs.setValue("ok", forKey: CONSTANTES.USER_DEFAULT.VISTA_GALERIA_INICIAL)
             let galeriaVC = self.storyboard?.instantiateViewController(withIdentifier: "GaleriaTutorialViewController") as! ISGaleriaTutorialViewController
@@ -78,17 +78,5 @@ class ISSplashViewController: UIViewController {
                     completion: nil)
         }
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

@@ -209,7 +209,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-d4-LFj">
-                                <rect key="frame" x="-4" y="-3" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <pageControl opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Wg-RX-mqi">
                                         <rect key="frame" x="16" y="17" width="288" height="37"/>
@@ -278,6 +278,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personas_jugando" translatesAutoresizingMaskIntoConstraints="NO" id="pxO-dh-xfX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diX-hi-20v">
                                 <rect key="frame" x="0.0" y="40" width="320" height="475"/>
                                 <subviews>
@@ -347,10 +351,6 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholderPerson" translatesAutoresizingMaskIntoConstraints="NO" id="kja-hD-Uhb">
-                                        <rect key="frame" x="8" y="12" width="56" height="56"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svT-tB-B66">
                                         <rect key="frame" x="47" y="366" width="226" height="27"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -381,7 +381,6 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="JDt-Ah-Ckt"/>
                                     <constraint firstAttribute="height" constant="475" id="zdM-SK-Fki"/>
@@ -402,7 +401,6 @@
                         <outlet property="myActInd" destination="NLY-S5-FKi" id="Zo1-d2-nM3"/>
                         <outlet property="myApellidoTF" destination="bLU-4B-yLo" id="NRy-Wn-7hg"/>
                         <outlet property="myEmailTF" destination="RWV-Lz-NtC" id="Uzd-SK-ADO"/>
-                        <outlet property="myImagenPerfil" destination="kja-hD-Uhb" id="02U-GU-7Za"/>
                         <outlet property="myMovilTF" destination="WQZ-Ci-YbR" id="6M0-yh-qUP"/>
                         <outlet property="myNombreTF" destination="r0A-Tv-6ur" id="NWw-2e-STC"/>
                         <outlet property="myPasswordTF" destination="X41-pW-Qbq" id="xos-la-LWv"/>
@@ -412,7 +410,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MkN-2Z-cQH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3937" y="134"/>
+            <point key="canvasLocation" x="-3937.5" y="133.09859154929578"/>
         </scene>
         <!--Terminos y Condiciones-->
         <scene sceneID="WJj-Kv-uVC">
@@ -530,21 +528,18 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kD-u8-J5I">
                                 <rect key="frame" x="0.0" y="33" width="320" height="478"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rab-xY-mUe">
-                                        <rect key="frame" x="15" y="20" width="280" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rab-xY-mUe">
+                                        <rect key="frame" x="8" y="25" width="304" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done"/>
                                     </textField>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oND-1a-yNd">
-                                        <rect key="frame" x="145" y="107" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbI-2p-qgW">
-                                        <rect key="frame" x="15" y="141" width="280" height="54"/>
+                                        <rect key="frame" x="60" y="156" width="200" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.13737346049999999" green="0.45702130819999998" blue="0.79320549240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                         <state key="normal" title="Acceder">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -552,11 +547,22 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                             <action selector="accessApp:" destination="CBe-ME-8gT" eventType="touchUpInside" id="FIy-f4-yFl"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash_iSaldos" translatesAutoresizingMaskIntoConstraints="NO" id="RrL-Y0-wdN">
+                                        <rect key="frame" x="40" y="300" width="240" height="178"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMW-65-tAP">
+                                        <rect key="frame" x="8" y="83" width="304" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol5-5t-qBu">
-                                        <rect key="frame" x="14.5" y="203" width="280" height="60"/>
+                                        <rect key="frame" x="60" y="222" width="200" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.13737346049999999" green="0.45702130819999998" blue="0.79320549240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                         <state key="normal" title="Registrarse">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -564,28 +570,12 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                             <segue destination="vV9-gd-Fnw" kind="presentation" id="jTZ-2l-eqB"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7CC-ip-Jw7">
-                                        <rect key="frame" x="15" y="51" width="280" height="1"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="oND-1a-yNd">
+                                        <rect key="frame" x="137" y="376" width="37" height="37"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HGE-87-z1p">
-                                        <rect key="frame" x="15" y="89" width="280" height="1"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icono" translatesAutoresizingMaskIntoConstraints="NO" id="RrL-Y0-wdN">
-                                        <rect key="frame" x="40" y="295" width="240" height="178"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMW-65-tAP">
-                                        <rect key="frame" x="15" y="58" width="280" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
-                                    </textField>
+                                        <color key="color" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Bo5-SY-e0G"/>
                                     <constraint firstAttribute="height" constant="478" id="k44-Th-kBM"/>
@@ -599,15 +589,18 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myAccederBTN" destination="fbI-2p-qgW" id="nvb-Kk-hBR"/>
                         <outlet property="myActiINd" destination="oND-1a-yNd" id="GZd-91-Tek"/>
                         <outlet property="myPasswordTF" destination="wMW-65-tAP" id="gRQ-PS-V09"/>
+                        <outlet property="myRegistrarseBTN" destination="Ol5-5t-qBu" id="ZfE-U4-NrA"/>
                         <outlet property="myUsernameTF" destination="rab-xY-mUe" id="CcS-jL-z6c"/>
-                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewContoller" id="Odd-gc-QFi"/>
+                        <segue destination="xyh-0i-CvB" kind="presentation" identifier="jumpToViewContollerFromLogin" id="Odd-gc-QFi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fi6-3b-u0S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Tps-cX-bLg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-4674.3999999999996" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-4676.25" y="133.09859154929578"/>
         </scene>
         <!--Menu Table View Controller-->
         <scene sceneID="LY9-8M-tsO">
@@ -830,6 +823,9 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.92620444300000004" green="0.93612229820000004" blue="0.94110381600000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="Tps-cX-bLg" kind="unwind" identifier="logout" unwindAction="heHechoLogoutWithSegue:" id="8Qa-OL-bPa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -839,6 +835,10 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                             <outlet property="delegate" destination="rnY-TD-lps" id="yMr-tn-890"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="myImagenPerfil" destination="Y8J-Bg-fE1" id="MZv-gr-1rT"/>
+                        <outlet property="myNombrePerfil" destination="b5a-Sz-g7i" id="peR-xA-Dsh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycq-xd-nIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1066,7 +1066,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="je4-EQ-k65">
                                                     <rect key="frame" x="8" y="27" width="304" height="242"/>
-                                                    <mutableString key="text">CEM Valderas es un dentista en Alcorc\u00f3n que ofrece las m\u00e1s c\u00f3modas consultas y salas de espera, para intentar hacer su estancia en el dentista lo m\u00e1s placentera posible. En todas sus especialidades m\u00e9dicas utilizan la m\u00e1s moderna tecnolog\u00eda, que pondremos al servicio de su salud bucodental para que tus dientes y boca est\u00e9n perfectos.\r\n\r\nCEM Valderas dispone de consultas de odontolog\u00eda, medicina general o tratamientos est\u00e9ticos. Este dentista en Alcorc\u00f3n es especialista en implantes dentales,  an\u00e1lisis cl\u00ednicos, pediatr\u00eda, podolog\u00eda  o depilaci\u00f3n l\u00e1ser.</mutableString>
+                                                    <string key="text">CEM Valderas es un dentista en Alcorc\u00f3n que ofrece las m\u00e1s c\u00f3modas consultas y salas de espera, para intentar hacer su estancia en el dentista lo m\u00e1s placentera posible. En todas sus especialidades m\u00e9dicas utilizan la m\u00e1s moderna tecnolog\u00eda, que pondremos al servicio de su salud bucodental para que tus dientes y boca est\u00e9n perfectos.\r\n\r\nCEM Valderas dispone de consultas de odontolog\u00eda, medicina general o tratamientos est\u00e9ticos. Este dentista en Alcorc\u00f3n es especialista en implantes dentales,  an\u00e1lisis cl\u00ednicos, pediatr\u00eda, podolog\u00eda  o depilaci\u00f3n l\u00e1ser.</string>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -2019,7 +2019,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <image name="concursos" width="35" height="35"/>
         <image name="cupones" width="35" height="35"/>
         <image name="degradado" width="320" height="70"/>
-        <image name="icono" width="351" height="376"/>
         <image name="iconoFondoImagenes" width="1200" height="675"/>
         <image name="legal" width="35" height="35"/>
         <image name="logout" width="35" height="35"/>
@@ -2027,14 +2026,14 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <image name="menu.png" width="16" height="16"/>
         <image name="ofertas" width="32" height="32"/>
         <image name="personMenu" width="35" height="35"/>
-        <image name="placeholderPerson" width="351" height="366"/>
+        <image name="personas_jugando" width="1200" height="800"/>
         <image name="puntos" width="35" height="35"/>
         <image name="qr" width="152" height="114"/>
         <image name="qr1" width="176" height="182"/>
         <image name="rateApp" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nX1-Ui-Xl1"/>
-        <segue reference="Gpq-Hv-uaE"/>
+        <segue reference="Odd-gc-QFi"/>
+        <segue reference="W6i-0w-9ct"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>NSCameraUsageDescription</key>
+	<string>iSaldos necesita acceder a la camara del dispositvo</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>iSaldos necesita acceder a la librería de fotos del dispositvo</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>

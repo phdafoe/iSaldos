@@ -67,7 +67,11 @@ class APISignUp : NSObject{
         usuario["nombre"] = self.nombre
         usuario["apellido"] = self.apellido
         usuario["movil"] = self.movil
-        usuario.signUpInBackground()
+        do {
+            try usuario.signUp()
+        }catch{
+            print(CustomError.self)
+        }
         
         exitoso = usuario.isNew
         return exitoso

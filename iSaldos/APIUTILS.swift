@@ -14,6 +14,7 @@ struct Constantes {
     let COLORES = Colores()
     let LLAMADAS = LLamadas()
     let USER_DEFAULT = CustomUserDefaults()
+    let PARSE_DATA = ParseData()
 }
 
 struct Colores {
@@ -38,10 +39,20 @@ struct LLamadas {
     let BASEIDLOCALIDAD = "idlocalidad="
     let BASEIDP = "&p="
     let BASEIDTIPO = "&tipo="
+    
+   
+    
+}
+
+struct ParseData {
+    let NOMBRE_TABLA_IMAGEN = "ImageProfile"
+    let IMAGEN_URL = "imagenFile"
+    let USERNAME_PARSE = "username"
 }
 
 struct CustomUserDefaults {
     let VISTA_GALERIA_INICIAL = "vistaGaleriaInicial"
     let VISTA_LOGIN = "vistaLogin"
     let VISTA_REGISTRO = "vistaRegistro"
+    let ISLOGGED = "inicioSesion"
 }

@@ -11,8 +11,10 @@ import Parse
 
 class ISRegistrarseViewController: UIViewController {
     
+    //MARK: - Variables locales
+    var photoSelected = false
+    
     //MARK: - IBOutlets
-    @IBOutlet weak var myImagenPerfil: UIImageView!
     @IBOutlet weak var myUsernameTF: UITextField!
     @IBOutlet weak var myPasswordTF: UITextField!
     @IBOutlet weak var myNombreTF: UITextField!
@@ -39,19 +41,11 @@ class ISRegistrarseViewController: UIViewController {
                               pMovil: myMovilTF.text!)
         
         do{
-            myActInd.isHidden = false
-            myActInd.startAnimating()
             try sigUp.signUpUser()
-            present(muestraAlertVC("Registrado",
-                                   messageData: "Los datos se salvaron correctamente"),
-                    animated: true,
-                    completion: { _ in
-                        self.myActInd.isHidden = true
-                        self.myActInd.stopAnimating()
-                        self.performSegue(withIdentifier: "jumpToViewContoller", sender: self) })
-        }catch let error{
+            self.performSegue(withIdentifier: "jumpToViewContoller", sender: self)
+        }catch{
             present(muestraAlertVC("Lo sentimos",
-                                   messageData: "\(error.localizedDescription)"),
+                                   messageData: "Algo salio mal"),
                     animated: true,
                     completion: nil)
         }catch{
@@ -65,29 +59,14 @@ class ISRegistrarseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         
-        //Comprobamos que si algun usuario ha accedido
-        if PFUser.current() != nil{
-            //OJO EL TIPO DE SEGUE TIENE QUE SER MODAL Y NO PUSH GENERA UN PROBLEMA DE SOPORTE
-            self.performSegue(withIdentifier: "jumpToViewContoller", sender: self)
-        }
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
 
 }
+
+

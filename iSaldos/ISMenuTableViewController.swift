@@ -7,24 +7,84 @@
 //
 
 import UIKit
+import Parse
+import MessageUI
 
 class ISMenuTableViewController: UITableViewController {
+    
+    //MARK: - IBOutlets
+    @IBOutlet weak var myImagenPerfil: UIImageView!
+    @IBOutlet weak var myNombrePerfil: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        
+        myImagenPerfil.layer.cornerRadius = myImagenPerfil.frame.size.width / 2
+        myImagenPerfil.layer.borderColor = CONSTANTES.COLORES.GRIS_NAV_TAB.cgColor
+        myImagenPerfil.layer.borderWidth = 1
+        myImagenPerfil.clipsToBounds = true
+        
+        dameInformacionPerfil()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if(indexPath.section==1){
+            switch indexPath.row {
+            case 4:
+                logout()
+                break
+            case 2:
+                sendMessage()
+                break
+            default:
+                break
+            }
+        }
+    }
+    
+    //MARK: - UTILS
+    func logout(){
+        performSegue(withIdentifier: "logout", sender: self)
+        PFUser.logOut()
+        dismiss(animated: true,
+                completion: nil)
+    }
+    
+    
+    func sendMessage(){
+        let mailComposeViewControler = configuredMailComposeViewController()
+        mailComposeViewControler.mailComposeDelegate = self
+        if MFMailComposeViewController.canSendMail(){
+            present(mailComposeViewControler, animated: true, completion: nil)
+        }else{
+            present(muestraAlertVC("Atención",
+                                   messageData: "El mail no se ha enviado correctamente"),
+                    animated: true,
+                    completion: nil)
+        }
     }
 
     
+    
+
+    //MARK: - Utils
+    func dameInformacionPerfil(){
+        //let queryInfo = PFQuery(className: <#T##String#>)
+    }
+    
+    
+    
 
 }
+
+//MARK: - DELEGADOS
+extension ISMenuTableViewController : MFMailComposeViewControllerDelegate{
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
+}
+
+
+

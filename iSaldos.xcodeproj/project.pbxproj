@@ -64,6 +64,7 @@
 		4138E4601EA01991003BCD5F /* ISOfertasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */; };
 		4138E4621EA019A5003BCD5F /* ISAsociadoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */; };
 		4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */; };
+		41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */; };
 		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +137,7 @@
 		4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertasModel.swift; sourceTree = "<group>"; };
 		4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISAsociadoModel.swift; sourceTree = "<group>"; };
 		4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISParserOfertas.swift; sourceTree = "<group>"; };
+		41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nike_iOS.mp4; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -201,6 +203,7 @@
 		412741D41E9F953E0074CDD7 /* TUTORIAL_INTRO */ = {
 			isa = PBXGroup;
 			children = (
+				41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */,
 				412742341E9FD9640074CDD7 /* FOTO_0.jpg */,
 				412742351E9FD9640074CDD7 /* FOTO_1.jpg */,
 				412742361E9FD9640074CDD7 /* FOTO_2.jpg */,
@@ -439,6 +442,7 @@
 				4127423F1E9FD9640074CDD7 /* FOTO_4.jpg in Resources */,
 				412742401E9FD9640074CDD7 /* FOTO_5.jpg in Resources */,
 				412742411E9FD9640074CDD7 /* FOTO_6.jpg in Resources */,
+				41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */,
 				412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */,
 				4127423D1E9FD9640074CDD7 /* FOTO_2.jpg in Resources */,
 				412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */,
