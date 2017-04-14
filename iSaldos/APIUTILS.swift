@@ -55,4 +55,9 @@ struct CustomUserDefaults {
     let VISTA_LOGIN = "vistaLogin"
     let VISTA_REGISTRO = "vistaRegistro"
     let ISLOGGED = "inicioSesion"
+    
+    let NOMBRE_USUARIO = "nombre"
+    let APELLIDO_USUARIO = "apellido"
+    
+    
 }

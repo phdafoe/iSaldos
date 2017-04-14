@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411945BA1EA148E900996974 /* ISConfiguracionPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */; };
 		412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741B41E9F93B20074CDD7 /* AppDelegate.swift */; };
 		412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412741B81E9F93B20074CDD7 /* Main.storyboard */; };
 		412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412741BB1E9F93B20074CDD7 /* Assets.xcassets */; };
@@ -28,10 +29,6 @@
 		412741FC1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */; };
 		412741FE1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */; };
 		412742011E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742001E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift */; };
-		412742041E9FC1980074CDD7 /* ISCuponCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742021E9FC1980074CDD7 /* ISCuponCustomCell.swift */; };
-		412742051E9FC1980074CDD7 /* ISCuponCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412742031E9FC1980074CDD7 /* ISCuponCustomCell.xib */; };
-		412742091E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742071E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift */; };
-		4127420A1E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412742081E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib */; };
 		4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */; };
 		4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127420E1E9FC3800074CDD7 /* ISHomeViewController.swift */; };
 		412742111E9FC3C80074CDD7 /* ISMuroSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */; };
@@ -66,12 +63,15 @@
 		4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */; };
 		41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */; };
 		41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFB1EA0EC0600FC491F /* RateApp.swift */; };
+		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
+		41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */; };
 		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.release.xcconfig"; sourceTree = "<group>"; };
 		35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.debug.xcconfig"; sourceTree = "<group>"; };
+		411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConfiguracionPerfilViewController.swift; sourceTree = "<group>"; };
 		412741B11E9F93B20074CDD7 /* iSaldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaldos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		412741B41E9F93B20074CDD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		412741B91E9F93B20074CDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,10 +102,6 @@
 		412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISOfertaCustomCell.xib; sourceTree = "<group>"; };
 		412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleOfertaViewController.swift; sourceTree = "<group>"; };
 		412742001E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleCuponesViewController.swift; sourceTree = "<group>"; };
-		412742021E9FC1980074CDD7 /* ISCuponCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISCuponCustomCell.swift; sourceTree = "<group>"; };
-		412742031E9FC1980074CDD7 /* ISCuponCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISCuponCustomCell.xib; sourceTree = "<group>"; };
-		412742071E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConcursoCustomCell.swift; sourceTree = "<group>"; };
-		412742081E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISConcursoCustomCell.xib; sourceTree = "<group>"; };
 		4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleConcursoViewController.swift; sourceTree = "<group>"; };
 		4127420E1E9FC3800074CDD7 /* ISHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISHomeViewController.swift; sourceTree = "<group>"; };
 		412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISMuroSocialViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +136,8 @@
 		4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISParserOfertas.swift; sourceTree = "<group>"; };
 		41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nike_iOS.mp4; sourceTree = "<group>"; };
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
+		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
+		41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRMiPerfilCustomCell.xib; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -294,8 +292,6 @@
 			children = (
 				412741F51E9FC11D0074CDD7 /* ISCuponesTableViewController.swift */,
 				412742001E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift */,
-				412742021E9FC1980074CDD7 /* ISCuponCustomCell.swift */,
-				412742031E9FC1980074CDD7 /* ISCuponCustomCell.xib */,
 			);
 			name = CUPONES;
 			sourceTree = "<group>";
@@ -305,8 +301,6 @@
 			children = (
 				412741F71E9FC1300074CDD7 /* ISConcursosTableViewController.swift */,
 				4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */,
-				412742071E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift */,
-				412742081E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib */,
 			);
 			name = CONCURSOS;
 			sourceTree = "<group>";
@@ -314,9 +308,12 @@
 		412742141E9FC4380074CDD7 /* SOCIAL */ = {
 			isa = PBXGroup;
 			children = (
+				41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */,
+				41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */,
 				4127420E1E9FC3800074CDD7 /* ISHomeViewController.swift */,
 				412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */,
 				412742121E9FC3D30074CDD7 /* ISCanalSocialViewController.swift */,
+				411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */,
 			);
 			name = SOCIAL;
 			sourceTree = "<group>";
@@ -327,7 +324,6 @@
 				41A3BBFB1EA0EC0600FC491F /* RateApp.swift */,
 				4127422B1E9FC6630074CDD7 /* APIUTILS.swift */,
 				4127422D1E9FC66C0074CDD7 /* APIHELPERS.swift */,
-				4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -347,6 +343,7 @@
 		412742311E9FC6810074CDD7 /* PARSERS */ = {
 			isa = PBXGroup;
 			children = (
+				4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */,
 			);
 			name = PARSERS;
 			sourceTree = "<group>";
@@ -447,16 +444,15 @@
 				412742411E9FD9640074CDD7 /* FOTO_6.jpg in Resources */,
 				41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */,
 				412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */,
+				41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */,
 				4127423D1E9FD9640074CDD7 /* FOTO_2.jpg in Resources */,
 				412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */,
 				412741FC1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib in Resources */,
-				412742051E9FC1980074CDD7 /* ISCuponCustomCell.xib in Resources */,
 				4127423B1E9FD9640074CDD7 /* FOTO_0.jpg in Resources */,
 				412741C71E9F93D40074CDD7 /* Podfile in Resources */,
 				4127423E1E9FD9640074CDD7 /* FOTO_3.jpg in Resources */,
 				4127423C1E9FD9640074CDD7 /* FOTO_1.jpg in Resources */,
 				412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */,
-				4127420A1E9FC1AE0074CDD7 /* ISConcursoCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +515,7 @@
 				4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */,
 				412742451E9FE74D0074CDD7 /* ISSignIn.swift in Sources */,
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
+				411945BA1EA148E900996974 /* ISConfiguracionPerfilViewController.swift in Sources */,
 				4127422E1E9FC66C0074CDD7 /* APIHELPERS.swift in Sources */,
 				412741EE1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift in Sources */,
 				4138E4601EA01991003BCD5F /* ISOfertasModel.swift in Sources */,
@@ -532,12 +529,11 @@
 				412741F61E9FC11D0074CDD7 /* ISCuponesTableViewController.swift in Sources */,
 				412741EA1E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift in Sources */,
 				4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */,
-				412742091E9FC1AE0074CDD7 /* ISConcursoCustomCell.swift in Sources */,
 				412742131E9FC3D30074CDD7 /* ISCanalSocialViewController.swift in Sources */,
 				412742331E9FC9FE0074CDD7 /* ISSplashViewController.swift in Sources */,
-				412742041E9FC1980074CDD7 /* ISCuponCustomCell.swift in Sources */,
 				412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */,
 				412742471E9FEB260074CDD7 /* ISEnumation.swift in Sources */,
+				41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */,
 				412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */,
 				412741DA1E9F984B0074CDD7 /* SWRevealViewController.m in Sources */,
 				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,

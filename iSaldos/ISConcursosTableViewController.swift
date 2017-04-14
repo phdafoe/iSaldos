@@ -92,16 +92,16 @@ class ISConcursosTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showOfertaSegue", sender: self)
+        performSegue(withIdentifier: "showConcursoSegue", sender: self)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showOfertaSegue"{
-            let detalleVC = segue.destination as! ISDetalleOfertaViewController
+        if segue.identifier == "showConcursoSegue"{
+            let detalleVC = segue.destination as! ISDetalleConcursoViewController
             let selectInd = tableView.indexPathForSelectedRow?.row
             let objInd = arrayConcursos[selectInd!]
-            detalleVC.oferta = objInd
+            detalleVC.concurso = objInd
             do{
                 let imageData = UIImage(data: try Data(contentsOf: URL(string: CONSTANTES.LLAMADAS.BASE_PHOTO_URL + (objInd.id)! + "/" + (objInd.imagen)!)!))
                 detalleVC.detalleImagenData = imageData!

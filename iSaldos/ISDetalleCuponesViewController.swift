@@ -36,7 +36,6 @@ class ISDetalleCuponesViewController: UITableViewController {
     
     
     @IBAction func qrACTION(_ sender: Any) {
-        
         let customBackground = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 2))
         customBackground.backgroundColor = CONSTANTES.COLORES.GRIS_NAV_TAB
         customBackground.alpha = 0.5
@@ -64,6 +63,17 @@ class ISDetalleCuponesViewController: UITableViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(actionGesture(_:)))
         view.addGestureRecognizer(tapGesture)
     }
+    
+    @IBAction func shareSocialNetworkACTION(_ sender: Any) {
+        let image = detalleImagenData
+        let texto = cupon?.asociado?.descripcion
+        let web = cupon?.asociado?.web
+        let shared = UIActivityViewController(activityItems: [image!, texto!, web!], applicationActivities: nil)
+        present(shared,
+                animated: true,
+                completion: nil)
+    }
+    
     
     
     //MARK: - GESTURE RECOGNIZER
