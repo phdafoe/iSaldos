@@ -14,9 +14,7 @@ import Kingfisher
 class ISOfertasTableViewController: UITableViewController {
     
     //MARK: - Variables locales
-    //MARK: - Variables locales
     var arrayOfertas : [ISOfertasModel] = []
-    
     
     
     //MARK: - IBOutlets

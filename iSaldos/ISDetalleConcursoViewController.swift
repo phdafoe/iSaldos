@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ISDetalleConcursoViewController: UIViewController {
+class ISDetalleConcursoViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

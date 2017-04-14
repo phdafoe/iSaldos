@@ -32,16 +32,20 @@ class ISMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(indexPath.section==1){
             switch indexPath.row {
-            case 4:
-                logout()
-                break
             case 2:
                 sendMessage()
-                break
+            case 3:
+                showRateAlertInmediatly(self)
+            case 4:
+                logout()
             default:
                 break
             }
         }
+        
+        
+        
+        
     }
     
     //MARK: - UTILS

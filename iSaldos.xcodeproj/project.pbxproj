@@ -65,6 +65,7 @@
 		4138E4621EA019A5003BCD5F /* ISAsociadoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */; };
 		4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */; };
 		41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */; };
+		41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFB1EA0EC0600FC491F /* RateApp.swift */; };
 		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +139,7 @@
 		4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISAsociadoModel.swift; sourceTree = "<group>"; };
 		4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISParserOfertas.swift; sourceTree = "<group>"; };
 		41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nike_iOS.mp4; sourceTree = "<group>"; };
+		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -322,6 +324,7 @@
 		4127422F1E9FC6750074CDD7 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				41A3BBFB1EA0EC0600FC491F /* RateApp.swift */,
 				4127422B1E9FC6630074CDD7 /* APIUTILS.swift */,
 				4127422D1E9FC66C0074CDD7 /* APIHELPERS.swift */,
 				4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */,
@@ -541,6 +544,7 @@
 				412741FE1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift in Sources */,
 				412742491E9FF68C0074CDD7 /* ISHomeTabBarController.swift in Sources */,
 				412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */,
+				41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */,
 				412742431E9FE73C0074CDD7 /* ISSignUp.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
 				412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */,
