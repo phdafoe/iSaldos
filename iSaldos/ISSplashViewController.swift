@@ -60,7 +60,7 @@ class ISSplashViewController: UIViewController {
     
     func beginApp(){
         if(customPrefs.string(forKey: CONSTANTES.USER_DEFAULT.VISTA_GALERIA_INICIAL) != nil){
-            if customPrefs.string(forKey: CONSTANTES.USER_DEFAULT.VISTA_LOGIN) != nil  && PFUser.current() != nil{
+            if PFUser.current() == nil{
                 let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! ISLoginViewController
                 loginVC.modalTransitionStyle = .crossDissolve
                 present(loginVC, animated: true, completion: nil)

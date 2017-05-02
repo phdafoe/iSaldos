@@ -10,6 +10,8 @@ import Foundation
 import SwiftyJSON
 import MessageUI
 
+
+
 let customPrefs = UserDefaults.standard
 
 
@@ -40,3 +42,11 @@ public func dimeString(_ j : JSON, nombre : String) -> String{
         return ""
     }
 }
+
+
+
+
+
+
+
+

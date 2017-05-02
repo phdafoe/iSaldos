@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+import Kingfisher
 
 class ISCanalSocialViewController: UIViewController {
     
@@ -36,8 +37,13 @@ class ISCanalSocialViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        findDataFromParse()
         myTableView.reloadData()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        findDataFromParse()
     }
     
 
@@ -87,12 +93,7 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
             customPerfilCell.myBotonAjustesPerfilUsuario.addTarget(self,
                                                                    action: #selector(muestraVCConfiguration),
                                                                    for: .touchUpInside)
-            
-            
             customPerfilCell.myFotoPerfilUsuario.image = imagenPerfil
-
-            
-            
             return customPerfilCell
             
         }else{
@@ -129,7 +130,6 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
             if errorBusqueda == nil{
                 if let objectData = objectsBusqueda{
                     for objectDataBusqueda in objectData{
-                        
                             //2. segunda consulta
                             let queryBusquedaFoto = PFQuery(className: "ImageProfile")
                             queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
@@ -137,7 +137,7 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                                 if errorFoto == nil{
                                     if let objectsBusquedaFotoData = objectsBusquedaFoto{
                                         for objectsBusquedaFotoBucle in objectsBusquedaFotoData{
-                                            let userImageFile = objectsBusquedaFotoBucle["imageFile"] as! PFFile
+                                            let userImageFile = objectsBusquedaFotoBucle["imageProfile"] as! PFFile
                                             //3. tercera consulta
                                             userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
                                                 if errorImageData == nil{
@@ -148,7 +148,9 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                                                 }else{
                                                     print("Hola chicos no tenemos imagen :(")
                                                 }
+                                                self.myTableView.reloadData()
                                             })
+                                            
                                         }
                                     }
                                 }else{

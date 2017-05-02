@@ -58,8 +58,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func personalizaUI(){
         let navBar = UINavigationBar.appearance()
         let tabBar = UITabBar.appearance()
+        let toolBar = UIToolbar.appearance()
+        
+        
+        
         navBar.barTintColor = CONSTANTES.COLORES.GRIS_NAV_TAB
         tabBar.barTintColor = CONSTANTES.COLORES.GRIS_NAV_TAB
+        
+        toolBar.barTintColor = CONSTANTES.COLORES.GRIS_NAV_TAB
+        toolBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV
+        
         navBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV
         tabBar.tintColor = CONSTANTES.COLORES.GRIS_NAV_TAB
         navBar.titleTextAttributes = [NSForegroundColorAttributeName : CONSTANTES.COLORES.BLANCO_TEXTO_NAV]

@@ -13,6 +13,7 @@ class ISHomeViewController: UIViewController {
     //MARK: - Variables locales
     var items = NSArray()
     var customTabSwipeNavigation : CarbonTabSwipeNavigation!
+    let botonFlotante = UIButton()
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -38,9 +39,19 @@ class ISHomeViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        botonFlotante.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: 64.0, height: 64.0))
+        botonFlotante.setImage(UIImage(named: "boton_Menu_MiPerfil"), for: UIControlState())
+        botonFlotante.center = CGPoint(x: self.view.bounds.width - 42.0, y: self.view.bounds.height - 100.0)
+        botonFlotante.addTarget(self, action: #selector(self.showVCNuevoComentario), for: .touchUpInside)
+        self.view.addSubview(botonFlotante)
+    }
+    
 
     func style(){
-        let customColor = CONSTANTES.COLORES.GRIS_NAV_TAB
+        let customColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV
         customTabSwipeNavigation.toolbar.isTranslucent = false
         customTabSwipeNavigation.setIndicatorColor(customColor)
         customTabSwipeNavigation.carbonSegmentedControl?.setWidth(self.view.frame.width / 2, forSegmentAt: 0)
@@ -49,16 +60,14 @@ class ISHomeViewController: UIViewController {
         customTabSwipeNavigation.setSelectedColor(customColor, font: UIFont.boldSystemFont(ofSize: 14))
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showVCNuevoComentario(){
+        let nuevoPostVC = self.storyboard?.instantiateViewController(withIdentifier: "NuevoPostTableViewController") as! ISNuevoPostTableViewController
+        let navController = UINavigationController(rootViewController: nuevoPostVC)
+        self.present(navController, animated: true, completion: nil)
     }
-    */
+    
+
+    
 
 }
 

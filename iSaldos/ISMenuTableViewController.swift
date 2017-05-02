@@ -15,6 +15,8 @@ class ISMenuTableViewController: UITableViewController {
     //MARK: - IBOutlets
     @IBOutlet weak var myImagenPerfil: UIImageView!
     @IBOutlet weak var myNombrePerfil: UILabel!
+    @IBOutlet weak var myApellidoPerfil: UILabel!
+    @IBOutlet weak var myEmailPerfil: UILabel!
     
 
     override func viewDidLoad() {
@@ -52,8 +54,8 @@ class ISMenuTableViewController: UITableViewController {
     func logout(){
         performSegue(withIdentifier: "logout", sender: self)
         PFUser.logOut()
-        dismiss(animated: true,
-                completion: nil)
+        /*dismiss(animated: true,
+                completion: nil)*/
     }
     
     
@@ -75,7 +77,54 @@ class ISMenuTableViewController: UITableViewController {
 
     //MARK: - Utils
     func dameInformacionPerfil(){
-        //let queryInfo = PFQuery(className: <#T##String#>)
+        //1. primera consulta
+        let queryData = PFUser.query()
+        queryData?.whereKey("username", equalTo: (PFUser.current()?.username)!)
+        queryData?.findObjectsInBackground(block: { (objectsBusqueda, errorBusqueda) in
+            
+            if errorBusqueda == nil{
+                if let objectData = objectsBusqueda{
+                    for objectDataBusqueda in objectData{
+        
+                        //2. segunda consulta
+                        let queryBusquedaFoto = PFQuery(className: "ImageProfile")
+                        queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
+                        queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
+                            if errorFoto == nil{
+                                if let objectsBusquedaFotoData = objectsBusquedaFoto{
+                                    for objectsBusquedaFotoBucle in objectsBusquedaFotoData{
+                                        let userImageFile = objectsBusquedaFotoBucle["imageProfile"] as! PFFile
+                                        
+                                        //3. tercera consulta
+                                        userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
+                                            if errorImageData == nil{
+                                                if let imageDataDesempaquetado = imageData{
+                                                    let imagenFinal = UIImage(data: imageDataDesempaquetado)
+                                                    self.myImagenPerfil.image = imagenFinal
+                                                }
+                                            }else{
+                                                print("Hola chicos no tenemos imagen :(")
+                                            }
+                                        })
+                                    }
+                                }
+                            }else{
+                                print("Error: \(errorFoto!.localizedDescription) ")
+                            }
+                        })
+                        self.myNombrePerfil.text = objectDataBusqueda["nombre"] as? String
+                        self.myApellidoPerfil.text = objectDataBusqueda["apellido"] as? String
+                        self.myEmailPerfil.text = objectDataBusqueda["email"] as? String
+                        
+                    }
+                }
+            }else{
+                self.present(muestraAlertVC("Atención",
+                                            messageData: "ha ocurrido un problema en la busqueda de la Base de Datos"),
+                             animated: true,
+                             completion: nil)
+            }
+        })
     }
     
     

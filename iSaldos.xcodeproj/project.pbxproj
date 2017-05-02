@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		411945BA1EA148E900996974 /* ISConfiguracionPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */; };
+		4125385F1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125385E1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift */; };
 		412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741B41E9F93B20074CDD7 /* AppDelegate.swift */; };
 		412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 412741B81E9F93B20074CDD7 /* Main.storyboard */; };
 		412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 412741BB1E9F93B20074CDD7 /* Assets.xcassets */; };
@@ -20,7 +21,6 @@
 		412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 412741E41E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m */; };
 		412741EA1E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741E91E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift */; };
 		412741EC1E9FC0520074CDD7 /* ISLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741EB1E9FC0520074CDD7 /* ISLoginViewController.swift */; };
-		412741EE1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741ED1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift */; };
 		412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F01E9FC0D70074CDD7 /* ISMenuTableViewController.swift */; };
 		412741F41E9FC1130074CDD7 /* ISOfertasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F31E9FC1130074CDD7 /* ISOfertasTableViewController.swift */; };
 		412741F61E9FC11D0074CDD7 /* ISCuponesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F51E9FC11D0074CDD7 /* ISCuponesTableViewController.swift */; };
@@ -54,13 +54,13 @@
 		4127423F1E9FD9640074CDD7 /* FOTO_4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 412742381E9FD9640074CDD7 /* FOTO_4.jpg */; };
 		412742401E9FD9640074CDD7 /* FOTO_5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 412742391E9FD9640074CDD7 /* FOTO_5.jpg */; };
 		412742411E9FD9640074CDD7 /* FOTO_6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4127423A1E9FD9640074CDD7 /* FOTO_6.jpg */; };
-		412742431E9FE73C0074CDD7 /* ISSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742421E9FE73C0074CDD7 /* ISSignUp.swift */; };
 		412742451E9FE74D0074CDD7 /* ISSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742441E9FE74D0074CDD7 /* ISSignIn.swift */; };
 		412742471E9FEB260074CDD7 /* ISEnumation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742461E9FEB260074CDD7 /* ISEnumation.swift */; };
 		412742491E9FF68C0074CDD7 /* ISHomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742481E9FF68C0074CDD7 /* ISHomeTabBarController.swift */; };
 		4138E4601EA01991003BCD5F /* ISOfertasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */; };
 		4138E4621EA019A5003BCD5F /* ISAsociadoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */; };
 		4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */; };
+		4151017F1EB89C49003B016D /* ISNuevoPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */; };
 		41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */; };
 		41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFB1EA0EC0600FC491F /* RateApp.swift */; };
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
@@ -72,6 +72,7 @@
 		1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.release.xcconfig"; sourceTree = "<group>"; };
 		35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.debug.xcconfig"; sourceTree = "<group>"; };
 		411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConfiguracionPerfilViewController.swift; sourceTree = "<group>"; };
+		4125385E1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISRegistroUsuarioTableViewController.swift; sourceTree = "<group>"; };
 		412741B11E9F93B20074CDD7 /* iSaldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaldos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		412741B41E9F93B20074CDD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		412741B91E9F93B20074CDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 		412741E41E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarbonTabSwipeSegmentedControl.m; sourceTree = "<group>"; };
 		412741E91E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISGaleriaTutorialViewController.swift; sourceTree = "<group>"; };
 		412741EB1E9FC0520074CDD7 /* ISLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISLoginViewController.swift; sourceTree = "<group>"; };
-		412741ED1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISRegistrarseViewController.swift; sourceTree = "<group>"; };
 		412741F01E9FC0D70074CDD7 /* ISMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISMenuTableViewController.swift; sourceTree = "<group>"; };
 		412741F31E9FC1130074CDD7 /* ISOfertasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertasTableViewController.swift; sourceTree = "<group>"; };
 		412741F51E9FC11D0074CDD7 /* ISCuponesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISCuponesTableViewController.swift; sourceTree = "<group>"; };
@@ -127,13 +127,13 @@
 		412742381E9FD9640074CDD7 /* FOTO_4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FOTO_4.jpg; sourceTree = "<group>"; };
 		412742391E9FD9640074CDD7 /* FOTO_5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FOTO_5.jpg; sourceTree = "<group>"; };
 		4127423A1E9FD9640074CDD7 /* FOTO_6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = FOTO_6.jpg; sourceTree = "<group>"; };
-		412742421E9FE73C0074CDD7 /* ISSignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSignUp.swift; sourceTree = "<group>"; };
 		412742441E9FE74D0074CDD7 /* ISSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSignIn.swift; sourceTree = "<group>"; };
 		412742461E9FEB260074CDD7 /* ISEnumation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISEnumation.swift; sourceTree = "<group>"; };
 		412742481E9FF68C0074CDD7 /* ISHomeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISHomeTabBarController.swift; sourceTree = "<group>"; };
 		4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertasModel.swift; sourceTree = "<group>"; };
 		4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISAsociadoModel.swift; sourceTree = "<group>"; };
 		4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISParserOfertas.swift; sourceTree = "<group>"; };
+		4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISNuevoPostTableViewController.swift; sourceTree = "<group>"; };
 		41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nike_iOS.mp4; sourceTree = "<group>"; };
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 				412741E91E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift */,
 				412742321E9FC9FE0074CDD7 /* ISSplashViewController.swift */,
 				412741EB1E9FC0520074CDD7 /* ISLoginViewController.swift */,
-				412741ED1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift */,
+				4125385E1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift */,
 			);
 			name = LOGIN/REGISTRO/GALERIA;
 			sourceTree = "<group>";
@@ -314,6 +314,7 @@
 				412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */,
 				412742121E9FC3D30074CDD7 /* ISCanalSocialViewController.swift */,
 				411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */,
+				4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */,
 			);
 			name = SOCIAL;
 			sourceTree = "<group>";
@@ -332,7 +333,6 @@
 			isa = PBXGroup;
 			children = (
 				412742461E9FEB260074CDD7 /* ISEnumation.swift */,
-				412742421E9FE73C0074CDD7 /* ISSignUp.swift */,
 				412742441E9FE74D0074CDD7 /* ISSignIn.swift */,
 				4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */,
 				4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */,
@@ -516,8 +516,8 @@
 				412742451E9FE74D0074CDD7 /* ISSignIn.swift in Sources */,
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
 				411945BA1EA148E900996974 /* ISConfiguracionPerfilViewController.swift in Sources */,
+				4151017F1EB89C49003B016D /* ISNuevoPostTableViewController.swift in Sources */,
 				4127422E1E9FC66C0074CDD7 /* APIHELPERS.swift in Sources */,
-				412741EE1E9FC06C0074CDD7 /* ISRegistrarseViewController.swift in Sources */,
 				4138E4601EA01991003BCD5F /* ISOfertasModel.swift in Sources */,
 				4127422A1E9FC5630074CDD7 /* ISTerminosViewController.swift in Sources */,
 				4127422C1E9FC6630074CDD7 /* APIUTILS.swift in Sources */,
@@ -541,10 +541,10 @@
 				412742491E9FF68C0074CDD7 /* ISHomeTabBarController.swift in Sources */,
 				412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */,
 				41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */,
-				412742431E9FE73C0074CDD7 /* ISSignUp.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
 				412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
+				4125385F1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
