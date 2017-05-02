@@ -2484,6 +2484,61 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
             </objects>
             <point key="canvasLocation" x="4910.625" y="2900.7042253521126"/>
         </scene>
+        <!--Usuarios Table View Controller-->
+        <scene sceneID="XP4-LV-saR">
+            <objects>
+                <tableViewController storyboardIdentifier="UsuariosTableViewController" id="3bP-GR-ZOu" customClass="ISUsuariosTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ugY-NI-Vnq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="9Ps-eb-Nmp">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ps-eb-Nmp" id="6eC-fk-dUu">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3bP-GR-ZOu" id="o18-WQ-G6h"/>
+                            <outlet property="delegate" destination="3bP-GR-ZOu" id="C6D-FB-m9u"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="zJk-kC-hCp">
+                        <barButtonItem key="rightBarButtonItem" title="X" id="hgl-Ag-aB8">
+                            <connections>
+                                <action selector="closeVC:" destination="3bP-GR-ZOu" id="E5b-9O-k8W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cR-v3-90w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4911" y="3634"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VlR-ei-OYc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HnC-bM-IUW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PJc-u8-Xca">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3bP-GR-ZOu" kind="relationship" relationship="rootViewController" id="diA-e2-2Is"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HKH-Un-c6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4179" y="3634"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Splash_iSaldos" width="351" height="376"/>

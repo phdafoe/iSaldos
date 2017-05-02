@@ -94,6 +94,11 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                                                                    action: #selector(muestraVCConfiguration),
                                                                    for: .touchUpInside)
             customPerfilCell.myFotoPerfilUsuario.image = imagenPerfil
+            customPerfilCell.myUsuarioGenerales.tag = indexPath.row
+            customPerfilCell.myUsuarioGenerales.addTarget(self,
+                                                          action: #selector(muestraTablaUsuarios),
+                                                          for: .touchUpInside)
+            
             return customPerfilCell
             
         }else{
@@ -177,6 +182,15 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                 animated: true,
                 completion: nil)
         
+    }
+    
+    func muestraTablaUsuarios(){
+                
+        let tablaUsuarios = storyboard?.instantiateViewController(withIdentifier: "UsuariosTableViewController") as! ISUsuariosTableViewController
+        let navController = UINavigationController(rootViewController: tablaUsuarios)
+        present(navController,
+                animated: true,
+                completion: nil)
     }
     
     

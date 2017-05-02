@@ -61,6 +61,10 @@
 		4138E4621EA019A5003BCD5F /* ISAsociadoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */; };
 		4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */; };
 		4151017F1EB89C49003B016D /* ISNuevoPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */; };
+		415101811EB8A8A8003B016D /* ISUsuariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101801EB8A8A8003B016D /* ISUsuariosTableViewController.swift */; };
+		415101831EB8B665003B016D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101821EB8B665003B016D /* UserModel.swift */; };
+		415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */; };
+		4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */; };
 		41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */; };
 		41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFB1EA0EC0600FC491F /* RateApp.swift */; };
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
@@ -134,6 +138,10 @@
 		4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISAsociadoModel.swift; sourceTree = "<group>"; };
 		4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISParserOfertas.swift; sourceTree = "<group>"; };
 		4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISNuevoPostTableViewController.swift; sourceTree = "<group>"; };
+		415101801EB8A8A8003B016D /* ISUsuariosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISUsuariosTableViewController.swift; sourceTree = "<group>"; };
+		415101821EB8B665003B016D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISUsuariosCustomCell.swift; sourceTree = "<group>"; };
+		415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISUsuariosCustomCell.xib; sourceTree = "<group>"; };
 		41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nike_iOS.mp4; sourceTree = "<group>"; };
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
@@ -315,6 +323,8 @@
 				412742121E9FC3D30074CDD7 /* ISCanalSocialViewController.swift */,
 				411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */,
 				4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */,
+				4151018B1EB8D5E3003B016D /* USUARIOS */,
+				415101861EB8C35B003B016D /* MODEL_USER */,
 			);
 			name = SOCIAL;
 			sourceTree = "<group>";
@@ -346,6 +356,24 @@
 				4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */,
 			);
 			name = PARSERS;
+			sourceTree = "<group>";
+		};
+		415101861EB8C35B003B016D /* MODEL_USER */ = {
+			isa = PBXGroup;
+			children = (
+				415101821EB8B665003B016D /* UserModel.swift */,
+			);
+			name = MODEL_USER;
+			sourceTree = "<group>";
+		};
+		4151018B1EB8D5E3003B016D /* USUARIOS */ = {
+			isa = PBXGroup;
+			children = (
+				415101801EB8A8A8003B016D /* ISUsuariosTableViewController.swift */,
+				415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */,
+				415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */,
+			);
+			name = USUARIOS;
 			sourceTree = "<group>";
 		};
 		AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */ = {
@@ -442,6 +470,7 @@
 				4127423F1E9FD9640074CDD7 /* FOTO_4.jpg in Resources */,
 				412742401E9FD9640074CDD7 /* FOTO_5.jpg in Resources */,
 				412742411E9FD9640074CDD7 /* FOTO_6.jpg in Resources */,
+				4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */,
 				41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */,
 				412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */,
 				41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */,
@@ -513,6 +542,7 @@
 			files = (
 				4138E4621EA019A5003BCD5F /* ISAsociadoModel.swift in Sources */,
 				4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */,
+				415101811EB8A8A8003B016D /* ISUsuariosTableViewController.swift in Sources */,
 				412742451E9FE74D0074CDD7 /* ISSignIn.swift in Sources */,
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
 				411945BA1EA148E900996974 /* ISConfiguracionPerfilViewController.swift in Sources */,
@@ -539,11 +569,13 @@
 				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				412741FE1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift in Sources */,
 				412742491E9FF68C0074CDD7 /* ISHomeTabBarController.swift in Sources */,
+				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */,
 				41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
 				412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
+				415101831EB8B665003B016D /* UserModel.swift in Sources */,
 				4125385F1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

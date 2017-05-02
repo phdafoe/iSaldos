@@ -29,6 +29,7 @@ class SRMiPerfilCustomCell: UITableViewCell {
     @IBOutlet weak var degradadoFondo: UIImageView!
     @IBOutlet weak var degradadoFoto: UIImageView!
     
+    @IBOutlet weak var myUsuarioGenerales: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
