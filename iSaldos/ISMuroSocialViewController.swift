@@ -8,10 +8,20 @@
 
 import UIKit
 
-class ISMuroSocialViewController: UIViewController {
+class ISMuroSocialViewController: UITableViewController {
+    
+    
+    
+    @IBOutlet weak var myTableView: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myTableView.delegate = self
+        myTableView.dataSource = self
+        
+        myTableView.register(UINib(nibName: "ISPostCustomCell", bundle: nil), forCellReuseIdentifier: "ISPostCustomCell")
 
         // Do any additional setup after loading the view.
     }
@@ -22,14 +32,6 @@ class ISMuroSocialViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

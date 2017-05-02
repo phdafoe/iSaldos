@@ -88,25 +88,22 @@ class ISUsuariosTableViewController: UITableViewController {
                                     if errorDos == nil{
                                         if let objectDosDes = objectDos{
                                             for objectDataDos in objectDosDes{
-                                                
                                                 let userData = objectsData as! PFUser
+                                                let userModelData = UserModel(pNombre: userData["nombre"] as! String,
+                                                                              pApellido: userData["apellido"] as! String,
+                                                                              pUsername: userData.username!,
+                                                                              pImageProfile: objectDataDos["imageProfile"] as! PFFile)
                                                 
-                                                if userData.username != PFUser.current()?.username{
-                                                    
-                                                    let userModelData = UserModel(pNombre: userData["nombre"] as! String,
-                                                                                  pApellido: userData["apellido"] as! String,
-                                                                                  pUsername: userData.username!,
-                                                                                  pImageProfile: objectDataDos["imageProfile"] as! PFFile)
-                                                    self.usersFromParse.append(userModelData)
-                                                    
-                                                    var isFollowing = false
-                                                    for followingPersonaje in followingPersonas{
-                                                        if followingPersonaje["following"] as? String == userData.username{
-                                                            isFollowing = true
-                                                        }
+                                                self.usersFromParse.append(userModelData)
+                                                
+                                                var isFollowing = false
+                                                for followingPersonaje in followingPersonas{
+                                                    if followingPersonaje["following"] as? String == userData.username{
+                                                        isFollowing = true
                                                     }
-                                                    self.usersFollowing.append(isFollowing)
                                                 }
+                                                self.usersFollowing.append(isFollowing)
+                                                
                                             }
                                             self.tableView.reloadData()
                                         }

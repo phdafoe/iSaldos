@@ -70,6 +70,8 @@
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
 		41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */; };
 		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
+		B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */; };
+		B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +148,8 @@
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
 		41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRMiPerfilCustomCell.xib; sourceTree = "<group>"; };
+		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
+		B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISPostCustomCell.xib; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -316,11 +320,8 @@
 		412742141E9FC4380074CDD7 /* SOCIAL */ = {
 			isa = PBXGroup;
 			children = (
-				41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */,
-				41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */,
+				B45B0E241EB8E3480038D174 /* CANAL/ MURO */,
 				4127420E1E9FC3800074CDD7 /* ISHomeViewController.swift */,
-				412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */,
-				412742121E9FC3D30074CDD7 /* ISCanalSocialViewController.swift */,
 				411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */,
 				4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */,
 				4151018B1EB8D5E3003B016D /* USUARIOS */,
@@ -392,6 +393,19 @@
 				F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B45B0E241EB8E3480038D174 /* CANAL/ MURO */ = {
+			isa = PBXGroup;
+			children = (
+				412742121E9FC3D30074CDD7 /* ISCanalSocialViewController.swift */,
+				41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */,
+				41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */,
+				B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */,
+				B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */,
+				412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */,
+			);
+			name = "CANAL/ MURO";
 			sourceTree = "<group>";
 		};
 		D54070C79A5867705BA6C568 /* Pods */ = {
@@ -469,6 +483,7 @@
 			files = (
 				4127423F1E9FD9640074CDD7 /* FOTO_4.jpg in Resources */,
 				412742401E9FD9640074CDD7 /* FOTO_5.jpg in Resources */,
+				B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */,
 				412742411E9FD9640074CDD7 /* FOTO_6.jpg in Resources */,
 				4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */,
 				41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */,
@@ -572,6 +587,7 @@
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */,
 				41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */,
+				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
 				412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
