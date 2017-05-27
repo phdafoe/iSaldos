@@ -1,5 +1,5 @@
 //
-//  ISPostCustomCell.swift
+//  ISNoPostCusotmCell.swift
 //  iSaldos
 //
 //  Created by Andres Felipe Ocampo Eljaiesk on 2/5/17.
@@ -8,17 +8,7 @@
 
 import UIKit
 
-class ISPostCustomCell: UITableViewCell {
-    
-    
-    //MARK: - IBOutlets
-    @IBOutlet weak var myImagePerfil: UIImageView!
-    @IBOutlet weak var myUsernamePerfil: UILabel!
-    @IBOutlet weak var myFechaPerfil: UILabel!
-    @IBOutlet weak var myNombreApellidoPerfil: UILabel!
-    @IBOutlet weak var myTextoDescripcionPerfil: UILabel!
-    @IBOutlet weak var myImagenPostPerfil: UIImageView!
-    
+class ISNoPostCusotmCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()

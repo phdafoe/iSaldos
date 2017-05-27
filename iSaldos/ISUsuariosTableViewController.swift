@@ -14,7 +14,6 @@ class ISUsuariosTableViewController: UITableViewController {
     //MARK: - VARIABLES LOCALES GLOBALES
     var usersFromParse = [UserModel]()
     var usersFollowing = [Bool]()
-    var user : NSIndexPath?
     
     
     
@@ -44,7 +43,6 @@ class ISUsuariosTableViewController: UITableViewController {
         queryUsuariosFromParse?.findObjectsInBackground(block: { (objectsUsuarios, errorUsuarios) in
             self.usersFromParse.removeAll()
             for objectsData in objectsUsuarios!{
-                
                 let query = PFQuery(className: "ImageProfile")
                 query.findObjectsInBackground(block: { (objectDos, errorDos) in
                     if errorDos == nil{

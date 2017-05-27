@@ -16,6 +16,14 @@ class ISCanalSocialViewController: UIViewController {
     var nombre : String?
     var apellido : String?
     var imagenPerfil : UIImage?
+    var fechaCreacionPost : String?
+    
+    var dataArray = ["One", "Two", "Three", "Four", "Five"]
+    var refreshControl: UIRefreshControl!
+    
+    
+    //var usersFromParse = [UserModel]()
+    var userPost = [UserPotImage]()
     
     
     //MARK: - IBOutlets
@@ -24,29 +32,34 @@ class ISCanalSocialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self,
+                                 action: #selector(otraVez),
+                                 for: .valueChanged)
+        myTableView.addSubview(refreshControl)
+        
+        
+        
         myTableView.delegate = self
         myTableView.dataSource = self
         
         
-        
-        //TODO: - Registro de celda
+        //TODO: - Registro de celda //ISPostCustomCell
         myTableView.register(UINib(nibName: "SRMiPerfilCustomCell", bundle: nil), forCellReuseIdentifier: "SRMiPerfilCustomCell")
+        myTableView.register(UINib(nibName: "ISPostCustomCell", bundle: nil), forCellReuseIdentifier: "ISPostCustomCell")
         
-
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         myTableView.reloadData()
+        informacionUsuario()
+        otraVez()
+        
     }
     
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        findDataFromParse()
-    }
-    
-
     
 
 }
@@ -62,22 +75,9 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
         switch section {
         case 0:
             return 1
-        case 1:
-            return 4
         default:
-            return 4
+            return userPost.count
         }
-        
-        /*if section == 0{
-            return 1
-        }else if section == 1{
-            return 1
-        }else{
-            if listaMuros.count == 0{
-                return 1
-            }
-            return listaMuros.count
-        }*/
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -102,69 +102,89 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
             return customPerfilCell
             
         }else{
-            return UITableViewCell()
+            let customPostCell = myTableView.dequeueReusableCell(withIdentifier: "ISPostCustomCell", for: indexPath) as! ISPostCustomCell
+            
+            //let model = usersFromParse[indexPath.row]
+            let modelPost = userPost[indexPath.row]
+           
+            
+            customPostCell.myFechaPerfil.text = fechaParse(modelPost.fechaCreacion!)
+            customPostCell.myNombreApellidoPerfil.text = modelPost.nombre
+            customPostCell.myUsernamePerfil.text = "@" + (PFUser.current()?.username)!
+
+            modelPost.imageProfile?.getDataInBackground(block: { (resultImageData, error) in
+                if error == nil{
+                    let imageData = UIImage(data:resultImageData!)
+                    customPostCell.myImagePerfil.image = imageData
+                }else{
+                    print("AQUI ERROR")
+                }
+            })
+            
+            modelPost.imagePost?.getDataInBackground(block: { (resultPostData, error) in
+                if error == nil{
+                    let imageData = UIImage(data: resultPostData!)
+                    customPostCell.myImagenPostPerfil.image = imageData
+                }else{
+                    print("AQUI ERROR DOS")
+                }
+            })
+            
+            customPostCell.myTextoDescripcionPerfil.text = modelPost.descripcion
+            
+            return customPostCell
         }
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (indexPath as NSIndexPath).section == 0{
-            return 305
-        }else if (indexPath as NSIndexPath).section == 1{
-            return UITableViewAutomaticDimension
-            //return 20
-        }else{
-            /*if listaMuros.count == 0{
-                return 320
-            }
-            
-            let muro = listaMuros[(indexPath as NSIndexPath).row]
-            return SRRestCliente().dameCellSize(muro: muro)*/
-            return CGFloat()
-            
+        var size = 0
+        switch indexPath.section {
+        case 0:
+            size = 305
+        default:
+            //size = Int(UITableViewAutomaticDimension)
+            size = 454
         }
+        return CGFloat(size)
     }
     
     
     //MARK: - UTILS
-    func findDataFromParse(){
+    func informacionUsuario(){
         //1. primera consulta
         let queryData = PFUser.query()
         queryData?.whereKey("username", equalTo: (PFUser.current()?.username)!)
         queryData?.findObjectsInBackground(block: { (objectsBusqueda, errorBusqueda) in
             if errorBusqueda == nil{
-                if let objectData = objectsBusqueda{
-                    for objectDataBusqueda in objectData{
-                            //2. segunda consulta
-                            let queryBusquedaFoto = PFQuery(className: "ImageProfile")
-                            queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
-                            queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
-                                if errorFoto == nil{
-                                    if let objectsBusquedaFotoData = objectsBusquedaFoto{
-                                        for objectsBusquedaFotoBucle in objectsBusquedaFotoData{
-                                            let userImageFile = objectsBusquedaFotoBucle["imageProfile"] as! PFFile
-                                            //3. tercera consulta
-                                            userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
-                                                if errorImageData == nil{
-                                                    if let imageDataDesempaquetado = imageData{
-                                                        let imagenFinal = UIImage(data: imageDataDesempaquetado)
-                                                        self.imagenPerfil = imagenFinal
-                                                    }
-                                                }else{
-                                                    print("Hola chicos no tenemos imagen :(")
-                                                }
-                                                self.myTableView.reloadData()
-                                            })
-                                            
+                if let objectData = objectsBusqueda?[0]{
+                    
+                    self.nombre = objectData["nombre"] as? String
+                    self.apellido = objectData["apellido"] as? String
+                    
+                    let queryBusquedaFoto = PFQuery(className: "ImageProfile")
+                    queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
+                    queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
+                        if errorFoto == nil{
+                            if let objectsBusquedaFotoData = objectsBusquedaFoto?[0]{
+                                let userImageFile = objectsBusquedaFotoData["imageProfile"] as! PFFile
+                                //3. tercera consulta
+                                userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
+                                    if errorImageData == nil{
+                                        if let imageDataDesempaquetado = imageData{
+                                            let imagenFinal = UIImage(data: imageDataDesempaquetado)
+                                            self.imagenPerfil = imagenFinal
                                         }
+                                    }else{
+                                        print("Hola chicos no tenemos imagen :(")
                                     }
-                                }else{
-                                    print("Error: \(errorFoto!) ")
-                                }
-                            })
-                            self.nombre = objectDataBusqueda["nombre"] as? String
-                            self.apellido = objectDataBusqueda["apellido"] as? String
-                    }
+                                    self.myTableView.reloadData()
+                                })
+                            }
+                        }else{
+                            print("Error: \(errorFoto!) ")
+                        }
+                    })
                     self.myTableView.reloadData()
                 }
             }else{
@@ -176,6 +196,40 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
         })
     }
     
+    
+    
+    func otraVez(){
+        let queryPost = PFQuery(className: "PostImageNetwork")
+        queryPost.findObjectsInBackground(block: { (objcDos, errorDos) in
+            if errorDos == nil{
+                
+                if let objcDosDes = objcDos{
+                    
+                    self.userPost.removeAll()
+                    
+                    for c_objDataPost in objcDosDes{
+                        let postFinal = UserPotImage(pNombre: c_objDataPost["nombre"] as! String,
+                                                     pApellido: c_objDataPost["apellido"] as! String,
+                                                     pUsername: c_objDataPost["username"] as! String,
+                                                     pImageProfile: c_objDataPost["imageFilePerfilNW"] as! PFFile,
+                                                     pImagePost: c_objDataPost["imageFileNW"] as! PFFile,
+                                                     pFechaCreacion: c_objDataPost.createdAt!,
+                                                     pDescripcion: c_objDataPost["descripcionImagen"] as! String)
+                        
+                        self.userPost.append(postFinal)
+                    }
+                    self.myTableView.reloadData()
+                    self.refreshControl.endRefreshing()
+                }
+            }
+        })
+    }
+    
+    
+    
+    
+    
+    
     func muestraVCConfiguration(){
         let configuracionVC = storyboard?.instantiateViewController(withIdentifier: "ConfiguracionPerfilViewController") as! ISConfiguracionPerfilViewController
         present(configuracionVC,
@@ -185,7 +239,7 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
     }
     
     func muestraTablaUsuarios(){
-                
+        
         let tablaUsuarios = storyboard?.instantiateViewController(withIdentifier: "UsuariosTableViewController") as! ISUsuariosTableViewController
         let navController = UINavigationController(rootViewController: tablaUsuarios)
         present(navController,

@@ -2361,8 +2361,15 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre Apellido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-ZO-VDj">
-                                                    <rect key="frame" x="53" y="27" width="259" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Andres Felipe" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ib2-ZO-VDj">
+                                                    <rect key="frame" x="53" y="27" width="86" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ocampo Eljaiek" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLh-zb-OOD">
+                                                    <rect key="frame" x="141" y="27" width="146" height="18"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2453,6 +2460,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="myApellido" destination="RLh-zb-OOD" id="nZB-gp-qvr"/>
                         <outlet property="myDescripcionFotoTip" destination="ad9-um-Pyw" id="GUy-9e-yKw"/>
                         <outlet property="myFechaHumanoPerfil" destination="8sX-go-ivj" id="uC2-17-V4M"/>
                         <outlet property="myImagenPerfil" destination="qpa-Av-31X" id="pU0-mw-XGO"/>

@@ -19,6 +19,7 @@ class ISDetalleCuponesViewController: UITableViewController {
     var codeBarData : String?
     var qrcodeImage : CIImage!
     var imageGroupTag = 3
+    var customBackground : UIView!
     
     //MARK: - IBOutlets
     @IBOutlet weak var myImagenOferta: UIImageView!
@@ -36,42 +37,42 @@ class ISDetalleCuponesViewController: UITableViewController {
     
     
     @IBAction func qrACTION(_ sender: Any) {
-        let customBackground = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 2))
-        customBackground.backgroundColor = CONSTANTES.COLORES.GRIS_NAV_TAB
-        customBackground.alpha = 0.5
+        customBackground = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 2))
+        customBackground.backgroundColor = UIColor.black
+        customBackground.alpha = 0.0
         customBackground.tag = imageGroupTag
-        self.view.addSubview(customBackground)
         
-        if myIdActividad.text == qrData{
-            let anchoImagen = self.view.frame.width / 1.5
-            let altoImagen = self.view.frame.height / 3
-            let imageView = UIImageView(frame: CGRect(x: (self.view.frame.width / 2 - anchoImagen / 2),
-                                                      y: (self.view.frame.height / 2 - altoImagen / 2),
-                                                      width: anchoImagen,
-                                                      height: altoImagen))
-            imageView.contentMode = .scaleAspectFit
-            imageView.tag = imageGroupTag
-            imageView.image = fromString(qrData!)
-            self.view.addSubview(imageView)
-        }else{
-            present(muestraAlertVC("Oops!",
-                                   messageData: "Tenemos problemas para mostrar el Qr"),
-                    animated: true,
-                    completion: nil)
+        let custBack = UIViewPropertyAnimator(duration: 0.3,
+                                              curve: .easeInOut) { 
+                                                self.customBackground.alpha = 0.8
+                                                self.view.addSubview(self.customBackground)
+                                                
         }
+        custBack.startAnimation()
+        custBack.addCompletion({ _ in
+            self.muestraImagen()
+        })
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(actionGesture(_:)))
         view.addGestureRecognizer(tapGesture)
     }
     
     @IBAction func shareSocialNetworkACTION(_ sender: Any) {
-        let image = detalleImagenData
-        let texto = cupon?.asociado?.descripcion
-        let web = cupon?.asociado?.web
-        let shared = UIActivityViewController(activityItems: [image!, texto!, web!], applicationActivities: nil)
-        present(shared,
-                animated: true,
-                completion: nil)
+        /*customBackground = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height * 2))
+        customBackground.backgroundColor = UIColor.black
+        customBackground.alpha = 0.0
+        customBackground.tag = imageGroupTag
+        
+        let custBack = UIViewPropertyAnimator(duration: 0.3,
+                                              curve: .easeInOut) {
+                                                self.customBackground.alpha = 0.8
+                                                self.view.addSubview(self.customBackground)
+                                                
+        }
+        custBack.startAnimation()
+        custBack.addCompletion { _ in*/
+            self.muestraStoryboard()
+        //}
     }
     
     
@@ -91,6 +92,37 @@ class ISDetalleCuponesViewController: UITableViewController {
         filter!.setValue(data, forKey: "inputMessage")
         return UIImage(ciImage: filter!.outputImage!)
     }
+    
+    func muestraImagen(){
+        if myIdActividad.text == qrData{
+            let anchoImagen = self.view.frame.width / 1.5
+            let altoImagen = self.view.frame.height / 3
+            let imageView = UIImageView(frame: CGRect(x: (self.view.frame.width / 2 - anchoImagen / 2),
+                                                      y: (self.view.frame.height / 2 - altoImagen / 2),
+                                                      width: anchoImagen,
+                                                      height: altoImagen))
+            imageView.contentMode = .scaleAspectFit
+            imageView.tag = imageGroupTag
+            imageView.image = fromString(qrData!)
+            self.view.addSubview(imageView)
+        }else{
+            self.present(muestraAlertVC("Oops!",
+                                        messageData: "Tenemos problemas para mostrar el Qr"),
+                         animated: true,
+                         completion: nil)
+        }
+    }
+    
+    func muestraStoryboard(){
+        let sbData = UIStoryboard(name: "ActionSheetStoryboard", bundle: nil)
+        let detalleUno = sbData.instantiateInitialViewController()!
+        detalleUno.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+        self.show(detalleUno as! UINavigationController, sender: self)
+    }
+    
+        
+    
+    
     
     
     
@@ -145,3 +177,5 @@ class ISDetalleCuponesViewController: UITableViewController {
     
 
 }
+
+

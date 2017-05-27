@@ -13,6 +13,7 @@ import MessageUI
 
 
 let customPrefs = UserDefaults.standard
+private let dateFormatter = DateFormatter()
 
 
 func muestraAlertVC(_ titleData : String, messageData : String) -> UIAlertController{
@@ -42,6 +43,16 @@ public func dimeString(_ j : JSON, nombre : String) -> String{
         return ""
     }
 }
+
+
+public func fechaParse(_ fecha : Date) -> String{
+    dateFormatter.dateFormat = "EEE, dd MMM"
+    dateFormatter.locale = Locale(identifier: "es_ES")
+    return dateFormatter.string(from: fecha)
+}
+
+
+
 
 
 

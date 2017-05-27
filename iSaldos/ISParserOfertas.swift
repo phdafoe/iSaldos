@@ -13,6 +13,12 @@ import Alamofire
 
 class ISParserOfertas: NSObject {
     
+    /*http://app.clubsinergias.es/api_comercios.php?idlocalidad=11&tipo=oferta&p=promociones
+    CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASEIDLOCALIDAD + idLocalidad + CONSTANTES.LLAMADAS.BASEIDTIPO + idTipo + CONSTANTES.LLAMADAS.BASEIDP + idParametro*/
+    
+    
+    
+    
     
     var jsonDataPromociones : JSON?
     

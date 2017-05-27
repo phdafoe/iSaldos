@@ -92,7 +92,9 @@ class ISMenuTableViewController: UITableViewController {
                         queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
                             if errorFoto == nil{
                                 if let objectsBusquedaFotoData = objectsBusquedaFoto{
+                                    
                                     for objectsBusquedaFotoBucle in objectsBusquedaFotoData{
+                                        
                                         let userImageFile = objectsBusquedaFotoBucle["imageProfile"] as! PFFile
                                         
                                         //3. tercera consulta
