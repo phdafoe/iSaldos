@@ -869,7 +869,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         <outlet property="myEmailPerfil" destination="V3j-eW-ifp" id="Ujf-Je-HwE"/>
                         <outlet property="myImagenPerfil" destination="Y8J-Bg-fE1" id="MZv-gr-1rT"/>
                         <outlet property="myNombrePerfil" destination="b5a-Sz-g7i" id="peR-xA-Dsh"/>
-                        <segue destination="Tps-cX-bLg" kind="unwind" identifier="logout" unwindAction="heHechoLogoutWithSegue:" id="V3E-JY-jel"/>
+                        <segue destination="Tps-cX-bLg" kind="unwind" identifier="logout" unwindAction="heHechoLogout:" id="Il4-Zd-akM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycq-xd-nIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1396,20 +1396,28 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <constraint firstAttribute="height" constant="228" id="aBO-qS-1QE"/>
                                 </constraints>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="problemasConexion" translatesAutoresizingMaskIntoConstraints="NO" id="JOF-se-esz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Z4n-4C-eaW" firstAttribute="top" secondItem="JOF-se-esz" secondAttribute="bottom" id="1eF-Yu-DLR"/>
+                            <constraint firstAttribute="trailing" secondItem="JOF-se-esz" secondAttribute="trailing" id="5cx-rA-yf5"/>
                             <constraint firstItem="HRW-0O-UiR" firstAttribute="centerY" secondItem="6zn-7u-w3r" secondAttribute="centerY" id="BHA-vr-1Fk"/>
+                            <constraint firstItem="JOF-se-esz" firstAttribute="top" secondItem="6zn-7u-w3r" secondAttribute="top" id="Fdg-UR-mnO"/>
                             <constraint firstItem="HRW-0O-UiR" firstAttribute="centerX" secondItem="6zn-7u-w3r" secondAttribute="centerX" id="QFk-Hc-a72"/>
+                            <constraint firstItem="JOF-se-esz" firstAttribute="leading" secondItem="6zn-7u-w3r" secondAttribute="leading" id="Uge-1Z-A6q"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="myImageLogoSaldos" destination="HRW-0O-UiR" id="8oJ-yW-hhD"/>
+                        <outlet property="myImagenProblemasConexion" destination="JOF-se-esz" id="bPk-yk-Srn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3k-hU-zT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4125" y="-717"/>
+            <point key="canvasLocation" x="-4125" y="-717.25352112676057"/>
         </scene>
         <!--Detalle Cupones View Controller-->
         <scene sceneID="Naz-Jt-IsG">
@@ -2583,6 +2591,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <image name="ofertas" width="32" height="32"/>
         <image name="personMenu" width="35" height="35"/>
         <image name="placeholderPerson" width="351" height="366"/>
+        <image name="problemasConexion" width="375" height="667"/>
         <image name="puntos" width="35" height="35"/>
         <image name="qr" width="152" height="114"/>
         <image name="rateApp" width="35" height="35"/>

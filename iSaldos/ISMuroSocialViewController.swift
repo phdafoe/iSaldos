@@ -50,9 +50,9 @@ class ISMuroSocialViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        myTableView.reloadData()
         otraVez()
-        
+        myTableView.reloadData()
+        self.refreshControl.endRefreshing()
     }
     
 }
@@ -89,7 +89,7 @@ extension ISMuroSocialViewController : UITableViewDelegate, UITableViewDataSourc
             
             customPostCell.myFechaPerfil.text = fechaParse(modelPost.fechaCreacion!)
             customPostCell.myNombreApellidoPerfil.text = modelPost.nombre
-            customPostCell.myUsernamePerfil.text = "@" + (PFUser.current()?.username)!
+            customPostCell.myUsernamePerfil.text = "@" + (modelPost.username!)
             
             modelPost.imageProfile?.getDataInBackground(block: { (resultImageData, error) in
                 if error == nil{
@@ -132,21 +132,33 @@ extension ISMuroSocialViewController : UITableViewDelegate, UITableViewDataSourc
         queryPost.order(byDescending: "createdAt")
         queryPost.findObjectsInBackground(block: { (objcDos, errorDos) in
             if errorDos == nil{
-                
                 if let objcDosDes = objcDos{
-                    
                     self.userPost.removeAll()
-                    
                     for c_objDataPost in objcDosDes{
-                        let postFinal = UserPotImage(pNombre: c_objDataPost["nombre"] as! String,
-                                                     pApellido: c_objDataPost["apellido"] as! String,
-                                                     pUsername: c_objDataPost["username"] as! String,
-                                                     pImageProfile: c_objDataPost["imageFilePerfilNW"] as! PFFile,
-                                                     pImagePost: c_objDataPost["imageFileNW"] as! PFFile,
-                                                     pFechaCreacion: c_objDataPost.createdAt!,
-                                                     pDescripcion: c_objDataPost["descripcionImagen"] as! String)
-                        
-                        self.userPost.append(postFinal)
+                        //2 consulta
+                        let queryBusquedaFoto = PFQuery(className: "ImageProfile")
+                        queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
+                            if errorFoto == nil{
+                                if let objectsBusquedaFotoData = objectsBusquedaFoto{
+                                    for c_objDos in objectsBusquedaFotoData{
+                                        
+                                        let userImageFile = c_objDos["imageProfile"] as! PFFile
+                                        
+                                        let postFinal = UserPotImage(pNombre: c_objDataPost["nombre"] as! String,
+                                                                     pApellido: c_objDataPost["apellido"] as! String,
+                                                                     pUsername: c_objDataPost["username"] as! String,
+                                                                     pImageProfile: userImageFile,
+                                                                     pImagePost: c_objDataPost["imageFileNW"] as! PFFile,
+                                                                     pFechaCreacion: c_objDataPost.createdAt!,
+                                                                     pDescripcion: c_objDataPost["descripcionImagen"] as! String)
+                                        
+                                        self.userPost.append(postFinal)
+                                    }
+                                    self.myTableView.reloadData()
+                                }
+                            }
+                            self.myTableView.reloadData()
+                        })
                     }
                     self.myTableView.reloadData()
                     self.refreshControl.endRefreshing()

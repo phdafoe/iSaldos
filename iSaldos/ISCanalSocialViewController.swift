@@ -50,9 +50,7 @@ class ISCanalSocialViewController: UIViewController {
         myTableView.register(UINib(nibName: "SRMiPerfilCustomCell", bundle: nil), forCellReuseIdentifier: "SRMiPerfilCustomCell")
         myTableView.register(UINib(nibName: "ISPostCustomCell", bundle: nil), forCellReuseIdentifier: "ISPostCustomCell")
         
-        informacionUsuario()
-        otraVez()
-        myTableView.reloadData()
+        
         
     }
 
@@ -61,15 +59,8 @@ class ISCanalSocialViewController: UIViewController {
         informacionUsuario()
         otraVez()
         myTableView.reloadData()
+        self.refreshControl.endRefreshing()
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        informacionUsuario()
-        otraVez()
-        myTableView.reloadData()
-    }
-    
     
     
 
@@ -218,15 +209,29 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                     self.userPost.removeAll()
                     for c_objDataPost in objcDosDes{
                         if c_objDataPost["username"] as? String == PFUser.current()?.username{
-                            let postFinal = UserPotImage(pNombre: c_objDataPost["nombre"] as! String,
-                                                         pApellido: c_objDataPost["apellido"] as! String,
-                                                         pUsername: c_objDataPost["username"] as! String,
-                                                         pImageProfile: c_objDataPost["imageFilePerfilNW"] as! PFFile,
-                                                         pImagePost: c_objDataPost["imageFileNW"] as! PFFile,
-                                                         pFechaCreacion: c_objDataPost.createdAt!,
-                                                         pDescripcion: c_objDataPost["descripcionImagen"] as! String)
-                            
-                            self.userPost.append(postFinal)
+                            let queryBusquedaFoto = PFQuery(className: "ImageProfile")
+                            queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
+                            queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
+                                if errorFoto == nil{
+                                    if let objectsBusquedaFotoData = objectsBusquedaFoto{
+                                        for c_objDos in objectsBusquedaFotoData{
+                                            
+                                            let userImageFile = c_objDos["imageProfile"] as! PFFile
+                                            
+                                            let postFinal = UserPotImage(pNombre: c_objDataPost["nombre"] as! String,
+                                                                         pApellido: c_objDataPost["apellido"] as! String,
+                                                                         pUsername: c_objDataPost["username"] as! String,
+                                                                         pImageProfile: userImageFile,
+                                                                         pImagePost: c_objDataPost["imageFileNW"] as! PFFile,
+                                                                         pFechaCreacion: c_objDataPost.createdAt!,
+                                                                         pDescripcion: c_objDataPost["descripcionImagen"] as! String)
+                                            self.userPost.append(postFinal)
+                                        }
+                                        self.myTableView.reloadData()
+                                    }
+                                }
+                                self.myTableView.reloadData()
+                            })
                         }
                     }
                     self.myTableView.reloadData()
@@ -234,8 +239,8 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                 }
             }
         })
-        self.myTableView.reloadData()
     }
+    
     
     
     
