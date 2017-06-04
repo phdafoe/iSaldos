@@ -25,8 +25,8 @@ enum CustomError: Error {
     case ingresoUsuarioError
 }
 
-extension CustomError: CustomStringConvertible{
-    var description: String{
+extension CustomError: LocalizedError{
+    public var customDescription: String?{
         switch self {
         case .campoVacio:
             return "Ingresa todos los campos"

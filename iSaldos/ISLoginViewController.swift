@@ -67,14 +67,11 @@ class ISLoginViewController: UIViewController {
         super.viewDidAppear(animated)
         if PFUser.current() != nil{
             //OJO EL TIPO DE SEGUE TIENE QUE SER MODAL Y NO PUSH GENERA UN PROBLEMA DE SOPORTE
-            self.performSegue(withIdentifier: "jumpToViewContoller", sender: self)
+            self.performSegue(withIdentifier: "jumpToViewContollerFromLogin", sender: self)
         }
     }
 
-    //TODO: - LOGOUT
-    @IBAction func heHechoLogout(segue: UIStoryboardSegue){
-        print("cierre de sesion exitoso")
-    }
+   
     
     //TODO: - SHOWVIDEO
     func showVideo(){

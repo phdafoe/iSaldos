@@ -855,9 +855,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.92620444300000004" green="0.93612229820000004" blue="0.94110381600000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <segue destination="Tps-cX-bLg" kind="unwind" identifier="logout" unwindAction="heHechoLogoutWithSegue:" id="8Qa-OL-bPa"/>
-                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -872,6 +869,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         <outlet property="myEmailPerfil" destination="V3j-eW-ifp" id="Ujf-Je-HwE"/>
                         <outlet property="myImagenPerfil" destination="Y8J-Bg-fE1" id="MZv-gr-1rT"/>
                         <outlet property="myNombrePerfil" destination="b5a-Sz-g7i" id="peR-xA-Dsh"/>
+                        <segue destination="Tps-cX-bLg" kind="unwind" identifier="logout" unwindAction="heHechoLogoutWithSegue:" id="V3E-JY-jel"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycq-xd-nIB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2138,10 +2136,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="personas_jugando" translatesAutoresizingMaskIntoConstraints="NO" id="FXa-l3-qBy">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vEo-fb-nmS">
                                 <rect key="frame" x="0.0" y="40" width="320" height="475"/>
                                 <subviews>
@@ -2265,7 +2259,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cd5-yR-sMt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3264" y="2901"/>
+            <point key="canvasLocation" x="3262.5" y="2900.7042253521126"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="22l-5g-bS9">
@@ -2588,14 +2582,13 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <image name="menu" width="35" height="35"/>
         <image name="ofertas" width="32" height="32"/>
         <image name="personMenu" width="35" height="35"/>
-        <image name="personas_jugando" width="1200" height="800"/>
         <image name="placeholderPerson" width="351" height="366"/>
         <image name="puntos" width="35" height="35"/>
         <image name="qr" width="152" height="114"/>
         <image name="rateApp" width="35" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Odd-gc-QFi"/>
+        <segue reference="PMB-TT-YxY"/>
         <segue reference="nX1-Ui-Xl1"/>
     </inferredMetricsTieBreakers>
 </document>
