@@ -39,28 +39,50 @@ class ISUsuariosTableViewController: UITableViewController {
     
     //MARK: - Utils
     func dameInformacionPerfil(){
+        
         let queryUsuariosFromParse = PFUser.query()
-        queryUsuariosFromParse?.findObjectsInBackground(block: { (objectsUsuarios, errorUsuarios) in
-            self.usersFromParse.removeAll()
-            for objectsData in objectsUsuarios!{
-                let query = PFQuery(className: "ImageProfile")
-                query.findObjectsInBackground(block: { (objectDos, errorDos) in
-                    if errorDos == nil{
-                        if let objectDosDes = objectDos{
-                            for objectDataDos in objectDosDes{
-                                let userData = objectsData as! PFUser
-                                let userModelData = UserModel(pNombre: userData["nombre"] as! String,
-                                                              pApellido: userData["apellido"] as! String,
-                                                              pUsername: userData.username!,
-                                                              pImageProfile: objectDataDos["imageProfile"] as! PFFile)
-                                self.usersFromParse.append(userModelData)
+        
+        queryUsuariosFromParse?.findObjectsInBackground(block: { (objectsUsuarios, errorUno) in
+            
+            if errorUno == nil{
+                
+                self.usersFromParse.removeAll()
+                
+                if let objectsUsuariosDes = objectsUsuarios{
+                    
+                    for objectsData in objectsUsuariosDes{
+                        
+                        let query = PFQuery(className: "ImageProfile")
+                        
+                        query.findObjectsInBackground(block: { (objectDos, errorDos) in
+                            
+                            if errorDos == nil{
+                                
+                                if let objectDosDes = objectDos{
+                                    
+                                    for objectDataDos in objectDosDes{
+                                        
+                                        let userData = objectsData as! PFUser
+                                        
+                                        let userModelData = UserModel(pNombre: userData["nombre"] as! String,
+                                                                      pApellido: userData["apellido"] as! String,
+                                                                      pUsername: userData.username!,
+                                                                      pImageProfile: objectDataDos["imageProfile"] as! PFFile)
+                                        
+                                        self.usersFromParse.append(userModelData)
+                                        
+                                    }
+                                    self.tableView.reloadData()
+                                }
                             }
-                            self.tableView.reloadData()
-                        }
+                        })
                     }
-                })
+                    self.tableView.reloadData()
+                }
+                
+                
             }
-            self.tableView.reloadData()
+            
         })
     }
     
@@ -69,6 +91,7 @@ class ISUsuariosTableViewController: UITableViewController {
         let queryFollowers = PFQuery(className: "Followers")
         queryFollowers.whereKey("follower", equalTo: (PFUser.current()?.username)!)
         queryFollowers.findObjectsInBackground { (objectFollowers, errorFollowers) in
+            
             if errorFollowers == nil{
                 if let followingPersonas = objectFollowers{
                     //2. consulta de PFQuery
@@ -77,7 +100,6 @@ class ISUsuariosTableViewController: UITableViewController {
                         self.usersFromParse.removeAll()
                         self.usersFollowing.removeAll()
                         for objectsData in objectsUsuarios!{
-                            
                             let userData = objectsData as! PFUser
                             if userData.username != PFUser.current()?.username{
                                 //3. consulta de PFQuery
@@ -87,21 +109,20 @@ class ISUsuariosTableViewController: UITableViewController {
                                         if let objectDosDes = objectDos{
                                             for objectDataDos in objectDosDes{
                                                 let userData = objectsData as! PFUser
-                                                let userModelData = UserModel(pNombre: userData["nombre"] as! String,
-                                                                              pApellido: userData["apellido"] as! String,
-                                                                              pUsername: userData.username!,
-                                                                              pImageProfile: objectDataDos["imageProfile"] as! PFFile)
-                                                
-                                                self.usersFromParse.append(userModelData)
-                                                
-                                                var isFollowing = false
-                                                for followingPersonaje in followingPersonas{
-                                                    if followingPersonaje["following"] as? String == userData.username{
-                                                        isFollowing = true
+                                                if objectDataDos["username"] as? String == userData.username{
+                                                    let userModelData = UserModel(pNombre: userData["nombre"] as! String,
+                                                                                  pApellido: userData["apellido"] as! String,
+                                                                                  pUsername: userData.username!,
+                                                                                  pImageProfile: objectDataDos["imageProfile"] as! PFFile)
+                                                    self.usersFromParse.append(userModelData)
+                                                    var isFollowing = false
+                                                    for followingPersonaje in followingPersonas{
+                                                        if followingPersonaje["following"] as? String == userData.username{
+                                                            isFollowing = true
+                                                        }
                                                     }
+                                                    self.usersFollowing.append(isFollowing)
                                                 }
-                                                self.usersFollowing.append(isFollowing)
-                                                
                                             }
                                             self.tableView.reloadData()
                                         }

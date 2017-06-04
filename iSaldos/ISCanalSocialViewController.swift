@@ -13,8 +13,8 @@ import Kingfisher
 class ISCanalSocialViewController: UIViewController {
     
     //MARK: - Variables locales
-    var nombre : String?
-    var apellido : String?
+    var nombre = ""
+    var apellido = ""
     var imagenPerfil : UIImage?
     var fechaCreacionPost : String?
     
@@ -33,6 +33,7 @@ class ISCanalSocialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self,
                                  action: #selector(otraVez),
@@ -49,14 +50,24 @@ class ISCanalSocialViewController: UIViewController {
         myTableView.register(UINib(nibName: "SRMiPerfilCustomCell", bundle: nil), forCellReuseIdentifier: "SRMiPerfilCustomCell")
         myTableView.register(UINib(nibName: "ISPostCustomCell", bundle: nil), forCellReuseIdentifier: "ISPostCustomCell")
         
+        informacionUsuario()
+        otraVez()
+        myTableView.reloadData()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        myTableView.reloadData()
         informacionUsuario()
         otraVez()
-        
+        myTableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        informacionUsuario()
+        otraVez()
+        myTableView.reloadData()
     }
     
     
@@ -76,6 +87,9 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
         case 0:
             return 1
         default:
+            
+            
+            
             return userPost.count
         }
     }
@@ -86,8 +100,8 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
             let customPerfilCell = myTableView.dequeueReusableCell(withIdentifier: "SRMiPerfilCustomCell", for: indexPath) as! SRMiPerfilCustomCell
             
             //nombre y apellido
-            customPerfilCell.myNombrePerfilUsuario.text = nombre
-            customPerfilCell.myUsernameSportReviewLBL.text = apellido
+            customPerfilCell.myNombrePerfilUsuario.text = nombre + " " + apellido
+            customPerfilCell.myUsernameSportReviewLBL.text = "@" + (PFUser.current()?.username)!
             
             customPerfilCell.myBotonAjustesPerfilUsuario.tag = indexPath.row
             customPerfilCell.myBotonAjustesPerfilUsuario.addTarget(self,
@@ -132,22 +146,26 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
             
             customPostCell.myTextoDescripcionPerfil.text = modelPost.descripcion
             
+            
             return customPostCell
         }
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        var size = 0
-        switch indexPath.section {
-        case 0:
-            size = 305
-        default:
-            //size = Int(UITableViewAutomaticDimension)
-            size = 454
+        if indexPath.section == 0{
+            return 305
+        }else if indexPath.section == 1{
+            return UITableViewAutomaticDimension
         }
-        return CGFloat(size)
+        return CGFloat()
     }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    
     
     
     //MARK: - UTILS
@@ -158,10 +176,9 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
         queryData?.findObjectsInBackground(block: { (objectsBusqueda, errorBusqueda) in
             if errorBusqueda == nil{
                 if let objectData = objectsBusqueda?[0]{
-                    
-                    self.nombre = objectData["nombre"] as? String
-                    self.apellido = objectData["apellido"] as? String
-                    
+                    self.nombre = (objectData["nombre"] as? String)!
+                    self.apellido = (objectData["apellido"] as? String)!
+                    //2 consulta
                     let queryBusquedaFoto = PFQuery(className: "ImageProfile")
                     queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
                     queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
@@ -174,24 +191,18 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                                         if let imageDataDesempaquetado = imageData{
                                             let imagenFinal = UIImage(data: imageDataDesempaquetado)
                                             self.imagenPerfil = imagenFinal
+                                            self.myTableView.reloadData()
                                         }
-                                    }else{
-                                        print("Hola chicos no tenemos imagen :(")
                                     }
-                                    self.myTableView.reloadData()
+                                    
                                 })
+                                self.myTableView.reloadData()
                             }
-                        }else{
-                            print("Error: \(errorFoto!) ")
                         }
+                        self.myTableView.reloadData()
                     })
-                    self.myTableView.reloadData()
                 }
-            }else{
-                self.present(muestraAlertVC("Hola",
-                                            messageData: "Ha ocurrido un problema  en la busqueda de datos"),
-                             animated: true,
-                             completion: nil)
+                self.myTableView.reloadData()
             }
         })
     }
@@ -200,29 +211,30 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
     
     func otraVez(){
         let queryPost = PFQuery(className: "PostImageNetwork")
+        queryPost.order(byDescending: "createdAt")
         queryPost.findObjectsInBackground(block: { (objcDos, errorDos) in
             if errorDos == nil{
-                
                 if let objcDosDes = objcDos{
-                    
                     self.userPost.removeAll()
-                    
                     for c_objDataPost in objcDosDes{
-                        let postFinal = UserPotImage(pNombre: c_objDataPost["nombre"] as! String,
-                                                     pApellido: c_objDataPost["apellido"] as! String,
-                                                     pUsername: c_objDataPost["username"] as! String,
-                                                     pImageProfile: c_objDataPost["imageFilePerfilNW"] as! PFFile,
-                                                     pImagePost: c_objDataPost["imageFileNW"] as! PFFile,
-                                                     pFechaCreacion: c_objDataPost.createdAt!,
-                                                     pDescripcion: c_objDataPost["descripcionImagen"] as! String)
-                        
-                        self.userPost.append(postFinal)
+                        if c_objDataPost["username"] as? String == PFUser.current()?.username{
+                            let postFinal = UserPotImage(pNombre: c_objDataPost["nombre"] as! String,
+                                                         pApellido: c_objDataPost["apellido"] as! String,
+                                                         pUsername: c_objDataPost["username"] as! String,
+                                                         pImageProfile: c_objDataPost["imageFilePerfilNW"] as! PFFile,
+                                                         pImagePost: c_objDataPost["imageFileNW"] as! PFFile,
+                                                         pFechaCreacion: c_objDataPost.createdAt!,
+                                                         pDescripcion: c_objDataPost["descripcionImagen"] as! String)
+                            
+                            self.userPost.append(postFinal)
+                        }
                     }
                     self.myTableView.reloadData()
                     self.refreshControl.endRefreshing()
                 }
             }
         })
+        self.myTableView.reloadData()
     }
     
     
@@ -232,6 +244,7 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
     
     func muestraVCConfiguration(){
         let configuracionVC = storyboard?.instantiateViewController(withIdentifier: "ConfiguracionPerfilViewController") as! ISConfiguracionPerfilViewController
+        configuracionVC.isDelegate = self
         present(configuracionVC,
                 animated: true,
                 completion: nil)
@@ -239,7 +252,6 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
     }
     
     func muestraTablaUsuarios(){
-        
         let tablaUsuarios = storyboard?.instantiateViewController(withIdentifier: "UsuariosTableViewController") as! ISUsuariosTableViewController
         let navController = UINavigationController(rootViewController: tablaUsuarios)
         present(navController,
@@ -251,3 +263,14 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
     
     
 }
+
+extension ISCanalSocialViewController : ISConfiguracionPerfilViewControllerDelegate{
+    
+    func didProfileChanged() {
+        myTableView.reloadData()
+    }
+}
+
+
+
+

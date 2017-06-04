@@ -9,10 +9,17 @@
 import UIKit
 import Parse
 
+
+protocol ISConfiguracionPerfilViewControllerDelegate {
+    func didProfileChanged()
+}
+
 class ISConfiguracionPerfilViewController: UIViewController {
     
     //MARK: - Variables locales
     var photoSelected = false
+    var objectIdImageProfile : String?
+    var isDelegate : ISConfiguracionPerfilViewControllerDelegate?
     
     //MARK: - IBOutlets
     @IBOutlet weak var myImagenPerfil: UIImageView!
@@ -74,8 +81,8 @@ class ISConfiguracionPerfilViewController: UIViewController {
                             if errorFoto == nil{
                                 if let objectsBusquedaFotoData = objectsBusquedaFoto{
                                     for objectsBusquedaFotoBucle in objectsBusquedaFotoData{
-                                        let userImageFile = objectsBusquedaFotoBucle["imageFile"] as! PFFile
-                                        
+                                        let userImageFile = objectsBusquedaFotoBucle["imageProfile"] as! PFFile
+                                        self.objectIdImageProfile = objectsBusquedaFotoBucle.objectId
                                         //3. tercera consulta
                                         userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
                                             if errorImageData == nil{
@@ -99,7 +106,6 @@ class ISConfiguracionPerfilViewController: UIViewController {
                         self.myPasswordTF.text = PFUser.current()?.password
                         self.myEmailTF.text = PFUser.current()?.email
                         self.myMovilTF.text = objectDataBusqueda["movil"] as? String
-                        
                     }
                 }
             }else{
@@ -114,36 +120,31 @@ class ISConfiguracionPerfilViewController: UIViewController {
     //TODO: - FUNC ACTUALIZAR DATOS
     func actualizarDatos(){
         
-        if myImagenPerfil.image != nil{
-            let userUpdateData = PFUser.current()!
-            userUpdateData["nombre"] = myNombreTF.text
-            userUpdateData["apellido"] = myApellidoTF.text
-            userUpdateData.email = myEmailTF.text
-            userUpdateData["movil"] = myMovilTF.text
-            
-            UIApplication.shared.beginIgnoringInteractionEvents()
-            myActInd.isHidden = false
-            myActInd.startAnimating()
-            userUpdateData.saveInBackground { (exitoActualizacion, errorActualizacion) in
-                self.myActInd.isHidden = true
-                self.myActInd.stopAnimating()
-                UIApplication.shared.endIgnoringInteractionEvents()
-                if exitoActualizacion{
-                    print("se han actualizado correctamente los datos")
-                    self.updateFoto()
-                }else{
-                    self.present(muestraAlertVC("Hola",
-                                                messageData: "\(String(describing: errorActualizacion?.localizedDescription))"),
-                                 animated: true,
-                                 completion: nil)
-                }
+        let userUpdateData = PFUser.current()!
+        userUpdateData["nombre"] = myNombreTF.text
+        userUpdateData["apellido"] = myApellidoTF.text
+        userUpdateData.email = myEmailTF.text
+        userUpdateData["movil"] = myMovilTF.text
+        
+        UIApplication.shared.beginIgnoringInteractionEvents()
+        myActInd.isHidden = false
+        myActInd.startAnimating()
+        userUpdateData.saveInBackground { (exitoActualizacion, errorActualizacion) in
+            self.myActInd.isHidden = true
+            self.myActInd.stopAnimating()
+            UIApplication.shared.endIgnoringInteractionEvents()
+            if exitoActualizacion{
+                print("se han actualizado correctamente los datos")
+                self.updateFoto()
+                self.isDelegate?.didProfileChanged()
+            }else{
+                self.present(muestraAlertVC("Hola",
+                                            messageData: "\(String(describing: errorActualizacion?.localizedDescription))"),
+                             animated: true,
+                             completion: nil)
             }
-        }else{
-            self.present(muestraAlertVC("Hola",
-                                        messageData: "Debes tener una foto seleccionada"),
-                         animated: true,
-                         completion: nil)
-        }  
+        }
+        
     }
     
     
@@ -152,21 +153,24 @@ class ISConfiguracionPerfilViewController: UIViewController {
     func updateFoto(){
         //instancia de la imagen a subir
         let postImage = PFObject(className: "ImageProfile")
+        postImage.objectId = objectIdImageProfile
         let imageData = UIImageJPEGRepresentation(self.myImagenPerfil.image!, 0.4)
-        let imageFile = PFFile(name: "imagePerfilUsuario.jpg", data: imageData!)
-        postImage["imageFile"] = imageFile
+        let imageFile = PFFile(name: "userImageProfile.jpg", data: imageData!)
+        postImage["imageProfile"] = imageFile
         postImage["username"] = PFUser.current()?.username
         postImage.saveInBackground { (success, error) in
             if success{
+                self.isDelegate?.didProfileChanged()
                 print("DATOS SALVADOS SATISFACTORIAMENTE")
                 self.dismiss(animated: true,
-                        completion: nil)
+                             completion: nil)
             }else{
                 print("Error en el registro")
             }
             self.photoSelected = false
             self.myImagenPerfil.image = UIImage(named:"placeholder")
         }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -221,7 +225,9 @@ extension ISConfiguracionPerfilViewController : UIImagePickerControllerDelegate,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let imageData = info[UIImagePickerControllerOriginalImage] as? UIImage{
             myImagenPerfil.image = imageData
-            photoSelected = true
+            if myImagenPerfil.image != nil{
+                photoSelected = true
+            }
         }
         dismiss(animated: true, completion: nil)
     }
