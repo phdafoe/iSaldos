@@ -120,7 +120,9 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
             modelPost.imageProfile?.getDataInBackground(block: { (resultImageData, error) in
                 if error == nil{
                     let imageData = UIImage(data:resultImageData!)
+                    
                     customPostCell.myImagePerfil.image = imageData
+                    
                 }else{
                     print("AQUI ERROR")
                 }
@@ -143,6 +145,10 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
         
     }
     
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0{
             return 305
@@ -154,6 +160,7 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+        
     }
     
     

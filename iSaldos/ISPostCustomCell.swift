@@ -18,8 +18,10 @@ class ISPostCustomCell: UITableViewCell {
     @IBOutlet weak var myNombreApellidoPerfil: UILabel!
     @IBOutlet weak var myTextoDescripcionPerfil: UILabel!
     @IBOutlet weak var myImagenPostPerfil: UIImageView!
+    @IBOutlet weak var constrUno: NSLayoutConstraint!
     
-
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -39,38 +39,25 @@ class ISUsuariosTableViewController: UITableViewController {
     
     //MARK: - Utils
     func dameInformacionPerfil(){
-        
         let queryUsuariosFromParse = PFUser.query()
-        
+        queryUsuariosFromParse?.whereKey("username", notEqualTo: (PFUser.current()?.username)!)
         queryUsuariosFromParse?.findObjectsInBackground(block: { (objectsUsuarios, errorUno) in
-            
             if errorUno == nil{
-                
                 self.usersFromParse.removeAll()
-                
                 if let objectsUsuariosDes = objectsUsuarios{
-                    
                     for objectsData in objectsUsuariosDes{
-                        
                         let query = PFQuery(className: "ImageProfile")
-                        
+                        query.whereKey("username", equalTo: (PFUser.current()?.username)!)
                         query.findObjectsInBackground(block: { (objectDos, errorDos) in
-                            
                             if errorDos == nil{
-                                
                                 if let objectDosDes = objectDos{
-                                    
                                     for objectDataDos in objectDosDes{
-                                        
                                         let userData = objectsData as! PFUser
-                                        
                                         let userModelData = UserModel(pNombre: userData["nombre"] as! String,
                                                                       pApellido: userData["apellido"] as! String,
                                                                       pUsername: userData.username!,
                                                                       pImageProfile: objectDataDos["imageProfile"] as! PFFile)
-                                        
                                         self.usersFromParse.append(userModelData)
-                                        
                                     }
                                     self.tableView.reloadData()
                                 }
@@ -89,13 +76,13 @@ class ISUsuariosTableViewController: UITableViewController {
     func actualizarDatosUsuariosSeguidos(){
         //1. Consulta a Followers
         let queryFollowers = PFQuery(className: "Followers")
-        queryFollowers.whereKey("follower", equalTo: (PFUser.current()?.username)!)
+        //queryFollowers.whereKey("follower", equalTo: (PFUser.current()?.username)!)
         queryFollowers.findObjectsInBackground { (objectFollowers, errorFollowers) in
-            
             if errorFollowers == nil{
                 if let followingPersonas = objectFollowers{
                     //2. consulta de PFQuery
                     let queryUsuariosFromParse = PFUser.query()
+                    queryUsuariosFromParse?.whereKey("username", notEqualTo: (PFUser.current()?.username)!)
                     queryUsuariosFromParse?.findObjectsInBackground(block: { (objectsUsuarios, errorUsuarios) in
                         self.usersFromParse.removeAll()
                         self.usersFollowing.removeAll()
@@ -104,11 +91,11 @@ class ISUsuariosTableViewController: UITableViewController {
                             if userData.username != PFUser.current()?.username{
                                 //3. consulta de PFQuery
                                 let query = PFQuery(className: "ImageProfile")
+                                //query.whereKey("username", equalTo: (PFUser.current()?.username)!)
                                 query.findObjectsInBackground(block: { (objectDos, errorDos) in
                                     if errorDos == nil{
                                         if let objectDosDes = objectDos{
                                             for objectDataDos in objectDosDes{
-                                                let userData = objectsData as! PFUser
                                                 if objectDataDos["username"] as? String == userData.username{
                                                     let userModelData = UserModel(pNombre: userData["nombre"] as! String,
                                                                                   pApellido: userData["apellido"] as! String,
