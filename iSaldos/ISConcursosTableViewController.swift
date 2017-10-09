@@ -8,8 +8,8 @@
 
 import UIKit
 import PromiseKit
-import PKHUD
 import Kingfisher
+import APESuperHUD
 
 class ISConcursosTableViewController: UITableViewController {
 
@@ -120,7 +120,7 @@ class ISConcursosTableViewController: UITableViewController {
         let tipoOferta = CONSTANTES.LLAMADAS.CONCURSO
         let tipoParametro = CONSTANTES.LLAMADAS.PROMOCIONES_SERVICE
         
-        HUD.show(.progress)
+        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
         firstly{
             return when(resolved: datosOfertas.getDatosPromociones(idLocalidad,
                                                                    idTipo: tipoOferta,
@@ -130,7 +130,9 @@ class ISConcursosTableViewController: UITableViewController {
             }.then{_ in
                 self.tableView.reloadData()
             }.then{_ in
-                HUD.hide(afterDelay: 0)
+                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: { _ in
+                    // Completed
+                })
             }.catch{error in
                 self.present(muestraAlertVC("Lo sentimos",
                                             messageData: "Algo salió mal"),
