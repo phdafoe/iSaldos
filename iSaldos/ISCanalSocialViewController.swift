@@ -226,7 +226,6 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                         
                         self.userPost.append(postFinal)
                     }
-                    
                     APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: { _ in
                         self.myTableView.reloadData()
                     })

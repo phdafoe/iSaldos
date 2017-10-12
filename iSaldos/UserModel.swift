@@ -14,7 +14,7 @@ class UserModel: NSObject {
     var nombre : String?
     var apellido : String?
     var username : String?
-    var imageProfile : PFFile?
+    var imageProfile : PFFile? = nil
     
     init(pNombre : String, pApellido : String, pUsername : String, pImageProfile : PFFile) {
         self.nombre = pNombre

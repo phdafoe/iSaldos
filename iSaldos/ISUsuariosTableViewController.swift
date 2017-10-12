@@ -30,39 +30,40 @@ class ISUsuariosTableViewController: UITableViewController {
         actualizarDatosUsuariosSeguidos()
         self.title = PFUser.current()?.username
         
-        
         tableView.register(UINib(nibName: "ISUsuariosCustomCell", bundle: nil), forCellReuseIdentifier: "ISUsuariosCustomCell")
-        
-        
-        
+    
     }
     
     //MARK: - Utils
     func dameInformacionPerfil(){
         let queryUsuariosFromParse = PFUser.query()
-        queryUsuariosFromParse?.findObjectsInBackground(block: { (objectsUsuarios, errorUsuarios) in
+        queryUsuariosFromParse?.findObjectsInBackground{ (objectsUsuarios, errorUsuarios) in
             self.usersFromParse.removeAll()
-            for objectsData in objectsUsuarios!{
-                let query = PFQuery(className: "ImageProfile")
-                query.findObjectsInBackground(block: { (objectDos, errorDos) in
-                    if errorDos == nil{
-                        if let objectDosDes = objectDos{
-                            for objectDataDos in objectDosDes{
-                                let userData = objectsData as! PFUser
-                                let userModelData = UserModel(pNombre: userData["nombre"] as! String,
-                                                              pApellido: userData["apellido"] as! String,
-                                                              pUsername: userData.username!,
-                                                              pImageProfile: objectDataDos["imageProfile"] as! PFFile)
-                                self.usersFromParse.append(userModelData)
+                if errorUsuarios == nil{
+                    for objectsData in objectsUsuarios!{
+                        let query = PFQuery(className: "ImageProfile")
+                        query.findObjectsInBackground(block: { (objectDos, errorDos) in
+                            if errorDos == nil{
+                                if let objectDosDes = objectDos{
+                                    for objectDataDos in objectDosDes{
+                                        let userData = objectsData as! PFUser
+                                        let userModelData = UserModel(pNombre: userData["nombre"] as! String,
+                                                                      pApellido: userData["apellido"] as! String,
+                                                                      pUsername: userData.username!,
+                                                                      pImageProfile: objectDataDos["imageProfile"] as! PFFile)
+
+                                        self.usersFromParse.append(userModelData)
+                                    }
+                                    self.tableView.reloadData()
+                                }
                             }
-                            self.tableView.reloadData()
-                        }
+                        })
                     }
-                })
+                    self.tableView.reloadData()
+                }
             }
-            self.tableView.reloadData()
-        })
     }
+    
     
     func actualizarDatosUsuariosSeguidos(){
         //1. Consulta a Followers
@@ -73,24 +74,27 @@ class ISUsuariosTableViewController: UITableViewController {
                 if let followingPersonas = objectFollowers{
                     //2. consulta de PFQuery
                     let queryUsuariosFromParse = PFUser.query()
-                    queryUsuariosFromParse?.findObjectsInBackground(block: { (objectsUsuarios, errorUsuarios) in
+                    queryUsuariosFromParse?.findObjectsInBackground{ (objectsUsuarios, errorUsuarios) in
                         self.usersFromParse.removeAll()
                         self.usersFollowing.removeAll()
-                        for objectsData in objectsUsuarios!{
-                            
-                            let userData = objectsData as! PFUser
-                            if userData.username != PFUser.current()?.username{
-                                //3. consulta de PFQuery
-                                let query = PFQuery(className: "ImageProfile")
-                                query.findObjectsInBackground(block: { (objectDos, errorDos) in
-                                    if errorDos == nil{
-                                        if let objectDosDes = objectDos{
-                                            for objectDataDos in objectDosDes{
-                                                let userData = objectsData as! PFUser
+                        if errorUsuarios == nil{
+                            for objectsData in objectsUsuarios!{
+                                //3. Consulta
+                                let userData = objectsData as! PFUser
+                                if userData.username != PFUser.current()?.username{
+                                    //self.usersFromParse.append("\(userData.username)")
+                                    let queryBusquedaFoto = PFQuery(className: "ImageProfile")
+                                    //queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
+                                    queryBusquedaFoto.findObjectsInBackground{ (objectsBusquedaFoto, errorFoto) in
+                                        if let objectsBusquedaFotoData = objectsBusquedaFoto{
+                                            for c_foto in objectsBusquedaFotoData{
+                                                
+                                                let userImageFile = c_foto["imageProfile"] as! PFFile
+                                                
                                                 let userModelData = UserModel(pNombre: userData["nombre"] as! String,
                                                                               pApellido: userData["apellido"] as! String,
                                                                               pUsername: userData.username!,
-                                                                              pImageProfile: objectDataDos["imageProfile"] as! PFFile)
+                                                                              pImageProfile: userImageFile)
                                                 
                                                 self.usersFromParse.append(userModelData)
                                                 
@@ -101,22 +105,22 @@ class ISUsuariosTableViewController: UITableViewController {
                                                     }
                                                 }
                                                 self.usersFollowing.append(isFollowing)
-                                                
+                                                self.tableView.reloadData()
                                             }
-                                            self.tableView.reloadData()
                                         }
                                     }
-                                })
+                                }
                             }
+                            self.tableView.reloadData()
                         }
-                        self.tableView.reloadData()
-                    })
+                    }
                 }
             }else{
                 print("Error: \(String(describing: errorFollowers?.localizedDescription))")
             }
         }
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -154,7 +158,7 @@ class ISUsuariosTableViewController: UITableViewController {
             }else{
                 print("Error AQUI")
             }
-            
+
         })
         
         if followingData{
