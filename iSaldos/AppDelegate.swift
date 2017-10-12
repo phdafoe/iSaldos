@@ -8,11 +8,18 @@
 
 import UIKit
 import Parse
+import UserNotifications
+
+var enlace = ""
+var abroWeb = false
+
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -27,10 +34,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.initialize(with: configuration)
         
         personalizaUI()
+        
+        //TODO: --//REGISTRO DE NOTIFICACIONES
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (exitoso, error) in
+            if exitoso{
+                UIApplication.shared.registerForRemoteNotifications()
+            }
+        }
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+        
+        
         return true
         
-        
     }
+    
+    
+    
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -72,6 +95,88 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBar.tintColor = CONSTANTES.COLORES.GRIS_NAV_TAB
         navBar.titleTextAttributes = [NSForegroundColorAttributeName : CONSTANTES.COLORES.BLANCO_TEXTO_NAV]
     }
+    
+    /*func application(_ application: UIApplication, didRegisterForRemoteNOtificationsWithDeviceToken deviceToken: Data) {
+        
+        let installation = PFInstallation.current()
+        //installation.setDeviceTokenFom(deviceToken)
+        //installation.saveInBackground()
+        //PFPush.subscribeToChannel(inBackground: “globalChannel”)
+    }*/
+    
+    //--------------------------------------
+    // MARK: Push Notifications  AQUI HA FALLADO EL REGISTRO
+    //--------------------------------------
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        if error._code == 3010 {
+            print("Push notifications are not supported in the iOS Simulator.\n")
+        } else {
+            print("application:didFailToRegisterForRemoteNotificationsWithError: %@\n", error)
+        }
+    }
+    
+    func application(_ application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+        let installation = PFInstallation.current()
+        installation?.setDeviceTokenFrom(deviceToken)
+        installation?.saveInBackground()
+    }
+    
+    func application(_ application: UIApplication,
+                     didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        getAlert(notificacion: userInfo as! [String : Any])
+        PFPush.handle(userInfo)
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Swift.Void){
+        
+        print(notification.request.content.categoryIdentifier)
+        completionHandler([.alert, .sound])
+        print("recibo notificacion dentro")
+    }
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Swift.Void){
+        
+        //UIApplication.shared.applicationIconBadgeNumber += 1
+        print("abro desde notificacion en response")
+        completionHandler()
+        getAlert(notificacion: response.notification.request.content.userInfo as! [String : AnyObject])
+    }
+    
+    
+    func notificationReceived(notification: [NSObject:AnyObject]) {
+        getAlert(notificacion: notification as! [String : Any])
+        
+    }
+    
+    func getAlert(notificacion: [String : Any]){
+        print("keys")
+        print(notificacion.keys)
+        let aps = notificacion["aps"]!
+        //enlace = (aps["enlace"]!)! as! String
+        enlace = ((aps as AnyObject) as? NSDictionary)?["enlace"] as! String
+        print("enlace: \(enlace)")
+        
+        
+        if tabBarRoot != nil{
+            tabBarRoot?.abroWebNotificacion()
+        }else{
+            abroWeb = true
+        }
+        
+    }
+    
+    
+    
 
 }
 

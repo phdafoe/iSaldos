@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+>>>>>>> origin/master
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -71,21 +75,33 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del Usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmj-TP-Fmd">
                                 <rect key="frame" x="3" y="1" width="297" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="DbS-Dh-HSl"/>
                                 </constraints>
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmj-TP-Fmd">
+                                <rect key="frame" x="3" y="2" width="301" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+>>>>>>> origin/master
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWI-rN-WtH">
                                 <rect key="frame" x="122" y="46" width="59" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="WUS-Dx-JRr"/>
                                     <constraint firstAttribute="width" constant="59" id="h02-qc-vcy"/>
                                 </constraints>
+=======
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWI-rN-WtH">
+                                <rect key="frame" x="108" y="49" width="92" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+>>>>>>> origin/master
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                 <state key="normal" title="USUARIOS">
                                     <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -106,6 +122,17 @@
                             <constraint firstItem="wQe-iD-2xC" firstAttribute="top" secondItem="Jmj-TP-Fmd" secondAttribute="bottom" constant="1" id="ibm-RG-KaK"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
+=======
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-Uy-N1B">
+                        <rect key="frame" x="285" y="105" width="31" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="31" id="45t-zd-aBj"/>
+                            <constraint firstAttribute="height" constant="31" id="Ngi-T6-CRY"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="iconoAjustesUsuario"/>
+                    </button>
+>>>>>>> origin/master
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="q7T-NS-zlP" secondAttribute="trailing" id="4hP-pM-U9V"/>
@@ -115,8 +142,10 @@
                     <constraint firstItem="Wkn-I2-nBp" firstAttribute="top" secondItem="Gqv-id-9wO" secondAttribute="bottom" constant="1" id="Xnp-0F-gcu"/>
                     <constraint firstItem="Gqv-id-9wO" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="ZGe-Sh-2qz"/>
                     <constraint firstItem="UbA-93-gio" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="caF-eD-VgV"/>
+                    <constraint firstAttribute="trailing" secondItem="bL5-Uy-N1B" secondAttribute="trailing" constant="4" id="ccL-Jv-EhB"/>
                     <constraint firstItem="UbA-93-gio" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="e6W-OO-txd"/>
                     <constraint firstItem="Wkn-I2-nBp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lky-lR-Vj7"/>
+                    <constraint firstItem="Wkn-I2-nBp" firstAttribute="top" secondItem="bL5-Uy-N1B" secondAttribute="bottom" constant="71" id="oIL-Jc-Vyl"/>
                     <constraint firstAttribute="trailing" secondItem="UbA-93-gio" secondAttribute="trailing" id="vaT-lH-TYs"/>
                     <constraint firstItem="bL5-Uy-N1B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="125" id="vrh-Ib-Guk"/>
                     <constraint firstAttribute="bottom" secondItem="Wkn-I2-nBp" secondAttribute="bottom" constant="-0.5" id="xaw-XI-TTl"/>

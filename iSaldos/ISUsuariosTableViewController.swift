@@ -37,11 +37,22 @@ class ISUsuariosTableViewController: UITableViewController {
     //MARK: - Utils
     func dameInformacionPerfil(){
         let queryUsuariosFromParse = PFUser.query()
+<<<<<<< HEAD
         queryUsuariosFromParse?.findObjectsInBackground{ (objectsUsuarios, errorUsuarios) in
             self.usersFromParse.removeAll()
                 if errorUsuarios == nil{
                     for objectsData in objectsUsuarios!{
                         let query = PFQuery(className: "ImageProfile")
+=======
+        queryUsuariosFromParse?.whereKey("username", notEqualTo: (PFUser.current()?.username)!)
+        queryUsuariosFromParse?.findObjectsInBackground(block: { (objectsUsuarios, errorUno) in
+            if errorUno == nil{
+                self.usersFromParse.removeAll()
+                if let objectsUsuariosDes = objectsUsuarios{
+                    for objectsData in objectsUsuariosDes{
+                        let query = PFQuery(className: "ImageProfile")
+                        query.whereKey("username", equalTo: (PFUser.current()?.username)!)
+>>>>>>> origin/master
                         query.findObjectsInBackground(block: { (objectDos, errorDos) in
                             if errorDos == nil{
                                 if let objectDosDes = objectDos{
@@ -51,7 +62,10 @@ class ISUsuariosTableViewController: UITableViewController {
                                                                       pApellido: userData["apellido"] as! String,
                                                                       pUsername: userData.username!,
                                                                       pImageProfile: objectDataDos["imageProfile"] as! PFFile)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
                                         self.usersFromParse.append(userModelData)
                                     }
                                     self.tableView.reloadData()
@@ -61,19 +75,28 @@ class ISUsuariosTableViewController: UITableViewController {
                     }
                     self.tableView.reloadData()
                 }
+<<<<<<< HEAD
             }
+=======
+                
+                
+            }
+            
+        })
+>>>>>>> origin/master
     }
     
     
     func actualizarDatosUsuariosSeguidos(){
         //1. Consulta a Followers
         let queryFollowers = PFQuery(className: "Followers")
-        queryFollowers.whereKey("follower", equalTo: (PFUser.current()?.username)!)
+        //queryFollowers.whereKey("follower", equalTo: (PFUser.current()?.username)!)
         queryFollowers.findObjectsInBackground { (objectFollowers, errorFollowers) in
             if errorFollowers == nil{
                 if let followingPersonas = objectFollowers{
                     //2. consulta de PFQuery
                     let queryUsuariosFromParse = PFUser.query()
+<<<<<<< HEAD
                     queryUsuariosFromParse?.findObjectsInBackground{ (objectsUsuarios, errorUsuarios) in
                         self.usersFromParse.removeAll()
                         self.usersFollowing.removeAll()
@@ -102,10 +125,41 @@ class ISUsuariosTableViewController: UITableViewController {
                                                 for followingPersonaje in followingPersonas{
                                                     if followingPersonaje["following"] as? String == userData.username{
                                                         isFollowing = true
+=======
+                    queryUsuariosFromParse?.whereKey("username", notEqualTo: (PFUser.current()?.username)!)
+                    queryUsuariosFromParse?.findObjectsInBackground(block: { (objectsUsuarios, errorUsuarios) in
+                        self.usersFromParse.removeAll()
+                        self.usersFollowing.removeAll()
+                        for objectsData in objectsUsuarios!{
+                            let userData = objectsData as! PFUser
+                            if userData.username != PFUser.current()?.username{
+                                //3. consulta de PFQuery
+                                let query = PFQuery(className: "ImageProfile")
+                                //query.whereKey("username", equalTo: (PFUser.current()?.username)!)
+                                query.findObjectsInBackground(block: { (objectDos, errorDos) in
+                                    if errorDos == nil{
+                                        if let objectDosDes = objectDos{
+                                            for objectDataDos in objectDosDes{
+                                                if objectDataDos["username"] as? String == userData.username{
+                                                    let userModelData = UserModel(pNombre: userData["nombre"] as! String,
+                                                                                  pApellido: userData["apellido"] as! String,
+                                                                                  pUsername: userData.username!,
+                                                                                  pImageProfile: objectDataDos["imageProfile"] as! PFFile)
+                                                    self.usersFromParse.append(userModelData)
+                                                    var isFollowing = false
+                                                    for followingPersonaje in followingPersonas{
+                                                        if followingPersonaje["following"] as? String == userData.username{
+                                                            isFollowing = true
+                                                        }
+>>>>>>> origin/master
                                                     }
+                                                    self.usersFollowing.append(isFollowing)
                                                 }
+<<<<<<< HEAD
                                                 self.usersFollowing.append(isFollowing)
                                                 self.tableView.reloadData()
+=======
+>>>>>>> origin/master
                                             }
                                         }
                                     }
