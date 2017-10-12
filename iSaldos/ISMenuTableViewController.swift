@@ -44,11 +44,8 @@ class ISMenuTableViewController: UITableViewController {
                 break
             }
         }
-        
-        
-        
-        
     }
+    
     
     //MARK: - UTILS
     func logout(){
@@ -59,6 +56,8 @@ class ISMenuTableViewController: UITableViewController {
     }
     
     
+    
+    ///MARK: - Envio de mensaje email
     func sendMessage(){
         let mailComposeViewControler = configuredMailComposeViewController()
         mailComposeViewControler.mailComposeDelegate = self
@@ -81,44 +80,35 @@ class ISMenuTableViewController: UITableViewController {
         let queryData = PFUser.query()
         queryData?.whereKey("username", equalTo: (PFUser.current()?.username)!)
         queryData?.findObjectsInBackground(block: { (objectsBusqueda, errorBusqueda) in
-            
             if errorBusqueda == nil{
-                if let objectData = objectsBusqueda{
-                    for objectDataBusqueda in objectData{
-        
-                        //2. segunda consulta
-                        let queryBusquedaFoto = PFQuery(className: "ImageProfile")
-                        queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
-                        queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
-                            if errorFoto == nil{
-                                if let objectsBusquedaFotoData = objectsBusquedaFoto{
-                                    
-                                    for objectsBusquedaFotoBucle in objectsBusquedaFotoData{
-                                        
-                                        let userImageFile = objectsBusquedaFotoBucle["imageProfile"] as! PFFile
-                                        
-                                        //3. tercera consulta
-                                        userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
-                                            if errorImageData == nil{
-                                                if let imageDataDesempaquetado = imageData{
-                                                    let imagenFinal = UIImage(data: imageDataDesempaquetado)
-                                                    self.myImagenPerfil.image = imagenFinal
-                                                }
-                                            }else{
-                                                print("Hola chicos no tenemos imagen :(")
-                                            }
-                                        })
+                if let objectData = objectsBusqueda?.first{
+                    //2. segunda consulta
+                    let queryBusquedaFoto = PFQuery(className: "ImageProfile")
+                    queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
+                    queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
+                        if errorFoto == nil{
+                            if let objectsBusquedaFotoData = objectsBusquedaFoto?.first{
+                                let userImageFile = objectsBusquedaFotoData["imageProfile"] as! PFFile
+                                //3. tercera consulta
+                                userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
+                                    if errorImageData == nil{
+                                        if let imageDataDesempaquetado = imageData{
+                                            let imagenFinal = UIImage(data: imageDataDesempaquetado)
+                                            self.myImagenPerfil.image = imagenFinal
+                                            self.tableView.reloadData()
+                                        }
+                                    }else{
+                                        print("Hola chicos no tenemos imagen :(")
                                     }
-                                }
-                            }else{
-                                print("Error: \(errorFoto!.localizedDescription) ")
+                                })
                             }
-                        })
-                        self.myNombrePerfil.text = objectDataBusqueda["nombre"] as? String
-                        self.myApellidoPerfil.text = objectDataBusqueda["apellido"] as? String
-                        self.myEmailPerfil.text = objectDataBusqueda["email"] as? String
-                        
-                    }
+                        }else{
+                            print("Error: \(errorFoto!.localizedDescription) ")
+                        }
+                    })
+                    self.myNombrePerfil.text = objectData["nombre"] as? String
+                    self.myApellidoPerfil.text = objectData["apellido"] as? String
+                    self.myEmailPerfil.text = objectData["email"] as? String
                 }
             }else{
                 self.present(muestraAlertVC("Atención",
@@ -136,6 +126,7 @@ class ISMenuTableViewController: UITableViewController {
 
 //MARK: - DELEGADOS
 extension ISMenuTableViewController : MFMailComposeViewControllerDelegate{
+    
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
     }

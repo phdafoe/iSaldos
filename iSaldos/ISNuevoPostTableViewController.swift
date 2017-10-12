@@ -117,16 +117,17 @@ class ISNuevoPostTableViewController: UITableViewController {
                 UIApplication.shared.endIgnoringInteractionEvents()
                 
                 if subidaExitosaFoto{
-                    self.present(muestraAlertVC("Estimado usuario",
-                                           messageData: "se ha logrado subir exitosamente la foto"),
-                            animated: true,
-                            completion: nil)
+//                    self.present(muestraAlertVC("Estimado usuario",
+//                                           messageData: "se ha logrado subir exitosamente la foto"),
+//                            animated: true,
+//                            completion: nil)
+                    self.dismiss(animated: true, completion: nil)
                 }else{
                     
-                    self.present(muestraAlertVC("Estimado usuario",
-                                           messageData: "NO se ha logrado subir exitosamente la foto"),
-                            animated: true,
-                            completion: nil)
+//                    self.present(muestraAlertVC("Estimado usuario",
+//                                           messageData: "NO se ha logrado subir exitosamente la foto"),
+//                            animated: true,
+//                            completion: nil)
                 }
                 self.fotoSeleccionada = false
                 self.myDescripcionFotoTip.text = ""

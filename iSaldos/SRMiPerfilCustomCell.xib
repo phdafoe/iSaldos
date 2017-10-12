@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Thin</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -15,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="305"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="304.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="personas_jugando" translatesAutoresizingMaskIntoConstraints="NO" id="UbA-93-gio">
@@ -30,6 +34,14 @@
                             <constraint firstAttribute="height" constant="178" id="G07-qj-gl1"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-Uy-N1B">
+                        <rect key="frame" x="265" y="125" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="OfI-IK-fgW"/>
+                            <constraint firstAttribute="height" constant="45" id="brC-g7-Mgf"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="iconoAjustesUsuario"/>
+                    </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gqv-id-9wO">
                         <rect key="frame" x="120" y="125" width="80" height="81"/>
                         <subviews>
@@ -50,39 +62,30 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wkn-I2-nBp">
                         <rect key="frame" x="9" y="207" width="303" height="98"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@usernamemuylargoymaslargoaunymaslar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQe-iD-2xC">
-                                <rect key="frame" x="3" y="26" width="301" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@usernamemuylargoymaslargoaunymaslar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQe-iD-2xC">
+                                <rect key="frame" x="3" y="26" width="297" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CQj-2N-zgq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdN-i6-5rM">
-                                <rect key="frame" x="212" y="49" width="83" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
-                                <state key="normal" title="SEGUIDOS">
-                                    <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMx-Bm-gEF">
-                                <rect key="frame" x="106" y="49" width="92" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
-                                <state key="normal" title="SEGUIDORES">
-                                    <color key="titleColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmj-TP-Fmd">
-                                <rect key="frame" x="3" y="2" width="301" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del Usuario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmj-TP-Fmd">
+                                <rect key="frame" x="3" y="1" width="297" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="DbS-Dh-HSl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWI-rN-WtH">
-                                <rect key="frame" x="8" y="49" width="92" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWI-rN-WtH">
+                                <rect key="frame" x="122" y="46" width="59" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="WUS-Dx-JRr"/>
+                                    <constraint firstAttribute="width" constant="59" id="h02-qc-vcy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
                                 <state key="normal" title="USUARIOS">
                                     <color key="titleColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -90,18 +93,23 @@
                             </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="Jmj-TP-Fmd" firstAttribute="top" secondItem="Wkn-I2-nBp" secondAttribute="top" constant="1" id="2Dp-PJ-5pI"/>
+                            <constraint firstItem="dWI-rN-WtH" firstAttribute="centerX" secondItem="Wkn-I2-nBp" secondAttribute="centerX" id="6vp-z2-3Fs"/>
                             <constraint firstAttribute="height" constant="98" id="7fi-dh-LVt"/>
+                            <constraint firstAttribute="trailing" secondItem="wQe-iD-2xC" secondAttribute="trailing" constant="3" id="CTN-yK-gEX"/>
+                            <constraint firstItem="Jmj-TP-Fmd" firstAttribute="leading" secondItem="Wkn-I2-nBp" secondAttribute="leading" constant="3" id="DBc-zG-eFk"/>
                             <constraint firstAttribute="width" constant="303" id="Dht-Uv-Ca5"/>
+                            <constraint firstItem="dWI-rN-WtH" firstAttribute="centerY" secondItem="Wkn-I2-nBp" secondAttribute="centerY" constant="20" id="Fel-gg-LzW"/>
+                            <constraint firstItem="dWI-rN-WtH" firstAttribute="top" secondItem="Jmj-TP-Fmd" secondAttribute="bottom" constant="21" id="Qfs-ai-EJ6"/>
+                            <constraint firstAttribute="trailing" secondItem="Jmj-TP-Fmd" secondAttribute="trailing" constant="3" id="eRB-pC-D2v"/>
+                            <constraint firstItem="wQe-iD-2xC" firstAttribute="leading" secondItem="Wkn-I2-nBp" secondAttribute="leading" constant="3" id="gYo-dW-GCe"/>
+                            <constraint firstItem="wQe-iD-2xC" firstAttribute="top" secondItem="Jmj-TP-Fmd" secondAttribute="bottom" constant="1" id="ibm-RG-KaK"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL5-Uy-N1B">
-                        <rect key="frame" x="285" y="105" width="31" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" backgroundImage="iconoAjustesUsuario"/>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="q7T-NS-zlP" secondAttribute="trailing" id="4hP-pM-U9V"/>
+                    <constraint firstAttribute="trailing" secondItem="bL5-Uy-N1B" secondAttribute="trailing" constant="10" id="5bF-Lk-TLS"/>
                     <constraint firstItem="q7T-NS-zlP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="LQm-b3-lN0"/>
                     <constraint firstItem="q7T-NS-zlP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="OWE-my-eRG"/>
                     <constraint firstItem="Wkn-I2-nBp" firstAttribute="top" secondItem="Gqv-id-9wO" secondAttribute="bottom" constant="1" id="Xnp-0F-gcu"/>
@@ -110,6 +118,7 @@
                     <constraint firstItem="UbA-93-gio" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="e6W-OO-txd"/>
                     <constraint firstItem="Wkn-I2-nBp" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="lky-lR-Vj7"/>
                     <constraint firstAttribute="trailing" secondItem="UbA-93-gio" secondAttribute="trailing" id="vaT-lH-TYs"/>
+                    <constraint firstItem="bL5-Uy-N1B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="125" id="vrh-Ib-Guk"/>
                     <constraint firstAttribute="bottom" secondItem="Wkn-I2-nBp" secondAttribute="bottom" constant="-0.5" id="xaw-XI-TTl"/>
                 </constraints>
             </tableViewCellContentView>
@@ -117,8 +126,6 @@
                 <outlet property="degradadoFondo" destination="q7T-NS-zlP" id="UKg-MM-8OK"/>
                 <outlet property="degradadoFoto" destination="mmS-z0-9Hq" id="Svb-X5-DeR"/>
                 <outlet property="myBotonAjustesPerfilUsuario" destination="bL5-Uy-N1B" id="p7M-UX-I5a"/>
-                <outlet property="myBotonSeguidores" destination="XMx-Bm-gEF" id="3hO-Zp-tBu"/>
-                <outlet property="myBotonSeguidos" destination="WdN-i6-5rM" id="RcI-E5-oUE"/>
                 <outlet property="myFondoDegradadoFotoPerfil" destination="mmS-z0-9Hq" id="NXG-Pn-tsk"/>
                 <outlet property="myFotoFondoPerfil" destination="UbA-93-gio" id="j4s-yV-UXd"/>
                 <outlet property="myFotoPerfilUsuario" destination="Mu4-aX-w0f" id="2wv-VZ-cUq"/>

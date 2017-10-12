@@ -9,6 +9,7 @@
 import UIKit
 import Parse
 import Kingfisher
+import APESuperHUD
 
 class ISCanalSocialViewController: UIViewController {
     
@@ -35,7 +36,7 @@ class ISCanalSocialViewController: UIViewController {
         
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self,
-                                 action: #selector(otraVez),
+                                 action: #selector(getDataPostFromParse),
                                  for: .valueChanged)
         myTableView.addSubview(refreshControl)
         
@@ -55,7 +56,7 @@ class ISCanalSocialViewController: UIViewController {
         super.viewWillAppear(animated)
         myTableView.reloadData()
         informacionUsuario()
-        otraVez()
+        getDataPostFromParse()
         
     }
     
@@ -143,10 +144,13 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
         case 0:
             size = 305
         default:
-            //size = Int(UITableViewAutomaticDimension)
-            size = 454
+            return UITableViewAutomaticDimension
         }
         return CGFloat(size)
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     
@@ -198,8 +202,11 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
     
     
     
-    func otraVez(){
+    func getDataPostFromParse(){
         let queryPost = PFQuery(className: "PostImageNetwork")
+        queryPost.order(byDescending: "createdAt")
+        queryPost.whereKey("username", equalTo: (PFUser.current()?.username)!)
+        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
         queryPost.findObjectsInBackground(block: { (objcDos, errorDos) in
             if errorDos == nil{
                 
@@ -208,6 +215,7 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                     self.userPost.removeAll()
                     
                     for c_objDataPost in objcDosDes{
+                        
                         let postFinal = UserPotImage(pNombre: c_objDataPost["nombre"] as! String,
                                                      pApellido: c_objDataPost["apellido"] as! String,
                                                      pUsername: c_objDataPost["username"] as! String,
@@ -218,7 +226,10 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                         
                         self.userPost.append(postFinal)
                     }
-                    self.myTableView.reloadData()
+                    
+                    APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: { _ in
+                        self.myTableView.reloadData()
+                    })
                     self.refreshControl.endRefreshing()
                 }
             }

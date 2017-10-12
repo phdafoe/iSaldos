@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class ISConfiguracionPerfilViewController: UIViewController {
+class ISConfiguracionPerfilViewController: UITableViewController {
     
     //MARK: - Variables locales
     var photoSelected = false
@@ -64,43 +64,35 @@ class ISConfiguracionPerfilViewController: UIViewController {
         queryData?.whereKey("username", equalTo: (PFUser.current()?.username)!)
         queryData?.findObjectsInBackground(block: { (objectsBusqueda, errorBusqueda) in
             if errorBusqueda == nil{
-                if let objectData = objectsBusqueda{
-                    for objectDataBusqueda in objectData{
-                        
-                        //2. segunda consulta
-                        let queryBusquedaFoto = PFQuery(className: "ImageProfile")
-                        queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
-                        queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
-                            if errorFoto == nil{
-                                if let objectsBusquedaFotoData = objectsBusquedaFoto{
-                                    for objectsBusquedaFotoBucle in objectsBusquedaFotoData{
-                                        let userImageFile = objectsBusquedaFotoBucle["imageFile"] as! PFFile
-                                        
-                                        //3. tercera consulta
-                                        userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
-                                            if errorImageData == nil{
-                                                if let imageDataDesempaquetado = imageData{
-                                                    let imagenFinal = UIImage(data: imageDataDesempaquetado)
-                                                    self.myImagenPerfil.image = imagenFinal
-                                                }
-                                            }else{
-                                                print("Hola chicos no tenemos imagen :(")
-                                            }
-                                        })
+                if let objectData = objectsBusqueda?.first{
+                    //2. segunda consulta
+                    let queryBusquedaFoto = PFQuery(className: "ImageProfile")
+                    queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
+                    queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
+                        if errorFoto == nil{
+                            if let objectsBusquedaFotoData = objectsBusquedaFoto?.first{
+                                let userImageFile = objectsBusquedaFotoData["imageProfile"] as! PFFile
+                                userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
+                                    if errorImageData == nil{
+                                        if let imageDataDesempaquetado = imageData{
+                                            let imagenFinal = UIImage(data: imageDataDesempaquetado)
+                                            self.myImagenPerfil.image = imagenFinal
+                                        }
+                                    }else{
+                                        print("Hola chicos no tenemos imagen :(")
                                     }
-                                }
-                            }else{
-                                print("Error: \(errorFoto!) ")
+                                })
                             }
-                        })
-                        self.myNombreTF.text = objectDataBusqueda["nombre"] as? String
-                        self.myApellidoTF.text = objectDataBusqueda["apellido"] as? String
-                        self.myUsernameTF.text = PFUser.current()?.username
-                        self.myPasswordTF.text = PFUser.current()?.password
-                        self.myEmailTF.text = PFUser.current()?.email
-                        self.myMovilTF.text = objectDataBusqueda["movil"] as? String
-                        
-                    }
+                        }else{
+                            print("Error: \(errorFoto!) ")
+                        }
+                    })
+                    self.myNombreTF.text = objectData["nombre"] as? String
+                    self.myApellidoTF.text = objectData["apellido"] as? String
+                    self.myUsernameTF.text = PFUser.current()?.username
+                    self.myPasswordTF.text = PFUser.current()?.password
+                    self.myEmailTF.text = PFUser.current()?.email
+                    self.myMovilTF.text = objectData["movil"] as? String
                 }
             }else{
                 self.present(muestraAlertVC("Hola",
@@ -154,7 +146,7 @@ class ISConfiguracionPerfilViewController: UIViewController {
         let postImage = PFObject(className: "ImageProfile")
         let imageData = UIImageJPEGRepresentation(self.myImagenPerfil.image!, 0.4)
         let imageFile = PFFile(name: "imagePerfilUsuario.jpg", data: imageData!)
-        postImage["imageFile"] = imageFile
+        postImage["imageProfile"] = imageFile
         postImage["username"] = PFUser.current()?.username
         postImage.saveInBackground { (success, error) in
             if success{

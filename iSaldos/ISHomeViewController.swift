@@ -30,7 +30,7 @@ class ISHomeViewController: UIViewController {
         }
         
         
-        items = ["Muro", "Canal"]
+        items = ["Mi Canal", "Mi Muro"]
         customTabSwipeNavigation = CarbonTabSwipeNavigation(items: (items as! [Any]), delegate: self)
         customTabSwipeNavigation.insert(intoRootViewController: self)
         style()
@@ -44,7 +44,7 @@ class ISHomeViewController: UIViewController {
         super.viewWillAppear(animated)
         botonFlotante.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: 64.0, height: 64.0))
         botonFlotante.setImage(UIImage(named: "boton_Menu_MiPerfil"), for: UIControlState())
-        botonFlotante.center = CGPoint(x: self.view.bounds.width - 42.0, y: self.view.bounds.height - 100.0)
+        botonFlotante.center = CGPoint(x: self.view.bounds.width - 42.0, y: self.view.bounds.height - 150.0)
         botonFlotante.addTarget(self, action: #selector(self.showVCNuevoComentario), for: .touchUpInside)
         self.view.addSubview(botonFlotante)
     }
@@ -77,9 +77,9 @@ extension ISHomeViewController : CarbonTabSwipeNavigationDelegate{
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
         switch index {
         case 0:
-            return self.storyboard?.instantiateViewController(withIdentifier: "MuroSocialViewController") as! ISMuroSocialViewController
-        default:
             return self.storyboard?.instantiateViewController(withIdentifier: "CanalSocialViewController") as! ISCanalSocialViewController
+        default:
+            return self.storyboard?.instantiateViewController(withIdentifier: "MuroSocialViewController") as! ISMuroSocialViewController
         }
     }
     
