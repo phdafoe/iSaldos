@@ -13,6 +13,7 @@ class ISConfiguracionPerfilViewController: UITableViewController {
     
     //MARK: - Variables locales
     var photoSelected = false
+    var objectIdFoto : String?
     
     //MARK: - IBOutlets
     @IBOutlet weak var myImagenPerfil: UIImageView!
@@ -72,6 +73,7 @@ class ISConfiguracionPerfilViewController: UITableViewController {
                         if errorFoto == nil{
                             if let objectsBusquedaFotoData = objectsBusquedaFoto?.first{
                                 let userImageFile = objectsBusquedaFotoData["imageProfile"] as! PFFile
+                                self.objectIdFoto = objectsBusquedaFotoData.objectId
                                 userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
                                     if errorImageData == nil{
                                         if let imageDataDesempaquetado = imageData{
@@ -84,7 +86,7 @@ class ISConfiguracionPerfilViewController: UITableViewController {
                                 })
                             }
                         }else{
-                            print("Error: \(errorFoto!) ")
+                            print("Error: \(errorFoto!.localizedDescription) ")
                         }
                     })
                     self.myNombreTF.text = objectData["nombre"] as? String
@@ -122,10 +124,10 @@ class ISConfiguracionPerfilViewController: UITableViewController {
                 UIApplication.shared.endIgnoringInteractionEvents()
                 if exitoActualizacion{
                     print("se han actualizado correctamente los datos")
-                    self.updateFoto()
+                    self.updatePhoto()
                 }else{
                     self.present(muestraAlertVC("Hola",
-                                                messageData: "\(String(describing: errorActualizacion?.localizedDescription))"),
+                                                messageData: "\(String(describing: errorActualizacion!.localizedDescription))"),
                                  animated: true,
                                  completion: nil)
                 }
@@ -139,25 +141,25 @@ class ISConfiguracionPerfilViewController: UITableViewController {
     }
     
     
-    
-    //MARK: - SUBIR FOTO A PARSE CON EL REGISTRO
-    func updateFoto(){
-        //instancia de la imagen a subir
-        let postImage = PFObject(className: "ImageProfile")
-        let imageData = UIImageJPEGRepresentation(self.myImagenPerfil.image!, 0.4)
-        let imageFile = PFFile(name: "imagePerfilUsuario.jpg", data: imageData!)
-        postImage["imageProfile"] = imageFile
-        postImage["username"] = PFUser.current()?.username
-        postImage.saveInBackground { (success, error) in
-            if success{
-                print("DATOS SALVADOS SATISFACTORIAMENTE")
-                self.dismiss(animated: true,
-                        completion: nil)
-            }else{
-                print("Error en el registro")
+    func updatePhoto(){
+        let imageProfile = PFObject(className: "ImageProfile")
+        imageProfile.objectId = objectIdFoto
+        let imageDataprofile = UIImageJPEGRepresentation(myImagenPerfil.image!, 0.5)
+        let imageProfileFile = PFFile(name: "ImageProfile.jpg", data: imageDataprofile!)
+        imageProfile["imageProfile"] = imageProfileFile
+        imageProfile["username"] = PFUser.current()?.username
+        imageProfile.saveInBackground{ (exitoso, error) in
+            if error == nil{
+                self.dismiss(animated: true, completion: nil)
+                self.photoSelected = false
+                self.myUsernameTF.text = ""
+                self.myPasswordTF.text = ""
+                self.myNombreTF.text = ""
+                self.myApellidoTF.text = ""
+                self.myEmailTF.text = ""
+                self.myMovilTF.text = ""
+                self.myImagenPerfil.image = #imageLiteral(resourceName: "placeholderPerson")
             }
-            self.photoSelected = false
-            self.myImagenPerfil.image = UIImage(named:"placeholder")
         }
     }
     
