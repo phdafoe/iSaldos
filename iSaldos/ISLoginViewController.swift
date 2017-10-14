@@ -33,8 +33,6 @@ class ISLoginViewController: UIViewController {
         do{
             try sigIn.signInUser()
             self.performSegue(withIdentifier: "jumpToViewContollerFromLogin", sender: self)
-            myUsernameTF.text = ""
-            myPasswordTF.text = ""
         }catch let error{
             present(muestraAlertVC("Lo sentimos",
                                    messageData: "\(error.localizedDescription)"),
@@ -54,21 +52,29 @@ class ISLoginViewController: UIViewController {
         
         showVideo()
         
+        
         myActiINd.isHidden = true
         
         myAccederBTN.layer.cornerRadius = 5
         myRegistrarseBTN.layer.cornerRadius = 5
+        
+        
 
+        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if PFUser.current() != nil{
-            self.performSegue(withIdentifier: "jumpToViewContollerFromLogin", sender: self)
+            //OJO EL TIPO DE SEGUE TIENE QUE SER MODAL Y NO PUSH GENERA UN PROBLEMA DE SOPORTE
+            self.performSegue(withIdentifier: "jumpToViewContoller", sender: self)
         }
     }
 
-   
+    //TODO: - LOGOUT
+    @IBAction func heHechoLogout(segue: UIStoryboardSegue){
+        print("cierre de sesion exitoso")
+    }
     
     //TODO: - SHOWVIDEO
     func showVideo(){
@@ -94,13 +100,5 @@ class ISLoginViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    /*@IBAction func heHechoLogout(_ segue : UIStoryboardSegue){
-        print("ANDRES" )
-    }*/
-    
-    
-    
-    
 
 }

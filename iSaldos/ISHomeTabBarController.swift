@@ -8,15 +8,10 @@
 
 import UIKit
 
-var tabBarRoot : ISHomeTabBarController?
-
 class ISHomeTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tabBarRoot = self
-        print("abro web : \(abroWeb)")
 
         // Do any additional setup after loading the view.
     }
@@ -27,15 +22,14 @@ class ISHomeTabBarController: UITabBarController {
     }
     
 
-    func abroWebNotificacion(){
-        if enlace != ""{
-            let webDetallePublicidad = self.storyboard?.instantiateViewController(withIdentifier: "ISWebViewController") as! ISWebViewController
-            //let navController = UINavigationController(rootViewController: webDetallePublicidad)
-            webDetallePublicidad.detalleWebPublicidad = enlace
-            webDetallePublicidad.detalleTitulo = "ISALDOS"
-            self.present(webDetallePublicidad, animated: true, completion: nil)
-        }
-        
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
+    */
 
 }

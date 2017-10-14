@@ -77,7 +77,6 @@
 		B45B0E2C1EB8EC010038D174 /* UserPotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */; };
 		B45B0E2F1EB8EDDC0038D174 /* ISNoPostCusotmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E2D1EB8EDDC0038D174 /* ISNoPostCusotmCell.swift */; };
 		B45B0E301EB8EDDC0038D174 /* ISNoPostCusotmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E2E1EB8EDDC0038D174 /* ISNoPostCusotmCell.xib */; };
-		B4E64DEB1EE4838B00A726F4 /* ISWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E64DEA1EE4838B00A726F4 /* ISWebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,8 +161,6 @@
 		B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPotImage.swift; sourceTree = "<group>"; };
 		B45B0E2D1EB8EDDC0038D174 /* ISNoPostCusotmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISNoPostCusotmCell.swift; sourceTree = "<group>"; };
 		B45B0E2E1EB8EDDC0038D174 /* ISNoPostCusotmCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISNoPostCusotmCell.xib; sourceTree = "<group>"; };
-		B4E64DE91EE47C1C00A726F4 /* iSaldos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iSaldos.entitlements; sourceTree = "<group>"; };
-		B4E64DEA1EE4838B00A726F4 /* ISWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISWebViewController.swift; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -211,7 +208,6 @@
 		412741B31E9F93B20074CDD7 /* iSaldos */ = {
 			isa = PBXGroup;
 			children = (
-				B4E64DE91EE47C1C00A726F4 /* iSaldos.entitlements */,
 				412741D51E9F98230074CDD7 /* OBJC */,
 				412741D41E9F953E0074CDD7 /* TUTORIAL_INTRO */,
 				412741B41E9F93B20074CDD7 /* AppDelegate.swift */,
@@ -285,7 +281,6 @@
 				412741F01E9FC0D70074CDD7 /* ISMenuTableViewController.swift */,
 				412742481E9FF68C0074CDD7 /* ISHomeTabBarController.swift */,
 				412742291E9FC5630074CDD7 /* ISTerminosViewController.swift */,
-				B4E64DEA1EE4838B00A726F4 /* ISWebViewController.swift */,
 				412742141E9FC4380074CDD7 /* SOCIAL */,
 				412741FF1E9FC1680074CDD7 /* OFERTAS */,
 				412742061E9FC19D0074CDD7 /* CUPONES */,
@@ -476,16 +471,7 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 2C7W4RF846;
 						LastSwiftMigration = 0830;
-<<<<<<< HEAD
 						ProvisioningStyle = Automatic;
-=======
-						ProvisioningStyle = Manual;
-						SystemCapabilities = {
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
->>>>>>> origin/master
 					};
 				};
 			};
@@ -649,7 +635,6 @@
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
 				412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */,
-				B4E64DEB1EE4838B00A726F4 /* ISWebViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 				B45B0E2F1EB8EDDC0038D174 /* ISNoPostCusotmCell.swift in Sources */,
 				415101831EB8B665003B016D /* UserModel.swift in Sources */,
@@ -790,20 +775,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-<<<<<<< HEAD
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-=======
-				CODE_SIGN_ENTITLEMENTS = iSaldos/iSaldos.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
->>>>>>> origin/master
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.iSaldos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iSaldos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6d8d1552-cbdf-4d65-abf7-536abf647972";
-				PROVISIONING_PROFILE_SPECIFIER = SALDOSDEV;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -816,87 +795,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-<<<<<<< HEAD
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-=======
-				CODE_SIGN_ENTITLEMENTS = iSaldos/iSaldos.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
->>>>>>> origin/master
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.iSaldos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iSaldos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6d8d1552-cbdf-4d65-abf7-536abf647972";
-				PROVISIONING_PROFILE_SPECIFIER = SALDOSDEV;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
-		};
-		B4E64DE71EE47BB200A726F4 /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Distribution;
-		};
-		B4E64DE81EE47BB200A726F4 /* Distribution */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = iSaldos/iSaldos.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = 2C7W4RF846;
-				INFOPLIST_FILE = iSaldos/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.iSaldos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c4671c94-9ada-4a95-a083-47eb87dbb2eb";
-				PROVISIONING_PROFILE_SPECIFIER = SALDOSPRO;
-				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Distribution;
 		};
 /* End XCBuildConfiguration section */
 
@@ -906,7 +816,6 @@
 			buildConfigurations = (
 				412741C11E9F93B20074CDD7 /* Debug */,
 				412741C21E9F93B20074CDD7 /* Release */,
-				B4E64DE71EE47BB200A726F4 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -916,7 +825,6 @@
 			buildConfigurations = (
 				412741C41E9F93B20074CDD7 /* Debug */,
 				412741C51E9F93B20074CDD7 /* Release */,
-				B4E64DE81EE47BB200A726F4 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

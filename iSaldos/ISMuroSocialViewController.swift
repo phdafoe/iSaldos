@@ -7,14 +7,10 @@
 //
 
 import UIKit
-import Parse
-import Kingfisher
 
 class ISMuroSocialViewController: UIViewController {
     
-    
-    var refreshControl: UIRefreshControl!
-    var userPost = [UserPotImage]()
+    var usersFromParse = [UserModel]()
     var usersFollowing = [Bool]()
     
     
@@ -25,16 +21,11 @@ class ISMuroSocialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self,
-                                 action: #selector(otraVez),
-                                 for: .valueChanged)
-        myTableView.addSubview(refreshControl)
-        
         myTableView.delegate = self
         myTableView.dataSource = self
         
-       
+        myTableView.estimatedRowHeight = 60
+        myTableView.rowHeight = UITableViewAutomaticDimension
         
         myTableView.register(UINib(nibName: "ISNoPostCusotmCell", bundle: nil), forCellReuseIdentifier: "ISNoPostCusotmCell")
         myTableView.register(UINib(nibName: "ISPostCustomCell", bundle: nil), forCellReuseIdentifier: "ISPostCustomCell")
@@ -45,14 +36,6 @@ class ISMuroSocialViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        otraVez()
-        myTableView.reloadData()
-        self.refreshControl.endRefreshing()
     }
     
 }
@@ -67,107 +50,41 @@ extension ISMuroSocialViewController : UITableViewDelegate, UITableViewDataSourc
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if userPost.count == 0{
-            let imageBackgroundList = UIImageView(image: #imageLiteral(resourceName: "placeholder"))
-            imageBackgroundList.contentMode = .scaleAspectFit
-            myTableView.backgroundView = imageBackgroundList
+        if usersFromParse.count == 0{
+            return 1
         }else{
-            myTableView.backgroundView = UIView()
+            return 30
         }
-        return userPost.count
         
         
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        
-            let customPostCell = myTableView.dequeueReusableCell(withIdentifier: "ISPostCustomCell", for: indexPath) as! ISPostCustomCell
+        switch indexPath.row {
+        case 0:
+            let cell = myTableView.dequeueReusableCell(withIdentifier: "ISNoPostCusotmCell",
+                                                       for: indexPath) as! ISNoPostCusotmCell
             
-            let modelPost = userPost[indexPath.row]
+            return cell
+        default:
+            let cell = myTableView.dequeueReusableCell(withIdentifier: "ISPostCustomCell",
+                                                       for: indexPath) as! ISPostCustomCell
             
-            
-            customPostCell.myFechaPerfil.text = fechaParse(modelPost.fechaCreacion!)
-            customPostCell.myNombreApellidoPerfil.text = modelPost.nombre
-            customPostCell.myUsernamePerfil.text = "@" + (modelPost.username!)
-            
-            modelPost.imageProfile?.getDataInBackground(block: { (resultImageData, error) in
-                if error == nil{
-                    let imageData = UIImage(data:resultImageData!)
-                    customPostCell.myImagePerfil.image = imageData
-                }else{
-                    print("AQUI ERROR")
-                }
-            })
-            
-            modelPost.imagePost?.getDataInBackground(block: { (resultPostData, error) in
-                if error == nil{
-                    let imageData = UIImage(data: resultPostData!)
-                    customPostCell.myImagenPostPerfil.image = imageData
-                }else{
-                    print("AQUI ERROR DOS")
-                }
-            })
-            
-            customPostCell.myTextoDescripcionPerfil.text = modelPost.descripcion
-            
-            return customPostCell
-        
+            return cell
+        }
         
         
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return UITableViewAutomaticDimension
-       
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 454
+        default:
+             return UITableViewAutomaticDimension
+        }
     }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension
-    }
-    
-    func otraVez(){
-        let queryPost = PFQuery(className: "PostImageNetwork")
-        queryPost.order(byDescending: "createdAt")
-        queryPost.findObjectsInBackground(block: { (objcDos, errorDos) in
-            if errorDos == nil{
-                if let objcDosDes = objcDos{
-                    self.userPost.removeAll()
-                    for c_objDataPost in objcDosDes{
-                        //2 consulta
-                        let queryBusquedaFoto = PFQuery(className: "ImageProfile")
-                        queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
-                            if errorFoto == nil{
-                                if let objectsBusquedaFotoData = objectsBusquedaFoto{
-                                    for c_objDos in objectsBusquedaFotoData{
-                                        
-                                        let userImageFile = c_objDos["imageProfile"] as! PFFile
-                                        
-                                        let postFinal = UserPotImage(pNombre: c_objDataPost["nombre"] as! String,
-                                                                     pApellido: c_objDataPost["apellido"] as! String,
-                                                                     pUsername: c_objDataPost["username"] as! String,
-                                                                     pImageProfile: userImageFile,
-                                                                     pImagePost: c_objDataPost["imageFileNW"] as! PFFile,
-                                                                     pFechaCreacion: c_objDataPost.createdAt!,
-                                                                     pDescripcion: c_objDataPost["descripcionImagen"] as! String)
-                                        
-                                        self.userPost.append(postFinal)
-                                    }
-                                    self.myTableView.reloadData()
-                                }
-                            }
-                            self.myTableView.reloadData()
-                        })
-                    }
-                    self.myTableView.reloadData()
-                    self.refreshControl.endRefreshing()
-                }
-            }
-        })
-    }
-
-    
     
     
     
