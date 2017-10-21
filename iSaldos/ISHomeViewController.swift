@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ISHomeViewController: UIViewController {
     
@@ -17,16 +18,23 @@ class ISHomeViewController: UIViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
-
+    @IBAction func LogoutToLogin(_ sender: Any) {
+        performSegue(withIdentifier: "logout", sender: self)
+        PFUser.logOut()
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
         
         //TODO: - Gestion del menu superior Izq.
         if revealViewController() != nil{
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rightViewRevealWidth = 150
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            //view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
         

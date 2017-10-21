@@ -88,9 +88,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="nDB-2v-sWa">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="arh-lP-zz4"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="eNf-EM-LBF">
+                            <connections>
+                                <action selector="LogoutToLogin:" destination="1TE-rV-7xR" id="TqO-Xx-Ocv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="menuButton" destination="arh-lP-zz4" id="UgG-Yx-e6b"/>
+                        <segue destination="Tps-cX-bLg" kind="unwind" identifier="logout" unwindAction="heHechoLogoutWithSegue:" id="EYp-Mq-0ap"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uqa-EC-5B6" sceneMemberID="firstResponder"/>
@@ -200,8 +206,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-d4-LFj">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-d4-LFj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <pageControl opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Wg-RX-mqi">
                                         <rect key="frame" x="43.666666666666657" y="17" width="288" height="37"/>
@@ -253,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBk-g4-jjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3343.125" y="-717.25352112676057"/>
+            <point key="canvasLocation" x="-3343.1999999999998" y="-717.48768472906409"/>
         </scene>
         <!--Registro Usuario Table View Controller-->
         <scene sceneID="mk2-eI-ud7">
@@ -2770,6 +2776,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="H3W-9g-Zj5"/>
-        <segue reference="PMB-TT-YxY"/>
+        <segue reference="bnR-hu-Ngu"/>
     </inferredMetricsTieBreakers>
 </document>

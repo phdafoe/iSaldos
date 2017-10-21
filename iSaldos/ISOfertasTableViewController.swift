@@ -15,6 +15,9 @@ class ISOfertasTableViewController: UITableViewController {
     
     //MARK: - Variables locales
     var arrayOfertas : [ISOfertasModel] = []
+    //Diccionario para almacenar localmente las imágenes
+    var imagenSeleccionada : UIImage?
+    var diccionarioImagenes = [String: UIImage?]()
     
     
     //MARK: - IBOutlets
@@ -70,13 +73,30 @@ class ISOfertasTableViewController: UITableViewController {
         customOfertasCell.myInformacionOferta.text = model.masInformacion
         customOfertasCell.myImporteOferta.text = model.importe
         
-        customOfertasCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: getImagePath(CONSTANTES.LLAMADAS.OFERTAS,
+        /*customOfertasCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: getImagePath(CONSTANTES.LLAMADAS.OFERTAS,
                                                                                                                id: model.id,
                                                                                                                name: model.imagen))!),
                                                      placeholder: #imageLiteral(resourceName: "placeholder"),
                                                      options: nil,
                                                      progressBlock: nil,
-                                                     completionHandler: nil)
+                                                     completionHandler: nil)*/
+ 
+        //Recuperar en background la imagen
+        if var pathImagen = model.imagen {
+            
+            pathImagen = CONSTANTES.LLAMADAS.BASE_URL + pathImagen
+            
+            
+            let pathComplete = getImagePath(CONSTANTES.LLAMADAS.OFERTAS, id: model.id!, name: model.imagen!)
+            customOfertasCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: pathComplete)!),
+                                                         placeholder: #imageLiteral(resourceName: "placeholder"),
+                                                         options: [.transition(ImageTransition.fade(1))],
+                                                         progressBlock: nil,
+                                                         completionHandler: { (image, error, cacheType, imageUrl) in
+                //guardamos las imágenes en un diccionario
+                self.diccionarioImagenes[model.id!] = image!
+            })
+        }
         
         
         return customOfertasCell
@@ -92,6 +112,8 @@ class ISOfertasTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let customOfertasCell = tableView.dequeueReusableCell(withIdentifier: "ISOfertaCustomCell", for: indexPath) as! ISOfertaCustomCell
+        imagenSeleccionada = customOfertasCell.myImagenOferta.image
         performSegue(withIdentifier: "showOfertaSegue", sender: self)
     }
     
@@ -101,14 +123,21 @@ class ISOfertasTableViewController: UITableViewController {
             let detalleVC = segue.destination as! ISDetalleOfertaViewController
             let selectInd = tableView.indexPathForSelectedRow?.row
             let objInd = arrayOfertas[selectInd!]
+            
+            //Asignar la oferta seleccionada
             detalleVC.oferta = objInd
+            
+            //Recuperar la imagen de la lista local
+            detalleVC.detalleImagenData = diccionarioImagenes[objInd.id!]!
+            
+            /*detalleVC.oferta = objInd
             do{
                 let imageData = UIImage(data: try Data(contentsOf: URL(string: CONSTANTES.LLAMADAS.BASE_PHOTO_URL + (objInd.id)! + "/" + (objInd.imagen)!)!))
                 detalleVC.detalleImagenData = imageData!
             }catch let error{
                 print("Error: \(error.localizedDescription)")
-            }
-            
+            }*/
+ 
             
         }
     }
