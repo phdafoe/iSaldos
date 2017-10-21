@@ -202,7 +202,7 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
     
     
     
-    func getDataPostFromParse(){
+    @objc func getDataPostFromParse(){
         let queryPost = PFQuery(className: "PostImageNetwork")
         queryPost.order(byDescending: "createdAt")
         queryPost.whereKey("username", equalTo: (PFUser.current()?.username)!)
@@ -226,9 +226,8 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
                         
                         self.userPost.append(postFinal)
                     }
-                    APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: { _ in
-                        self.myTableView.reloadData()
-                    })
+                    self.myTableView.reloadData()
+                    APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
                     self.refreshControl.endRefreshing()
                 }
             }
@@ -240,7 +239,7 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
     
     
     
-    func muestraVCConfiguration(){
+    @objc func muestraVCConfiguration(){
         let configuracionVC = storyboard?.instantiateViewController(withIdentifier: "ConfiguracionPerfilViewController") as! ISConfiguracionPerfilViewController
         present(configuracionVC,
                 animated: true,
@@ -248,7 +247,7 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func muestraTablaUsuarios(){
+    @objc func muestraTablaUsuarios(){
         
         let tablaUsuarios = storyboard?.instantiateViewController(withIdentifier: "UsuariosTableViewController") as! ISUsuariosTableViewController
         let navController = UINavigationController(rootViewController: tablaUsuarios)

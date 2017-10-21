@@ -132,9 +132,7 @@ class ISOfertasTableViewController: UITableViewController {
             }.then{_ in
                 self.tableView.reloadData()
             }.then{_ in
-                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: { _ in
-                    // Completed
-                })
+                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
             }.catch{error in
                 self.present(muestraAlertVC("Lo sentimos",
                                             messageData: "Algo salió mal"),

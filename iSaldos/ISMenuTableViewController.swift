@@ -51,8 +51,7 @@ class ISMenuTableViewController: UITableViewController {
     func logout(){
         performSegue(withIdentifier: "logout", sender: self)
         PFUser.logOut()
-        /*dismiss(animated: true,
-                completion: nil)*/
+        dismiss(animated: true, completion: nil)
     }
     
     

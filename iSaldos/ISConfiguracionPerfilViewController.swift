@@ -175,7 +175,7 @@ class ISConfiguracionPerfilViewController: UITableViewController {
 //MARK: - EXTENSION
 extension ISConfiguracionPerfilViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
-    func pickerFoto(){
+    @objc func pickerFoto(){
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             muestraMenu()
         }else{

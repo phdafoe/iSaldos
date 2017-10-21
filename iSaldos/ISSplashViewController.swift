@@ -46,7 +46,7 @@ class ISSplashViewController: UIViewController {
     
     
     //MARK: - Utils
-    func manejadorAutomatico(){
+    @objc func manejadorAutomatico(){
         let logoAnimacion = UIViewPropertyAnimator(duration: 0.5,
                                                    curve: .easeInOut) { 
                                                     self.myImageLogoSaldos.transform = CGAffineTransform(scaleX: 25,

@@ -81,7 +81,7 @@ class ISNuevoPostTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func salvarDatos(){
+    @objc func salvarDatos(){
         var errorData = ""
         
         if !fotoSeleccionada{
@@ -188,7 +188,7 @@ class ISNuevoPostTableViewController: UITableViewController {
     }
     
     
-    func bajarTeclado(){
+    @objc func bajarTeclado(){
         myDescripcionFotoTip.resignFirstResponder()
     }
     
@@ -208,7 +208,7 @@ class ISNuevoPostTableViewController: UITableViewController {
 //MARK: - EXTENSION
 extension ISNuevoPostTableViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
-    func pickerFoto(){
+    @objc func pickerFoto(){
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             muestraMenu()
         }else{

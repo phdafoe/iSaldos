@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         navBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV
         tabBar.tintColor = CONSTANTES.COLORES.GRIS_NAV_TAB
-        navBar.titleTextAttributes = [NSForegroundColorAttributeName : CONSTANTES.COLORES.BLANCO_TEXTO_NAV]
+        navBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : CONSTANTES.COLORES.BLANCO_TEXTO_NAV]
     }
 
 }

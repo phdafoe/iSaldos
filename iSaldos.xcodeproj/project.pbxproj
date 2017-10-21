@@ -59,12 +59,12 @@
 		4138E4601EA01991003BCD5F /* ISOfertasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */; };
 		4138E4621EA019A5003BCD5F /* ISAsociadoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */; };
 		4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */; };
+		414AFD031F9BB49000D6EE73 /* LightStreaksDeepBlue.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 414AFD021F9BB49000D6EE73 /* LightStreaksDeepBlue.mp4 */; };
 		4151017F1EB89C49003B016D /* ISNuevoPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */; };
 		415101811EB8A8A8003B016D /* ISUsuariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101801EB8A8A8003B016D /* ISUsuariosTableViewController.swift */; };
 		415101831EB8B665003B016D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101821EB8B665003B016D /* UserModel.swift */; };
 		415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */; };
 		4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */; };
-		41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */; };
 		41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFB1EA0EC0600FC491F /* RateApp.swift */; };
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
 		41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */; };
@@ -144,12 +144,12 @@
 		4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertasModel.swift; sourceTree = "<group>"; };
 		4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISAsociadoModel.swift; sourceTree = "<group>"; };
 		4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISParserOfertas.swift; sourceTree = "<group>"; };
+		414AFD021F9BB49000D6EE73 /* LightStreaksDeepBlue.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LightStreaksDeepBlue.mp4; sourceTree = "<group>"; };
 		4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISNuevoPostTableViewController.swift; sourceTree = "<group>"; };
 		415101801EB8A8A8003B016D /* ISUsuariosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISUsuariosTableViewController.swift; sourceTree = "<group>"; };
 		415101821EB8B665003B016D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISUsuariosCustomCell.swift; sourceTree = "<group>"; };
 		415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISUsuariosCustomCell.xib; sourceTree = "<group>"; };
-		41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Nike_iOS.mp4; sourceTree = "<group>"; };
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
 		41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRMiPerfilCustomCell.xib; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		412741D41E9F953E0074CDD7 /* TUTORIAL_INTRO */ = {
 			isa = PBXGroup;
 			children = (
-				41A3BBF91EA0E31F00FC491F /* Nike_iOS.mp4 */,
+				414AFD021F9BB49000D6EE73 /* LightStreaksDeepBlue.mp4 */,
 				412742341E9FD9640074CDD7 /* FOTO_0.jpg */,
 				412742351E9FD9640074CDD7 /* FOTO_1.jpg */,
 				412742361E9FD9640074CDD7 /* FOTO_2.jpg */,
@@ -470,7 +470,7 @@
 					412741B01E9F93B20074CDD7 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 2C7W4RF846;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -504,7 +504,7 @@
 				B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */,
 				412742411E9FD9640074CDD7 /* FOTO_6.jpg in Resources */,
 				4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */,
-				41A3BBFA1EA0E31F00FC491F /* Nike_iOS.mp4 in Resources */,
+				414AFD031F9BB49000D6EE73 /* LightStreaksDeepBlue.mp4 in Resources */,
 				412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */,
 				41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */,
 				4127423D1E9FD9640074CDD7 /* FOTO_2.jpg in Resources */,
@@ -785,7 +785,8 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -804,7 +805,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

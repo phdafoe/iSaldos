@@ -60,7 +60,7 @@ class ISHomeViewController: UIViewController {
         customTabSwipeNavigation.setSelectedColor(customColor, font: UIFont.boldSystemFont(ofSize: 14))
     }
     
-    func showVCNuevoComentario(){
+    @objc func showVCNuevoComentario(){
         let nuevoPostVC = self.storyboard?.instantiateViewController(withIdentifier: "NuevoPostTableViewController") as! ISNuevoPostTableViewController
         let navController = UINavigationController(rootViewController: nuevoPostVC)
         self.present(navController, animated: true, completion: nil)

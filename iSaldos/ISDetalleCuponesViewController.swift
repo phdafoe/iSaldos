@@ -78,7 +78,7 @@ class ISDetalleCuponesViewController: UITableViewController {
     
     
     //MARK: - GESTURE RECOGNIZER
-    func actionGesture(_ gestureRecognizer: UITapGestureRecognizer){
+    @objc func actionGesture(_ gestureRecognizer: UITapGestureRecognizer){
         for subview in self.view.subviews{
             if subview.tag == self.imageGroupTag{
                 subview.removeFromSuperview()

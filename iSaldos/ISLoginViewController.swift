@@ -80,19 +80,19 @@ class ISLoginViewController: UIViewController {
     func showVideo(){
         
         //VIDEO
-        let path = Bundle.main.path(forResource: "Nike_iOS", ofType: "mp4")
+        let path = Bundle.main.path(forResource: "LightStreaksDeepBlue", ofType: "mp4")
         player = AVPlayer(url: URL(fileURLWithPath: path!))
         player!.actionAtItemEnd = AVPlayerActionAtItemEnd.none;
         let playerLayer = AVPlayerLayer(player: player)
         playerLayer.frame = self.view.frame
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         self.view.layer.insertSublayer(playerLayer, at: 0)
         NotificationCenter.default.addObserver(self, selector: #selector(self.playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
         player!.seek(to: kCMTimeZero)
         player!.play()
     }
 
-    func playerItemDidReachEnd() {
+    @objc func playerItemDidReachEnd() {
         player.seek(to: kCMTimeZero)
     }
     

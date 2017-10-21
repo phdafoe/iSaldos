@@ -14,6 +14,8 @@ class ISUsuariosTableViewController: UITableViewController {
     //MARK: - VARIABLES LOCALES GLOBALES
     var usersFromParse = [UserModel]()
     var usersFollowing = [Bool]()
+    var objectIdFoto : String?
+    
     
     
     
@@ -82,25 +84,21 @@ class ISUsuariosTableViewController: UITableViewController {
                                 //3. Consulta
                                 let userData = objectsData as! PFUser
                                 if userData.username != PFUser.current()?.username{
-                                    //self.usersFromParse.append("\(userData.username)")
                                     let queryBusquedaFoto = PFQuery(className: "ImageProfile")
-                                    //queryBusquedaFoto.whereKey("username", equalTo: (PFUser.current()?.username)!)
+                                    queryFollowers.whereKey("username", notEqualTo: userData.username!)
                                     queryBusquedaFoto.findObjectsInBackground{ (objectsBusquedaFoto, errorFoto) in
-                                        if let objectsBusquedaFotoData = objectsBusquedaFoto{
-                                            for c_foto in objectsBusquedaFotoData{
-                                                
-                                                let userImageFile = c_foto["imageProfile"] as! PFFile
-                                                
+                                        if errorFoto == nil{
+                                            if let objectsBusquedaFotoDes = objectsBusquedaFoto?.first{
+                                                let imageName = objectsBusquedaFotoDes["imageProfile"] as! PFFile
                                                 let userModelData = UserModel(pNombre: userData["nombre"] as! String,
                                                                               pApellido: userData["apellido"] as! String,
                                                                               pUsername: userData.username!,
-                                                                              pImageProfile: userImageFile)
-                                                
+                                                                              pImageProfile: imageName)
                                                 self.usersFromParse.append(userModelData)
                                                 
                                                 var isFollowing = false
-                                                for followingPersonaje in followingPersonas{
-                                                    if followingPersonaje["following"] as? String == userData.username{
+                                                for c_followingPersonaje in followingPersonas{
+                                                    if c_followingPersonaje["following"] as? String == userData.username{
                                                         isFollowing = true
                                                     }
                                                 }
@@ -204,8 +202,6 @@ class ISUsuariosTableViewController: UITableViewController {
             following.saveInBackground(block: nil)
         }
     }
-    
-
     
 
 }

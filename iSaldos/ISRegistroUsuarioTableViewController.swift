@@ -143,7 +143,7 @@ class ISRegistroUsuarioTableViewController: UITableViewController {
 //MARK: - EXTENSION
 extension ISRegistroUsuarioTableViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
-    func pickerPhoto(){
+    @objc func pickerPhoto(){
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             muestraMenu()
         }else{
