@@ -60,8 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBar = UITabBar.appearance()
         let toolBar = UIToolbar.appearance()
         
-        
-        
         navBar.barTintColor = CONSTANTES.COLORES.GRIS_NAV_TAB
         tabBar.barTintColor = CONSTANTES.COLORES.GRIS_NAV_TAB
         
@@ -69,7 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         toolBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV
         
         navBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV
-        tabBar.tintColor = CONSTANTES.COLORES.GRIS_NAV_TAB
+        tabBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV
+        
         navBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : CONSTANTES.COLORES.BLANCO_TEXTO_NAV]
     }
 

@@ -69,6 +69,7 @@
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
 		41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */; };
 		41BD66341F8B6CFE00768339 /* APESuperHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BD66351F8B6CFE00768339 /* APESuperHUD.framework */; };
+		41FF74A71FA62482003D2669 /* ISWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FF74A61FA62481003D2669 /* ISWebViewController.swift */; };
 		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
 		B4409CD51ED4D5EA00F44FD2 /* ActionSheetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4409CD41ED4D5EA00F44FD2 /* ActionSheetStoryboard.storyboard */; };
 		B4409CD71ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4409CD61ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift */; };
@@ -154,6 +155,7 @@
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
 		41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRMiPerfilCustomCell.xib; sourceTree = "<group>"; };
 		41BD66351F8B6CFE00768339 /* APESuperHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APESuperHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41FF74A61FA62481003D2669 /* ISWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISWebViewController.swift; sourceTree = "<group>"; };
 		B4409CD41ED4D5EA00F44FD2 /* ActionSheetStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionSheetStoryboard.storyboard; sourceTree = "<group>"; };
 		B4409CD61ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISActionSheetPersonalizadoViewController.swift; sourceTree = "<group>"; };
 		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				412741F01E9FC0D70074CDD7 /* ISMenuTableViewController.swift */,
 				412742481E9FF68C0074CDD7 /* ISHomeTabBarController.swift */,
 				412742291E9FC5630074CDD7 /* ISTerminosViewController.swift */,
+				41FF74A61FA62481003D2669 /* ISWebViewController.swift */,
 				412742141E9FC4380074CDD7 /* SOCIAL */,
 				412741FF1E9FC1680074CDD7 /* OFERTAS */,
 				412742061E9FC19D0074CDD7 /* CUPONES */,
@@ -635,6 +638,7 @@
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
 				412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */,
+				41FF74A71FA62482003D2669 /* ISWebViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 				B45B0E2F1EB8EDDC0038D174 /* ISNoPostCusotmCell.swift in Sources */,
 				415101831EB8B665003B016D /* UserModel.swift in Sources */,

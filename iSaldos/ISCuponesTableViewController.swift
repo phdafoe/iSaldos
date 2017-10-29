@@ -34,7 +34,7 @@ class ISCuponesTableViewController: UITableViewController {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rightViewRevealWidth = 150
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            //view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
         
@@ -75,7 +75,7 @@ class ISCuponesTableViewController: UITableViewController {
                                                                                                                id: model.id,
                                                                                                                name: model.imagen))!),
                                                      placeholder: #imageLiteral(resourceName: "placeholder"),
-                                                     options: nil,
+                                                     options: [.transition(ImageTransition.fade(1))],
                                                      progressBlock: nil,
                                                      completionHandler: nil)
         

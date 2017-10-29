@@ -33,6 +33,8 @@ class ISLoginViewController: UIViewController {
         do{
             try sigIn.signInUser()
             self.performSegue(withIdentifier: "jumpToViewContollerFromLogin", sender: self)
+            self.myUsernameTF.text = ""
+            self.myPasswordTF.text = ""
         }catch let error{
             present(muestraAlertVC("Lo sentimos",
                                    messageData: "\(error.localizedDescription)"),
@@ -49,18 +51,10 @@ class ISLoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         showVideo()
-        
-        
         myActiINd.isHidden = true
-        
         myAccederBTN.layer.cornerRadius = 5
         myRegistrarseBTN.layer.cornerRadius = 5
-        
-        
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
