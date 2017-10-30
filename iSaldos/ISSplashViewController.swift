@@ -8,6 +8,7 @@
 
 import UIKit
 import Parse
+//import ReachabilitySwift
 
 class ISSplashViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class ISSplashViewController: UIViewController {
     //MARK: - Variables locales
     var viewAnimator : UIViewPropertyAnimator!
     var desbloqueoGesto = Timer()
+    //var reach = Reachability()
     
     //MARK: - IBOutlets
     @IBOutlet weak var myImageLogoSaldos: UIImageView!
@@ -28,20 +30,52 @@ class ISSplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.showData()
+        
+//        NotificationCenter.default.addObserver(self,
+//                                               selector: #selector(self.reachabilityChanged(_:)),
+//                                               name: ReachabilityChangedNotification,
+//                                               object: reach)
+//        do{
+//            try reach?.startNotifier()
+//        }catch{
+//            print("No es posible iniciar la notificacion")
+//        }
+        
+       
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    //MARK: - Utils
+//    @objc func reachabilityChanged(_ noti : Notification){
+//        let reachability = noti.object as! Reachability
+//        if reachability.isReachable{
+//            if reachability.isReachableViaWiFi{
+//                print("via wifi")
+//                self.showData()
+//            }else{
+//                print("via 3G")
+//                self.showData()
+//            }
+//        }else{
+//            print("No hay red")
+//        }
+//    }
+    
+    func showData(){
         viewAnimator = UIViewPropertyAnimator(duration: 1.0,
                                               curve: .easeInOut,
                                               animations: {
-            self.myImageLogoSaldos.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
-            self.desbloqueoGesto = Timer.scheduledTimer(timeInterval: 1.5,
-                                                        target: self,
-                                                        selector: #selector(self.manejadorAutomatico),
-                                                        userInfo: nil,
-                                                        repeats: false)
+                                                self.myImageLogoSaldos.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+                                                self.desbloqueoGesto = Timer.scheduledTimer(timeInterval: 1.5,
+                                                                                            target: self,
+                                                                                            selector: #selector(self.manejadorAutomatico),
+                                                                                            userInfo: nil,
+                                                                                            repeats: false)
         })
         
         viewAnimator.startAnimation()
-        
-        // Do any additional setup after loading the view.
     }
     
     

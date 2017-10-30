@@ -4,7 +4,6 @@ use_frameworks!
 
 target 'iSaldos' do
     pod 'SwiftyJSON'
-    pod 'ReachabilitySwift'
     pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "master"
     pod 'PromiseKit'
     pod 'Kingfisher'

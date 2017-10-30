@@ -65,7 +65,6 @@
 		415101831EB8B665003B016D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101821EB8B665003B016D /* UserModel.swift */; };
 		415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */; };
 		4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */; };
-		4151FCCA1FA7B0D700FA37C2 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4151FCCB1FA7B0D700FA37C2 /* Reachability.framework */; };
 		41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFB1EA0EC0600FC491F /* RateApp.swift */; };
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
 		41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */; };
@@ -153,11 +152,13 @@
 		415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISUsuariosCustomCell.swift; sourceTree = "<group>"; };
 		415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISUsuariosCustomCell.xib; sourceTree = "<group>"; };
 		4151FCCB1FA7B0D700FA37C2 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		418E11B31FA7B8EB001229A8 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
 		41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRMiPerfilCustomCell.xib; sourceTree = "<group>"; };
 		41BD66351F8B6CFE00768339 /* APESuperHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APESuperHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FF74A61FA62481003D2669 /* ISWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISWebViewController.swift; sourceTree = "<group>"; };
+		5EA5DBE264CB33DA4355D716 /* Pods-iSaldos.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.distribution.xcconfig"; sourceTree = "<group>"; };
 		B4409CD41ED4D5EA00F44FD2 /* ActionSheetStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionSheetStoryboard.storyboard; sourceTree = "<group>"; };
 		B4409CD61ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISActionSheetPersonalizadoViewController.swift; sourceTree = "<group>"; };
 		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
@@ -171,7 +172,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4151FCCA1FA7B0D700FA37C2 /* Reachability.framework in Frameworks */,
 				41BD66341F8B6CFE00768339 /* APESuperHUD.framework in Frameworks */,
 				4127421F1E9FC4620074CDD7 /* Alamofire.framework in Frameworks */,
 				412742201E9FC4620074CDD7 /* Bolts.framework in Frameworks */,
@@ -398,6 +398,7 @@
 		AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				418E11B31FA7B8EB001229A8 /* Reachability.framework */,
 				4151FCCB1FA7B0D700FA37C2 /* Reachability.framework */,
 				41BD66351F8B6CFE00768339 /* APESuperHUD.framework */,
 				412742151E9FC4620074CDD7 /* Alamofire.framework */,
@@ -433,6 +434,7 @@
 			children = (
 				35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */,
 				1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */,
+				5EA5DBE264CB33DA4355D716 /* Pods-iSaldos.distribution.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -865,7 +867,7 @@
 		};
 		416EDB2F1FA7B5B5007A3B34 /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */;
+			baseConfigurationReference = 5EA5DBE264CB33DA4355D716 /* Pods-iSaldos.distribution.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
