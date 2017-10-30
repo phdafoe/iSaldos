@@ -38,11 +38,9 @@
 		4127421F1E9FC4620074CDD7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742151E9FC4620074CDD7 /* Alamofire.framework */; };
 		412742201E9FC4620074CDD7 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742161E9FC4620074CDD7 /* Bolts.framework */; };
 		412742211E9FC4620074CDD7 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742171E9FC4620074CDD7 /* CryptoSwift.framework */; };
-		412742221E9FC4620074CDD7 /* ExpandingMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742181E9FC4620074CDD7 /* ExpandingMenu.framework */; };
 		412742231E9FC4620074CDD7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742191E9FC4620074CDD7 /* Kingfisher.framework */; };
 		412742241E9FC4620074CDD7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421A1E9FC4620074CDD7 /* Parse.framework */; };
 		412742261E9FC4620074CDD7 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421C1E9FC4620074CDD7 /* PromiseKit.framework */; };
-		412742271E9FC4620074CDD7 /* ReachabilitySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421D1E9FC4620074CDD7 /* ReachabilitySwift.framework */; };
 		412742281E9FC4620074CDD7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421E1E9FC4620074CDD7 /* SwiftyJSON.framework */; };
 		4127422A1E9FC5630074CDD7 /* ISTerminosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742291E9FC5630074CDD7 /* ISTerminosViewController.swift */; };
 		4127422C1E9FC6630074CDD7 /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127422B1E9FC6630074CDD7 /* APIUTILS.swift */; };
@@ -67,6 +65,7 @@
 		415101831EB8B665003B016D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101821EB8B665003B016D /* UserModel.swift */; };
 		415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */; };
 		4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */; };
+		4151FCCA1FA7B0D700FA37C2 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4151FCCB1FA7B0D700FA37C2 /* Reachability.framework */; };
 		41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFB1EA0EC0600FC491F /* RateApp.swift */; };
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
 		41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */; };
@@ -78,8 +77,6 @@
 		B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */; };
 		B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */; };
 		B45B0E2C1EB8EC010038D174 /* UserPotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */; };
-		B45B0E2F1EB8EDDC0038D174 /* ISNoPostCusotmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E2D1EB8EDDC0038D174 /* ISNoPostCusotmCell.swift */; };
-		B45B0E301EB8EDDC0038D174 /* ISNoPostCusotmCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E2E1EB8EDDC0038D174 /* ISNoPostCusotmCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +152,7 @@
 		415101821EB8B665003B016D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISUsuariosCustomCell.swift; sourceTree = "<group>"; };
 		415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISUsuariosCustomCell.xib; sourceTree = "<group>"; };
+		4151FCCB1FA7B0D700FA37C2 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
 		41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRMiPerfilCustomCell.xib; sourceTree = "<group>"; };
@@ -165,8 +163,6 @@
 		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
 		B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISPostCustomCell.xib; sourceTree = "<group>"; };
 		B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPotImage.swift; sourceTree = "<group>"; };
-		B45B0E2D1EB8EDDC0038D174 /* ISNoPostCusotmCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISNoPostCusotmCell.swift; sourceTree = "<group>"; };
-		B45B0E2E1EB8EDDC0038D174 /* ISNoPostCusotmCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISNoPostCusotmCell.xib; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,15 +171,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4151FCCA1FA7B0D700FA37C2 /* Reachability.framework in Frameworks */,
 				41BD66341F8B6CFE00768339 /* APESuperHUD.framework in Frameworks */,
 				4127421F1E9FC4620074CDD7 /* Alamofire.framework in Frameworks */,
 				412742201E9FC4620074CDD7 /* Bolts.framework in Frameworks */,
 				412742211E9FC4620074CDD7 /* CryptoSwift.framework in Frameworks */,
-				412742221E9FC4620074CDD7 /* ExpandingMenu.framework in Frameworks */,
 				412742231E9FC4620074CDD7 /* Kingfisher.framework in Frameworks */,
 				412742241E9FC4620074CDD7 /* Parse.framework in Frameworks */,
 				412742261E9FC4620074CDD7 /* PromiseKit.framework in Frameworks */,
-				412742271E9FC4620074CDD7 /* ReachabilitySwift.framework in Frameworks */,
 				412742281E9FC4620074CDD7 /* SwiftyJSON.framework in Frameworks */,
 				5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */,
 			);
@@ -403,6 +398,7 @@
 		AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4151FCCB1FA7B0D700FA37C2 /* Reachability.framework */,
 				41BD66351F8B6CFE00768339 /* APESuperHUD.framework */,
 				412742151E9FC4620074CDD7 /* Alamofire.framework */,
 				412742161E9FC4620074CDD7 /* Bolts.framework */,
@@ -428,8 +424,6 @@
 				412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */,
 				B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */,
 				B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */,
-				B45B0E2D1EB8EDDC0038D174 /* ISNoPostCusotmCell.swift */,
-				B45B0E2E1EB8EDDC0038D174 /* ISNoPostCusotmCell.xib */,
 			);
 			name = "CANAL/ MURO";
 			sourceTree = "<group>";
@@ -509,7 +503,6 @@
 			files = (
 				4127423F1E9FD9640074CDD7 /* FOTO_4.jpg in Resources */,
 				412742401E9FD9640074CDD7 /* FOTO_5.jpg in Resources */,
-				B45B0E301EB8EDDC0038D174 /* ISNoPostCusotmCell.xib in Resources */,
 				B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */,
 				412742411E9FD9640074CDD7 /* FOTO_6.jpg in Resources */,
 				4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */,
@@ -557,11 +550,10 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/ExpandingMenu/ExpandingMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -570,11 +562,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ExpandingMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -648,7 +639,6 @@
 				412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */,
 				41FF74A71FA62482003D2669 /* ISWebViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
-				B45B0E2F1EB8EDDC0038D174 /* ISNoPostCusotmCell.swift in Sources */,
 				415101831EB8B665003B016D /* UserModel.swift in Sources */,
 				4125385F1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift in Sources */,
 			);

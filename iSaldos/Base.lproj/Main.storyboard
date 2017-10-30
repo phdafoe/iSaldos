@@ -208,6 +208,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rwg-gi-dcl">
                                 <rect key="frame" x="0.0" y="52" width="375" height="696"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0Ps-Tc-Kkm">
                                     <size key="itemSize" width="375" height="672"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>

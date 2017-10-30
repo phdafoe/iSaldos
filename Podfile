@@ -5,11 +5,10 @@ use_frameworks!
 target 'iSaldos' do
     pod 'SwiftyJSON'
     pod 'ReachabilitySwift'
-    pod 'ExpandingMenu'
     pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "master"
     pod 'PromiseKit'
     pod 'Kingfisher'
     pod 'PromiseKit/Alamofire'
     pod 'Parse'
-    pod 'APESuperHUD'
+    pod 'APESuperHUD', :git => 'https://github.com/apegroup/APESuperHUD.git'
 end

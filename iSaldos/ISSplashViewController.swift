@@ -59,7 +59,7 @@ class ISSplashViewController: UIViewController {
     }
     
     func beginApp(){
-        if(customPrefs.string(forKey: CONSTANTES.USER_DEFAULT.VISTA_GALERIA_INICIAL) != nil){
+        //if(customPrefs.string(forKey: CONSTANTES.USER_DEFAULT.VISTA_GALERIA_INICIAL) != nil){
             if PFUser.current() == nil{
                 let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! ISLoginViewController
                 loginVC.modalTransitionStyle = .crossDissolve
@@ -69,14 +69,15 @@ class ISSplashViewController: UIViewController {
                 revealVC.modalTransitionStyle = .crossDissolve
                 present(revealVC, animated: true, completion: nil)
             }
-        }else{
-            customPrefs.setValue("ok", forKey: CONSTANTES.USER_DEFAULT.VISTA_GALERIA_INICIAL)
-            let galeriaVC = self.storyboard?.instantiateViewController(withIdentifier: "ISGaleriaCollectionViewController") as! ISGaleriaCollectionViewController
-            galeriaVC.modalTransitionStyle = .crossDissolve
-            present(galeriaVC,
-                    animated: true,
-                    completion: nil)
-        }
+       // }
+//        }else{
+//            customPrefs.setValue("ok", forKey: CONSTANTES.USER_DEFAULT.VISTA_GALERIA_INICIAL)
+//            let galeriaVC = self.storyboard?.instantiateViewController(withIdentifier: "ISGaleriaCollectionViewController") as! ISGaleriaCollectionViewController
+//            galeriaVC.modalTransitionStyle = .crossDissolve
+//            present(galeriaVC,
+//                    animated: true,
+//                    completion: nil)
+//        }
     }
 
 }

@@ -29,6 +29,7 @@ class ISGaleriaCollectionViewController: UIViewController {
         
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
+        myCollectionView.isPagingEnabled = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -90,7 +91,7 @@ class ISGaleriaCollectionViewController: UIViewController {
 }
 
 
-extension ISGaleriaCollectionViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+extension ISGaleriaCollectionViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     // MARK: UICollectionViewDataSource
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -115,8 +116,13 @@ extension ISGaleriaCollectionViewController : UICollectionViewDelegate, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        return CGSize(width: 333, height: 716)
-        
+        return CGSize(width: 375, height: 716)
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+      
 }
