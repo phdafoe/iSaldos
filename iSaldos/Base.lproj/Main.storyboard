@@ -194,73 +194,85 @@
             </objects>
             <point key="canvasLocation" x="-1817" y="1993"/>
         </scene>
-        <!--Galeria Tutorial View Controller-->
-        <scene sceneID="lmR-YV-BHc">
+        <!--Galeria Collection View Controller-->
+        <scene sceneID="8Cm-gq-jiS">
             <objects>
-                <viewController storyboardIdentifier="GaleriaTutorialViewController" id="lo4-TM-0MF" customClass="ISGaleriaTutorialViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ISGaleriaCollectionViewController" id="sMO-mm-tfk" customClass="ISGaleriaCollectionViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cia-83-V8w"/>
-                        <viewControllerLayoutGuide type="bottom" id="kuq-bn-CzP"/>
+                        <viewControllerLayoutGuide type="top" id="Yd0-U4-FHD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zfg-EL-eKm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="EsS-cB-Lyz">
+                    <view key="view" contentMode="scaleToFill" id="oTg-qc-itF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y50-d4-LFj">
-                                <rect key="frame" x="0.0" y="52" width="375" height="726"/>
-                                <subviews>
-                                    <pageControl opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Wg-RX-mqi">
-                                        <rect key="frame" x="43.666666666666657" y="17" width="288" height="37"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rwg-gi-dcl">
+                                <rect key="frame" x="0.0" y="52" width="375" height="696"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0Ps-Tc-Kkm">
+                                    <size key="itemSize" width="375" height="672"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="CellGallery" id="G0K-z6-Gqg" customClass="ISImageGalleryCell" customModule="iSaldos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="12" width="375" height="672"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WQo-BV-JzO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="672"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="JKX-QK-To1"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="TsW-n1-X6h"/>
-                                            <constraint firstAttribute="height" constant="37" id="UZ1-ZE-3ft"/>
-                                            <constraint firstAttribute="width" constant="288" id="wEi-bI-arc"/>
+                                            <constraint firstAttribute="trailing" secondItem="WQo-BV-JzO" secondAttribute="trailing" id="D5G-Rv-bz0"/>
+                                            <constraint firstItem="WQo-BV-JzO" firstAttribute="leading" secondItem="G0K-z6-Gqg" secondAttribute="leading" id="Wnf-KK-NoI"/>
+                                            <constraint firstItem="WQo-BV-JzO" firstAttribute="top" secondItem="G0K-z6-Gqg" secondAttribute="top" id="XXh-WM-GbX"/>
+                                            <constraint firstAttribute="bottom" secondItem="WQo-BV-JzO" secondAttribute="bottom" id="xuR-2j-Xhy"/>
                                         </constraints>
-                                    </pageControl>
-                                </subviews>
+                                        <connections>
+                                            <outlet property="myImageGallery" destination="WQo-BV-JzO" id="zGI-of-Bpi"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1My-4N-UUI">
+                                <rect key="frame" x="155" y="740" width="65" height="34"/>
                                 <constraints>
-                                    <constraint firstItem="3Wg-RX-mqi" firstAttribute="top" secondItem="Y50-d4-LFj" secondAttribute="top" constant="17" id="Q8v-UR-vMe"/>
-                                    <constraint firstItem="3Wg-RX-mqi" firstAttribute="centerX" secondItem="Y50-d4-LFj" secondAttribute="centerX" id="YP0-Rj-txN"/>
-                                </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="lo4-TM-0MF" id="Mx9-Qh-fie"/>
-                                </connections>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zU5-fj-tQB">
-                                <rect key="frame" x="155" y="738" width="65" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="rvG-Ix-1DB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="3IY-uw-LEt"/>
+                                    <constraint firstAttribute="height" constant="34" id="FMp-Bd-duD"/>
+                                    <constraint firstAttribute="width" constant="65" id="q9G-4D-MUG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
                                 <state key="normal" title="Omitir">
-                                    <color key="titleColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CBe-ME-8gT" kind="modal" id="MQF-dB-G9l"/>
+                                    <segue destination="CBe-ME-8gT" kind="presentation" id="9D4-Ia-Pow"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Y50-d4-LFj" firstAttribute="top" secondItem="Cia-83-V8w" secondAttribute="bottom" id="4OD-II-iUg"/>
-                            <constraint firstItem="kuq-bn-CzP" firstAttribute="top" secondItem="Y50-d4-LFj" secondAttribute="bottom" id="8We-zZ-9OB"/>
-                            <constraint firstAttribute="trailing" secondItem="Y50-d4-LFj" secondAttribute="trailing" id="OEo-54-a3F"/>
-                            <constraint firstItem="Y50-d4-LFj" firstAttribute="leading" secondItem="EsS-cB-Lyz" secondAttribute="leading" id="qCz-f9-gdo"/>
-                            <constraint firstItem="zU5-fj-tQB" firstAttribute="centerX" secondItem="EsS-cB-Lyz" secondAttribute="centerX" id="qjM-kL-ihd"/>
-                            <constraint firstItem="kuq-bn-CzP" firstAttribute="top" secondItem="zU5-fj-tQB" secondAttribute="bottom" constant="6" id="y6V-o7-EZh"/>
+                            <constraint firstItem="1My-4N-UUI" firstAttribute="centerX" secondItem="oTg-qc-itF" secondAttribute="centerX" id="8Ac-IM-Vxd"/>
+                            <constraint firstItem="Rwg-gi-dcl" firstAttribute="leading" secondItem="oTg-qc-itF" secondAttribute="leading" id="Acl-XH-vs2"/>
+                            <constraint firstItem="Rwg-gi-dcl" firstAttribute="top" secondItem="oTg-qc-itF" secondAttribute="top" constant="52" id="BnY-u1-ucj"/>
+                            <constraint firstAttribute="bottom" secondItem="Rwg-gi-dcl" secondAttribute="bottom" constant="64" id="MMT-gb-bWC"/>
+                            <constraint firstAttribute="trailing" secondItem="Rwg-gi-dcl" secondAttribute="trailing" id="cP3-by-s5Q"/>
+                            <constraint firstItem="Zfg-EL-eKm" firstAttribute="top" secondItem="1My-4N-UUI" secondAttribute="bottom" constant="4" id="uHW-T6-Z5v"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myOmitirBTN" destination="zU5-fj-tQB" id="3Rk-HL-9EZ"/>
-                        <outlet property="myPageShowGallery" destination="3Wg-RX-mqi" id="LDh-Df-z1S"/>
-                        <outlet property="myScrollShowGallery" destination="Y50-d4-LFj" id="Xzt-pU-na8"/>
-                        <segue destination="xyh-0i-CvB" kind="presentation" id="bnR-hu-Ngu"/>
+                        <outlet property="myCollectionView" destination="Rwg-gi-dcl" id="j7o-sh-aZ4"/>
+                        <segue destination="xyh-0i-CvB" kind="presentation" id="PAK-2k-k0k"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FBk-g4-jjf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ktF-6y-k8C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3343.1999999999998" y="-717.48768472906409"/>
+            <point key="canvasLocation" x="-3276" y="-717"/>
         </scene>
         <!--Registro Usuario Table View Controller-->
         <scene sceneID="mk2-eI-ud7">
@@ -2843,6 +2855,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nX1-Ui-Xl1"/>
-        <segue reference="PMB-TT-YxY"/>
+        <segue reference="PAK-2k-k0k"/>
     </inferredMetricsTieBreakers>
 </document>

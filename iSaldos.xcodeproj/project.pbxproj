@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410561B01FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410561AF1FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift */; };
+		410561B21FA631C8001DBBE9 /* ISImageGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410561B11FA631C8001DBBE9 /* ISImageGalleryCell.swift */; };
 		411945BA1EA148E900996974 /* ISConfiguracionPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */; };
 		4125385F1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125385E1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift */; };
 		412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741B41E9F93B20074CDD7 /* AppDelegate.swift */; };
@@ -83,6 +85,8 @@
 /* Begin PBXFileReference section */
 		1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.release.xcconfig"; sourceTree = "<group>"; };
 		35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.debug.xcconfig"; sourceTree = "<group>"; };
+		410561AF1FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISGaleriaCollectionViewController.swift; sourceTree = "<group>"; };
+		410561B11FA631C8001DBBE9 /* ISImageGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISImageGalleryCell.swift; sourceTree = "<group>"; };
 		411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConfiguracionPerfilViewController.swift; sourceTree = "<group>"; };
 		4125385E1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISRegistroUsuarioTableViewController.swift; sourceTree = "<group>"; };
 		412741B11E9F93B20074CDD7 /* iSaldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaldos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,6 +300,8 @@
 			isa = PBXGroup;
 			children = (
 				412741E91E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift */,
+				410561AF1FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift */,
+				410561B11FA631C8001DBBE9 /* ISImageGalleryCell.swift */,
 				412742321E9FC9FE0074CDD7 /* ISSplashViewController.swift */,
 				412741EB1E9FC0520074CDD7 /* ISLoginViewController.swift */,
 				4125385E1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift */,
@@ -619,6 +625,7 @@
 				412742111E9FC3C80074CDD7 /* ISMuroSocialViewController.swift in Sources */,
 				412741F41E9FC1130074CDD7 /* ISOfertasTableViewController.swift in Sources */,
 				412741F61E9FC11D0074CDD7 /* ISCuponesTableViewController.swift in Sources */,
+				410561B01FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift in Sources */,
 				412741EA1E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift in Sources */,
 				4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */,
 				412742131E9FC3D30074CDD7 /* ISCanalSocialViewController.swift in Sources */,
@@ -630,6 +637,7 @@
 				412741DA1E9F984B0074CDD7 /* SWRevealViewController.m in Sources */,
 				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				412741FE1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift in Sources */,
+				410561B21FA631C8001DBBE9 /* ISImageGalleryCell.swift in Sources */,
 				412742491E9FF68C0074CDD7 /* ISHomeTabBarController.swift in Sources */,
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				B4409CD71ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift in Sources */,

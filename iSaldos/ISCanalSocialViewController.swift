@@ -113,23 +113,23 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
             customPostCell.myNombreApellidoPerfil.text = modelPost.nombre
             customPostCell.myUsernamePerfil.text = "@" + (PFUser.current()?.username)!
 
-            modelPost.imageProfile?.getDataInBackground(block: { (resultImageData, error) in
+            modelPost.imageProfile?.getDataInBackground{ (resultImageData, error) in
                 if error == nil{
-                    let imageData = UIImage(data:resultImageData!)
+                    let imageData = UIImage(data: resultImageData!)
                     customPostCell.myImagePerfil.image = imageData
                 }else{
                     print("AQUI ERROR")
                 }
-            })
+            }
             
-            modelPost.imagePost?.getDataInBackground(block: { (resultPostData, error) in
+            modelPost.imagePost?.getDataInBackground{ (resultPostData, error) in
                 if error == nil{
                     let imageData = UIImage(data: resultPostData!)
                     customPostCell.myImagenPostPerfil.image = imageData
                 }else{
                     print("AQUI ERROR DOS")
                 }
-            })
+            }
             
             customPostCell.myTextoDescripcionPerfil.text = modelPost.descripcion
             

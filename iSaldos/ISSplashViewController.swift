@@ -71,7 +71,7 @@ class ISSplashViewController: UIViewController {
             }
         }else{
             customPrefs.setValue("ok", forKey: CONSTANTES.USER_DEFAULT.VISTA_GALERIA_INICIAL)
-            let galeriaVC = self.storyboard?.instantiateViewController(withIdentifier: "GaleriaTutorialViewController") as! ISGaleriaTutorialViewController
+            let galeriaVC = self.storyboard?.instantiateViewController(withIdentifier: "ISGaleriaCollectionViewController") as! ISGaleriaCollectionViewController
             galeriaVC.modalTransitionStyle = .crossDissolve
             present(galeriaVC,
                     animated: true,

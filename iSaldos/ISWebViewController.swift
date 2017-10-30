@@ -35,8 +35,6 @@ class ISWebViewController: UIViewController {
         let url = URL(string: "http://" + urlWeb!)
         let peticion = URLRequest(url: url!)
         myWebView.loadRequest(peticion)
-        
-        
     }
 
 }
