@@ -65,6 +65,7 @@
 		415101831EB8B665003B016D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101821EB8B665003B016D /* UserModel.swift */; };
 		415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */; };
 		4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */; };
+		415490A91FA9EF8600BD0510 /* HayInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415490A81FA9EF8600BD0510 /* HayInternet.swift */; };
 		41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFB1EA0EC0600FC491F /* RateApp.swift */; };
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
 		41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */; };
@@ -126,7 +127,6 @@
 		4127421A1E9FC4620074CDD7 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/Parse/Parse.framework"; sourceTree = "<group>"; };
 		4127421B1E9FC4620074CDD7 /* PKHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PKHUD.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/PKHUD/PKHUD.framework"; sourceTree = "<group>"; };
 		4127421C1E9FC4620074CDD7 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/PromiseKit/PromiseKit.framework"; sourceTree = "<group>"; };
-		4127421D1E9FC4620074CDD7 /* ReachabilitySwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReachabilitySwift.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/ReachabilitySwift/ReachabilitySwift.framework"; sourceTree = "<group>"; };
 		4127421E1E9FC4620074CDD7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/iSaldos-enwpimjkyioufubeyavwbakzpkll/Build/Products/Debug-iphoneos/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		412742291E9FC5630074CDD7 /* ISTerminosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISTerminosViewController.swift; sourceTree = "<group>"; };
 		4127422B1E9FC6630074CDD7 /* APIUTILS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUTILS.swift; sourceTree = "<group>"; };
@@ -151,8 +151,7 @@
 		415101821EB8B665003B016D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISUsuariosCustomCell.swift; sourceTree = "<group>"; };
 		415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISUsuariosCustomCell.xib; sourceTree = "<group>"; };
-		4151FCCB1FA7B0D700FA37C2 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		418E11B31FA7B8EB001229A8 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		415490A81FA9EF8600BD0510 /* HayInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HayInternet.swift; sourceTree = "<group>"; };
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
 		41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRMiPerfilCustomCell.xib; sourceTree = "<group>"; };
@@ -350,6 +349,7 @@
 		4127422F1E9FC6750074CDD7 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				415490A81FA9EF8600BD0510 /* HayInternet.swift */,
 				41A3BBFB1EA0EC0600FC491F /* RateApp.swift */,
 				4127422B1E9FC6630074CDD7 /* APIUTILS.swift */,
 				4127422D1E9FC66C0074CDD7 /* APIHELPERS.swift */,
@@ -398,8 +398,6 @@
 		AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				418E11B31FA7B8EB001229A8 /* Reachability.framework */,
-				4151FCCB1FA7B0D700FA37C2 /* Reachability.framework */,
 				41BD66351F8B6CFE00768339 /* APESuperHUD.framework */,
 				412742151E9FC4620074CDD7 /* Alamofire.framework */,
 				412742161E9FC4620074CDD7 /* Bolts.framework */,
@@ -409,7 +407,6 @@
 				4127421A1E9FC4620074CDD7 /* Parse.framework */,
 				4127421B1E9FC4620074CDD7 /* PKHUD.framework */,
 				4127421C1E9FC4620074CDD7 /* PromiseKit.framework */,
-				4127421D1E9FC4620074CDD7 /* ReachabilitySwift.framework */,
 				4127421E1E9FC4620074CDD7 /* SwiftyJSON.framework */,
 				F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */,
 			);
@@ -555,7 +552,6 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -567,7 +563,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,6 +638,7 @@
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 				415101831EB8B665003B016D /* UserModel.swift in Sources */,
 				4125385F1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift in Sources */,
+				415490A91FA9EF8600BD0510 /* HayInternet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

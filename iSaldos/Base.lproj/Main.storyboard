@@ -1480,6 +1480,10 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <constraint firstAttribute="height" constant="228" id="aBO-qS-1QE"/>
                                 </constraints>
                             </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="comprobacionInternet" translatesAutoresizingMaskIntoConstraints="NO" id="Gcx-Ya-ot1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.2784313725" green="0.2784313725" blue="0.2784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -1488,12 +1492,13 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="myComprobacionInternet" destination="Gcx-Ya-ot1" id="XWR-ta-PaS"/>
                         <outlet property="myImageLogoSaldos" destination="HRW-0O-UiR" id="8oJ-yW-hhD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U3k-hU-zT3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4125" y="-717"/>
+            <point key="canvasLocation" x="-4125.6000000000004" y="-717.48768472906409"/>
         </scene>
         <!--Detalle Cupones View Controller-->
         <scene sceneID="Naz-Jt-IsG">
@@ -2842,6 +2847,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <image name="botonCerrarImagen" width="16" height="16"/>
         <image name="camara" width="35" height="35"/>
         <image name="cerrasX" width="140" height="140"/>
+        <image name="comprobacionInternet" width="281" height="500"/>
         <image name="concursos" width="35" height="35"/>
         <image name="cupones" width="35" height="35"/>
         <image name="legal" width="35" height="35"/>

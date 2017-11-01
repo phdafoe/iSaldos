@@ -20,7 +20,6 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.4.3):
     - PromiseKit/CorePromise
-  - ReachabilitySwift (4.1.0)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
@@ -30,7 +29,6 @@ DEPENDENCIES:
   - Parse
   - PromiseKit
   - PromiseKit/Alamofire
-  - ReachabilitySwift
   - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -56,9 +54,8 @@ SPEC CHECKSUMS:
   Kingfisher: 9ee7e788d8ba07c3f21ce0d43f33cec310a4f781
   Parse: cdc0f1f975ee8be0409e66f21b05df4ae067047c
   PromiseKit: fbb52a0d154402c57eeb6eccd36dd7724fcf6117
-  ReachabilitySwift: 6849231cd4e06559f3b9ef4a97a0a0f96d41e09f
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 71a785430fc33d3e80f79d45517aed44d0960695
+PODFILE CHECKSUM: d77df177eb50a27c9d60c1006a801681ca160b3e
 
 COCOAPODS: 1.3.1
