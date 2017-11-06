@@ -40,6 +40,8 @@ class ISConcursosTableViewController: UITableViewController {
         //TODO: - Registro de celda
         tableView.register(UINib(nibName: "ISOfertaCustomCell", bundle: nil), forCellReuseIdentifier: "ISOfertaCustomCell")
         
+        self.title = "Descuentos"
+        
         
     }
     
@@ -115,18 +117,13 @@ class ISConcursosTableViewController: UITableViewController {
     
     //MARK: - UTILS
     func llamadaCupones(){
-        let datosOfertas = ISParserOfertas()
-        let idLocalidad = "11"
-        let tipoOferta = CONSTANTES.LLAMADAS.CONCURSO
-        let tipoParametro = CONSTANTES.LLAMADAS.PROMOCIONES_SERVICE
+        let datosConcursos = ISParserConcursos()
         
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
         firstly{
-            return when(resolved: datosOfertas.getDatosPromociones(idLocalidad,
-                                                                   idTipo: tipoOferta,
-                                                                   idParametro: tipoParametro))
+            return when(resolved: datosConcursos.getDatosConcursos())
             }.then{_ in
-                self.arrayConcursos = datosOfertas.getParserPromociones()
+                self.arrayConcursos = datosConcursos.getParserConcursos()
             }.then{_ in
                 self.tableView.reloadData()
             }.then{_ in

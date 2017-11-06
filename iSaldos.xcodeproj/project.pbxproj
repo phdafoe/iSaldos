@@ -65,6 +65,8 @@
 		415101831EB8B665003B016D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101821EB8B665003B016D /* UserModel.swift */; };
 		415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */; };
 		4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */; };
+		41532F1B1FB1031F00A95CC9 /* ISParserConcursos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41532F1A1FB1031F00A95CC9 /* ISParserConcursos.swift */; };
+		41532F1D1FB10FB600A95CC9 /* ISParsesCupones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41532F1C1FB10FB600A95CC9 /* ISParsesCupones.swift */; };
 		415490A91FA9EF8600BD0510 /* HayInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415490A81FA9EF8600BD0510 /* HayInternet.swift */; };
 		41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFB1EA0EC0600FC491F /* RateApp.swift */; };
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
@@ -151,6 +153,8 @@
 		415101821EB8B665003B016D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISUsuariosCustomCell.swift; sourceTree = "<group>"; };
 		415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISUsuariosCustomCell.xib; sourceTree = "<group>"; };
+		41532F1A1FB1031F00A95CC9 /* ISParserConcursos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISParserConcursos.swift; sourceTree = "<group>"; };
+		41532F1C1FB10FB600A95CC9 /* ISParsesCupones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISParsesCupones.swift; sourceTree = "<group>"; };
 		415490A81FA9EF8600BD0510 /* HayInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HayInternet.swift; sourceTree = "<group>"; };
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
@@ -372,6 +376,8 @@
 			isa = PBXGroup;
 			children = (
 				4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */,
+				41532F1A1FB1031F00A95CC9 /* ISParserConcursos.swift */,
+				41532F1C1FB10FB600A95CC9 /* ISParsesCupones.swift */,
 			);
 			name = PARSERS;
 			sourceTree = "<group>";
@@ -637,6 +643,8 @@
 				41FF74A71FA62482003D2669 /* ISWebViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
 				415101831EB8B665003B016D /* UserModel.swift in Sources */,
+				41532F1B1FB1031F00A95CC9 /* ISParserConcursos.swift in Sources */,
+				41532F1D1FB10FB600A95CC9 /* ISParsesCupones.swift in Sources */,
 				4125385F1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift in Sources */,
 				415490A91FA9EF8600BD0510 /* HayInternet.swift in Sources */,
 			);

@@ -39,6 +39,8 @@ struct LLamadas {
     let BASEIDLOCALIDAD = "idlocalidad="
     let BASEIDP = "&p="
     let BASEIDTIPO = "&tipo="
+    let BASE_URL_CONCURSOS = "http://andresocampo.com/pruebas/iSaldos/concursos.json"
+    let BASE_URL_CUPONES = "http://andresocampo.com/pruebas/iSaldos/cupones.json"
     
    
     

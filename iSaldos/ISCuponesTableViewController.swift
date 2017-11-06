@@ -118,18 +118,13 @@ class ISCuponesTableViewController: UITableViewController {
     
     //MARK: - UTILS
     func llamadaCupones(){
-        let datosOfertas = ISParserOfertas()
-        let idLocalidad = "11"
-        let tipoOferta = CONSTANTES.LLAMADAS.CUPONES
-        let tipoParametro = CONSTANTES.LLAMADAS.PROMOCIONES_SERVICE
+        let datosCupones = ISParsesCupones()
         
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
         firstly{
-            return when(resolved: datosOfertas.getDatosPromociones(idLocalidad,
-                                                                   idTipo: tipoOferta,
-                                                                   idParametro: tipoParametro))
+            return when(resolved: datosCupones.getDatosCupones())
             }.then{_ in
-                self.arrayCupones = datosOfertas.getParserPromociones()
+                self.arrayCupones = datosCupones.getParserCupones()
             }.then{_ in
                 self.tableView.reloadData()
             }.then{_ in
