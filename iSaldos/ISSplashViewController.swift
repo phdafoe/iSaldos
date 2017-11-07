@@ -29,8 +29,9 @@ class ISSplashViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(currentReachabilityStatus != .notReachable) //true connected
         
-        if(!isInternetAvailable()){
+        if(currentReachabilityStatus == .notReachable){
             UIView.animate(withDuration: 3,
                            animations: {
                             self.myComprobacionInternet.isHidden = false
