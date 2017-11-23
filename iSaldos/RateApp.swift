@@ -11,7 +11,7 @@
 import UIKit
 
 // ----APP RATE SETTINGS ---
-let APP_ID = "981848691"
+let APP_ID = "1305072342"
 
 let showRateTimes = 3 //Times rateApp() called before alert shows
 // -------------------------
@@ -54,7 +54,13 @@ func rateApp(_ view: UIViewController, immediatly: Bool?) {
             rateAlert.addAction(fiveStarsAction)
             let fourStarsAction = UIAlertAction(title: "★★★★✩", style: .default, handler: {(alert: UIAlertAction!) in goToRate(view)})
             rateAlert.addAction(fourStarsAction)
-            let threeStarsAction = UIAlertAction(title: "★★★✩✩", style: .default, handler: {(alert: UIAlertAction!) in showCloseAlert(view, title: "Gracias", message: "Apreciamos tu opinón.")
+            let threeStarsAction = UIAlertAction(title: "★★★✩✩", style: .default, handler: {(alert: UIAlertAction!) in goToRate(view)})
+            rateAlert.addAction(threeStarsAction)
+            let twoStarsAction = UIAlertAction(title: "★★✩✩✩", style: .default, handler: {(alert: UIAlertAction!) in goToRate(view)})
+            rateAlert.addAction(twoStarsAction)
+            let oneStarsAction = UIAlertAction(title: "★✩✩✩✩", style: .default, handler: {(alert: UIAlertAction!) in goToRate(view)})
+            rateAlert.addAction(oneStarsAction)
+            /*let threeStarsAction = UIAlertAction(title: "★★★✩✩", style: .default, handler: {(alert: UIAlertAction!) in showCloseAlert(view, title: "Gracias", message: "Apreciamos tu opinón.")
                 noMoreRate()
             })
             rateAlert.addAction(threeStarsAction)
@@ -64,8 +70,7 @@ func rateApp(_ view: UIViewController, immediatly: Bool?) {
             rateAlert.addAction(twoStarsAction)
             let oneStarsAction = UIAlertAction(title: "★✩✩✩✩", style: .default, handler: {(alert: UIAlertAction!) in showCloseAlert(view, title: "Gracias", message: "Apreciamos tu opinón.")
                 noMoreRate()
-            })
-            rateAlert.addAction(oneStarsAction)
+            })*/
             let notNowAction = UIAlertAction(title: "Ahora no", style: .default, handler: nil)
             rateAlert.addAction(notNowAction)
             let noThanksAction = UIAlertAction(title: "Quizá en otro momento", style: .default, handler: {(alert: UIAlertAction!) in noMoreRate()})

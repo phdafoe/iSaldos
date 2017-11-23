@@ -41,7 +41,7 @@ struct LLamadas {
     let BASEIDTIPO = "&tipo="
     let BASE_URL_CONCURSOS = "http://andresocampo.com/pruebas/iSaldos/concursos.json"
     let BASE_URL_CUPONES = "http://andresocampo.com/pruebas/iSaldos/cupones.json"
-    
+    let BASE_URL_OFERTAS = "http://andresocampo.com/pruebas/iSaldos/ofertas.json"
    
     
 }

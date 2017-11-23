@@ -15,6 +15,7 @@ class ISParserOfertas: NSObject {
     
     /*http://app.clubsinergias.es/api_comercios.php?idlocalidad=11&tipo=oferta&p=promociones
     CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASEIDLOCALIDAD + idLocalidad + CONSTANTES.LLAMADAS.BASEIDTIPO + idTipo + CONSTANTES.LLAMADAS.BASEIDP + idParametro*/
+    //http://andresocampo.com/pruebas/iSaldos/concursos.json
     
     
     
@@ -23,12 +24,11 @@ class ISParserOfertas: NSObject {
     var jsonDataPromociones : JSON?
     
     func getDatosPromociones(_ idLocalidad : String, idTipo : String, idParametro : String) -> Promise<JSON>{
-        let request = URLRequest(url: URL(string: CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASEIDLOCALIDAD + idLocalidad + CONSTANTES.LLAMADAS.BASEIDTIPO + idTipo + CONSTANTES.LLAMADAS.BASEIDP + idParametro)!)
+        let request = URLRequest(url: URL(string: CONSTANTES.LLAMADAS.BASE_URL_OFERTAS)!)
         print(request)
         
         return Alamofire.request(request).responseJSON().then{(data) -> JSON in
             self.jsonDataPromociones = JSON(data)
-            //print(self.jsonDataPromociones!)
             return self.jsonDataPromociones!
         }
     }
