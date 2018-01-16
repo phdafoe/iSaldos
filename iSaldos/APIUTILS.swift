@@ -53,6 +53,7 @@ struct ParseData {
 }
 
 struct CustomUserDefaults {
+    
     let VISTA_GALERIA_INICIAL = "vistaGaleriaInicial"
     let VISTA_LOGIN = "vistaLogin"
     let VISTA_REGISTRO = "vistaRegistro"
