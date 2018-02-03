@@ -614,7 +614,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8kD-u8-J5I">
                                 <rect key="frame" x="27.666666666666657" y="57" width="320" height="478"/>
@@ -622,17 +622,22 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rab-xY-mUe">
                                         <rect key="frame" x="8" y="25" width="304" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" white="0.87339952256944442" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbI-2p-qgW">
                                         <rect key="frame" x="60" y="156" width="200" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.13737346049999999" green="0.45702130819999998" blue="0.79320549240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                         <state key="normal" title="Acceder">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="accessApp:" destination="CBe-ME-8gT" eventType="touchUpInside" id="FIy-f4-yFl"/>
@@ -645,17 +650,22 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="PASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMW-65-tAP">
                                         <rect key="frame" x="8" y="83" width="304" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                <color key="value" white="0.93543836805555558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ol5-5t-qBu">
                                         <rect key="frame" x="60" y="222" width="200" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.13737346049999999" green="0.45702130819999998" blue="0.79320549240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="35"/>
                                         <state key="normal" title="Registrarse">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="1yV-fq-TJr" kind="presentation" id="uQ2-s9-JOe"/>
@@ -672,13 +682,23 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <constraint firstAttribute="height" constant="478" id="k44-Th-kBM"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTZ-GU-Hbn">
+                                <rect key="frame" x="36" y="190" width="304" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5tp-Bx-jTA">
+                                <rect key="frame" x="36" y="132" width="304" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="q78-P1-xsN" secondAttribute="trailing" id="A3B-V3-g0G"/>
+                            <constraint firstAttribute="bottom" secondItem="q78-P1-xsN" secondAttribute="bottom" id="BN0-sH-vYu"/>
                             <constraint firstItem="q78-P1-xsN" firstAttribute="leading" secondItem="fIJ-cO-IdJ" secondAttribute="leading" id="Nq5-AC-3V8"/>
                             <constraint firstItem="8kD-u8-J5I" firstAttribute="top" secondItem="lhJ-CK-fu8" secondAttribute="bottom" constant="13" id="X10-fN-YnQ"/>
-                            <constraint firstItem="9JI-RV-0Fq" firstAttribute="top" secondItem="q78-P1-xsN" secondAttribute="bottom" constant="-34" id="mZc-re-dDM"/>
                             <constraint firstItem="q78-P1-xsN" firstAttribute="top" secondItem="fIJ-cO-IdJ" secondAttribute="top" id="sUp-2d-rpa"/>
                             <constraint firstItem="8kD-u8-J5I" firstAttribute="centerX" secondItem="fIJ-cO-IdJ" secondAttribute="centerX" id="wpv-qp-41h"/>
                         </constraints>
@@ -2191,6 +2211,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
     <inferredMetricsTieBreakers>
         <segue reference="UYl-39-UOJ"/>
         <segue reference="nX1-Ui-Xl1"/>
-        <segue reference="PAK-2k-k0k"/>
+        <segue reference="Odd-gc-QFi"/>
     </inferredMetricsTieBreakers>
 </document>
