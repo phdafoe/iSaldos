@@ -18,7 +18,7 @@ struct ISGenericModel {
     var name : String?
     var releaseDate : String?
     var url : String?
- 
+    
     init(json : JSON) {
         artistName = dimeString(json, nombre: "artistName")
         artworkUrl100 = dimeString(json, nombre: "artworkUrl100").replacingOccurrences(of: "200x200", with: "600x600")

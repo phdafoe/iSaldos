@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import WebKit
 
-class ISWebViewController: UIViewController {
+class ISWebViewController: UIViewController, NibVC {    
 
     //MARK: - Variables Locales
     var urlWeb : String?
     
     
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var myWebView: UIWebView!
+    @IBOutlet weak var myWebView: WKWebView!
     
     
     @IBAction func myCerrarVentanaACTION(_ sender: UIButton) {
@@ -29,23 +30,24 @@ class ISWebViewController: UIViewController {
         myActivityIndicator.isHidden = false
         
         //Crear delegados para la web
-        myWebView.delegate = self
+        myWebView.navigationDelegate = self
         
         //Cargar datos de la página
-        let url = URL(string: "http://" + urlWeb!)
+        let url = URL(string: urlWeb!)
         let peticion = URLRequest(url: url!)
-        myWebView.loadRequest(peticion)
+        myWebView.load(peticion)
     }
 
 }
 
-extension ISWebViewController : UIWebViewDelegate{
-    func webViewDidStartLoad(_ webView: UIWebView) {
+extension ISWebViewController : WKNavigationDelegate{
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         myActivityIndicator.isHidden = false
         myActivityIndicator.startAnimating()
     }
     
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         myActivityIndicator.isHidden = true
         myActivityIndicator.stopAnimating()
     }

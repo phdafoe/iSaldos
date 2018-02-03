@@ -13,6 +13,16 @@ public protocol ReuseIdentifierInterface : class{
     static var defaultReuseIdentifier : String { get }
 }
 
+public protocol NibVC : class{
+    static var defaultNibVC : String { get }
+}
+
+public extension NibVC where Self : UIViewController{
+    static var defaultNibVC : String{
+        return NSStringFromClass(self).components(separatedBy: ".").last!
+    }
+}
+
 public extension ReuseIdentifierInterface where Self : UIView{
     static var defaultReuseIdentifier : String{
         return NSStringFromClass(self).components(separatedBy: ".").last!

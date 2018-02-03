@@ -85,6 +85,16 @@ class MoviesViewController: UIViewController {
         self.refresh?.endRefreshing()
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailView"{
+            let detailVC = segue.destination as! ISDetalleOfertaViewController
+            let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
+            let objInd = arrayGeneric[selectInd!]
+            detailVC.modelData = objInd
+            detailVC.detalleImagenData = diccionarioImagenes[objInd.id!]!
+        }
+    }
 
 }
 
@@ -111,7 +121,7 @@ extension MoviesViewController : UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         imagenSeleccionada = customCellData?.myImagePoster.image
-        performSegue(withIdentifier: "showOfertaSegue", sender: self)
+        performSegue(withIdentifier: "showDetailView", sender: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

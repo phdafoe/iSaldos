@@ -26,7 +26,7 @@ class MusicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Movies"
+        self.title = "Music"
         
         //LLAMADA A DATOS
         llamadaMovies()
@@ -110,8 +110,11 @@ extension MusicViewController : UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        imagenSeleccionada = customCellData?.myImagePoster.image
-        performSegue(withIdentifier: "showOfertaSegue", sender: self)
+        let webVC = self.storyboard?.instantiateViewController(withIdentifier: ISWebViewController.defaultNibVC) as! ISWebViewController
+        let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
+        let objInd = arrayGeneric[selectInd!]
+        webVC.urlWeb = objInd.url
+        present(webVC, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
