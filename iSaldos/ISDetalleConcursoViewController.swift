@@ -12,7 +12,7 @@ import MapKit
 class ISDetalleConcursoViewController: UITableViewController {
 
     //MARK: - Variables locales
-    var concurso : ISOfertasModel?
+    //var concurso : ISOfertasModel?
     var detalleImagenData : UIImage?
     
     //MARK: - IBOutlets
@@ -36,7 +36,7 @@ class ISDetalleConcursoViewController: UITableViewController {
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        myImagenOferta.image = detalleImagenData
+        /*myImagenOferta.image = detalleImagenData
         myNombreOferta.text = concurso?.nombre
         myFechaOferta.text = concurso?.fechaFin
         myInformacionOferta.text = concurso?.masInformacion
@@ -54,7 +54,7 @@ class ISDetalleConcursoViewController: UITableViewController {
         annotation.coordinate = CLLocationCoordinate2DMake(40.352494, -3.809620)
         annotation.title = concurso?.nombre
         annotation.subtitle = concurso?.asociado?.direccion
-        myMapView.addAnnotation(annotation)
+        myMapView.addAnnotation(annotation)*/
         
         
         // Do any additional setup after loading the view.
@@ -66,10 +66,7 @@ class ISDetalleConcursoViewController: UITableViewController {
     }
     
     
-    //MARK: - Utils
-    func getImagePath(_ type: String, id : String!, name : String!) -> String{
-        return CONSTANTES.LLAMADAS.BASE_PHOTO_URL + id + "/" + name
-    }
+    
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

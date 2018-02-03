@@ -59,6 +59,11 @@ public func dameFecha(_ fecha : Date) -> String{
 }
 
 
+public func randonNumber () -> String{
+    let arrayNumber = 1 + Int(arc4random_uniform(100))
+    return "\(arrayNumber)"
+}
+
 
 
 

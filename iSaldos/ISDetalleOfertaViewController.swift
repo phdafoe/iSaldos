@@ -12,7 +12,7 @@ import MapKit
 class ISDetalleOfertaViewController: UITableViewController {
     
     //MARK: - Variables locales
-    var oferta : ISOfertasModel?
+    //var oferta : ISOfertasModel?
     var detalleImagenData : UIImage?
     
     //MARK: - IBOutlets
@@ -51,7 +51,7 @@ class ISDetalleOfertaViewController: UITableViewController {
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        if let ofertaDes = oferta, let AsociadoDes = oferta?.asociado{
+        /*if let ofertaDes = oferta, let AsociadoDes = oferta?.asociado{
         
         myImagenOferta.image = detalleImagenData
         myNombreOferta.text = ofertaDes.nombre
@@ -72,7 +72,7 @@ class ISDetalleOfertaViewController: UITableViewController {
         annotation.coordinate = CLLocationCoordinate2DMake(40.352494, -3.809620)
         annotation.title = oferta?.nombre
         annotation.subtitle = oferta?.asociado?.direccion
-        myMapView.addAnnotation(annotation)
+        myMapView.addAnnotation(annotation)*/
         
 
         // Do any additional setup after loading the view.
@@ -84,10 +84,7 @@ class ISDetalleOfertaViewController: UITableViewController {
     }
     
 
-    //MARK: - Utils
-    func getImagePath(_ type: String, id : String!, name : String!) -> String{
-        return CONSTANTES.LLAMADAS.BASE_PHOTO_URL + id + "/" + name
-    }
+    
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

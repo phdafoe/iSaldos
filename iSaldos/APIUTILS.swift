@@ -7,8 +7,12 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 let CONSTANTES = Constantes()
+var jsonDataGenerico : JSON?
+var imagenSeleccionada : UIImage?
+var diccionarioImagenes = [String: UIImage?]()
 
 struct Constantes {
     let COLORES = Colores()
@@ -19,31 +23,19 @@ struct Constantes {
 
 struct Colores {
     let GRIS_NAV_TAB = #colorLiteral(red: 0.2765139249, green: 0.2765139249, blue: 0.2765139249, alpha: 1)
-    let BLANCO_TEXTO_NAV = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    let BLANCO_TEXTO_NAV = #colorLiteral(red: 0.9411764706, green: 0.1882352941, blue: 0.1725490196, alpha: 1)
 }
 
 struct LLamadas {
-    let BASE_API_URL_PORTADAS = "https://pre.sportreview.es/api/"
+    let BASE_URL_APPLE = "https://rss.itunes.apple.com/api/v1/us/%@/%@/all/%@/explicit.json"
+    let MOVIES_APPLE = "movies"
+    let BOOKS_APPLE = "books"
+    let APPLE_MUSIC = "apple-music"
+    let ITUNES_MUSIC = "itunes-music"
     
-    let OFERTAS = "oferta"
-    let CUPONES = "cupon"
-    let CONCURSO = "concurso"
-    
-    let BASE_PHOTO_URL = "http://app.clubsinergias.es/uploads/promociones/"
-    
-    let PROMOCIONES_SERVICE = "promociones"
-    
-    let BASEURLIDPARSE = "http://app.clubsinergias.es/api_comercios.php?idparse="
-    let BASE_URL = "http://app.clubsinergias.es/api_comercios.php?"
-    let BASEURLIDCLIENTE = "http://app.clubsinergias.es/api_comercios.php?idcliente="
-    let BASEIDLOCALIDAD = "idlocalidad="
-    let BASEIDP = "&p="
-    let BASEIDTIPO = "&tipo="
-    let BASE_URL_CONCURSOS = "http://andresocampo.com/pruebas/iSaldos/concursos.json"
-    let BASE_URL_CUPONES = "http://andresocampo.com/pruebas/iSaldos/cupones.json"
-    let BASE_URL_OFERTAS = "http://andresocampo.com/pruebas/iSaldos/ofertas.json"
-   
-    
+    let TOP_MOVIE_APPLE = "top-movies"
+    let TOP_FREE_APPLE = "top-free"
+    let HOT_TRACK_APPLE = "hot-tracks"
 }
 
 struct ParseData {

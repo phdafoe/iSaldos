@@ -11,7 +11,7 @@ import UIKit
 class ISDetalleCuponesViewController: UITableViewController {
 
     //MARK: - Variables locales
-    var cupon : ISOfertasModel?
+    //var cupon : ISOfertasModel?
     var detalleImagenData : UIImage?
     
     //MARK: - VARIABLES QR
@@ -132,7 +132,7 @@ class ISDetalleCuponesViewController: UITableViewController {
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        myImagenOferta.image = detalleImagenData
+        /*myImagenOferta.image = detalleImagenData
         myNombreOferta.text = cupon?.nombre
         myFechaOferta.text = cupon?.fechaFin
         myInformacionOferta.text = cupon?.masInformacion
@@ -144,7 +144,7 @@ class ISDetalleCuponesViewController: UITableViewController {
         myEmailAsociado.text = cupon?.asociado?.mail
         myIdActividad.text = cupon?.asociado?.idActividad
         
-        qrData = cupon?.asociado?.idActividad
+        qrData = cupon?.asociado?.idActividad*/
 
         
         // Do any additional setup after loading the view.
@@ -159,10 +159,7 @@ class ISDetalleCuponesViewController: UITableViewController {
     }
     
     
-    //MARK: - Utils
-    func getImagePath(_ type: String, id : String!, name : String!) -> String{
-        return CONSTANTES.LLAMADAS.BASE_PHOTO_URL + id + "/" + name
-    }
+    
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		410561B01FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410561AF1FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift */; };
 		410561B21FA631C8001DBBE9 /* ISImageGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410561B11FA631C8001DBBE9 /* ISImageGalleryCell.swift */; };
+		4105F7DD2026029F007FEF49 /* ISMoviesApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7DC2026029F007FEF49 /* ISMoviesApple.swift */; };
+		4105F7DF202604B5007FEF49 /* ISMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7DE202604B5007FEF49 /* ISMovieModel.swift */; };
+		4105F7E120260A6C007FEF49 /* ReuseIdentifierInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7E020260A6C007FEF49 /* ReuseIdentifierInterface.swift */; };
+		4105F7E320260B20007FEF49 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7E220260B20007FEF49 /* MoviesViewController.swift */; };
+		4105F7E520260E8A007FEF49 /* GenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7E420260E8A007FEF49 /* GenericCollectionViewCell.swift */; };
+		4105F7E720260EF0007FEF49 /* GenericTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7E620260EF0007FEF49 /* GenericTableView.swift */; };
+		4105F7EA202617D4007FEF49 /* BooksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7E9202617D4007FEF49 /* BooksViewController.swift */; };
+		4105F7EC20261891007FEF49 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7EB20261891007FEF49 /* MusicViewController.swift */; };
 		411945BA1EA148E900996974 /* ISConfiguracionPerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */; };
 		4125385F1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125385E1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift */; };
 		412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741B41E9F93B20074CDD7 /* AppDelegate.swift */; };
@@ -24,9 +32,6 @@
 		412741EA1E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741E91E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift */; };
 		412741EC1E9FC0520074CDD7 /* ISLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741EB1E9FC0520074CDD7 /* ISLoginViewController.swift */; };
 		412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F01E9FC0D70074CDD7 /* ISMenuTableViewController.swift */; };
-		412741F41E9FC1130074CDD7 /* ISOfertasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F31E9FC1130074CDD7 /* ISOfertasTableViewController.swift */; };
-		412741F61E9FC11D0074CDD7 /* ISCuponesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F51E9FC11D0074CDD7 /* ISCuponesTableViewController.swift */; };
-		412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F71E9FC1300074CDD7 /* ISConcursosTableViewController.swift */; };
 		412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */; };
 		412741FC1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */; };
 		412741FE1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */; };
@@ -56,17 +61,12 @@
 		412742451E9FE74D0074CDD7 /* ISSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742441E9FE74D0074CDD7 /* ISSignIn.swift */; };
 		412742471E9FEB260074CDD7 /* ISEnumation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742461E9FEB260074CDD7 /* ISEnumation.swift */; };
 		412742491E9FF68C0074CDD7 /* ISHomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742481E9FF68C0074CDD7 /* ISHomeTabBarController.swift */; };
-		4138E4601EA01991003BCD5F /* ISOfertasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */; };
-		4138E4621EA019A5003BCD5F /* ISAsociadoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */; };
-		4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */; };
 		414AFD031F9BB49000D6EE73 /* LightStreaksDeepBlue.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 414AFD021F9BB49000D6EE73 /* LightStreaksDeepBlue.mp4 */; };
 		4151017F1EB89C49003B016D /* ISNuevoPostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */; };
 		415101811EB8A8A8003B016D /* ISUsuariosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101801EB8A8A8003B016D /* ISUsuariosTableViewController.swift */; };
 		415101831EB8B665003B016D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101821EB8B665003B016D /* UserModel.swift */; };
 		415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */; };
 		4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */; };
-		41532F1B1FB1031F00A95CC9 /* ISParserConcursos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41532F1A1FB1031F00A95CC9 /* ISParserConcursos.swift */; };
-		41532F1D1FB10FB600A95CC9 /* ISParsesCupones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41532F1C1FB10FB600A95CC9 /* ISParsesCupones.swift */; };
 		415490A91FA9EF8600BD0510 /* HayInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415490A81FA9EF8600BD0510 /* HayInternet.swift */; };
 		41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFB1EA0EC0600FC491F /* RateApp.swift */; };
 		41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */; };
@@ -86,6 +86,14 @@
 		35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.debug.xcconfig"; sourceTree = "<group>"; };
 		410561AF1FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISGaleriaCollectionViewController.swift; sourceTree = "<group>"; };
 		410561B11FA631C8001DBBE9 /* ISImageGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISImageGalleryCell.swift; sourceTree = "<group>"; };
+		4105F7DC2026029F007FEF49 /* ISMoviesApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISMoviesApple.swift; sourceTree = "<group>"; };
+		4105F7DE202604B5007FEF49 /* ISMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISMovieModel.swift; sourceTree = "<group>"; };
+		4105F7E020260A6C007FEF49 /* ReuseIdentifierInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierInterface.swift; sourceTree = "<group>"; };
+		4105F7E220260B20007FEF49 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
+		4105F7E420260E8A007FEF49 /* GenericCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewCell.swift; sourceTree = "<group>"; };
+		4105F7E620260EF0007FEF49 /* GenericTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableView.swift; sourceTree = "<group>"; };
+		4105F7E9202617D4007FEF49 /* BooksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewController.swift; sourceTree = "<group>"; };
+		4105F7EB20261891007FEF49 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConfiguracionPerfilViewController.swift; sourceTree = "<group>"; };
 		4125385E1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISRegistroUsuarioTableViewController.swift; sourceTree = "<group>"; };
 		412741B11E9F93B20074CDD7 /* iSaldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaldos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,9 +118,6 @@
 		412741E91E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISGaleriaTutorialViewController.swift; sourceTree = "<group>"; };
 		412741EB1E9FC0520074CDD7 /* ISLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISLoginViewController.swift; sourceTree = "<group>"; };
 		412741F01E9FC0D70074CDD7 /* ISMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISMenuTableViewController.swift; sourceTree = "<group>"; };
-		412741F31E9FC1130074CDD7 /* ISOfertasTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertasTableViewController.swift; sourceTree = "<group>"; };
-		412741F51E9FC11D0074CDD7 /* ISCuponesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISCuponesTableViewController.swift; sourceTree = "<group>"; };
-		412741F71E9FC1300074CDD7 /* ISConcursosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConcursosTableViewController.swift; sourceTree = "<group>"; };
 		412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertaCustomCell.swift; sourceTree = "<group>"; };
 		412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISOfertaCustomCell.xib; sourceTree = "<group>"; };
 		412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleOfertaViewController.swift; sourceTree = "<group>"; };
@@ -144,17 +149,12 @@
 		412742441E9FE74D0074CDD7 /* ISSignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISSignIn.swift; sourceTree = "<group>"; };
 		412742461E9FEB260074CDD7 /* ISEnumation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISEnumation.swift; sourceTree = "<group>"; };
 		412742481E9FF68C0074CDD7 /* ISHomeTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISHomeTabBarController.swift; sourceTree = "<group>"; };
-		4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertasModel.swift; sourceTree = "<group>"; };
-		4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISAsociadoModel.swift; sourceTree = "<group>"; };
-		4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISParserOfertas.swift; sourceTree = "<group>"; };
 		414AFD021F9BB49000D6EE73 /* LightStreaksDeepBlue.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LightStreaksDeepBlue.mp4; sourceTree = "<group>"; };
 		4151017E1EB89C49003B016D /* ISNuevoPostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISNuevoPostTableViewController.swift; sourceTree = "<group>"; };
 		415101801EB8A8A8003B016D /* ISUsuariosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISUsuariosTableViewController.swift; sourceTree = "<group>"; };
 		415101821EB8B665003B016D /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		415101871EB8C371003B016D /* ISUsuariosCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISUsuariosCustomCell.swift; sourceTree = "<group>"; };
 		415101881EB8C371003B016D /* ISUsuariosCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISUsuariosCustomCell.xib; sourceTree = "<group>"; };
-		41532F1A1FB1031F00A95CC9 /* ISParserConcursos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISParserConcursos.swift; sourceTree = "<group>"; };
-		41532F1C1FB10FB600A95CC9 /* ISParsesCupones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISParsesCupones.swift; sourceTree = "<group>"; };
 		415490A81FA9EF8600BD0510 /* HayInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HayInternet.swift; sourceTree = "<group>"; };
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
@@ -190,6 +190,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4105F7E8202616E8007FEF49 /* APPLE */ = {
+			isa = PBXGroup;
+			children = (
+				4105F7E220260B20007FEF49 /* MoviesViewController.swift */,
+				4105F7EB20261891007FEF49 /* MusicViewController.swift */,
+				4105F7E9202617D4007FEF49 /* BooksViewController.swift */,
+			);
+			name = APPLE;
+			sourceTree = "<group>";
+		};
 		412741A81E9F93B20074CDD7 = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +300,7 @@
 				412741FF1E9FC1680074CDD7 /* OFERTAS */,
 				412742061E9FC19D0074CDD7 /* CUPONES */,
 				4127420D1E9FC1C60074CDD7 /* CONCURSOS */,
+				4105F7E8202616E8007FEF49 /* APPLE */,
 			);
 			name = VIEWS_CONTROLLERS;
 			sourceTree = "<group>";
@@ -310,7 +321,6 @@
 		412741FF1E9FC1680074CDD7 /* OFERTAS */ = {
 			isa = PBXGroup;
 			children = (
-				412741F31E9FC1130074CDD7 /* ISOfertasTableViewController.swift */,
 				412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */,
 				412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */,
 				412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */,
@@ -321,7 +331,6 @@
 		412742061E9FC19D0074CDD7 /* CUPONES */ = {
 			isa = PBXGroup;
 			children = (
-				412741F51E9FC11D0074CDD7 /* ISCuponesTableViewController.swift */,
 				412742001E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift */,
 				B4409CD61ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift */,
 			);
@@ -331,7 +340,6 @@
 		4127420D1E9FC1C60074CDD7 /* CONCURSOS */ = {
 			isa = PBXGroup;
 			children = (
-				412741F71E9FC1300074CDD7 /* ISConcursosTableViewController.swift */,
 				4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */,
 			);
 			name = CONCURSOS;
@@ -353,10 +361,13 @@
 		4127422F1E9FC6750074CDD7 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				4105F7E620260EF0007FEF49 /* GenericTableView.swift */,
 				415490A81FA9EF8600BD0510 /* HayInternet.swift */,
 				41A3BBFB1EA0EC0600FC491F /* RateApp.swift */,
 				4127422B1E9FC6630074CDD7 /* APIUTILS.swift */,
 				4127422D1E9FC66C0074CDD7 /* APIHELPERS.swift */,
+				4105F7E020260A6C007FEF49 /* ReuseIdentifierInterface.swift */,
+				4105F7E420260E8A007FEF49 /* GenericCollectionViewCell.swift */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -365,9 +376,8 @@
 			isa = PBXGroup;
 			children = (
 				412742461E9FEB260074CDD7 /* ISEnumation.swift */,
+				4105F7DE202604B5007FEF49 /* ISMovieModel.swift */,
 				412742441E9FE74D0074CDD7 /* ISSignIn.swift */,
-				4138E45F1EA01991003BCD5F /* ISOfertasModel.swift */,
-				4138E4611EA019A5003BCD5F /* ISAsociadoModel.swift */,
 			);
 			name = MODELS;
 			sourceTree = "<group>";
@@ -375,9 +385,7 @@
 		412742311E9FC6810074CDD7 /* PARSERS */ = {
 			isa = PBXGroup;
 			children = (
-				4138E4631EA01C3D003BCD5F /* ISParserOfertas.swift */,
-				41532F1A1FB1031F00A95CC9 /* ISParserConcursos.swift */,
-				41532F1C1FB10FB600A95CC9 /* ISParsesCupones.swift */,
+				4105F7DC2026029F007FEF49 /* ISMoviesApple.swift */,
 			);
 			name = PARSERS;
 			sourceTree = "<group>";
@@ -601,27 +609,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4138E4621EA019A5003BCD5F /* ISAsociadoModel.swift in Sources */,
 				4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */,
 				415101811EB8A8A8003B016D /* ISUsuariosTableViewController.swift in Sources */,
 				B45B0E2C1EB8EC010038D174 /* UserPotImage.swift in Sources */,
 				412742451E9FE74D0074CDD7 /* ISSignIn.swift in Sources */,
 				412741E61E9FBF230074CDD7 /* CarbonTabSwipeNavigation.m in Sources */,
+				4105F7EC20261891007FEF49 /* MusicViewController.swift in Sources */,
 				411945BA1EA148E900996974 /* ISConfiguracionPerfilViewController.swift in Sources */,
 				4151017F1EB89C49003B016D /* ISNuevoPostTableViewController.swift in Sources */,
 				4127422E1E9FC66C0074CDD7 /* APIHELPERS.swift in Sources */,
-				4138E4601EA01991003BCD5F /* ISOfertasModel.swift in Sources */,
 				4127422A1E9FC5630074CDD7 /* ISTerminosViewController.swift in Sources */,
+				4105F7E320260B20007FEF49 /* MoviesViewController.swift in Sources */,
 				4127422C1E9FC6630074CDD7 /* APIUTILS.swift in Sources */,
 				412742011E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift in Sources */,
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
+				4105F7DD2026029F007FEF49 /* ISMoviesApple.swift in Sources */,
+				4105F7EA202617D4007FEF49 /* BooksViewController.swift in Sources */,
 				412741EC1E9FC0520074CDD7 /* ISLoginViewController.swift in Sources */,
 				412742111E9FC3C80074CDD7 /* ISMuroSocialViewController.swift in Sources */,
-				412741F41E9FC1130074CDD7 /* ISOfertasTableViewController.swift in Sources */,
-				412741F61E9FC11D0074CDD7 /* ISCuponesTableViewController.swift in Sources */,
+				4105F7E520260E8A007FEF49 /* GenericCollectionViewCell.swift in Sources */,
 				410561B01FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift in Sources */,
 				412741EA1E9FC0470074CDD7 /* ISGaleriaTutorialViewController.swift in Sources */,
-				4138E4641EA01C3D003BCD5F /* ISParserOfertas.swift in Sources */,
 				412742131E9FC3D30074CDD7 /* ISCanalSocialViewController.swift in Sources */,
 				412742331E9FC9FE0074CDD7 /* ISSplashViewController.swift in Sources */,
 				412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */,
@@ -637,14 +645,14 @@
 				B4409CD71ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift in Sources */,
 				412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */,
 				41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */,
+				4105F7E120260A6C007FEF49 /* ReuseIdentifierInterface.swift in Sources */,
 				B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */,
+				4105F7E720260EF0007FEF49 /* GenericTableView.swift in Sources */,
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
-				412741F81E9FC1300074CDD7 /* ISConcursosTableViewController.swift in Sources */,
 				41FF74A71FA62482003D2669 /* ISWebViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
+				4105F7DF202604B5007FEF49 /* ISMovieModel.swift in Sources */,
 				415101831EB8B665003B016D /* UserModel.swift in Sources */,
-				41532F1B1FB1031F00A95CC9 /* ISParserConcursos.swift in Sources */,
-				41532F1D1FB10FB600A95CC9 /* ISParsesCupones.swift in Sources */,
 				4125385F1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift in Sources */,
 				415490A91FA9EF8600BD0510 /* HayInternet.swift in Sources */,
 			);
