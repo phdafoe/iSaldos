@@ -12,7 +12,8 @@ import Parse
 class ISUsuariosTableViewController: UITableViewController {
     
     //MARK: - VARIABLES LOCALES GLOBALES
-    var usersFromParse = [UserModel]()
+    var userName : [String] = []
+    var nombreYApellido : [String] = []
     var usersFollowing = [Bool]()
     var objectIdFoto : String?
     
@@ -40,26 +41,11 @@ class ISUsuariosTableViewController: UITableViewController {
     func dameInformacionPerfil(){
         let queryUsuariosFromParse = PFUser.query()
         queryUsuariosFromParse?.findObjectsInBackground{ (objectsUsuarios, errorUsuarios) in
-            self.usersFromParse.removeAll()
+            self.userName.removeAll()
                 if errorUsuarios == nil{
                     for objectsData in objectsUsuarios!{
-                        let query = PFQuery(className: "ImageProfile")
-                        query.findObjectsInBackground(block: { (objectDos, errorDos) in
-                            if errorDos == nil{
-                                if let objectDosDes = objectDos{
-                                    for objectDataDos in objectDosDes{
-                                        let userData = objectsData as! PFUser
-                                        let userModelData = UserModel(pNombre: userData["nombre"] as! String,
-                                                                      pApellido: userData["apellido"] as! String,
-                                                                      pUsername: userData.username!,
-                                                                      pImageProfile: objectDataDos["imageProfile"] as! PFFile)
-
-                                        self.usersFromParse.append(userModelData)
-                                    }
-                                    self.tableView.reloadData()
-                                }
-                            }
-                        })
+                        let userData = objectsData as! PFUser
+                        self.userName.append(userData.username!)
                     }
                     self.tableView.reloadData()
                 }
@@ -77,36 +63,25 @@ class ISUsuariosTableViewController: UITableViewController {
                     //2. consulta de PFQuery
                     let queryUsuariosFromParse = PFUser.query()
                     queryUsuariosFromParse?.findObjectsInBackground{ (objectsUsuarios, errorUsuarios) in
-                        self.usersFromParse.removeAll()
+                        self.userName.removeAll()
                         self.usersFollowing.removeAll()
                         if errorUsuarios == nil{
                             for objectsData in objectsUsuarios!{
                                 //3. Consulta
                                 let userData = objectsData as! PFUser
                                 if userData.username != PFUser.current()?.username{
-                                    let queryBusquedaFoto = PFQuery(className: "ImageProfile")
-                                    queryFollowers.whereKey("username", notEqualTo: userData.username!)
-                                    queryBusquedaFoto.findObjectsInBackground{ (objectsBusquedaFoto, errorFoto) in
-                                        if errorFoto == nil{
-                                            if let objectsBusquedaFotoDes = objectsBusquedaFoto?.first{
-                                                let imageName = objectsBusquedaFotoDes["imageProfile"] as! PFFile
-                                                let userModelData = UserModel(pNombre: userData["nombre"] as! String,
-                                                                              pApellido: userData["apellido"] as! String,
-                                                                              pUsername: userData.username!,
-                                                                              pImageProfile: imageName)
-                                                self.usersFromParse.append(userModelData)
-                                                
-                                                var isFollowing = false
-                                                for c_followingPersonaje in followingPersonas{
-                                                    if c_followingPersonaje["following"] as? String == userData.username{
-                                                        isFollowing = true
-                                                    }
-                                                }
-                                                self.usersFollowing.append(isFollowing)
-                                                self.tableView.reloadData()
-                                            }
+                                    self.userName.append(userData.username!)
+                                    self.nombreYApellido.append(userData["nombre"] as! String)
+                                    self.nombreYApellido.append(userData["apellido"] as! String)
+                                    
+                                    var isFollowing = false
+                                    for c_followingPersonaje in followingPersonas{
+                                        if c_followingPersonaje["following"] as? String == userData.username{
+                                            isFollowing = true
                                         }
                                     }
+                                    self.usersFollowing.append(isFollowing)
+                                    self.tableView.reloadData()
                                 }
                             }
                             self.tableView.reloadData()
@@ -134,7 +109,7 @@ class ISUsuariosTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return usersFromParse.count
+        return userName.count
     }
 
     
@@ -142,22 +117,23 @@ class ISUsuariosTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ISUsuariosCustomCell", for: indexPath) as! ISUsuariosCustomCell
 
         // Configure the cell...
-        let modelData = usersFromParse[indexPath.row]
+        let modelData = userName[indexPath.row]
+        let modelNombre = nombreYApellido[indexPath.row]
         let followingData = usersFollowing[indexPath.row]
         
-        cell.myNombre.text = modelData.nombre
-        cell.myApellido.text = modelData.apellido
-        cell.myUsername.text = modelData.username!
+        cell.myNombre.text = modelNombre
+        //cell.myApellido.text = modelNombre
+        cell.myUsername.text = modelData
         
-        modelData.imageProfile?.getDataInBackground(block: { (dataImage, errorImage) in
-            if errorImage == nil{
-                let imageDown = UIImage(data: dataImage!)
-                cell.myImagenPerfil.image = imageDown
-            }else{
-                print("Error AQUI")
-            }
-
-        })
+//        modelData.imageProfile?.getDataInBackground(block: { (dataImage, errorImage) in
+//            if errorImage == nil{
+//                let imageDown = UIImage(data: dataImage!)
+//                cell.myImagenPerfil.image = imageDown
+//            }else{
+//                print("Error AQUI")
+//            }
+//
+//        })
         
         if followingData{
             cell.accessoryType = UITableViewCellAccessoryType.checkmark
@@ -170,7 +146,7 @@ class ISUsuariosTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 39
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -202,6 +178,8 @@ class ISUsuariosTableViewController: UITableViewController {
             following.saveInBackground(block: nil)
         }
     }
+    
+    
     
 
 }

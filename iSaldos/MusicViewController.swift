@@ -68,7 +68,9 @@ class MusicViewController: UIViewController {
             }.then{_ in
                 providerService.getParseGeneric(completion: { (resultData) in
                     self.arrayGeneric = resultData
-                    self.myCollectionView.reloadData()
+                    DispatchQueue.main.async {
+                        self.myCollectionView.reloadData()
+                    }
                     APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
                 })
             }.catch{error in

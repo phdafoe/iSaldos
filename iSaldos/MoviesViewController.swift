@@ -68,9 +68,12 @@ class MoviesViewController: UIViewController {
             }.then{_ in
                 providerService.getParseGeneric(completion: { (resultData) in
                     self.arrayGeneric = resultData
-                    self.myCollectionView.reloadData()
-                    APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+                    DispatchQueue.main.async {
+                        self.myCollectionView.reloadData()
+                    }
                 })
+            }.then{_ in
+                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
             }.catch{error in
                 self.present(muestraAlertVC("Lo sentimos",
                                             messageData: "Algo salió mal"),

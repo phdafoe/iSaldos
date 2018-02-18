@@ -6,7 +6,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -91,7 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nDB-2v-sWa">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="arh-lP-zz4"/>
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="eNf-EM-LBF">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" id="eNf-EM-LBF">
                             <connections>
                                 <action selector="LogoutToLogin:" destination="1TE-rV-7xR" id="TqO-Xx-Ocv"/>
                             </connections>
@@ -1038,7 +1037,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                             <subviews>
                                                 <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZE-Iq-0d0">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="686"/>
-                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <wkWebViewConfiguration key="configuration">
                                                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                         <wkPreferences key="preferences"/>
@@ -1109,21 +1108,19 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                                                         <rect key="frame" x="0.0" y="0.0" width="180" height="271"/>
                                                                     </imageView>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="degradado" translatesAutoresizingMaskIntoConstraints="NO" id="Xgm-h2-vLx">
-                                                                        <rect key="frame" x="0.0" y="108" width="180" height="163"/>
+                                                                        <rect key="frame" x="0.0" y="201" width="180" height="70"/>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lorejsdjsdkakdasjdkasdkasdlasdjñlkasdñsajdñljaslkñdjasñkld" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0if-eD-ap2">
-                                                                        <rect key="frame" x="20" y="221" width="152" height="41"/>
-                                                                        <constraints>
-                                                                            <constraint firstAttribute="height" constant="41" id="nhz-rX-LU4"/>
-                                                                        </constraints>
+                                                                        <rect key="frame" x="20" y="212.66666666666666" width="152" height="50.333333333333343"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVu-4R-AWX">
-                                                                        <rect key="frame" x="8" y="241" width="11" height="21"/>
+                                                                        <rect key="frame" x="8" y="242" width="11" height="21"/>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="width" constant="11" id="l5b-QM-iOz"/>
+                                                                            <constraint firstAttribute="width" constant="11" id="5pO-YV-msK"/>
+                                                                            <constraint firstAttribute="height" constant="21" id="8F5-gE-ssu"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                                         <color key="textColor" red="0.90588235289999997" green="0.29803921570000003" blue="0.23529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1132,19 +1129,18 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
-                                                                <constraint firstItem="ZVu-4R-AWX" firstAttribute="leading" secondItem="NC2-iF-HTl" secondAttribute="leadingMargin" constant="-8" id="3Xz-IS-UF5"/>
-                                                                <constraint firstItem="0if-eD-ap2" firstAttribute="leading" secondItem="ZVu-4R-AWX" secondAttribute="trailing" constant="1" id="48Y-Nv-ftu"/>
-                                                                <constraint firstAttribute="trailingMargin" secondItem="0if-eD-ap2" secondAttribute="trailing" constant="-8" id="57n-5f-tEA"/>
+                                                                <constraint firstAttribute="bottom" secondItem="0if-eD-ap2" secondAttribute="bottom" constant="8" id="5Rs-fO-PMJ"/>
+                                                                <constraint firstAttribute="bottom" secondItem="ZVu-4R-AWX" secondAttribute="bottom" constant="8" id="5Vm-8B-Z4l"/>
                                                                 <constraint firstAttribute="trailing" secondItem="OHr-6s-KG3" secondAttribute="trailing" id="CVK-II-pPg"/>
-                                                                <constraint firstAttribute="bottomMargin" secondItem="ZVu-4R-AWX" secondAttribute="bottom" constant="-25" id="PlW-o1-VW9"/>
                                                                 <constraint firstAttribute="bottom" secondItem="OHr-6s-KG3" secondAttribute="bottom" id="QiA-Zu-Kxs"/>
+                                                                <constraint firstAttribute="trailing" secondItem="0if-eD-ap2" secondAttribute="trailing" constant="8" id="YQ5-dj-jDk"/>
                                                                 <constraint firstItem="Xgm-h2-vLx" firstAttribute="bottom" secondItem="OHr-6s-KG3" secondAttribute="bottom" id="ZLd-1O-BHZ"/>
                                                                 <constraint firstItem="OHr-6s-KG3" firstAttribute="leading" secondItem="NC2-iF-HTl" secondAttribute="leading" id="cL0-r5-FNZ"/>
+                                                                <constraint firstItem="0if-eD-ap2" firstAttribute="leading" secondItem="ZVu-4R-AWX" secondAttribute="trailing" constant="1" id="fOb-ys-f2p"/>
                                                                 <constraint firstItem="Xgm-h2-vLx" firstAttribute="leading" secondItem="OHr-6s-KG3" secondAttribute="leading" id="fTQ-uV-0Tu"/>
-                                                                <constraint firstItem="ZVu-4R-AWX" firstAttribute="bottom" secondItem="0if-eD-ap2" secondAttribute="bottom" id="iyC-ql-irw"/>
                                                                 <constraint firstItem="OHr-6s-KG3" firstAttribute="top" secondItem="NC2-iF-HTl" secondAttribute="top" id="mve-Ck-nyl"/>
-                                                                <constraint firstItem="Xgm-h2-vLx" firstAttribute="top" secondItem="NC2-iF-HTl" secondAttribute="topMargin" constant="64" id="q7G-jY-p6j"/>
                                                                 <constraint firstItem="Xgm-h2-vLx" firstAttribute="trailing" secondItem="OHr-6s-KG3" secondAttribute="trailing" id="y19-8m-7wI"/>
+                                                                <constraint firstItem="ZVu-4R-AWX" firstAttribute="leading" secondItem="NC2-iF-HTl" secondAttribute="leading" constant="8" id="yB5-sb-6Lf"/>
                                                             </constraints>
                                                             <size key="customSize" width="180" height="271"/>
                                                             <connections>
@@ -1836,7 +1832,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SYZ-jB-2vn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -1900,7 +1896,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="vmW-j0-5qa" customClass="GenericCollectionViewCell" customModule="iEveris" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="vmW-j0-5qa" customClass="GenericCollectionViewCell" customModule="iSaldos" customModuleProvider="target">
                                         <rect key="frame" x="97.666666666666671" y="5" width="180" height="271"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -2003,7 +1999,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="xne-2Q-7Fy" customClass="GenericCollectionViewCell" customModule="iEveris" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="xne-2Q-7Fy" customClass="GenericCollectionViewCell" customModule="iSaldos" customModuleProvider="target">
                                         <rect key="frame" x="97.666666666666671" y="5" width="180" height="271"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -2106,7 +2102,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="fKK-fG-ymN" customClass="GenericCollectionViewCell" customModule="iEveris" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="fKK-fG-ymN" customClass="GenericCollectionViewCell" customModule="iSaldos" customModuleProvider="target">
                                         <rect key="frame" x="97.666666666666671" y="5" width="180" height="271"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

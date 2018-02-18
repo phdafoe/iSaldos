@@ -43,6 +43,7 @@ class ISDetalleOfertaViewController: UITableViewController {
         myNombreProducto.text = modelDataDes.name
         myFechaLanzamientoProducto.text = modelDataDes.releaseDate
         myInfoUrlProducto.text = modelDataDes.genres?[0].url
+        self.title = modelDataDes.name
         
         let url = URL(string: modelDataDes.url!)
         let urlRequest = URLRequest(url: url!)
@@ -68,9 +69,12 @@ class ISDetalleOfertaViewController: UITableViewController {
             }.then{_ in
                 providerService.getParseGeneric(completion: { (resultData) in
                     self.arrayGeneric = resultData
-                    self.myCollectionView.reloadData()
-                    APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+                    DispatchQueue.main.async {
+                        self.myCollectionView.reloadData()
+                    }
                 })
+            }.then{_ in
+                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
             }.catch{error in
                 self.present(muestraAlertVC("Lo sentimos",
                                             messageData: "Algo salió mal"),
