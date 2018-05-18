@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PromiseKit
+//import PromiseKit
 import Kingfisher
 import APESuperHUD
 
@@ -15,8 +15,10 @@ class MoviesViewController: UIViewController {
     
     //MARK: - Variables locales
     var refresh : UIRefreshControl?
-    var arrayGeneric : [ISGenericModel] = []
+    var arrayGeneric : [PeliculasModel] = []
     var customCellData : GenericCollectionViewCell?
+    var pagina = 1
+    
     
     //MARK: - IBOutlets
     @IBOutlet weak var myCollectionView: UICollectionView!
@@ -25,6 +27,7 @@ class MoviesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         self.title = "Movies"
         
@@ -56,38 +59,27 @@ class MoviesViewController: UIViewController {
 
     //MARK: - UTILS
     func llamadaMovies(){
-        
-        let providerService = ISMoviesApple()
-        
-        let movies = CONSTANTES.LLAMADAS.MOVIES_APPLE
-        let topMovies = CONSTANTES.LLAMADAS.TOP_MOVIE_APPLE
-        
+        let providerService = ISParserPeliculas()
+        let currentPage = pagina
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
-        firstly{
-            return when(resolved: providerService.getDataServiceGeneric(movies, topMovies: topMovies, numberMovies: randonNumber()))
-            }.then{_ in
-                providerService.getParseGeneric(completion: { (resultData) in
-                    self.arrayGeneric = resultData
-                    DispatchQueue.main.async {
-                        self.myCollectionView.reloadData()
-                    }
-                })
-            }.then{_ in
-                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
-            }.catch{error in
-                self.present(muestraAlertVC("Lo sentimos",
-                                            messageData: "Algo salió mal"),
-                             animated: true,
-                             completion: nil)
+        providerService.getDataServicePeliculas(CONSTANTES.API_KEY.API_KEY, numberPage: currentPage) { (resultData) in
+            guard let resultDataDes = resultData else { return }
+            self.arrayGeneric = resultDataDes
+                DispatchQueue.main.async {
+                    self.myCollectionView.reloadData()
+                    APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+                }
         }
     }
     
     @objc func refreshControll(){
+        pagina = 1
         llamadaMovies()
         myCollectionView!.reloadData()
         self.refresh?.endRefreshing()
         
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetailView"{
@@ -113,6 +105,12 @@ extension MoviesViewController : UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if indexPath.row == arrayGeneric.count - 1{
+            if arrayGeneric.count < 0{
+                pagina += 1
+                llamadaMovies()
+            }
+        }
         let modeldata = arrayGeneric[indexPath.row]
         let customCell = myCollectionView.dequeueReusableCell(withReuseIdentifier: GenericCollectionViewCell.defaultReuseIdentifier, for: indexPath) as! GenericCollectionViewCell
         let cell = ISALDOSellenarCeldas().tipoGenericoCollectionCell(customCell,

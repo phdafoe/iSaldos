@@ -15,9 +15,9 @@ import APESuperHUD
 class ISDetalleOfertaViewController: UITableViewController {
     
     //MARK: - Variables locales
-    var modelData : ISGenericModel?
+    var modelData : PeliculasModel?
     var detalleImagenData : UIImage?
-    var arrayGeneric : [ISGenericModel] = []
+    var arrayGeneric : [PeliculasModel] = []
     var customCellData : GenericCollectionViewCell?
     
     //MARK: - IBOutlets
@@ -35,17 +35,22 @@ class ISDetalleOfertaViewController: UITableViewController {
         
         //LLAMADA A DATOS
         llamadaMovies()
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         guard let modelDataDes = modelData else { return }
         
-        myImagenOferta.image = detalleImagenData
-        imageBackground.image = detalleImagenData
-        myNombreProducto.text = modelDataDes.name
-        myFechaLanzamientoProducto.text = modelDataDes.releaseDate
-        myInfoUrlProducto.text = modelDataDes.genres?[0].url
-        self.title = modelDataDes.name
+        let imagenBack = modelDataDes.backdrop_path
+        let uriImagenBack = getImagePath()+imagenBack!
         
-        let url = URL(string: modelDataDes.url!)
+        myImagenOferta.image = detalleImagenData
+        imageBackground.kf.setImage(with: ImageResource(downloadURL: URL(string: uriImagenBack)!))
+        myNombreProducto.text = modelDataDes.title
+        myFechaLanzamientoProducto.text = modelDataDes.release_date
+        myInfoUrlProducto.text = "\(String(describing: modelDataDes.overview))"
+        self.title = modelDataDes.original_title
+        
+        let url = URL(string: "http://www.andresocampo.com")
         let urlRequest = URLRequest(url: url!)
         myWebViewProducto.load(urlRequest)
         myWebViewProducto.navigationDelegate = self
@@ -54,32 +59,28 @@ class ISDetalleOfertaViewController: UITableViewController {
         myCollectionView.dataSource = self
         
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        if indexPath.section == 1 && indexPath.row == 2{
+            return UITableViewAutomaticDimension
+        }
+        return super.tableView(tableView, heightForRowAt: indexPath)
+    }
+    
 
     //MARK: - UTILS
     func llamadaMovies(){
-        
-        let providerService = ISMoviesApple()
-        
-        let movies = CONSTANTES.LLAMADAS.APPLE_MUSIC
-        let topMovies = CONSTANTES.LLAMADAS.HOT_TRACK_APPLE
-        
+        let providerService = ISParserPeliculas()
+        let currentPage = 1
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
-        firstly{
-            return when(resolved: providerService.getDataServiceGeneric(movies, topMovies: topMovies, numberMovies: randonNumber()))
-            }.then{_ in
-                providerService.getParseGeneric(completion: { (resultData) in
-                    self.arrayGeneric = resultData
-                    DispatchQueue.main.async {
-                        self.myCollectionView.reloadData()
-                    }
-                })
-            }.then{_ in
+        providerService.getDataServicePeliculas(CONSTANTES.API_KEY.API_KEY, numberPage: currentPage) { (resultData) in
+            guard let resultDataDes = resultData else { return }
+            self.arrayGeneric = resultDataDes
+            DispatchQueue.main.async {
+                self.myCollectionView.reloadData()
                 APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
-            }.catch{error in
-                self.present(muestraAlertVC("Lo sentimos",
-                                            messageData: "Algo salió mal"),
-                             animated: true,
-                             completion: nil)
+            }
         }
     }
     
@@ -118,11 +119,11 @@ extension ISDetalleOfertaViewController : UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let webVC = self.storyboard?.instantiateViewController(withIdentifier: ISWebViewController.defaultNibVC) as! ISWebViewController
-        let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
-        let objInd = arrayGeneric[selectInd!]
-        webVC.urlWeb = objInd.url
-        present(webVC, animated: true, completion: nil)
+//        let webVC = self.storyboard?.instantiateViewController(withIdentifier: ISWebViewController.defaultNibVC) as! ISWebViewController
+//        let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
+//        let objInd = arrayGeneric[selectInd!]
+//        webVC.urlWeb = objInd.url
+//        present(webVC, animated: true, completion: nil)
     }
     
     

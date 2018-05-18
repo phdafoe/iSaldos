@@ -12,13 +12,15 @@ import SwiftyJSON
 let CONSTANTES = Constantes()
 var jsonDataGenerico : JSON?
 var imagenSeleccionada : UIImage?
-var diccionarioImagenes = [String: UIImage?]()
+var diccionarioImagenes = [Int: UIImage?]()
+let delegate = UIApplication.shared.delegate as? AppDelegate
 
 struct Constantes {
     let COLORES = Colores()
     let LLAMADAS = LLamadas()
     let USER_DEFAULT = CustomUserDefaults()
     let PARSE_DATA = ParseData()
+    let API_KEY = APIKey()
 }
 
 struct Colores {
@@ -26,7 +28,17 @@ struct Colores {
     let BLANCO_TEXTO_NAV = #colorLiteral(red: 0.9411764706, green: 0.1882352941, blue: 0.1725490196, alpha: 1)
 }
 
+struct APIKey {
+    let API_KEY = "e260c34cd5cff1c6f9d3f586c7230da4"
+}
+
 struct LLamadas {
+    
+    let BASE_URL_TMDB = "https://api.themoviedb.org/3/discover/movie?api_key=%@&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=%d"
+    
+    let BASE_URL_IMAGE_TMDB = "https://image.tmdb.org/t/p/w500/"
+    
+    
     let BASE_URL_APPLE = "https://rss.itunes.apple.com/api/v1/us/%@/%@/all/%@/explicit.json"
     let MOVIES_APPLE = "movies"
     let BOOKS_APPLE = "books"
@@ -56,3 +68,6 @@ struct CustomUserDefaults {
     
     
 }
+
+
+

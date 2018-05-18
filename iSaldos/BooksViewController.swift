@@ -15,7 +15,7 @@ class BooksViewController: UIViewController {
 
     //MARK: - Variables locales
     var refresh : UIRefreshControl?
-    var arrayGeneric : [ISGenericModel] = []
+    var arrayGeneric : [PeliculasModel] = []
     var customCellData : GenericCollectionViewCell?
     
     //MARK: - IBOutlets
@@ -29,7 +29,7 @@ class BooksViewController: UIViewController {
         self.title = "Books"
         
         //LLAMADA A DATOS
-        llamadaMovies()
+        //llamadaMovies()
         
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
@@ -55,34 +55,34 @@ class BooksViewController: UIViewController {
     
     
     //MARK: - UTILS
-    func llamadaMovies(){
-        
-        let providerService = ISMoviesApple()
-        
-        let movies = CONSTANTES.LLAMADAS.BOOKS_APPLE
-        let topMovies = CONSTANTES.LLAMADAS.TOP_FREE_APPLE
-        
-        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
-        firstly{
-            return when(resolved: providerService.getDataServiceGeneric(movies, topMovies: topMovies, numberMovies: randonNumber()))
-            }.then{_ in
-                providerService.getParseGeneric(completion: { (resultData) in
-                    self.arrayGeneric = resultData
-                    DispatchQueue.main.async {
-                        self.myCollectionView.reloadData()
-                        APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
-                    }
-                })
-            }.catch{error in
-                self.present(muestraAlertVC("Lo sentimos",
-                                            messageData: "Algo salió mal"),
-                             animated: true,
-                             completion: nil)
-        }
-    }
+//    func llamadaMovies(){
+//        
+//        let providerService = ISMoviesApple()
+//        
+//        let movies = CONSTANTES.LLAMADAS.BOOKS_APPLE
+//        let topMovies = CONSTANTES.LLAMADAS.TOP_FREE_APPLE
+//        
+//        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
+//        firstly{
+//            return when(resolved: providerService.getDataServiceGeneric(movies, topMovies: topMovies, numberMovies: randonNumber()))
+//            }.then{_ in
+//                providerService.getParseGeneric(completion: { (resultData) in
+//                    self.arrayGeneric = resultData
+//                    DispatchQueue.main.async {
+//                        self.myCollectionView.reloadData()
+//                        APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+//                    }
+//                })
+//            }.catch{error in
+//                self.present(muestraAlertVC("Lo sentimos",
+//                                            messageData: "Algo salió mal"),
+//                             animated: true,
+//                             completion: nil)
+//        }
+//    }
     
     @objc func refreshControll(){
-        llamadaMovies()
+        //llamadaMovies()
         myCollectionView!.reloadData()
         self.refresh?.endRefreshing()
         
@@ -112,11 +112,11 @@ extension BooksViewController : UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let webVC = self.storyboard?.instantiateViewController(withIdentifier: ISWebViewController.defaultNibVC) as! ISWebViewController
-        let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
-        let objInd = arrayGeneric[selectInd!]
-        webVC.urlWeb = objInd.url
-        present(webVC, animated: true, completion: nil)
+//        let webVC = self.storyboard?.instantiateViewController(withIdentifier: ISWebViewController.defaultNibVC) as! ISWebViewController
+//        let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
+//        let objInd = arrayGeneric[selectInd!]
+//        webVC.urlWeb = objInd.url
+//        present(webVC, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

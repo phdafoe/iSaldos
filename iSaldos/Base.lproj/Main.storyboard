@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pzs-ON-7Pl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pzs-ON-7Pl">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Avenir.ttc">
-            <string>Avenir-Light</string>
-            <string>Avenir-LightOblique</string>
-        </array>
-        <array key="HelveticaNeueLights.ttc">
-            <string>HelveticaNeue-Thin</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Movies-->
         <scene sceneID="laA-LH-JFT">
@@ -1065,14 +1056,19 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="32"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="C\/ VENUS, 10 POSTERIOR. Alcorc\u00f3n (Madrid)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN1-1M-n48">
-                                                    <rect key="frame" x="8" y="6" width="359" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C\/ VENUS, 10 POSTERIOR. Alcorc\u00f3n (Madrid)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eN1-1M-n48">
+                                                    <rect key="frame" x="8" y="6.0000000000000018" width="359" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eN1-1M-n48" firstAttribute="leading" secondItem="F8X-I4-qWc" secondAttribute="leading" constant="8" id="DJz-s3-aMP"/>
+                                                <constraint firstAttribute="trailing" secondItem="eN1-1M-n48" secondAttribute="trailing" constant="8" id="mBt-JN-iqM"/>
+                                                <constraint firstItem="eN1-1M-n48" firstAttribute="top" secondItem="F8X-I4-qWc" secondAttribute="top" constant="6" id="phc-kl-clQ"/>
+                                                <constraint firstAttribute="bottom" secondItem="eN1-1M-n48" secondAttribute="bottom" constant="5" id="txn-xQ-fpY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
@@ -1088,7 +1084,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gJT-Pw-cMw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="282"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="281.66666666666669"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s0i-PV-iVV">
                                                         <size key="itemSize" width="180" height="271"/>
@@ -1098,7 +1094,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="NC2-iF-HTl" customClass="GenericCollectionViewCell" customModule="iSaldos" customModuleProvider="target">
-                                                            <rect key="frame" x="5" y="5.666666666666667" width="180" height="271"/>
+                                                            <rect key="frame" x="5" y="5.333333333333333" width="180" height="271"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                                 <rect key="frame" x="0.0" y="0.0" width="180" height="271"/>
@@ -2207,6 +2203,6 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
     <inferredMetricsTieBreakers>
         <segue reference="UYl-39-UOJ"/>
         <segue reference="nX1-Ui-Xl1"/>
-        <segue reference="Odd-gc-QFi"/>
+        <segue reference="PMB-TT-YxY"/>
     </inferredMetricsTieBreakers>
 </document>

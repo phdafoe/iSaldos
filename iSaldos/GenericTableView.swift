@@ -40,12 +40,12 @@ public class ISALDOSellenarCeldas{
         return customCell
     }*/
     
-    func tipoGenericoCollectionCell(_ customCell : GenericCollectionViewCell, arrayGenerico : ISGenericModel, row : Int) -> GenericCollectionViewCell{
+    func tipoGenericoCollectionCell(_ customCell : GenericCollectionViewCell, arrayGenerico : PeliculasModel, row : Int) -> GenericCollectionViewCell{
         
-        customCell.myValueRent.text = arrayGenerico.name
+        customCell.myValueRent.text = arrayGenerico.release_date
         
-        if let pathImagen = arrayGenerico.artworkUrl100 {
-            customCell.myImagePoster.kf.setImage(with: ImageResource(downloadURL: URL(string: pathImagen)!),
+        if let pathImagen = arrayGenerico.poster_path {
+            customCell.myImagePoster.kf.setImage(with: ImageResource(downloadURL: URL(string: getImagePath()+pathImagen)!),
                                                   placeholder: #imageLiteral(resourceName: "placeholder"),
                                                   options: [.transition(ImageTransition.fade(1))],
                                                   progressBlock: nil,

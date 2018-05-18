@@ -79,6 +79,8 @@
 		B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */; };
 		B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */; };
 		B45B0E2C1EB8EC010038D174 /* UserPotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */; };
+		B4A932E920AD639500AE4AB5 /* ISPeliculasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A932E820AD639500AE4AB5 /* ISPeliculasModel.swift */; };
+		B4A932EB20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A932EA20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +169,8 @@
 		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
 		B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISPostCustomCell.xib; sourceTree = "<group>"; };
 		B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPotImage.swift; sourceTree = "<group>"; };
+		B4A932E820AD639500AE4AB5 /* ISPeliculasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISPeliculasModel.swift; sourceTree = "<group>"; };
+		B4A932EA20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISParserPeliculasTMDB.swift; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -378,6 +382,7 @@
 				412742461E9FEB260074CDD7 /* ISEnumation.swift */,
 				4105F7DE202604B5007FEF49 /* ISMovieModel.swift */,
 				412742441E9FE74D0074CDD7 /* ISSignIn.swift */,
+				B4A932E820AD639500AE4AB5 /* ISPeliculasModel.swift */,
 			);
 			name = MODELS;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				4105F7DC2026029F007FEF49 /* ISMoviesApple.swift */,
+				B4A932EA20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift */,
 			);
 			name = PARSERS;
 			sourceTree = "<group>";
@@ -617,11 +623,13 @@
 				4105F7EC20261891007FEF49 /* MusicViewController.swift in Sources */,
 				411945BA1EA148E900996974 /* ISConfiguracionPerfilViewController.swift in Sources */,
 				4151017F1EB89C49003B016D /* ISNuevoPostTableViewController.swift in Sources */,
+				B4A932EB20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift in Sources */,
 				4127422E1E9FC66C0074CDD7 /* APIHELPERS.swift in Sources */,
 				4127422A1E9FC5630074CDD7 /* ISTerminosViewController.swift in Sources */,
 				4105F7E320260B20007FEF49 /* MoviesViewController.swift in Sources */,
 				4127422C1E9FC6630074CDD7 /* APIUTILS.swift in Sources */,
 				412742011E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift in Sources */,
+				B4A932E920AD639500AE4AB5 /* ISPeliculasModel.swift in Sources */,
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
 				4105F7DD2026029F007FEF49 /* ISMoviesApple.swift in Sources */,
 				4105F7EA202617D4007FEF49 /* BooksViewController.swift in Sources */,

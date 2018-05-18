@@ -8,11 +8,19 @@
 
 import UIKit
 import Parse
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
+    var sessionManager: SessionManager = {
+        let configuration = URLSessionConfiguration.default
+        let manager = Alamofire.SessionManager(configuration: configuration)
+        return manager
+    }()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
