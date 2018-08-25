@@ -15,87 +15,107 @@ import APESuperHUD
 class ISDetalleOfertaViewController: UITableViewController {
     
     //MARK: - Variables locales
-    var modelData : PeliculasModel?
-    var detalleImagenData : UIImage?
-    var arrayGeneric : [PeliculasModel] = []
+    var modelData : ISDetailPeliculaModel?
+    var id = 0
+    var arrayCast : [ISCastPeliculaModel] = []
     var customCellData : GenericCollectionViewCell?
+    let providerService = ISParserPeliculas()
+    var imageLogoEmpty = ""
+
     
     //MARK: - IBOutlets
-    @IBOutlet weak var myImagenOferta: UIImageView!
+    @IBOutlet weak var myImagenMovie: UIImageView!
     @IBOutlet weak var myNombreProducto: UILabel!
     @IBOutlet weak var myFechaLanzamientoProducto: UILabel!
-    @IBOutlet weak var myWebViewProducto: WKWebView!
+    @IBOutlet weak var myRate: UILabel!
     @IBOutlet weak var myInfoUrlProducto: UILabel!
     @IBOutlet weak var myCollectionView: UICollectionView!
-    @IBOutlet weak var myActiIndi: UIActivityIndicatorView!
     @IBOutlet weak var imageBackground: UIImageView!
+    @IBOutlet weak var imageLogo: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.myImagenMovie.layer.borderWidth = 1
+        self.myImagenMovie.layer.borderColor = UIColor.white.cgColor
+        
         //LLAMADA A DATOS
-        llamadaMovies()
-        tableView.estimatedRowHeight = 60
-        tableView.rowHeight = UITableViewAutomaticDimension
-        
-        guard let modelDataDes = modelData else { return }
-        
-        let imagenBack = modelDataDes.backdrop_path
-        let uriImagenBack = getImagePath()+imagenBack!
-        
-        myImagenOferta.image = detalleImagenData
-        imageBackground.kf.setImage(with: ImageResource(downloadURL: URL(string: uriImagenBack)!))
-        myNombreProducto.text = modelDataDes.title
-        myFechaLanzamientoProducto.text = modelDataDes.release_date
-        myInfoUrlProducto.text = "\(String(describing: modelDataDes.overview))"
-        self.title = modelDataDes.original_title
-        
-        let url = URL(string: "http://www.andresocampo.com")
-        let urlRequest = URLRequest(url: url!)
-        myWebViewProducto.load(urlRequest)
-        myWebViewProducto.navigationDelegate = self
+        llamadaDetailMovie()
         
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        if indexPath.section == 1 && indexPath.row == 2{
+        if indexPath.row == 1{
             return UITableViewAutomaticDimension
         }
         return super.tableView(tableView, heightForRowAt: indexPath)
     }
     
-
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 1{
+            return UITableViewAutomaticDimension
+        }
+        return super.tableView(tableView, heightForRowAt: indexPath)
+    }
+    
     //MARK: - UTILS
-    func llamadaMovies(){
-        let providerService = ISParserPeliculas()
-        let currentPage = 1
+    func llamadaDetailMovie(){
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
-        providerService.getDataServicePeliculas(CONSTANTES.API_KEY.API_KEY, numberPage: currentPage) { (resultData) in
-            guard let resultDataDes = resultData else { return }
-            self.arrayGeneric = resultDataDes
+        let idMovie = "\(self.id)"
+        providerService.getDataServiceDetailPeliculas(idMovie, apiKey: CONSTANTES.API_KEY.API_KEY) { (resultData, resultCompany) in
+            guard let resultDataDes = resultData else {return}
+            guard let resultCompanyDes = resultCompany else {return}
             DispatchQueue.main.async {
-                self.myCollectionView.reloadData()
+            self.modelData = resultDataDes
+                if let modelDataDes = self.modelData{
+                    let imagenBack = modelDataDes.backdropPath
+                    let uriImagenBack = getImagePath()+imagenBack
+                    let imagePoster = modelDataDes.posterPath
+                    let urlImagePoster = getImagePath()+imagePoster
+                    if resultCompanyDes.count == 0{
+                        self.imageLogoEmpty = ""
+                    }else{
+                        self.imageLogoEmpty = resultCompanyDes[0].logoPath
+                    }
+                    let uriImageLogo = getImagePath()+self.imageLogoEmpty
+                    self.imageBackground.kf.setImage(with: ImageResource(downloadURL: URL(string: uriImagenBack)!))
+                    self.myImagenMovie.kf.setImage(with: ImageResource(downloadURL: URL(string: urlImagePoster)!))
+                    self.imageLogo.kf.setImage(with: ImageResource(downloadURL: URL(string: uriImageLogo)!))
+                    
+                    self.myNombreProducto.text = modelDataDes.title
+                    self.myFechaLanzamientoProducto.text = modelDataDes.releaseDate
+                    self.myInfoUrlProducto.text = modelDataDes.overview
+                    self.myRate.text = "\(modelDataDes.voteAverage)"
+                    self.title = modelDataDes.originalTitle
+                    self.tableView.reloadData()
+                }
                 APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+                self.llamadaMovies()
+            }
+        }
+    }
+    
+    func llamadaMovies(){
+        let idMovie = "\(self.id)"
+        providerService.getDataServiceCast(idMovie, apiKey: CONSTANTES.API_KEY.API_KEY) { (resultData) in
+            guard let resultDataDes = resultData else { return }
+            DispatchQueue.main.async {
+                self.arrayCast = resultDataDes
+                self.myCollectionView.reloadData()
             }
         }
     }
     
 }
 
-extension ISDetalleOfertaViewController : WKNavigationDelegate{
-    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        myActiIndi.isHidden = false
-        myActiIndi.startAnimating()
-    }
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        myActiIndi.isHidden = true
-        myActiIndi.stopAnimating()
-    }
-}
 
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 extension ISDetalleOfertaViewController : UICollectionViewDelegate, UICollectionViewDataSource{
@@ -105,15 +125,15 @@ extension ISDetalleOfertaViewController : UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayGeneric.count
+        return arrayCast.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let modeldata = arrayGeneric[indexPath.row]
+        let modeldata = arrayCast[indexPath.row]
         let customCell = myCollectionView.dequeueReusableCell(withReuseIdentifier: GenericCollectionViewCell.defaultReuseIdentifier, for: indexPath) as! GenericCollectionViewCell
-        let cell = ISALDOSellenarCeldas().tipoGenericoCollectionCell(customCell,
-                                                                     arrayGenerico: modeldata,
-                                                                     row: indexPath.row)
+        let cell = ISALDOSellenarCeldas().tipoGenericoCollectionCellCast(customCell,
+                                                                         arrayCast: modeldata,
+                                                                         row: indexPath.row)
         customCellData = cell
         return cell
     }
@@ -128,3 +148,4 @@ extension ISDetalleOfertaViewController : UICollectionViewDelegate, UICollection
     
     
 }
+

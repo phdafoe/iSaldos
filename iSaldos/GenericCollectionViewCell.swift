@@ -13,5 +13,6 @@ class GenericCollectionViewCell: UICollectionViewCell, ReuseIdentifierInterface 
     //MARK: - IBOutlets
     @IBOutlet weak var myImagePoster: UIImageView!
     @IBOutlet weak var myValueRent: UILabel!
+    @IBOutlet weak var myCharacter: UILabel?
     
 }

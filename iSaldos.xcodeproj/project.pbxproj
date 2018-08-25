@@ -81,6 +81,9 @@
 		B45B0E2C1EB8EC010038D174 /* UserPotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */; };
 		B4A932E920AD639500AE4AB5 /* ISPeliculasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A932E820AD639500AE4AB5 /* ISPeliculasModel.swift */; };
 		B4A932EB20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A932EA20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift */; };
+		B4EF7CE62131CB6F00EAC98F /* ISDetailPeliculaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CE52131CB6F00EAC98F /* ISDetailPeliculaModel.swift */; };
+		B4EF7CE82131E91F00EAC98F /* ISCastMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CE72131E91F00EAC98F /* ISCastMovieModel.swift */; };
+		B4EF7CEA2132160400EAC98F /* ISPopularTVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CE92132160400EAC98F /* ISPopularTVModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +174,9 @@
 		B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPotImage.swift; sourceTree = "<group>"; };
 		B4A932E820AD639500AE4AB5 /* ISPeliculasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISPeliculasModel.swift; sourceTree = "<group>"; };
 		B4A932EA20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISParserPeliculasTMDB.swift; sourceTree = "<group>"; };
+		B4EF7CE52131CB6F00EAC98F /* ISDetailPeliculaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetailPeliculaModel.swift; sourceTree = "<group>"; };
+		B4EF7CE72131E91F00EAC98F /* ISCastMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISCastMovieModel.swift; sourceTree = "<group>"; };
+		B4EF7CE92132160400EAC98F /* ISPopularTVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISPopularTVModel.swift; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -383,6 +389,9 @@
 				4105F7DE202604B5007FEF49 /* ISMovieModel.swift */,
 				412742441E9FE74D0074CDD7 /* ISSignIn.swift */,
 				B4A932E820AD639500AE4AB5 /* ISPeliculasModel.swift */,
+				B4EF7CE52131CB6F00EAC98F /* ISDetailPeliculaModel.swift */,
+				B4EF7CE72131E91F00EAC98F /* ISCastMovieModel.swift */,
+				B4EF7CE92132160400EAC98F /* ISPopularTVModel.swift */,
 			);
 			name = MODELS;
 			sourceTree = "<group>";
@@ -624,12 +633,14 @@
 				411945BA1EA148E900996974 /* ISConfiguracionPerfilViewController.swift in Sources */,
 				4151017F1EB89C49003B016D /* ISNuevoPostTableViewController.swift in Sources */,
 				B4A932EB20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift in Sources */,
+				B4EF7CEA2132160400EAC98F /* ISPopularTVModel.swift in Sources */,
 				4127422E1E9FC66C0074CDD7 /* APIHELPERS.swift in Sources */,
 				4127422A1E9FC5630074CDD7 /* ISTerminosViewController.swift in Sources */,
 				4105F7E320260B20007FEF49 /* MoviesViewController.swift in Sources */,
 				4127422C1E9FC6630074CDD7 /* APIUTILS.swift in Sources */,
 				412742011E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift in Sources */,
 				B4A932E920AD639500AE4AB5 /* ISPeliculasModel.swift in Sources */,
+				B4EF7CE82131E91F00EAC98F /* ISCastMovieModel.swift in Sources */,
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
 				4105F7DD2026029F007FEF49 /* ISMoviesApple.swift in Sources */,
 				4105F7EA202617D4007FEF49 /* BooksViewController.swift in Sources */,
@@ -641,6 +652,7 @@
 				412742131E9FC3D30074CDD7 /* ISCanalSocialViewController.swift in Sources */,
 				412742331E9FC9FE0074CDD7 /* ISSplashViewController.swift in Sources */,
 				412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */,
+				B4EF7CE62131CB6F00EAC98F /* ISDetailPeliculaModel.swift in Sources */,
 				412742471E9FEB260074CDD7 /* ISEnumation.swift in Sources */,
 				41A3BBFF1EA1312900FC491F /* SRMiPerfilCustomCell.swift in Sources */,
 				412741B51E9F93B20074CDD7 /* AppDelegate.swift in Sources */,

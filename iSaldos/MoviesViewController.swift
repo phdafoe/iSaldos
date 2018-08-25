@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import PromiseKit
 import Kingfisher
 import APESuperHUD
 
@@ -18,6 +17,7 @@ class MoviesViewController: UIViewController {
     var arrayGeneric : [PeliculasModel] = []
     var customCellData : GenericCollectionViewCell?
     var pagina = 1
+    var maxPages = 1
     
     
     //MARK: - IBOutlets
@@ -85,11 +85,13 @@ class MoviesViewController: UIViewController {
         if segue.identifier == "showDetailView"{
             let detailVC = segue.destination as! ISDetalleOfertaViewController
             let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
-            let objInd = arrayGeneric[selectInd!]
-            detailVC.modelData = objInd
-            detailVC.detalleImagenData = diccionarioImagenes[objInd.id!]!
+            let objInd = arrayGeneric[selectInd!].id
+            detailVC.id = objInd!
+            //detailVC.detalleImagenData = diccionarioImagenes[objInd.id!]!
         }
     }
+    
+    
 
 }
 
@@ -106,7 +108,7 @@ extension MoviesViewController : UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == arrayGeneric.count - 1{
-            if arrayGeneric.count < 0{
+            if arrayGeneric.count < maxPages{
                 pagina += 1
                 llamadaMovies()
             }
@@ -121,7 +123,7 @@ extension MoviesViewController : UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        imagenSeleccionada = customCellData?.myImagePoster.image
+        //imagenSeleccionada = customCellData?.myImagePoster.image
         performSegue(withIdentifier: "showDetailView", sender: self)
     }
     
@@ -136,6 +138,25 @@ extension MoviesViewController : UICollectionViewDelegate, UICollectionViewDataS
         height = width * height / 180
         return CGSize(width: width, height: height)
     }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        checkForMovements(scrollView: scrollView)
+    }
+    
+    private func checkForMovements (scrollView: UIScrollView) {
+        if didScrolledToBottom(scrollView: scrollView) {
+            pagina += 1
+            llamadaMovies()
+            scrollView.scrollsToTop = true
+        }
+    }
+    
+    
+    func didScrolledToBottom(scrollView: UIScrollView) -> Bool {
+        return ((scrollView.contentOffset.y - 100) >= (scrollView.contentSize.height - scrollView.frame.size.height - 150))
+    }
+    
+    
     
     
 }

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PromiseKit
 import Kingfisher
 import APESuperHUD
 
@@ -15,8 +14,9 @@ class BooksViewController: UIViewController {
 
     //MARK: - Variables locales
     var refresh : UIRefreshControl?
-    var arrayGeneric : [PeliculasModel] = []
+    var arrayTVshows : [ISPopularTVModel] = []
     var customCellData : GenericCollectionViewCell?
+    let providerService = ISParserPeliculas()
     
     //MARK: - IBOutlets
     @IBOutlet weak var myCollectionView: UICollectionView!
@@ -26,10 +26,10 @@ class BooksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Books"
+        self.title = "TV - Shows"
         
         //LLAMADA A DATOS
-        //llamadaMovies()
+        llamadaTVShows()
         
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
@@ -55,37 +55,33 @@ class BooksViewController: UIViewController {
     
     
     //MARK: - UTILS
-//    func llamadaMovies(){
-//        
-//        let providerService = ISMoviesApple()
-//        
-//        let movies = CONSTANTES.LLAMADAS.BOOKS_APPLE
-//        let topMovies = CONSTANTES.LLAMADAS.TOP_FREE_APPLE
-//        
-//        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
-//        firstly{
-//            return when(resolved: providerService.getDataServiceGeneric(movies, topMovies: topMovies, numberMovies: randonNumber()))
-//            }.then{_ in
-//                providerService.getParseGeneric(completion: { (resultData) in
-//                    self.arrayGeneric = resultData
-//                    DispatchQueue.main.async {
-//                        self.myCollectionView.reloadData()
-//                        APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
-//                    }
-//                })
-//            }.catch{error in
-//                self.present(muestraAlertVC("Lo sentimos",
-//                                            messageData: "Algo salió mal"),
-//                             animated: true,
-//                             completion: nil)
-//        }
-//    }
+    func llamadaTVShows(){
+        
+        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
+        providerService.getDataServicePopularTV(CONSTANTES.API_KEY.API_KEY) { (resultData) in
+            guard let resultDataDes = resultData else { return }
+            self.arrayTVshows = resultDataDes
+            DispatchQueue.main.async {
+                self.myCollectionView.reloadData()
+                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+            }
+        }
+    }
     
     @objc func refreshControll(){
-        //llamadaMovies()
         myCollectionView!.reloadData()
         self.refresh?.endRefreshing()
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailViewFromTVShows"{
+            let detailVC = segue.destination as! ISDetalleOfertaViewController
+            let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
+            let objInd = arrayTVshows[selectInd!].id
+            detailVC.id = objInd
+            //detailVC.detalleImagenData = diccionarioImagenes[objInd.id!]!
+        }
     }
     
 }
@@ -98,13 +94,13 @@ extension BooksViewController : UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayGeneric.count
+        return arrayTVshows.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let modeldata = arrayGeneric[indexPath.row]
+        let modeldata = arrayTVshows[indexPath.row]
         let customCell = myCollectionView.dequeueReusableCell(withReuseIdentifier: GenericCollectionViewCell.defaultReuseIdentifier, for: indexPath) as! GenericCollectionViewCell
-        let cell = ISALDOSellenarCeldas().tipoGenericoCollectionCell(customCell,
+        let cell = ISALDOSellenarCeldas().tipoGenericoCollectionCellTVShows(customCell,
                                                                      arrayGenerico: modeldata,
                                                                      row: indexPath.row)
         customCellData = cell
@@ -112,11 +108,7 @@ extension BooksViewController : UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let webVC = self.storyboard?.instantiateViewController(withIdentifier: ISWebViewController.defaultNibVC) as! ISWebViewController
-//        let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
-//        let objInd = arrayGeneric[selectInd!]
-//        webVC.urlWeb = objInd.url
-//        present(webVC, animated: true, completion: nil)
+        performSegue(withIdentifier: "showDetailViewFromTVShows", sender: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

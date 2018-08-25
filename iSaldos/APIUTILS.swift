@@ -35,8 +35,12 @@ struct APIKey {
 struct LLamadas {
     
     let BASE_URL_TMDB = "https://api.themoviedb.org/3/discover/movie?api_key=%@&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=%d"
+    let BASE_URL_DETAIL_MOVIE = "https://api.themoviedb.org/3/movie/%@?api_key=%@&language=en-US"
+    let BASE_ULR_CAST_MOVIE = "http://api.themoviedb.org/3/movie/%@/casts?api_key=%@"
+    let BASE_URL_IMAGE_TMDB = "https://image.tmdb.org/t/p/w500"
     
-    let BASE_URL_IMAGE_TMDB = "https://image.tmdb.org/t/p/w500/"
+    let BASE_URL_POPULAR_TV = "https://api.themoviedb.org/3/tv/popular?api_key=%@&language=en-US&page=1"
+    let BASE_URL_DETAIL_POPULAR_TV = "https://api.themoviedb.org/3/tv/%@?api_key=%@&language=en-US"
     
     
     let BASE_URL_APPLE = "https://rss.itunes.apple.com/api/v1/us/%@/%@/all/%@/explicit.json"
