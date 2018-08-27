@@ -84,6 +84,9 @@
 		B4EF7CE62131CB6F00EAC98F /* ISDetailPeliculaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CE52131CB6F00EAC98F /* ISDetailPeliculaModel.swift */; };
 		B4EF7CE82131E91F00EAC98F /* ISCastMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CE72131E91F00EAC98F /* ISCastMovieModel.swift */; };
 		B4EF7CEA2132160400EAC98F /* ISPopularTVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CE92132160400EAC98F /* ISPopularTVModel.swift */; };
+		B4EF7CF02132D45B00EAC98F /* ISDetalleTVShowsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CEF2132D45B00EAC98F /* ISDetalleTVShowsTableViewController.swift */; };
+		B4EF7CF22132D4C900EAC98F /* ISDetailTVShowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CF12132D4C900EAC98F /* ISDetailTVShowsModel.swift */; };
+		B4EF7CF42134548500EAC98F /* ISDetailPeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CF32134548500EAC98F /* ISDetailPeopleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,6 +180,9 @@
 		B4EF7CE52131CB6F00EAC98F /* ISDetailPeliculaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetailPeliculaModel.swift; sourceTree = "<group>"; };
 		B4EF7CE72131E91F00EAC98F /* ISCastMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISCastMovieModel.swift; sourceTree = "<group>"; };
 		B4EF7CE92132160400EAC98F /* ISPopularTVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISPopularTVModel.swift; sourceTree = "<group>"; };
+		B4EF7CEF2132D45B00EAC98F /* ISDetalleTVShowsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetalleTVShowsTableViewController.swift; sourceTree = "<group>"; };
+		B4EF7CF12132D4C900EAC98F /* ISDetailTVShowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetailTVShowsModel.swift; sourceTree = "<group>"; };
+		B4EF7CF32134548500EAC98F /* ISDetailPeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetailPeopleModel.swift; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -307,7 +313,7 @@
 				412742291E9FC5630074CDD7 /* ISTerminosViewController.swift */,
 				41FF74A61FA62481003D2669 /* ISWebViewController.swift */,
 				412742141E9FC4380074CDD7 /* SOCIAL */,
-				412741FF1E9FC1680074CDD7 /* OFERTAS */,
+				412741FF1E9FC1680074CDD7 /* DETALLE */,
 				412742061E9FC19D0074CDD7 /* CUPONES */,
 				4127420D1E9FC1C60074CDD7 /* CONCURSOS */,
 				4105F7E8202616E8007FEF49 /* APPLE */,
@@ -328,14 +334,15 @@
 			name = LOGIN/REGISTRO/GALERIA;
 			sourceTree = "<group>";
 		};
-		412741FF1E9FC1680074CDD7 /* OFERTAS */ = {
+		412741FF1E9FC1680074CDD7 /* DETALLE */ = {
 			isa = PBXGroup;
 			children = (
 				412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */,
+				B4EF7CEF2132D45B00EAC98F /* ISDetalleTVShowsTableViewController.swift */,
 				412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */,
 				412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */,
 			);
-			name = OFERTAS;
+			name = DETALLE;
 			sourceTree = "<group>";
 		};
 		412742061E9FC19D0074CDD7 /* CUPONES */ = {
@@ -392,6 +399,8 @@
 				B4EF7CE52131CB6F00EAC98F /* ISDetailPeliculaModel.swift */,
 				B4EF7CE72131E91F00EAC98F /* ISCastMovieModel.swift */,
 				B4EF7CE92132160400EAC98F /* ISPopularTVModel.swift */,
+				B4EF7CF12132D4C900EAC98F /* ISDetailTVShowsModel.swift */,
+				B4EF7CF32134548500EAC98F /* ISDetailPeopleModel.swift */,
 			);
 			name = MODELS;
 			sourceTree = "<group>";
@@ -624,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4EF7CF02132D45B00EAC98F /* ISDetalleTVShowsTableViewController.swift in Sources */,
 				4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */,
 				415101811EB8A8A8003B016D /* ISUsuariosTableViewController.swift in Sources */,
 				B45B0E2C1EB8EC010038D174 /* UserPotImage.swift in Sources */,
@@ -644,6 +654,7 @@
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
 				4105F7DD2026029F007FEF49 /* ISMoviesApple.swift in Sources */,
 				4105F7EA202617D4007FEF49 /* BooksViewController.swift in Sources */,
+				B4EF7CF42134548500EAC98F /* ISDetailPeopleModel.swift in Sources */,
 				412741EC1E9FC0520074CDD7 /* ISLoginViewController.swift in Sources */,
 				412742111E9FC3C80074CDD7 /* ISMuroSocialViewController.swift in Sources */,
 				4105F7E520260E8A007FEF49 /* GenericCollectionViewCell.swift in Sources */,
@@ -660,6 +671,7 @@
 				412741E81E9FBF230074CDD7 /* CarbonTabSwipeSegmentedControl.m in Sources */,
 				412741FE1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift in Sources */,
 				410561B21FA631C8001DBBE9 /* ISImageGalleryCell.swift in Sources */,
+				B4EF7CF22132D4C900EAC98F /* ISDetailTVShowsModel.swift in Sources */,
 				412742491E9FF68C0074CDD7 /* ISHomeTabBarController.swift in Sources */,
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				B4409CD71ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift in Sources */,

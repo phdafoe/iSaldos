@@ -76,7 +76,7 @@ class BooksViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetailViewFromTVShows"{
-            let detailVC = segue.destination as! ISDetalleOfertaViewController
+            let detailVC = segue.destination as! ISDetalleTVShowsTableViewController
             let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
             let objInd = arrayTVshows[selectInd!].id
             detailVC.id = objInd

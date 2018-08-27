@@ -1,25 +1,26 @@
 //
-//  ISDetalleOfertaViewController.swift
+//  ISDetalleTVShowsTableViewController.swift
 //  iSaldos
 //
-//  Created by Andres on 13/4/17.
-//  Copyright © 2017 icologic. All rights reserved.
+//  Created by Andres Felipe Ocampo Eljaiesk on 26/8/18.
+//  Copyright © 2018 icologic. All rights reserved.
 //
 
 import UIKit
 import Kingfisher
 import APESuperHUD
 
-class ISDetalleOfertaViewController: UITableViewController {
+class ISDetalleTVShowsTableViewController: UITableViewController {
     
     //MARK: - Variables locales
-    var modelData : ISDetailPeliculaModel?
+    var modelData : ISDetailTVShowsModel?
     var id = 0
-    var arrayCast : [ISCastPeliculaModel] = []
+    var arrayNetwork : [Network] = []
+    var arraySeason : [Season] = []
+    
     var customCellData : GenericCollectionViewCell?
     let providerService = ISParserPeliculas()
     var imageLogoEmpty = ""
-
     
     //MARK: - IBOutlets
     @IBOutlet weak var myImagenMovie: UIImageView!
@@ -30,21 +31,17 @@ class ISDetalleOfertaViewController: UITableViewController {
     @IBOutlet weak var myCollectionView: UICollectionView!
     @IBOutlet weak var imageBackground: UIImageView!
     @IBOutlet weak var imageLogo: UIImageView!
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.myImagenMovie.layer.borderWidth = 1
-        self.myImagenMovie.layer.borderColor = UIColor.white.cgColor
-        
-        //LLAMADA A DATOS
-        llamadaDetailMovie()
+
+        //LLAMADA DATOS
+        llamadaDetailTVShows()
         
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
@@ -64,72 +61,61 @@ class ISDetalleOfertaViewController: UITableViewController {
         return super.tableView(tableView, heightForRowAt: indexPath)
     }
     
-    //MARK: - UTILS
-    func llamadaDetailMovie(){
+    func llamadaDetailTVShows(){
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
         let idMovie = "\(self.id)"
-        providerService.getDataServiceDetailPeliculas(idMovie, apiKey: CONSTANTES.API_KEY.API_KEY) { (resultData, resultCompany) in
+        providerService.getDataServiceDetailPopularTVShows(idMovie, apiKey: CONSTANTES.API_KEY.API_KEY) { (resultData, resultNetwork, resultSeason) in
             guard let resultDataDes = resultData else {return}
-            guard let resultCompanyDes = resultCompany else {return}
+            guard let resultNetworkDes = resultNetwork else {return}
+            guard let resultSeasonDes = resultSeason else {return}
             DispatchQueue.main.async {
-            self.modelData = resultDataDes
+                self.modelData = resultDataDes
+                self.arraySeason = resultSeasonDes
                 if let modelDataDes = self.modelData{
                     let imagenBack = modelDataDes.backdropPath
                     let uriImagenBack = getImagePath()+imagenBack
                     let imagePoster = modelDataDes.posterPath
                     let urlImagePoster = getImagePath()+imagePoster
-                    if resultCompanyDes.count == 0{
+                    if resultNetworkDes.count == 0{
                         self.imageLogoEmpty = ""
                     }else{
-                        self.imageLogoEmpty = resultCompanyDes[0].logoPath
+                        guard let logoPath = resultNetworkDes[0].logoPath else {return}
+                        self.imageLogoEmpty = logoPath
                     }
                     let uriImageLogo = getImagePath()+self.imageLogoEmpty
                     self.imageBackground.kf.setImage(with: ImageResource(downloadURL: URL(string: uriImagenBack)!))
                     self.myImagenMovie.kf.setImage(with: ImageResource(downloadURL: URL(string: urlImagePoster)!))
                     self.imageLogo.kf.setImage(with: ImageResource(downloadURL: URL(string: uriImageLogo)!))
                     
-                    self.myNombreProducto.text = modelDataDes.title
-                    self.myFechaLanzamientoProducto.text = modelDataDes.releaseDate
+                    self.myNombreProducto.text = modelDataDes.name
+                    self.myFechaLanzamientoProducto.text = modelDataDes.lastAirDate
                     self.myInfoUrlProducto.text = modelDataDes.overview
                     self.myRate.text = "\(modelDataDes.voteAverage)"
-                    self.title = modelDataDes.originalTitle
+                    self.title = modelDataDes.originalName
                     self.tableView.reloadData()
+                    self.myCollectionView.reloadData()
                 }
                 APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
-                self.llamadaMovies()
             }
         }
     }
-    
-    func llamadaMovies(){
-        let idMovie = "\(self.id)"
-        providerService.getDataServiceCast(idMovie, apiKey: CONSTANTES.API_KEY.API_KEY) { (resultData) in
-            guard let resultDataDes = resultData else { return }
-            DispatchQueue.main.async {
-                self.arrayCast = resultDataDes
-                self.myCollectionView.reloadData()
-            }
-        }
-    }
-    
 }
 
-
 //MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
-extension ISDetalleOfertaViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+extension ISDetalleTVShowsTableViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return arrayCast.count
+        return arraySeason.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let modeldata = arrayCast[indexPath.row]
+        let modeldata = arraySeason[indexPath.row]
         let customCell = myCollectionView.dequeueReusableCell(withReuseIdentifier: GenericCollectionViewCell.defaultReuseIdentifier, for: indexPath) as! GenericCollectionViewCell
-        let cell = ISALDOSellenarCeldas().tipoGenericoCollectionCellCast(customCell,
+        let cell = ISALDOSellenarCeldas().tipoGenericoCollectionCellSesion(customCell,
                                                                          arrayCast: modeldata,
                                                                          row: indexPath.row)
         customCellData = cell
@@ -137,17 +123,6 @@ extension ISDetalleOfertaViewController : UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let model = arrayCast[indexPath.row]
-        let nombre = model.name
-        llamadaDetallePersonas(nombre)
-    }
-    
-    func llamadaDetallePersonas(_ nameQuery : String){
         
     }
-    
-    
-    
-    
 }
-

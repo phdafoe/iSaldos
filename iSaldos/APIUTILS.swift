@@ -42,6 +42,8 @@ struct LLamadas {
     let BASE_URL_POPULAR_TV = "https://api.themoviedb.org/3/tv/popular?api_key=%@&language=en-US&page=1"
     let BASE_URL_DETAIL_POPULAR_TV = "https://api.themoviedb.org/3/tv/%@?api_key=%@&language=en-US"
     
+    let BASE_URL_DETAIL_PEOPLE = "https://api.themoviedb.org/3/search/person?api_key=%@&language=en-US&query=%@&page=1&include_adult=false"
+    
     
     let BASE_URL_APPLE = "https://rss.itunes.apple.com/api/v1/us/%@/%@/all/%@/explicit.json"
     let MOVIES_APPLE = "movies"

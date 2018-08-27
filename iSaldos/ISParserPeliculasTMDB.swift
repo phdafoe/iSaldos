@@ -14,6 +14,12 @@ class ISParserPeliculas : NSObject {
     
     static let shared = ISParserPeliculas()
     
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - apiKey: <#apiKey description#>
+    ///   - numberPage: <#numberPage description#>
+    ///   - completion: <#completion description#>
     func getDataServicePeliculas(_ apiKey : String, numberPage : Int, completion: @escaping ([PeliculasModel]?) -> ()){
         
         let format = CONSTANTES.LLAMADAS.BASE_URL_TMDB
@@ -51,6 +57,12 @@ class ISParserPeliculas : NSObject {
         }
     }
     
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - id: <#id description#>
+    ///   - apiKey: <#apiKey description#>
+    ///   - completion: <#completion description#>
     func getDataServiceDetailPeliculas(_ id : String, apiKey : String, completion : @escaping (ISDetailPeliculaModel?, [ProductionCompany]?) -> ()){
         
         
@@ -90,6 +102,12 @@ class ISParserPeliculas : NSObject {
         }
     }
     
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - id: <#id description#>
+    ///   - apiKey: <#apiKey description#>
+    ///   - completion: <#completion description#>
     func getDataServiceCast(_ id : String, apiKey : String, completion: @escaping ([ISCastPeliculaModel]?) -> ()){
         
         let format = CONSTANTES.LLAMADAS.BASE_ULR_CAST_MOVIE
@@ -128,6 +146,11 @@ class ISParserPeliculas : NSObject {
     }
     
     
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - apiKey: <#apiKey description#>
+    ///   - completion: <#completion description#>
     func getDataServicePopularTV(_ apiKey : String, completion: @escaping ([ISPopularTVModel]?) -> ()){
         
         let format = CONSTANTES.LLAMADAS.BASE_URL_POPULAR_TV
@@ -163,6 +186,95 @@ class ISParserPeliculas : NSObject {
                 completion(nil)
             }
         }
+    }
+    
+    func getDataServiceDetailPopularTVShows(_ id : String, apiKey : String, completion : @escaping (ISDetailTVShowsModel?, [Network]?, [Season]?) -> ()){
+        
+        let format = CONSTANTES.LLAMADAS.BASE_URL_DETAIL_POPULAR_TV
+        let arguments : [CVarArg] = [id, apiKey]
+        let urlsString = String(format: format, arguments: arguments)
+        let urlRequest = URLRequest(url: URL(string: urlsString)!)
+        
+        delegate?.sessionManager.request(urlRequest).validate().responseJSON{ (responseJSON) in
+            switch responseJSON.result {
+            case .success:
+                if let valorData = responseJSON.result.value{
+                    let json = JSON(valorData)
+                    let detailPopularTVShows = ISDetailTVShowsModel(json: json)
+                    var arrayNetwork = [Network]()
+                    var arraySeason = [Season]()
+                    
+                    for c_network in json["networks"].arrayValue{
+                        let modelData = Network(json: c_network)
+                        arrayNetwork.append(modelData)
+                    }
+                    
+                    for c_season in json["seasons"].arrayValue{
+                        let modelData = Season(json: c_season)
+                        arraySeason.append(modelData)
+                    }
+                    completion(detailPopularTVShows, arrayNetwork, arraySeason)
+                }
+            case .failure(let error):
+                if let httpStatusCode = responseJSON.response?.statusCode{
+                    switch(httpStatusCode){
+                    case 400:
+                        print("Error: \(error.localizedDescription)")
+                        break
+                    default:
+                        print("Error: \(error.localizedDescription)")
+                        break
+                    }
+                }else{
+                    print("Error: \(error.localizedDescription)")
+                }
+                completion(nil, [], [])
+            }
+        }
+        
+    }
+    
+    func getDataServiceDetailPeople(_ name : String, apiKey : String, completion : @escaping (ISDetailPeopleModel?, [KnownFor]) -> ()){
+        
+        let format = CONSTANTES.LLAMADAS.BASE_URL_DETAIL_PEOPLE
+        let arguments : [CVarArg] = [name, apiKey]
+        let urlsString = String(format: format, arguments: arguments)
+        let urlRequest = URLRequest(url: URL(string: urlsString)!)
+        
+        delegate?.sessionManager.request(urlRequest).validate().responseJSON{ (responseJSON) in
+            switch responseJSON.result {
+            case .success:
+                if let valorData = responseJSON.result.value{
+                    let json = JSON(valorData)
+                    let detailPopularTVShows = ISDetailPeopleModel(json: json)
+                    var arrayKnowfor = [KnownFor]()
+                    
+                    for c_knowfor in json["know_for"].arrayValue{
+                        let modelData = KnownFor(json: c_knowfor)
+                        arrayKnowfor.append(modelData)
+                    }
+                    
+                    completion(detailPopularTVShows, arrayKnowfor)
+                }
+            case .failure(let error):
+                if let httpStatusCode = responseJSON.response?.statusCode{
+                    switch(httpStatusCode){
+                    case 400:
+                        print("Error: \(error.localizedDescription)")
+                        break
+                    default:
+                        print("Error: \(error.localizedDescription)")
+                        break
+                    }
+                }else{
+                    print("Error: \(error.localizedDescription)")
+                }
+                completion(nil, [])
+            }
+        }
+        
+        
+        
     }
     
     
