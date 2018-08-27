@@ -87,6 +87,11 @@
 		B4EF7CF02132D45B00EAC98F /* ISDetalleTVShowsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CEF2132D45B00EAC98F /* ISDetalleTVShowsTableViewController.swift */; };
 		B4EF7CF22132D4C900EAC98F /* ISDetailTVShowsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CF12132D4C900EAC98F /* ISDetailTVShowsModel.swift */; };
 		B4EF7CF42134548500EAC98F /* ISDetailPeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CF32134548500EAC98F /* ISDetailPeopleModel.swift */; };
+		B4EF7CF6213457D400EAC98F /* ISDetallePersonasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CF5213457D400EAC98F /* ISDetallePersonasTableViewController.swift */; };
+		B4EF7CF92134584600EAC98F /* ISDetalleCabeceraPersonaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CF72134584600EAC98F /* ISDetalleCabeceraPersonaCell.swift */; };
+		B4EF7CFA2134584600EAC98F /* ISDetalleCabeceraPersonaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EF7CF82134584600EAC98F /* ISDetalleCabeceraPersonaCell.xib */; };
+		B4EF7CFD2134587200EAC98F /* ISDetallePersonasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CFB2134587200EAC98F /* ISDetallePersonasCell.swift */; };
+		B4EF7CFE2134587200EAC98F /* ISDetallePersonasCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EF7CFC2134587200EAC98F /* ISDetallePersonasCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +188,11 @@
 		B4EF7CEF2132D45B00EAC98F /* ISDetalleTVShowsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetalleTVShowsTableViewController.swift; sourceTree = "<group>"; };
 		B4EF7CF12132D4C900EAC98F /* ISDetailTVShowsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetailTVShowsModel.swift; sourceTree = "<group>"; };
 		B4EF7CF32134548500EAC98F /* ISDetailPeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetailPeopleModel.swift; sourceTree = "<group>"; };
+		B4EF7CF5213457D400EAC98F /* ISDetallePersonasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetallePersonasTableViewController.swift; sourceTree = "<group>"; };
+		B4EF7CF72134584600EAC98F /* ISDetalleCabeceraPersonaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetalleCabeceraPersonaCell.swift; sourceTree = "<group>"; };
+		B4EF7CF82134584600EAC98F /* ISDetalleCabeceraPersonaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ISDetalleCabeceraPersonaCell.xib; sourceTree = "<group>"; };
+		B4EF7CFB2134587200EAC98F /* ISDetallePersonasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetallePersonasCell.swift; sourceTree = "<group>"; };
+		B4EF7CFC2134587200EAC98F /* ISDetallePersonasCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ISDetallePersonasCell.xib; sourceTree = "<group>"; };
 		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -339,8 +349,13 @@
 			children = (
 				412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */,
 				B4EF7CEF2132D45B00EAC98F /* ISDetalleTVShowsTableViewController.swift */,
+				B4EF7CF5213457D400EAC98F /* ISDetallePersonasTableViewController.swift */,
 				412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */,
 				412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */,
+				B4EF7CF72134584600EAC98F /* ISDetalleCabeceraPersonaCell.swift */,
+				B4EF7CF82134584600EAC98F /* ISDetalleCabeceraPersonaCell.xib */,
+				B4EF7CFB2134587200EAC98F /* ISDetallePersonasCell.swift */,
+				B4EF7CFC2134587200EAC98F /* ISDetallePersonasCell.xib */,
 			);
 			name = DETALLE;
 			sourceTree = "<group>";
@@ -543,6 +558,7 @@
 				B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */,
 				412742411E9FD9640074CDD7 /* FOTO_6.jpg in Resources */,
 				4151018A1EB8C371003B016D /* ISUsuariosCustomCell.xib in Resources */,
+				B4EF7CFE2134587200EAC98F /* ISDetallePersonasCell.xib in Resources */,
 				414AFD031F9BB49000D6EE73 /* LightStreaksDeepBlue.mp4 in Resources */,
 				412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */,
 				41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */,
@@ -554,6 +570,7 @@
 				4127423E1E9FD9640074CDD7 /* FOTO_3.jpg in Resources */,
 				4127423C1E9FD9640074CDD7 /* FOTO_1.jpg in Resources */,
 				B4409CD51ED4D5EA00F44FD2 /* ActionSheetStoryboard.storyboard in Resources */,
+				B4EF7CFA2134584600EAC98F /* ISDetalleCabeceraPersonaCell.xib in Resources */,
 				412741BA1E9F93B20074CDD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,6 +662,7 @@
 				B4A932EB20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift in Sources */,
 				B4EF7CEA2132160400EAC98F /* ISPopularTVModel.swift in Sources */,
 				4127422E1E9FC66C0074CDD7 /* APIHELPERS.swift in Sources */,
+				B4EF7CFD2134587200EAC98F /* ISDetallePersonasCell.swift in Sources */,
 				4127422A1E9FC5630074CDD7 /* ISTerminosViewController.swift in Sources */,
 				4105F7E320260B20007FEF49 /* MoviesViewController.swift in Sources */,
 				4127422C1E9FC6630074CDD7 /* APIUTILS.swift in Sources */,
@@ -683,9 +701,11 @@
 				4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */,
 				41FF74A71FA62482003D2669 /* ISWebViewController.swift in Sources */,
 				412741E51E9FBF230074CDD7 /* CarbonSwipeRefresh.m in Sources */,
+				B4EF7CF92134584600EAC98F /* ISDetalleCabeceraPersonaCell.swift in Sources */,
 				4105F7DF202604B5007FEF49 /* ISMovieModel.swift in Sources */,
 				415101831EB8B665003B016D /* UserModel.swift in Sources */,
 				4125385F1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift in Sources */,
+				B4EF7CF6213457D400EAC98F /* ISDetallePersonasTableViewController.swift in Sources */,
 				415490A91FA9EF8600BD0510 /* HayInternet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

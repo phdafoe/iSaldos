@@ -138,15 +138,10 @@ extension ISDetalleOfertaViewController : UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model = arrayCast[indexPath.row]
-        let nombre = model.name
-        llamadaDetallePersonas(nombre)
+        let detalleVC = self.storyboard?.instantiateViewController(withIdentifier: "DetallePersonasTableViewController") as! ISDetallePersonasTableViewController
+        detalleVC.nombre = model.name
+        self.navigationController?.pushViewController(detalleVC, animated: true)
     }
-    
-    func llamadaDetallePersonas(_ nameQuery : String){
-        
-    }
-    
-    
     
     
 }

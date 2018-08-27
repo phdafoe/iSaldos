@@ -234,27 +234,41 @@ class ISParserPeliculas : NSObject {
         
     }
     
-    func getDataServiceDetailPeople(_ name : String, apiKey : String, completion : @escaping (ISDetailPeopleModel?, [KnownFor]) -> ()){
+    /// <#Description#>
+    ///
+    /// - Parameters:
+    ///   - name: <#name description#>
+    ///   - apiKey: <#apiKey description#>
+    ///   - completion: <#completion description#>
+    func getDataServiceDetailPeople(_ name : String, apiKey : String, completion : @escaping (ISResultDetailModel?,[Resultados]?, [KnownFor]?) -> ()){
         
         let format = CONSTANTES.LLAMADAS.BASE_URL_DETAIL_PEOPLE
-        let arguments : [CVarArg] = [name, apiKey]
+        let arguments : [CVarArg] = [apiKey, name]
         let urlsString = String(format: format, arguments: arguments)
-        let urlRequest = URLRequest(url: URL(string: urlsString)!)
+        //if let urlsStringDes = urlsString{
+        let urlData = URL(string: urlEncode(urlsString)!)
+        let urlRequest = URLRequest(url: urlData!)
+        //}
         
         delegate?.sessionManager.request(urlRequest).validate().responseJSON{ (responseJSON) in
             switch responseJSON.result {
             case .success:
                 if let valorData = responseJSON.result.value{
                     let json = JSON(valorData)
-                    let detailPopularTVShows = ISDetailPeopleModel(json: json)
+                    
+                    let detailPeople = ISResultDetailModel(json: json)
+                    var arrayResultados = [Resultados]()
                     var arrayKnowfor = [KnownFor]()
                     
-                    for c_knowfor in json["know_for"].arrayValue{
-                        let modelData = KnownFor(json: c_knowfor)
-                        arrayKnowfor.append(modelData)
+                    for c_result in json["results"].arrayValue{
+                        let modelData = Resultados(json: c_result)
+                        arrayResultados.append(modelData)
+                        for c_knowfor in c_result["known_for"].arrayValue{
+                            let modelData = KnownFor(json: c_knowfor)
+                            arrayKnowfor.append(modelData)
+                        }
                     }
-                    
-                    completion(detailPopularTVShows, arrayKnowfor)
+                    completion(detailPeople, arrayResultados, arrayKnowfor)
                 }
             case .failure(let error):
                 if let httpStatusCode = responseJSON.response?.statusCode{
@@ -269,13 +283,18 @@ class ISParserPeliculas : NSObject {
                 }else{
                     print("Error: \(error.localizedDescription)")
                 }
-                completion(nil, [])
+                completion(nil, [], [])
             }
         }
-        
-        
-        
     }
+    
+    
+    func urlEncode(_ str: String?) -> String? {
+        var tempStr = str ?? ""
+        if let subRange = Range<String.Index>(NSRange(location: 0, length: tempStr.count), in: tempStr) { tempStr = tempStr.replacingOccurrences(of: " ", with: "+", options: .caseInsensitive, range: subRange) }
+        return ("\(tempStr)" as NSString).addingPercentEscapes(using: String.Encoding.utf8.rawValue)
+    }
+    
     
     
 }

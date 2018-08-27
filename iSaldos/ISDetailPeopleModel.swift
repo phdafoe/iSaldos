@@ -9,19 +9,27 @@
 import Foundation
 import SwiftyJSON
 
-struct ISDetailPeopleModel {
+struct ISResultDetailModel{
+    let results: [Resultados]
+    
+    init(json : JSON) {
+        results = [Resultados.init(json: json)]
+    }
+}
+
+struct Resultados {
     
     let popularity: Double
     let id: Int
     let profilePath, name: String
-    let knownFor: [KnownFor]
+    let knownForData: [KnownFor]
     
     init(json : JSON) {
         popularity = dimeDouble(json, nombre: "popularity")
         id = dimeInt(json, nombre: "id")
         profilePath = dimeString(json, nombre: "profile_path")
         name = dimeString(json, nombre: "name")
-        knownFor = [KnownFor.init(json: json)]
+        knownForData = [KnownFor.init(json: json)]
     }
     
 }
@@ -36,7 +44,7 @@ struct KnownFor {
     let overview, releaseDate: String
     
     init(json : JSON) {
-        voteAverage = dimeDouble(json, nombre: "voteAverage")
+        voteAverage = dimeDouble(json, nombre: "vote_average")
         mediaType = dimeString(json, nombre: "media_type")
         title = dimeString(json, nombre: "title")
         popularity = dimeDouble(json, nombre: "popularity")
