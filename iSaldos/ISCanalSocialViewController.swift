@@ -19,8 +19,17 @@ class ISCanalSocialViewController: UIViewController {
     var imagenPerfil : UIImage?
     var fechaCreacionPost : String?
     
-    var dataArray = ["One", "Two", "Three", "Four", "Five"]
+    var dataArrayDenuncia = ["¿Por qué lo denuncias?", "Creo que esto es inapropiado", "Creo que la información es falsa, fraudulenta o no deseada", "Creo que es otra cosa diferente"]
     var refreshControl: UIRefreshControl!
+    
+    @IBOutlet weak var myVistaDenuncia: UIView!
+    @IBAction func cierraVistaDenuncia(_ sender: Any) {
+        UIView.animate(withDuration: 0.03) {
+             self.myVistaDenuncia.isHidden = true
+        }
+    }
+    
+    @IBOutlet weak var myTableViewDenuncia: UITableView!
     
     
     //var usersFromParse = [UserModel]()
@@ -34,6 +43,13 @@ class ISCanalSocialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        myVistaDenuncia.isHidden = true
+        myVistaDenuncia.layer.cornerRadius = 10
+        myVistaDenuncia.layer.borderColor = CONSTANTES.COLORES.GRIS_NAV_TAB.cgColor
+        myVistaDenuncia.layer.borderWidth = 1
+        myVistaDenuncia.layer.shadowColor = CONSTANTES.COLORES.GRIS_NAV_TAB.cgColor
+        myVistaDenuncia.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self,
                                  action: #selector(getDataPostFromParse),
@@ -45,10 +61,14 @@ class ISCanalSocialViewController: UIViewController {
         myTableView.delegate = self
         myTableView.dataSource = self
         
+        myTableViewDenuncia.delegate = self
+        myTableViewDenuncia.dataSource = self
+        
         
         //TODO: - Registro de celda //ISPostCustomCell
         myTableView.register(UINib(nibName: "SRMiPerfilCustomCell", bundle: nil), forCellReuseIdentifier: "SRMiPerfilCustomCell")
         myTableView.register(UINib(nibName: "ISPostCustomCell", bundle: nil), forCellReuseIdentifier: "ISPostCustomCell")
+        myTableViewDenuncia.register(UINib(nibName: "DenunciaCell", bundle: nil), forCellReuseIdentifier: "DenunciaCell")
         
     }
 
@@ -68,89 +88,116 @@ class ISCanalSocialViewController: UIViewController {
 extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        if tableView == myTableView{
+            return 2
+        }else{
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        switch section {
-        case 0:
-            return 1
-        default:
-            return userPost.count
+        if tableView == myTableView{
+            switch section {
+            case 0:
+                return 1
+            default:
+                return userPost.count
+            }
+        }else{
+            return dataArrayDenuncia.count
         }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if indexPath.section == 0{
-            let customPerfilCell = myTableView.dequeueReusableCell(withIdentifier: "SRMiPerfilCustomCell", for: indexPath) as! SRMiPerfilCustomCell
-            
-            //nombre y apellido
-            customPerfilCell.myNombrePerfilUsuario.text = nombre
-            customPerfilCell.myUsernameSportReviewLBL.text = apellido
-            
-            customPerfilCell.myBotonAjustesPerfilUsuario.tag = indexPath.row
-            customPerfilCell.myBotonAjustesPerfilUsuario.addTarget(self,
-                                                                   action: #selector(muestraVCConfiguration),
-                                                                   for: .touchUpInside)
-            customPerfilCell.myFotoPerfilUsuario.image = imagenPerfil
-            customPerfilCell.myUsuarioGenerales.tag = indexPath.row
-            customPerfilCell.myUsuarioGenerales.addTarget(self,
-                                                          action: #selector(muestraTablaUsuarios),
-                                                          for: .touchUpInside)
-            
-            return customPerfilCell
-            
+        if tableView == myTableView{
+            if indexPath.section == 0{
+                let customPerfilCell = myTableView.dequeueReusableCell(withIdentifier: "SRMiPerfilCustomCell", for: indexPath) as! SRMiPerfilCustomCell
+                
+                //nombre y apellido
+                customPerfilCell.myNombrePerfilUsuario.text = nombre
+                customPerfilCell.myUsernameSportReviewLBL.text = apellido
+                
+                customPerfilCell.myBotonAjustesPerfilUsuario.tag = indexPath.row
+                customPerfilCell.myBotonAjustesPerfilUsuario.addTarget(self,
+                                                                       action: #selector(muestraVCConfiguration),
+                                                                       for: .touchUpInside)
+                customPerfilCell.myFotoPerfilUsuario.image = imagenPerfil
+                customPerfilCell.myUsuarioGenerales.tag = indexPath.row
+                customPerfilCell.myUsuarioGenerales.addTarget(self,
+                                                              action: #selector(muestraTablaUsuarios),
+                                                              for: .touchUpInside)
+                
+                return customPerfilCell
+                
+            }else{
+                let customPostCell = myTableView.dequeueReusableCell(withIdentifier: "ISPostCustomCell", for: indexPath) as! ISPostCustomCell
+                
+                //let model = usersFromParse[indexPath.row]
+                let modelPost = userPost[indexPath.row]
+                
+                
+                customPostCell.myFechaPerfil.text = fechaParse(modelPost.fechaCreacion!)
+                customPostCell.myNombreApellidoPerfil.text = modelPost.nombre
+                customPostCell.myUsernamePerfil.text = "@" + (PFUser.current()?.username)!
+                customPostCell.myDenunciaButton.tag = indexPath.row
+                customPostCell.myDenunciaButton.addTarget(self, action: #selector(muestraAlertaDenuncia(_ :)), for: .touchUpInside)
+                
+                modelPost.imageProfile?.getDataInBackground{ (resultImageData, error) in
+                    if error == nil{
+                        let imageData = UIImage(data: resultImageData!)
+                        customPostCell.myImagePerfil.image = imageData
+                    }else{
+                        print("AQUI ERROR")
+                    }
+                }
+                
+                modelPost.imagePost?.getDataInBackground{ (resultPostData, error) in
+                    if error == nil{
+                        let imageData = UIImage(data: resultPostData!)
+                        customPostCell.myImagenPostPerfil.image = imageData
+                    }else{
+                        print("AQUI ERROR DOS")
+                    }
+                }
+                
+                customPostCell.myTextoDescripcionPerfil.text = modelPost.descripcion
+                
+                return customPostCell
+            }
         }else{
-            let customPostCell = myTableView.dequeueReusableCell(withIdentifier: "ISPostCustomCell", for: indexPath) as! ISPostCustomCell
-            
-            //let model = usersFromParse[indexPath.row]
-            let modelPost = userPost[indexPath.row]
-           
-            
-            customPostCell.myFechaPerfil.text = fechaParse(modelPost.fechaCreacion!)
-            customPostCell.myNombreApellidoPerfil.text = modelPost.nombre
-            customPostCell.myUsernamePerfil.text = "@" + (PFUser.current()?.username)!
-
-            modelPost.imageProfile?.getDataInBackground{ (resultImageData, error) in
-                if error == nil{
-                    let imageData = UIImage(data: resultImageData!)
-                    customPostCell.myImagePerfil.image = imageData
-                }else{
-                    print("AQUI ERROR")
-                }
-            }
-            
-            modelPost.imagePost?.getDataInBackground{ (resultPostData, error) in
-                if error == nil{
-                    let imageData = UIImage(data: resultPostData!)
-                    customPostCell.myImagenPostPerfil.image = imageData
-                }else{
-                    print("AQUI ERROR DOS")
-                }
-            }
-            
-            customPostCell.myTextoDescripcionPerfil.text = modelPost.descripcion
-            
-            return customPostCell
+            let cell = myTableViewDenuncia.dequeueReusableCell(withIdentifier: "DenunciaCell", for: indexPath) as! DenunciaCell
+            cell.myDenunciaLBL.text = dataArrayDenuncia[indexPath.row]
+            return cell
         }
+        
         
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        var size = 0
-        switch indexPath.section {
-        case 0:
-            size = 305
-        default:
-            return UITableViewAutomaticDimension
+        if tableView == myTableView{
+            var size = 0
+            switch indexPath.section {
+            case 0:
+                size = 305
+            default:
+                return UITableViewAutomaticDimension
+            }
+            return CGFloat(size)
+        }else{
+            return 60
         }
-        return CGFloat(size)
+        
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == myTableViewDenuncia{
+            self.myVistaDenuncia.isHidden = true
+        }
     }
     
     
@@ -254,6 +301,39 @@ extension ISCanalSocialViewController : UITableViewDelegate, UITableViewDataSour
         present(navController,
                 animated: true,
                 completion: nil)
+    }
+    
+    
+    @objc func muestraAlertaDenuncia(_ sender : UIButton){
+        
+        let modelPost = userPost[sender.tag]
+        let nombrePublicacion = modelPost.nombre
+        var imageData : UIImage?
+        modelPost.imagePost?.getDataInBackground(block: { (resultPostData, error) in
+            if error == nil{
+                imageData = UIImage(data: resultPostData!)
+            }else{
+                print("AQUI ERROR DOS")
+            }
+        })
+        
+        let optionMenu = UIAlertController(title: nil, message: "Elija la opción", preferredStyle: .actionSheet)
+        let actionCancelar = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        let actionDenunciar = UIAlertAction(title: "Denunciar esta publicación", style: .default, handler: {(action) in
+            UIView.animate(withDuration: 0.3, animations: {
+                 self.myVistaDenuncia.isHidden = false
+            })
+        })
+        let actionCompartir = UIAlertAction(title: "Compartir por", style: .default) { (action) in
+            let compartirVC = UIActivityViewController(activityItems: [nombrePublicacion!, imageData!], applicationActivities: nil)
+            self.present(compartirVC, animated: true, completion: nil)
+        }
+        
+        optionMenu.addAction(actionCancelar)
+        optionMenu.addAction(actionDenunciar)
+        optionMenu.addAction(actionCompartir)
+        present(optionMenu, animated: true, completion: nil)
+        
     }
     
     

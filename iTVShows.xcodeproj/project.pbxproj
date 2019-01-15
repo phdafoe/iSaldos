@@ -79,6 +79,8 @@
 		B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */; };
 		B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */; };
 		B45B0E2C1EB8EC010038D174 /* UserPotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */; };
+		B48D53DB21EDEDF8001311CD /* DenunciaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48D53D921EDEDF7001311CD /* DenunciaCell.swift */; };
+		B48D53DC21EDEDF8001311CD /* DenunciaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B48D53DA21EDEDF8001311CD /* DenunciaCell.xib */; };
 		B4A932E920AD639500AE4AB5 /* ISPeliculasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A932E820AD639500AE4AB5 /* ISPeliculasModel.swift */; };
 		B4A932EB20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A932EA20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift */; };
 		B4EF7CE62131CB6F00EAC98F /* ISDetailPeliculaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CE52131CB6F00EAC98F /* ISDetailPeliculaModel.swift */; };
@@ -109,7 +111,7 @@
 		4105F7EB20261891007FEF49 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConfiguracionPerfilViewController.swift; sourceTree = "<group>"; };
 		4125385E1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISRegistroUsuarioTableViewController.swift; sourceTree = "<group>"; };
-		412741B11E9F93B20074CDD7 /* iSaldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSaldos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		412741B11E9F93B20074CDD7 /* iTVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		412741B41E9F93B20074CDD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		412741B91E9F93B20074CDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		412741BB1E9F93B20074CDD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +182,8 @@
 		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
 		B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISPostCustomCell.xib; sourceTree = "<group>"; };
 		B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPotImage.swift; sourceTree = "<group>"; };
+		B48D53D921EDEDF7001311CD /* DenunciaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenunciaCell.swift; sourceTree = "<group>"; };
+		B48D53DA21EDEDF8001311CD /* DenunciaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DenunciaCell.xib; sourceTree = "<group>"; };
 		B4A932E820AD639500AE4AB5 /* ISPeliculasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISPeliculasModel.swift; sourceTree = "<group>"; };
 		B4A932EA20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISParserPeliculasTMDB.swift; sourceTree = "<group>"; };
 		B4EF7CE52131CB6F00EAC98F /* ISDetailPeliculaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetailPeliculaModel.swift; sourceTree = "<group>"; };
@@ -240,7 +244,7 @@
 		412741B21E9F93B20074CDD7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				412741B11E9F93B20074CDD7 /* iSaldos.app */,
+				412741B11E9F93B20074CDD7 /* iTVShows.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -475,6 +479,8 @@
 				412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */,
 				B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */,
 				B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */,
+				B48D53D921EDEDF7001311CD /* DenunciaCell.swift */,
+				B48D53DA21EDEDF8001311CD /* DenunciaCell.xib */,
 			);
 			name = "CANAL/ MURO";
 			sourceTree = "<group>";
@@ -492,9 +498,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		412741B01E9F93B20074CDD7 /* iSaldos */ = {
+		412741B01E9F93B20074CDD7 /* iTVShows */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 412741C31E9F93B20074CDD7 /* Build configuration list for PBXNativeTarget "iSaldos" */;
+			buildConfigurationList = 412741C31E9F93B20074CDD7 /* Build configuration list for PBXNativeTarget "iTVShows" */;
 			buildPhases = (
 				DEBBE55CB4AC9D43484F9803 /* [CP] Check Pods Manifest.lock */,
 				412741AD1E9F93B20074CDD7 /* Sources */,
@@ -507,9 +513,9 @@
 			);
 			dependencies = (
 			);
-			name = iSaldos;
+			name = iTVShows;
 			productName = iSaldos;
-			productReference = 412741B11E9F93B20074CDD7 /* iSaldos.app */;
+			productReference = 412741B11E9F93B20074CDD7 /* iTVShows.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -530,7 +536,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 412741AC1E9F93B20074CDD7 /* Build configuration list for PBXProject "iSaldos" */;
+			buildConfigurationList = 412741AC1E9F93B20074CDD7 /* Build configuration list for PBXProject "iTVShows" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -543,7 +549,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				412741B01E9F93B20074CDD7 /* iSaldos */,
+				412741B01E9F93B20074CDD7 /* iTVShows */,
 			);
 		};
 /* End PBXProject section */
@@ -561,6 +567,7 @@
 				B4EF7CFE2134587200EAC98F /* ISDetallePersonasCell.xib in Resources */,
 				414AFD031F9BB49000D6EE73 /* LightStreaksDeepBlue.mp4 in Resources */,
 				412741BF1E9F93B20074CDD7 /* LaunchScreen.storyboard in Resources */,
+				B48D53DC21EDEDF8001311CD /* DenunciaCell.xib in Resources */,
 				41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */,
 				4127423D1E9FD9640074CDD7 /* FOTO_2.jpg in Resources */,
 				412741BC1E9F93B20074CDD7 /* Assets.xcassets in Resources */,
@@ -692,6 +699,7 @@
 				B4EF7CF22132D4C900EAC98F /* ISDetailTVShowsModel.swift in Sources */,
 				412742491E9FF68C0074CDD7 /* ISHomeTabBarController.swift in Sources */,
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
+				B48D53DB21EDEDF8001311CD /* DenunciaCell.swift in Sources */,
 				B4409CD71ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift in Sources */,
 				412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */,
 				41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */,
@@ -843,15 +851,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andres Ocampo (S5TXXSHPBT)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.iSaldos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.iTVShows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "024263b8-ac7d-4a92-bdc3-a6b8baebb90d";
-				PROVISIONING_PROFILE_SPECIFIER = SALDOSDEV;
+				PROVISIONING_PROFILE = "a5e3343b-ae3b-4d3b-9673-b1617398b36b";
+				PROVISIONING_PROFILE_SPECIFIER = ITVSHOWSDEV;
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
@@ -865,15 +873,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Andres Ocampo (2C7W4RF846)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.iSaldos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.iTVShows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "6d8d1552-cbdf-4d65-abf7-536abf647972";
-				PROVISIONING_PROFILE_SPECIFIER = SALDOSDEV;
+				PROVISIONING_PROFILE = "a982060a-15e2-46dc-abd4-5a1c6fb9e2c4";
+				PROVISIONING_PROFILE_SPECIFIER = ITVSHOWSPRO;
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -935,15 +943,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Andres Ocampo (2C7W4RF846)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 2C7W4RF846;
 				INFOPLIST_FILE = iSaldos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.iSaldos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.icologic.iOS.iTVShows;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c4671c94-9ada-4a95-a083-47eb87dbb2eb";
-				PROVISIONING_PROFILE_SPECIFIER = SALDOSPRO;
+				PROVISIONING_PROFILE = "a982060a-15e2-46dc-abd4-5a1c6fb9e2c4";
+				PROVISIONING_PROFILE_SPECIFIER = ITVSHOWSPRO;
 				SWIFT_OBJC_BRIDGING_HEADER = "iSaldos/iSaldos-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = On;
 				SWIFT_VERSION = 4.0;
@@ -953,7 +961,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		412741AC1E9F93B20074CDD7 /* Build configuration list for PBXProject "iSaldos" */ = {
+		412741AC1E9F93B20074CDD7 /* Build configuration list for PBXProject "iTVShows" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				412741C11E9F93B20074CDD7 /* Debug */,
@@ -963,7 +971,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		412741C31E9F93B20074CDD7 /* Build configuration list for PBXNativeTarget "iSaldos" */ = {
+		412741C31E9F93B20074CDD7 /* Build configuration list for PBXNativeTarget "iTVShows" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				412741C41E9F93B20074CDD7 /* Debug */,

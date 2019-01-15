@@ -11,7 +11,7 @@
 import UIKit
 
 // ----APP RATE SETTINGS ---
-let APP_ID = "1305072342"
+let APP_ID = "1434335564"
 
 let showRateTimes = 3 //Times rateApp() called before alert shows
 // -------------------------

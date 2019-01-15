@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pzs-ON-7Pl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pzs-ON-7Pl">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,7 +50,7 @@
         <!--Home View Controller-->
         <scene sceneID="MOF-oZ-yJK">
             <objects>
-                <viewController storyboardIdentifier="ISHomeViewController" id="1TE-rV-7xR" customClass="ISHomeViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ISHomeViewController" id="1TE-rV-7xR" customClass="ISHomeViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="agp-YI-CqW"/>
                         <viewControllerLayoutGuide type="bottom" id="m0R-Jg-tYc"/>
@@ -99,7 +99,7 @@
         <!--Home Tab Bar Controller-->
         <scene sceneID="8a4-mi-IxP">
             <objects>
-                <tabBarController storyboardIdentifier="HomeTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="17Q-Nh-yOF" customClass="ISHomeTabBarController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="17Q-Nh-yOF" customClass="ISHomeTabBarController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SEj-YH-kXy">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -170,7 +170,7 @@
         <!--Galeria Collection View Controller-->
         <scene sceneID="8Cm-gq-jiS">
             <objects>
-                <viewController storyboardIdentifier="ISGaleriaCollectionViewController" id="sMO-mm-tfk" customClass="ISGaleriaCollectionViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ISGaleriaCollectionViewController" id="sMO-mm-tfk" customClass="ISGaleriaCollectionViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yd0-U4-FHD"/>
                         <viewControllerLayoutGuide type="bottom" id="Zfg-EL-eKm"/>
@@ -189,7 +189,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="CellGallery" id="G0K-z6-Gqg" customClass="ISImageGalleryCell" customModule="iSaldos" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="CellGallery" id="G0K-z6-Gqg" customClass="ISImageGalleryCell" customModule="iTVShows" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="12" width="375" height="672"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -251,7 +251,7 @@
         <!--Registro Usuario Table View Controller-->
         <scene sceneID="mk2-eI-ud7">
             <objects>
-                <tableViewController storyboardIdentifier="RegistroUsuarioTableViewController" id="1yV-fq-TJr" customClass="ISRegistroUsuarioTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RegistroUsuarioTableViewController" id="1yV-fq-TJr" customClass="ISRegistroUsuarioTableViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eaX-Bf-yai">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -468,7 +468,7 @@
         <!--Terminos y Condiciones-->
         <scene sceneID="WJj-Kv-uVC">
             <objects>
-                <viewController storyboardIdentifier="TerminosViewController" id="Rps-Ut-xw8" customClass="ISTerminosViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TerminosViewController" id="Rps-Ut-xw8" customClass="ISTerminosViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FMW-dk-RXt"/>
                         <viewControllerLayoutGuide type="bottom" id="Id5-yi-zT5"/>
@@ -569,7 +569,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Login View Controller-->
         <scene sceneID="mUH-9l-JDa">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="CBe-ME-8gT" customClass="ISLoginViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="CBe-ME-8gT" customClass="ISLoginViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lhJ-CK-fu8"/>
                         <viewControllerLayoutGuide type="bottom" id="9JI-RV-0Fq"/>
@@ -690,7 +690,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Menu Table View Controller-->
         <scene sceneID="LY9-8M-tsO">
             <objects>
-                <tableViewController storyboardIdentifier="MenuTableViewController" id="rnY-TD-lps" customClass="ISMenuTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MenuTableViewController" id="rnY-TD-lps" customClass="ISMenuTableViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RSP-uO-BQm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -914,7 +914,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Detalle Oferta View Controller-->
         <scene sceneID="jTg-DO-bI4">
             <objects>
-                <tableViewController storyboardIdentifier="DetalleOfertaViewController" id="qU4-L3-6qi" customClass="ISDetalleOfertaViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DetalleOfertaViewController" id="qU4-L3-6qi" customClass="ISDetalleOfertaViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9in-Pn-7dl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1063,7 +1063,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                                         <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="hA3-e0-41A" customClass="GenericCollectionViewCell" customModule="iSaldos" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="hA3-e0-41A" customClass="GenericCollectionViewCell" customModule="iTVShows" customModuleProvider="target">
                                                             <rect key="frame" x="5" y="5" width="180" height="271"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1152,7 +1152,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Canal Social View Controller-->
         <scene sceneID="reO-Cl-fJj">
             <objects>
-                <viewController storyboardIdentifier="CanalSocialViewController" id="UTr-Yc-1jI" customClass="ISCanalSocialViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CanalSocialViewController" id="UTr-Yc-1jI" customClass="ISCanalSocialViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G19-oY-LqP"/>
                         <viewControllerLayoutGuide type="bottom" id="0gM-KY-jx0"/>
@@ -1175,27 +1175,72 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4IM-A3-w4N">
+                                <rect key="frame" x="16" y="127" width="343" height="355"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp2-9X-b2L">
+                                        <rect key="frame" x="296" y="9" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="MYO-oL-U6d"/>
+                                            <constraint firstAttribute="height" constant="32" id="Pyt-vt-HRW"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="cerrasX"/>
+                                        <connections>
+                                            <action selector="cierraVistaDenuncia:" destination="UTr-Yc-1jI" eventType="touchUpInside" id="O3f-f8-iAH"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rkN-Oc-gom">
+                                        <rect key="frame" x="11" y="53" width="320" height="294"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PXN-Ih-kk1">
+                                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PXN-Ih-kk1" id="AvZ-DA-OPs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rkN-Oc-gom" secondAttribute="trailing" constant="12" id="4pg-cu-Xld"/>
+                                    <constraint firstAttribute="height" constant="355" id="8uA-W9-h0A"/>
+                                    <constraint firstItem="rkN-Oc-gom" firstAttribute="top" secondItem="Bp2-9X-b2L" secondAttribute="bottom" constant="12" id="GdA-Q7-Yra"/>
+                                    <constraint firstAttribute="bottom" secondItem="rkN-Oc-gom" secondAttribute="bottom" constant="8" id="HAz-P4-OhG"/>
+                                    <constraint firstItem="Bp2-9X-b2L" firstAttribute="top" secondItem="4IM-A3-w4N" secondAttribute="top" constant="9" id="acO-Qi-B3Z"/>
+                                    <constraint firstItem="rkN-Oc-gom" firstAttribute="leading" secondItem="4IM-A3-w4N" secondAttribute="leading" constant="11" id="s3x-XT-NNN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bp2-9X-b2L" secondAttribute="trailing" constant="15" id="s8v-k2-ofX"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0gM-KY-jx0" firstAttribute="top" secondItem="4mz-Be-Cct" secondAttribute="bottom" id="NhY-wL-fst"/>
+                            <constraint firstItem="4IM-A3-w4N" firstAttribute="leading" secondItem="L12-gO-2mR" secondAttribute="leading" constant="16" id="PED-8t-Ap6"/>
                             <constraint firstItem="4mz-Be-Cct" firstAttribute="top" secondItem="L12-gO-2mR" secondAttribute="top" id="Po2-JW-b13"/>
                             <constraint firstItem="4mz-Be-Cct" firstAttribute="leading" secondItem="L12-gO-2mR" secondAttribute="leading" id="Vgf-hH-ONz"/>
                             <constraint firstAttribute="trailing" secondItem="4mz-Be-Cct" secondAttribute="trailing" id="fTr-27-aYT"/>
+                            <constraint firstAttribute="trailing" secondItem="4IM-A3-w4N" secondAttribute="trailing" constant="16" id="i2m-Yh-yz6"/>
+                            <constraint firstItem="4IM-A3-w4N" firstAttribute="top" secondItem="G19-oY-LqP" secondAttribute="bottom" constant="83" id="j6W-Gq-R6g"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="4mz-Be-Cct" id="0rr-gL-GWI"/>
+                        <outlet property="myTableViewDenuncia" destination="rkN-Oc-gom" id="7Ya-6i-Kck"/>
+                        <outlet property="myVistaDenuncia" destination="4IM-A3-w4N" id="G1G-en-oZr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUU-wY-QHj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2287.5" y="2900.7042253521126"/>
+            <point key="canvasLocation" x="2287.1999999999998" y="2900.2463054187192"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="9LL-Ng-gxq">
             <objects>
-                <viewController storyboardIdentifier="SplashViewController" id="pzs-ON-7Pl" customClass="ISSplashViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashViewController" id="pzs-ON-7Pl" customClass="ISSplashViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nvW-fp-n65"/>
                         <viewControllerLayoutGuide type="bottom" id="Z4n-4C-eaW"/>
@@ -1262,7 +1307,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--NUEVA POST-->
         <scene sceneID="0Rq-8S-xJQ">
             <objects>
-                <tableViewController storyboardIdentifier="NuevoPostTableViewController" id="as0-1Y-Yib" customClass="ISNuevoPostTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="NuevoPostTableViewController" id="as0-1Y-Yib" customClass="ISNuevoPostTableViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="epQ-8X-n7S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1424,7 +1469,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Usuarios Table View Controller-->
         <scene sceneID="XP4-LV-saR">
             <objects>
-                <tableViewController storyboardIdentifier="UsuariosTableViewController" id="3bP-GR-ZOu" customClass="ISUsuariosTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="UsuariosTableViewController" id="3bP-GR-ZOu" customClass="ISUsuariosTableViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ugY-NI-Vnq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1479,7 +1524,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Muro Social View Controller-->
         <scene sceneID="W2z-hB-lvE">
             <objects>
-                <viewController storyboardIdentifier="MuroSocialViewController" id="VFL-vq-OP0" customClass="ISMuroSocialViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MuroSocialViewController" id="VFL-vq-OP0" customClass="ISMuroSocialViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fUe-Oy-1ll"/>
                         <viewControllerLayoutGuide type="bottom" id="Oq6-9e-UGc"/>
@@ -1502,27 +1547,73 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pKD-xn-igb">
+                                <rect key="frame" x="16" y="127" width="343" height="355"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqb-mb-LSL">
+                                        <rect key="frame" x="296" y="9" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="2il-Ii-1SA"/>
+                                            <constraint firstAttribute="width" constant="32" id="Bc6-wC-BUq"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="cerrasX"/>
+                                        <connections>
+                                            <action selector="cierraVistaDenuncia:" destination="UTr-Yc-1jI" eventType="touchUpInside" id="cBu-sk-I2H"/>
+                                            <action selector="cierraVistaDenuncia:" destination="VFL-vq-OP0" eventType="touchUpInside" id="sKO-Hi-LAy"/>
+                                        </connections>
+                                    </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5WP-Ho-S9r">
+                                        <rect key="frame" x="11" y="53" width="324" height="294"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CxF-iI-V83">
+                                                <rect key="frame" x="0.0" y="28" width="324" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CxF-iI-V83" id="9Fh-oT-3KC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="324" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Lqb-mb-LSL" firstAttribute="top" secondItem="pKD-xn-igb" secondAttribute="top" constant="9" id="9nQ-Tx-4L8"/>
+                                    <constraint firstItem="5WP-Ho-S9r" firstAttribute="leading" secondItem="pKD-xn-igb" secondAttribute="leading" constant="11" id="EKm-X9-ges"/>
+                                    <constraint firstAttribute="height" constant="355" id="ERf-as-CNJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="5WP-Ho-S9r" secondAttribute="trailing" constant="8" id="Fih-Jk-nqz"/>
+                                    <constraint firstItem="5WP-Ho-S9r" firstAttribute="top" secondItem="Lqb-mb-LSL" secondAttribute="bottom" constant="12" id="Uoa-wb-DUF"/>
+                                    <constraint firstAttribute="bottom" secondItem="5WP-Ho-S9r" secondAttribute="bottom" constant="8" id="Xyr-c9-6dk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lqb-mb-LSL" secondAttribute="trailing" constant="15" id="u1Q-RN-gaK"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7mO-TA-9jF" firstAttribute="leading" secondItem="aIc-aC-spk" secondAttribute="leading" id="3MD-5s-ZXB"/>
+                            <constraint firstAttribute="trailing" secondItem="pKD-xn-igb" secondAttribute="trailing" constant="16" id="4fo-GR-34f"/>
                             <constraint firstItem="Oq6-9e-UGc" firstAttribute="top" secondItem="7mO-TA-9jF" secondAttribute="bottom" id="E8U-ZV-Q0t"/>
                             <constraint firstItem="7mO-TA-9jF" firstAttribute="top" secondItem="aIc-aC-spk" secondAttribute="top" id="PAE-YU-IyZ"/>
+                            <constraint firstItem="pKD-xn-igb" firstAttribute="top" secondItem="fUe-Oy-1ll" secondAttribute="bottom" constant="83" id="gSH-WJ-dWY"/>
                             <constraint firstAttribute="trailing" secondItem="7mO-TA-9jF" secondAttribute="trailing" id="lYn-r2-64Y"/>
+                            <constraint firstItem="pKD-xn-igb" firstAttribute="leading" secondItem="aIc-aC-spk" secondAttribute="leading" constant="16" id="wBq-Oo-G3i"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="myTableView" destination="7mO-TA-9jF" id="c0b-tF-2wq"/>
+                        <outlet property="myTableViewDenuncia" destination="5WP-Ho-S9r" id="LPj-Dx-vDZ"/>
+                        <outlet property="myVistaDenuncia" destination="pKD-xn-igb" id="9bJ-x2-bmX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyr-qE-xI6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569" y="2901"/>
+            <point key="canvasLocation" x="1568.8" y="2900.9852216748768"/>
         </scene>
         <!--Configuracion Perfil View Controller-->
         <scene sceneID="y3B-Jx-Kke">
             <objects>
-                <tableViewController storyboardIdentifier="ConfiguracionPerfilViewController" id="qnv-1T-WYk" customClass="ISConfiguracionPerfilViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ConfiguracionPerfilViewController" id="qnv-1T-WYk" customClass="ISConfiguracionPerfilViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="VW4-Fw-HVl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1784,7 +1875,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Movies View Controller-->
         <scene sceneID="NbP-K9-gDv">
             <objects>
-                <viewController storyboardIdentifier="MoviesViewController" id="dFb-7e-rh5" customClass="MoviesViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MoviesViewController" id="dFb-7e-rh5" customClass="MoviesViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QL7-2c-KZu"/>
                         <viewControllerLayoutGuide type="bottom" id="Lee-AP-lYp"/>
@@ -1803,7 +1894,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="vmW-j0-5qa" customClass="GenericCollectionViewCell" customModule="iSaldos" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="vmW-j0-5qa" customClass="GenericCollectionViewCell" customModule="iTVShows" customModuleProvider="target">
                                         <rect key="frame" x="97.666666666666671" y="5" width="180" height="271"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1887,7 +1978,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Books View Controller-->
         <scene sceneID="TtI-DL-hZf">
             <objects>
-                <viewController storyboardIdentifier="BooksViewController" id="NrC-GE-9Zg" customClass="BooksViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BooksViewController" id="NrC-GE-9Zg" customClass="BooksViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0i8-fW-vcK"/>
                         <viewControllerLayoutGuide type="bottom" id="Kdd-mD-dzm"/>
@@ -1906,7 +1997,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                     <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="xne-2Q-7Fy" customClass="GenericCollectionViewCell" customModule="iSaldos" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="xne-2Q-7Fy" customClass="GenericCollectionViewCell" customModule="iTVShows" customModuleProvider="target">
                                         <rect key="frame" x="97.666666666666671" y="5" width="180" height="271"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -1990,7 +2081,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--DetalleTV Shows Table View Controller-->
         <scene sceneID="cCV-NN-oUa">
             <objects>
-                <tableViewController storyboardIdentifier="DetalleTVShowsTableViewController" id="jHj-Zi-dwF" customClass="ISDetalleTVShowsTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DetalleTVShowsTableViewController" id="jHj-Zi-dwF" customClass="ISDetalleTVShowsTableViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Yqo-z9-tLm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2139,7 +2230,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
                                                         <inset key="sectionInset" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="sFa-6C-jQu" customClass="GenericCollectionViewCell" customModule="iSaldos" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GenericCollectionViewCell" id="sFa-6C-jQu" customClass="GenericCollectionViewCell" customModule="iTVShows" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="5" width="374" height="271"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -2228,7 +2319,7 @@ Ante cualquier conflicto, la Ley aplicable será la Peruana y la jurisdicción c
         <!--Detalle Personas Table View Controller-->
         <scene sceneID="U0u-Fp-MFS">
             <objects>
-                <tableViewController storyboardIdentifier="DetallePersonasTableViewController" id="lfV-4y-KUm" customClass="ISDetallePersonasTableViewController" customModule="iSaldos" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DetallePersonasTableViewController" id="lfV-4y-KUm" customClass="ISDetallePersonasTableViewController" customModule="iTVShows" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dhW-Ff-HGd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="454" id="KGk-i7-Jjw" customClass="ISPostCustomCell" customModule="iSaldos" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="454" id="KGk-i7-Jjw" customClass="ISPostCustomCell" customModule="iTVShows" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="454"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -32,16 +32,14 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W36-lr-OO2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxG-Nd-iey">
-                                <rect key="frame" x="71" y="3" width="138" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxG-Nd-iey">
+                                <rect key="frame" x="71" y="3" width="138" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre Apellido Nombre ApellidoNombre Apellido" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3o-ZP-51d">
-                                <rect key="frame" x="71" y="25" width="240" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre Apellido Nombre ApellidoNombre Apellido" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3o-ZP-51d">
+                                <rect key="frame" x="71" y="25" width="229" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -56,16 +54,38 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IR1-3b-Sal">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IR1-3b-Sal">
                                 <rect key="frame" x="3" y="3" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="T87-KV-kQs"/>
+                                    <constraint firstAttribute="height" constant="60" id="b9T-hP-p0A"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rY1-yQ-ieY">
+                                <rect key="frame" x="302" y="27" width="14" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14" id="E1W-KP-cjP"/>
+                                    <constraint firstAttribute="height" constant="33" id="vLh-qT-Nt5"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="denuncia"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="rY1-yQ-ieY" firstAttribute="top" secondItem="GPJ-DO-1bS" secondAttribute="bottom" constant="3" id="0fg-Qb-jy8"/>
+                            <constraint firstItem="d3o-ZP-51d" firstAttribute="top" secondItem="GPJ-DO-1bS" secondAttribute="bottom" constant="1" id="2Az-tD-CHi"/>
+                            <constraint firstItem="GPJ-DO-1bS" firstAttribute="leading" secondItem="xxG-Nd-iey" secondAttribute="trailing" id="3Ju-9b-nqV"/>
                             <constraint firstAttribute="height" constant="69" id="8V1-cf-vc9"/>
+                            <constraint firstAttribute="trailing" secondItem="d3o-ZP-51d" secondAttribute="trailing" constant="20" id="F7e-hA-aYB"/>
+                            <constraint firstItem="IR1-3b-Sal" firstAttribute="leading" secondItem="W36-lr-OO2" secondAttribute="leading" constant="3" id="JcF-HW-c3l"/>
+                            <constraint firstItem="rY1-yQ-ieY" firstAttribute="leading" secondItem="d3o-ZP-51d" secondAttribute="trailing" constant="2" id="Q7Y-xe-alD"/>
                             <constraint firstAttribute="trailing" secondItem="GPJ-DO-1bS" secondAttribute="trailing" constant="9" id="VmB-go-ZZK"/>
+                            <constraint firstAttribute="trailing" secondItem="rY1-yQ-ieY" secondAttribute="trailing" constant="4" id="YGM-MP-pKc"/>
                             <constraint firstItem="GPJ-DO-1bS" firstAttribute="top" secondItem="W36-lr-OO2" secondAttribute="top" constant="3" id="YjB-ch-pe2"/>
+                            <constraint firstItem="xxG-Nd-iey" firstAttribute="leading" secondItem="IR1-3b-Sal" secondAttribute="trailing" constant="8" id="Ynt-lv-pOs"/>
+                            <constraint firstItem="d3o-ZP-51d" firstAttribute="leading" secondItem="IR1-3b-Sal" secondAttribute="trailing" constant="8" id="cYs-7o-MUn"/>
+                            <constraint firstItem="xxG-Nd-iey" firstAttribute="top" secondItem="W36-lr-OO2" secondAttribute="top" constant="3" id="wpl-9M-pgx"/>
+                            <constraint firstItem="IR1-3b-Sal" firstAttribute="top" secondItem="W36-lr-OO2" secondAttribute="top" constant="3" id="xwf-AC-6lB"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFw-7O-EL4">
@@ -103,6 +123,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="myDenunciaButton" destination="rY1-yQ-ieY" id="oQj-og-jVS"/>
                 <outlet property="myFechaPerfil" destination="GPJ-DO-1bS" id="zbm-NO-SRA"/>
                 <outlet property="myImagePerfil" destination="IR1-3b-Sal" id="BaB-4z-Ong"/>
                 <outlet property="myImagenPostPerfil" destination="iSJ-T9-JED" id="Ja7-TO-0yS"/>
@@ -113,4 +134,7 @@
             <point key="canvasLocation" x="34" y="260"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="denuncia" width="22" height="50"/>
+    </resources>
 </document>

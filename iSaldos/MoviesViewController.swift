@@ -47,7 +47,6 @@ class MoviesViewController: UIViewController {
             menuButton.target = revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rightViewRevealWidth = 150
-            //view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
 
@@ -87,7 +86,6 @@ class MoviesViewController: UIViewController {
             let selectInd = myCollectionView.indexPathsForSelectedItems?.first?.row
             let objInd = arrayGeneric[selectInd!].id
             detailVC.id = objInd!
-            //detailVC.detalleImagenData = diccionarioImagenes[objInd.id!]!
         }
     }
     

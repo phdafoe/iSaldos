@@ -14,12 +14,12 @@ class ISParserPeliculas : NSObject {
     
     static let shared = ISParserPeliculas()
     
-    /// <#Description#>
+    /// Obtencion de las peliculas
     ///
     /// - Parameters:
-    ///   - apiKey: <#apiKey description#>
-    ///   - numberPage: <#numberPage description#>
-    ///   - completion: <#completion description#>
+    ///   - apiKey: api key de TMDB
+    ///   - numberPage: determina la pagina a mostrar
+    ///   - completion: retorna Peliculas Model
     func getDataServicePeliculas(_ apiKey : String, numberPage : Int, completion: @escaping ([PeliculasModel]?) -> ()){
         
         let format = CONSTANTES.LLAMADAS.BASE_URL_TMDB

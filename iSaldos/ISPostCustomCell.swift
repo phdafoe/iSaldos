@@ -18,6 +18,8 @@ class ISPostCustomCell: UITableViewCell {
     @IBOutlet weak var myNombreApellidoPerfil: UILabel!
     @IBOutlet weak var myTextoDescripcionPerfil: UILabel!
     @IBOutlet weak var myImagenPostPerfil: UIImageView!
+    @IBOutlet weak var myDenunciaButton: UIButton!
+    
     
 
     override func awakeFromNib() {
