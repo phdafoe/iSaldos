@@ -178,7 +178,7 @@ extension ISMuroSocialViewController : UITableViewDelegate, UITableViewDataSourc
         let queryPost = PFQuery(className: "PostImageNetwork")
         queryPost.order(byDescending: "createdAt")
         //queryPost.whereKey("username", notEqualTo: (PFUser.current()?.username)!)
-        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
+        APESuperHUD.show(style: HUDStyle.textOnly, title: nil, message: "Cargando..", completion: nil)
         queryPost.findObjectsInBackground(block: { (objcDos, errorDos) in
             if errorDos == nil{
                 
@@ -191,15 +191,15 @@ extension ISMuroSocialViewController : UITableViewDelegate, UITableViewDataSourc
                         let postFinal = UserPotImage(pNombre: c_objDataPost["nombre"] as! String,
                                                      pApellido: c_objDataPost["apellido"] as! String,
                                                      pUsername: c_objDataPost["username"] as! String,
-                                                     pImageProfile: c_objDataPost["imageFilePerfilNW"] as! PFFile,
-                                                     pImagePost: c_objDataPost["imageFileNW"] as! PFFile,
+                                                     pImageProfile: c_objDataPost["imageFilePerfilNW"] as! PFFileObject,
+                                                     pImagePost: c_objDataPost["imageFileNW"] as! PFFileObject,
                                                      pFechaCreacion: c_objDataPost.createdAt!,
                                                      pDescripcion: c_objDataPost["descripcionImagen"] as! String)
                         
                         self.userPost.append(postFinal)
                     }
                  self.myTableView.reloadData()
-                    APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+                    APESuperHUD.dismissAll(animated: true)
                     self.refreshControl.endRefreshing()
                 }
             }

@@ -17,7 +17,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>4</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -26,9 +26,9 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>iSaldos necesita acceder a la camara del dispositvo</string>
+	<string>iTVShows desea acceder a la camara del dispositivo con el fin de prestar una mejor experiencia de usuario</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>iSaldos necesita acceder a la librería de fotos del dispositvo</string>
+	<string>iTVShows desea acceder a la biblioteca de fotos del dispositivo con el fin de prestar una mejor experiencia de usuario</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

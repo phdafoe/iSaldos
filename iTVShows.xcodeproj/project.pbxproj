@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		410561B01FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410561AF1FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift */; };
 		410561B21FA631C8001DBBE9 /* ISImageGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410561B11FA631C8001DBBE9 /* ISImageGalleryCell.swift */; };
-		4105F7DD2026029F007FEF49 /* ISMoviesApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7DC2026029F007FEF49 /* ISMoviesApple.swift */; };
 		4105F7DF202604B5007FEF49 /* ISMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7DE202604B5007FEF49 /* ISMovieModel.swift */; };
 		4105F7E120260A6C007FEF49 /* ReuseIdentifierInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7E020260A6C007FEF49 /* ReuseIdentifierInterface.swift */; };
 		4105F7E320260B20007FEF49 /* MoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4105F7E220260B20007FEF49 /* MoviesViewController.swift */; };
@@ -35,8 +34,6 @@
 		412741FB1E9FC14C0074CDD7 /* ISOfertaCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */; };
 		412741FC1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */; };
 		412741FE1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */; };
-		412742011E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742001E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift */; };
-		4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */; };
 		4127420F1E9FC3800074CDD7 /* ISHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127420E1E9FC3800074CDD7 /* ISHomeViewController.swift */; };
 		412742111E9FC3C80074CDD7 /* ISMuroSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */; };
 		412742131E9FC3D30074CDD7 /* ISCanalSocialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742121E9FC3D30074CDD7 /* ISCanalSocialViewController.swift */; };
@@ -45,7 +42,6 @@
 		412742211E9FC4620074CDD7 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742171E9FC4620074CDD7 /* CryptoSwift.framework */; };
 		412742231E9FC4620074CDD7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 412742191E9FC4620074CDD7 /* Kingfisher.framework */; };
 		412742241E9FC4620074CDD7 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421A1E9FC4620074CDD7 /* Parse.framework */; };
-		412742261E9FC4620074CDD7 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421C1E9FC4620074CDD7 /* PromiseKit.framework */; };
 		412742281E9FC4620074CDD7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4127421E1E9FC4620074CDD7 /* SwiftyJSON.framework */; };
 		4127422A1E9FC5630074CDD7 /* ISTerminosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412742291E9FC5630074CDD7 /* ISTerminosViewController.swift */; };
 		4127422C1E9FC6630074CDD7 /* APIUTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127422B1E9FC6630074CDD7 /* APIUTILS.swift */; };
@@ -73,9 +69,7 @@
 		41A3BC001EA1312900FC491F /* SRMiPerfilCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */; };
 		41BD66341F8B6CFE00768339 /* APESuperHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41BD66351F8B6CFE00768339 /* APESuperHUD.framework */; };
 		41FF74A71FA62482003D2669 /* ISWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FF74A61FA62481003D2669 /* ISWebViewController.swift */; };
-		5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */; };
 		B4409CD51ED4D5EA00F44FD2 /* ActionSheetStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4409CD41ED4D5EA00F44FD2 /* ActionSheetStoryboard.storyboard */; };
-		B4409CD71ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4409CD61ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift */; };
 		B45B0E271EB8E3670038D174 /* ISPostCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */; };
 		B45B0E281EB8E3670038D174 /* ISPostCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */; };
 		B45B0E2C1EB8EC010038D174 /* UserPotImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */; };
@@ -94,14 +88,12 @@
 		B4EF7CFA2134584600EAC98F /* ISDetalleCabeceraPersonaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EF7CF82134584600EAC98F /* ISDetalleCabeceraPersonaCell.xib */; };
 		B4EF7CFD2134587200EAC98F /* ISDetallePersonasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4EF7CFB2134587200EAC98F /* ISDetallePersonasCell.swift */; };
 		B4EF7CFE2134587200EAC98F /* ISDetallePersonasCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EF7CFC2134587200EAC98F /* ISDetallePersonasCell.xib */; };
+		C476FA7821A2BFA64210E8C5 /* Pods_iTVShows.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6324A7D31FC894ADAECBA225 /* Pods_iTVShows.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.release.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.release.xcconfig"; sourceTree = "<group>"; };
-		35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.debug.xcconfig"; sourceTree = "<group>"; };
 		410561AF1FA62FA9001DBBE9 /* ISGaleriaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISGaleriaCollectionViewController.swift; sourceTree = "<group>"; };
 		410561B11FA631C8001DBBE9 /* ISImageGalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISImageGalleryCell.swift; sourceTree = "<group>"; };
-		4105F7DC2026029F007FEF49 /* ISMoviesApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISMoviesApple.swift; sourceTree = "<group>"; };
 		4105F7DE202604B5007FEF49 /* ISMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISMovieModel.swift; sourceTree = "<group>"; };
 		4105F7E020260A6C007FEF49 /* ReuseIdentifierInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierInterface.swift; sourceTree = "<group>"; };
 		4105F7E220260B20007FEF49 /* MoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewController.swift; sourceTree = "<group>"; };
@@ -111,7 +103,7 @@
 		4105F7EB20261891007FEF49 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 		411945B91EA148E900996974 /* ISConfiguracionPerfilViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISConfiguracionPerfilViewController.swift; sourceTree = "<group>"; };
 		4125385E1EB87E6800BE157B /* ISRegistroUsuarioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISRegistroUsuarioTableViewController.swift; sourceTree = "<group>"; };
-		412741B11E9F93B20074CDD7 /* iTVShows.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		412741B11E9F93B20074CDD7 /* iSaldos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = iSaldos.app; path = iTVShows.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		412741B41E9F93B20074CDD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		412741B91E9F93B20074CDD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		412741BB1E9F93B20074CDD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -136,8 +128,6 @@
 		412741F91E9FC14C0074CDD7 /* ISOfertaCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISOfertaCustomCell.swift; sourceTree = "<group>"; };
 		412741FA1E9FC14C0074CDD7 /* ISOfertaCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISOfertaCustomCell.xib; sourceTree = "<group>"; };
 		412741FD1E9FC1610074CDD7 /* ISDetalleOfertaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleOfertaViewController.swift; sourceTree = "<group>"; };
-		412742001E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleCuponesViewController.swift; sourceTree = "<group>"; };
-		4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISDetalleConcursoViewController.swift; sourceTree = "<group>"; };
 		4127420E1E9FC3800074CDD7 /* ISHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISHomeViewController.swift; sourceTree = "<group>"; };
 		412742101E9FC3C80074CDD7 /* ISMuroSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISMuroSocialViewController.swift; sourceTree = "<group>"; };
 		412742121E9FC3D30074CDD7 /* ISCanalSocialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISCanalSocialViewController.swift; sourceTree = "<group>"; };
@@ -174,11 +164,12 @@
 		41A3BBFB1EA0EC0600FC491F /* RateApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RateApp.swift; sourceTree = "<group>"; };
 		41A3BBFD1EA1312900FC491F /* SRMiPerfilCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRMiPerfilCustomCell.swift; sourceTree = "<group>"; };
 		41A3BBFE1EA1312900FC491F /* SRMiPerfilCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SRMiPerfilCustomCell.xib; sourceTree = "<group>"; };
+		41B51FB458E3330B378CEEB0 /* Pods-iTVShows.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTVShows.debug.xcconfig"; path = "Target Support Files/Pods-iTVShows/Pods-iTVShows.debug.xcconfig"; sourceTree = "<group>"; };
 		41BD66351F8B6CFE00768339 /* APESuperHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APESuperHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FF74A61FA62481003D2669 /* ISWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISWebViewController.swift; sourceTree = "<group>"; };
-		5EA5DBE264CB33DA4355D716 /* Pods-iSaldos.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iSaldos.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos.distribution.xcconfig"; sourceTree = "<group>"; };
+		6324A7D31FC894ADAECBA225 /* Pods_iTVShows.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTVShows.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7005A5AEAE60209E0697B414 /* Pods-iTVShows.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTVShows.distribution.xcconfig"; path = "Target Support Files/Pods-iTVShows/Pods-iTVShows.distribution.xcconfig"; sourceTree = "<group>"; };
 		B4409CD41ED4D5EA00F44FD2 /* ActionSheetStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActionSheetStoryboard.storyboard; sourceTree = "<group>"; };
-		B4409CD61ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISActionSheetPersonalizadoViewController.swift; sourceTree = "<group>"; };
 		B45B0E251EB8E3670038D174 /* ISPostCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ISPostCustomCell.swift; sourceTree = "<group>"; };
 		B45B0E261EB8E3670038D174 /* ISPostCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISPostCustomCell.xib; sourceTree = "<group>"; };
 		B45B0E2B1EB8EC010038D174 /* UserPotImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPotImage.swift; sourceTree = "<group>"; };
@@ -197,7 +188,7 @@
 		B4EF7CF82134584600EAC98F /* ISDetalleCabeceraPersonaCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ISDetalleCabeceraPersonaCell.xib; sourceTree = "<group>"; };
 		B4EF7CFB2134587200EAC98F /* ISDetallePersonasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISDetallePersonasCell.swift; sourceTree = "<group>"; };
 		B4EF7CFC2134587200EAC98F /* ISDetallePersonasCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ISDetallePersonasCell.xib; sourceTree = "<group>"; };
-		F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iSaldos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9670A4720B0DA3C510268A4 /* Pods-iTVShows.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTVShows.release.xcconfig"; path = "Target Support Files/Pods-iTVShows/Pods-iTVShows.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,9 +202,8 @@
 				412742211E9FC4620074CDD7 /* CryptoSwift.framework in Frameworks */,
 				412742231E9FC4620074CDD7 /* Kingfisher.framework in Frameworks */,
 				412742241E9FC4620074CDD7 /* Parse.framework in Frameworks */,
-				412742261E9FC4620074CDD7 /* PromiseKit.framework in Frameworks */,
 				412742281E9FC4620074CDD7 /* SwiftyJSON.framework in Frameworks */,
-				5A6D0BCA5E107D272AC036F5 /* Pods_iSaldos.framework in Frameworks */,
+				C476FA7821A2BFA64210E8C5 /* Pods_iTVShows.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,15 +226,15 @@
 				412741C61E9F93D40074CDD7 /* Podfile */,
 				412741B31E9F93B20074CDD7 /* iSaldos */,
 				412741B21E9F93B20074CDD7 /* Products */,
-				D54070C79A5867705BA6C568 /* Pods */,
 				AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */,
+				46286575482697FAE0D1E38E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		412741B21E9F93B20074CDD7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				412741B11E9F93B20074CDD7 /* iTVShows.app */,
+				412741B11E9F93B20074CDD7 /* iSaldos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,8 +318,6 @@
 				41FF74A61FA62481003D2669 /* ISWebViewController.swift */,
 				412742141E9FC4380074CDD7 /* SOCIAL */,
 				412741FF1E9FC1680074CDD7 /* DETALLE */,
-				412742061E9FC19D0074CDD7 /* CUPONES */,
-				4127420D1E9FC1C60074CDD7 /* CONCURSOS */,
 				4105F7E8202616E8007FEF49 /* APPLE */,
 			);
 			name = VIEWS_CONTROLLERS;
@@ -362,23 +350,6 @@
 				B4EF7CFC2134587200EAC98F /* ISDetallePersonasCell.xib */,
 			);
 			name = DETALLE;
-			sourceTree = "<group>";
-		};
-		412742061E9FC19D0074CDD7 /* CUPONES */ = {
-			isa = PBXGroup;
-			children = (
-				412742001E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift */,
-				B4409CD61ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift */,
-			);
-			name = CUPONES;
-			sourceTree = "<group>";
-		};
-		4127420D1E9FC1C60074CDD7 /* CONCURSOS */ = {
-			isa = PBXGroup;
-			children = (
-				4127420B1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift */,
-			);
-			name = CONCURSOS;
 			sourceTree = "<group>";
 		};
 		412742141E9FC4380074CDD7 /* SOCIAL */ = {
@@ -427,7 +398,6 @@
 		412742311E9FC6810074CDD7 /* PARSERS */ = {
 			isa = PBXGroup;
 			children = (
-				4105F7DC2026029F007FEF49 /* ISMoviesApple.swift */,
 				B4A932EA20AD768600AE4AB5 /* ISParserPeliculasTMDB.swift */,
 			);
 			name = PARSERS;
@@ -452,6 +422,16 @@
 			name = USUARIOS;
 			sourceTree = "<group>";
 		};
+		46286575482697FAE0D1E38E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41B51FB458E3330B378CEEB0 /* Pods-iTVShows.debug.xcconfig */,
+				C9670A4720B0DA3C510268A4 /* Pods-iTVShows.release.xcconfig */,
+				7005A5AEAE60209E0697B414 /* Pods-iTVShows.distribution.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AFC3C07FCCC3C0CD5BF92E48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,7 +445,7 @@
 				4127421B1E9FC4620074CDD7 /* PKHUD.framework */,
 				4127421C1E9FC4620074CDD7 /* PromiseKit.framework */,
 				4127421E1E9FC4620074CDD7 /* SwiftyJSON.framework */,
-				F140B6E052B1C95D61762DD6 /* Pods_iSaldos.framework */,
+				6324A7D31FC894ADAECBA225 /* Pods_iTVShows.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -485,16 +465,6 @@
 			name = "CANAL/ MURO";
 			sourceTree = "<group>";
 		};
-		D54070C79A5867705BA6C568 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */,
-				1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */,
-				5EA5DBE264CB33DA4355D716 /* Pods-iSaldos.distribution.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -502,12 +472,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 412741C31E9F93B20074CDD7 /* Build configuration list for PBXNativeTarget "iTVShows" */;
 			buildPhases = (
-				DEBBE55CB4AC9D43484F9803 /* [CP] Check Pods Manifest.lock */,
+				6FCFC79B4E6725A143C3A8AA /* [CP] Check Pods Manifest.lock */,
 				412741AD1E9F93B20074CDD7 /* Sources */,
 				412741AE1E9F93B20074CDD7 /* Frameworks */,
 				412741AF1E9F93B20074CDD7 /* Resources */,
-				8BEA6850C9CBE0C78BAC4C2B /* [CP] Embed Pods Frameworks */,
-				707B7C636524262B63175E59 /* [CP] Copy Pods Resources */,
+				6A19284F9F8C0C2911828B23 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -515,7 +484,7 @@
 			);
 			name = iTVShows;
 			productName = iSaldos;
-			productReference = 412741B11E9F93B20074CDD7 /* iTVShows.app */;
+			productReference = 412741B11E9F93B20074CDD7 /* iSaldos.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -585,38 +554,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		707B7C636524262B63175E59 /* [CP] Copy Pods Resources */ = {
+		6A19284F9F8C0C2911828B23 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8BEA6850C9CBE0C78BAC4C2B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-iTVShows/Pods-iTVShows-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/APESuperHUD/APESuperHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APESuperHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
@@ -624,26 +581,29 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iSaldos/Pods-iSaldos-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iTVShows/Pods-iTVShows-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DEBBE55CB4AC9D43484F9803 /* [CP] Check Pods Manifest.lock */ = {
+		6FCFC79B4E6725A143C3A8AA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iSaldos-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-iTVShows-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -658,7 +618,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4EF7CF02132D45B00EAC98F /* ISDetalleTVShowsTableViewController.swift in Sources */,
-				4127420C1E9FC1C10074CDD7 /* ISDetalleConcursoViewController.swift in Sources */,
 				415101811EB8A8A8003B016D /* ISUsuariosTableViewController.swift in Sources */,
 				B45B0E2C1EB8EC010038D174 /* UserPotImage.swift in Sources */,
 				412742451E9FE74D0074CDD7 /* ISSignIn.swift in Sources */,
@@ -673,11 +632,9 @@
 				4127422A1E9FC5630074CDD7 /* ISTerminosViewController.swift in Sources */,
 				4105F7E320260B20007FEF49 /* MoviesViewController.swift in Sources */,
 				4127422C1E9FC6630074CDD7 /* APIUTILS.swift in Sources */,
-				412742011E9FC17C0074CDD7 /* ISDetalleCuponesViewController.swift in Sources */,
 				B4A932E920AD639500AE4AB5 /* ISPeliculasModel.swift in Sources */,
 				B4EF7CE82131E91F00EAC98F /* ISCastMovieModel.swift in Sources */,
 				412741E71E9FBF230074CDD7 /* CarbonTabSwipeScrollView.m in Sources */,
-				4105F7DD2026029F007FEF49 /* ISMoviesApple.swift in Sources */,
 				4105F7EA202617D4007FEF49 /* BooksViewController.swift in Sources */,
 				B4EF7CF42134548500EAC98F /* ISDetailPeopleModel.swift in Sources */,
 				412741EC1E9FC0520074CDD7 /* ISLoginViewController.swift in Sources */,
@@ -700,7 +657,6 @@
 				412742491E9FF68C0074CDD7 /* ISHomeTabBarController.swift in Sources */,
 				415101891EB8C371003B016D /* ISUsuariosCustomCell.swift in Sources */,
 				B48D53DB21EDEDF8001311CD /* DenunciaCell.swift in Sources */,
-				B4409CD71ED4D69600F44FD2 /* ISActionSheetPersonalizadoViewController.swift in Sources */,
 				412741F11E9FC0D70074CDD7 /* ISMenuTableViewController.swift in Sources */,
 				41A3BBFC1EA0EC0600FC491F /* RateApp.swift in Sources */,
 				4105F7E120260A6C007FEF49 /* ReuseIdentifierInterface.swift in Sources */,
@@ -847,7 +803,7 @@
 		};
 		412741C41E9F93B20074CDD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35185A7F9FEA12C79F2C5A0E /* Pods-iSaldos.debug.xcconfig */;
+			baseConfigurationReference = 41B51FB458E3330B378CEEB0 /* Pods-iTVShows.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -869,7 +825,7 @@
 		};
 		412741C51E9F93B20074CDD7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1258501E4571696ED0F16CDB /* Pods-iSaldos.release.xcconfig */;
+			baseConfigurationReference = C9670A4720B0DA3C510268A4 /* Pods-iTVShows.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -939,7 +895,7 @@
 		};
 		416EDB2F1FA7B5B5007A3B34 /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5EA5DBE264CB33DA4355D716 /* Pods-iSaldos.distribution.xcconfig */;
+			baseConfigurationReference = 7005A5AEAE60209E0697B414 /* Pods-iTVShows.distribution.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

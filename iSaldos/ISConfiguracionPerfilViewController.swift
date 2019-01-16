@@ -72,7 +72,7 @@ class ISConfiguracionPerfilViewController: UITableViewController {
                     queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
                         if errorFoto == nil{
                             if let objectsBusquedaFotoData = objectsBusquedaFoto?.first{
-                                let userImageFile = objectsBusquedaFotoData["imageProfile"] as! PFFile
+                                let userImageFile = objectsBusquedaFotoData["imageProfile"] as! PFFileObject
                                 self.objectIdFoto = objectsBusquedaFotoData.objectId
                                 userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
                                     if errorImageData == nil{
@@ -145,7 +145,7 @@ class ISConfiguracionPerfilViewController: UITableViewController {
         let imageProfile = PFObject(className: "ImageProfile")
         imageProfile.objectId = objectIdFoto
         let imageDataprofile = UIImageJPEGRepresentation(myImagenPerfil.image!, 0.5)
-        let imageProfileFile = PFFile(name: "ImageProfile.jpg", data: imageDataprofile!)
+        let imageProfileFile = PFFileObject(name: "ImageProfile.jpg", data: imageDataprofile!)
         imageProfile["imageProfile"] = imageProfileFile
         imageProfile["username"] = PFUser.current()?.username
         imageProfile.saveInBackground{ (exitoso, error) in

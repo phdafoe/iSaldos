@@ -98,10 +98,10 @@ class ISNuevoPostTableViewController: UITableViewController {
         }else{
             let postImage = PFObject(className: "PostImageNetwork")
             let imageData = UIImageJPEGRepresentation(self.myImagenPost.image!, 0.1)
-            let imageFile = PFFile(name: "image.jpg", data: imageData!)
+            let imageFile = PFFileObject(name: "image.jpg", data: imageData!)
             
             let imageDataPerfil = UIImageJPEGRepresentation(self.myImagenPerfil.image!, 0.1)
-            let imageFilePerfil = PFFile(name: "imagePerfil.jpg", data: imageDataPerfil!)
+            let imageFilePerfil = PFFileObject(name: "imagePerfil.jpg", data: imageDataPerfil!)
             
             postImage["imageFileNW"] = imageFile
             postImage["imageFilePerfilNW"] = imageFilePerfil
@@ -160,7 +160,7 @@ class ISNuevoPostTableViewController: UITableViewController {
                     queryBusquedaFoto.findObjectsInBackground(block: { (objectsBusquedaFoto, errorFoto) in
                         if errorFoto == nil{
                             if let objectsBusquedaFotoData = objectsBusquedaFoto?[0]{
-                                let userImageFile = objectsBusquedaFotoData["imageProfile"] as! PFFile
+                                let userImageFile = objectsBusquedaFotoData["imageProfile"] as! PFFileObject
                                 //3. tercera consulta
                                 userImageFile.getDataInBackground(block: { (imageData, errorImageData) in
                                     if errorImageData == nil{

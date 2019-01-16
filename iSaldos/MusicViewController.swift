@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PromiseKit
 import Kingfisher
 import APESuperHUD
 

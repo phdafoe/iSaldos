@@ -45,7 +45,7 @@ class ISDetallePersonasTableViewController: UITableViewController {
     }
     
     func llamadaDetallePersonas(_ name : String){
-        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
+        APESuperHUD.show(style: HUDStyle.textOnly, title: nil, message: "Cargando..", completion: nil)
         providerService.getDataServiceDetailPeople(name, apiKey: CONSTANTES.API_KEY.API_KEY) { (resultDictionary, resultData, resultKnowfor) in
             guard let resultDictionaryDes = resultDictionary else {return}
             guard let resultDataDes = resultData else {return}
@@ -56,7 +56,7 @@ class ISDetallePersonasTableViewController: UITableViewController {
                 self.arrayKnowfor = resultKnowforDes
                 self.tableView.reloadData()
             }
-            APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+            APESuperHUD.dismissAll(animated: true)
         }
     }
 

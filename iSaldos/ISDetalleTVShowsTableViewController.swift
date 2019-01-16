@@ -62,7 +62,7 @@ class ISDetalleTVShowsTableViewController: UITableViewController {
     }
     
     func llamadaDetailTVShows(){
-        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
+        APESuperHUD.show(style: HUDStyle.textOnly, title: nil, message: "Cargando..", completion: nil)
         let idMovie = "\(self.id)"
         providerService.getDataServiceDetailPopularTVShows(idMovie, apiKey: CONSTANTES.API_KEY.API_KEY) { (resultData, resultNetwork, resultSeason) in
             guard let resultDataDes = resultData else {return}
@@ -95,7 +95,7 @@ class ISDetalleTVShowsTableViewController: UITableViewController {
                     self.tableView.reloadData()
                     self.myCollectionView.reloadData()
                 }
-                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+                APESuperHUD.dismissAll(animated: true)
             }
         }
     }

@@ -11,11 +11,11 @@ import Parse
 
 class UserPotImage: UserModel {
     
-    var imagePost : PFFile?
+    var imagePost : PFFileObject?
     var fechaCreacion : Date?
     var descripcion : String?
     
-    init(pNombre: String, pApellido: String, pUsername: String, pImageProfile: PFFile, pImagePost : PFFile, pFechaCreacion : Date, pDescripcion : String) {
+    init(pNombre: String, pApellido: String, pUsername: String, pImageProfile: PFFileObject, pImagePost : PFFileObject, pFechaCreacion : Date, pDescripcion : String) {
         
         self.imagePost = pImagePost
         self.fechaCreacion = pFechaCreacion

@@ -66,7 +66,7 @@ class ISDetalleOfertaViewController: UITableViewController {
     
     //MARK: - UTILS
     func llamadaDetailMovie(){
-        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
+        APESuperHUD.show(style: HUDStyle.textOnly, title: nil, message: "Cargando..", completion: nil)
         let idMovie = "\(self.id)"
         providerService.getDataServiceDetailPeliculas(idMovie, apiKey: CONSTANTES.API_KEY.API_KEY) { (resultData, resultCompany) in
             guard let resultDataDes = resultData else {return}
@@ -95,7 +95,7 @@ class ISDetalleOfertaViewController: UITableViewController {
                     self.title = modelDataDes.originalTitle
                     self.tableView.reloadData()
                 }
-                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+                APESuperHUD.dismissAll(animated: true)
                 self.llamadaMovies()
             }
         }

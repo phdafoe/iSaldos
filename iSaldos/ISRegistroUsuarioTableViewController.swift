@@ -115,7 +115,7 @@ class ISRegistroUsuarioTableViewController: UITableViewController {
         if photoSelected {
             let imageProfile = PFObject(className: "ImageProfile")
             let imageDataProfile = UIImageJPEGRepresentation(myImagenPerfil.image!, 0.5)
-            let imageProfileFile = PFFile(name: "userImageProfile.jpg", data: imageDataProfile!)
+            let imageProfileFile = PFFileObject(name: "userImageProfile.jpg", data: imageDataProfile!)
             imageProfile["imageProfile"] = imageProfileFile
             imageProfile["username"] = PFUser.current()?.username
             
